@@ -1,0 +1,20 @@
+.contact-form {
+  @extend .has-background-white-ter;
+  padding: 2rem;
+  &--success-message {
+    display: none;
+    @extend .message;
+    @extend .is-success;
+  }
+  &--error-message {
+    display: none;
+    @extend .message;
+    @extend .is-danger;
+  }
+  &--message-body {
+    @extend .message-body;
+  }
+  &--checkbox-input {
+    min-width: 13px;
+  }
+}

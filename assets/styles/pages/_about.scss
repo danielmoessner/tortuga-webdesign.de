@@ -1,0 +1,14 @@
+#about {
+  #ueber-uns {
+    img {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    @include until($tablet) {
+      .columns {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

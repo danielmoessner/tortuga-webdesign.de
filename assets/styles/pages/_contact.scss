@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the contact page.
+// -----------------------------------------------------------------------------
+#contact {
+  #kontakt {
+    .columns:nth-child(1) {
+      flex-direction: row-reverse;
+    }
+  }
+}
