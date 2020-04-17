@@ -19,3 +19,31 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'tag'
+    label: 'Tag'
+    format: 'json'
+    folder: 'assets/content/tag'
+    create: true
+    slug: '{{fields.title}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+  - name: 'work'
+    label: 'Work'
+    format: 'json'
+    folder: 'assets/content/work'
+    create: true
+    identifier_field: 'slug'
+    slug: '{{fields.slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Tags', name: 'tags', widget: 'relation', multiple: true, searchFields: ['title'], collecton: 'tag', valueField: 'title' }
+
