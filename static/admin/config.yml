@@ -41,9 +41,9 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Featured', name: 'featured', widget: 'boolean' }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Tags', name: 'tags', widget: 'relation', multiple: true, searchFields: ['title'], collecton: 'tag', valueField: 'title' }
+      - { label: 'Tags', name: 'tags', widget: 'relation', multiple: true, searchFields: ['title'], collection: 'tag', valueField: 'title' }
 
