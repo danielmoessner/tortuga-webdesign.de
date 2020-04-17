@@ -11,9 +11,7 @@ collections:
     format: 'json'
     folder: 'assets/content/blog'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -25,8 +23,6 @@ collections:
     folder: 'assets/content/tag'
     create: true
     slug: '{{fields.title}}'
-    editor:
-      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
   - name: 'work'
@@ -36,14 +32,12 @@ collections:
     create: true
     identifier_field: 'slug'
     slug: '{{fields.slug}}'
-    editor:
-      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Featured', name: 'featured', widget: 'boolean' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Tags', name: 'tags', widget: 'relation', multiple: true, searchFields: ['title'], collection: 'tag', valueField: 'title' }
 
