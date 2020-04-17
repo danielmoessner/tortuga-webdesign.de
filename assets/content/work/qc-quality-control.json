@@ -1,0 +1,12 @@
+{
+  "date": "2019-09-26T22:00:00.000Z",
+  "title": "QC Quality Control",
+  "slug": "qc-quality-control",
+  "image": "/img/1500x.qc-quality-control.de.jpg",
+  "description": "QC Quality Control bietet Produkte für die Halbleiter- und Pharmaindustrie an. Mit der modernen Webseite ist das Einstellen von neuen Produkten eine Leichtigkeit.",
+  "tags": [
+    "Django",
+    "Bootstrap 4",
+    "CMS"
+  ]
+}
