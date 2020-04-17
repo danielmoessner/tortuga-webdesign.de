@@ -6,5 +6,6 @@
   "tags": [
     "Webflow"
   ],
-  "image": "/img/1500x.kues-gutachter.de.jpg"
+  "image": "/img/1500x.kues-gutachter.de.jpg",
+  "featured": true
 }
