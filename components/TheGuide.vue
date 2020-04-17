@@ -15,49 +15,22 @@
         </div>
       </div>
     </div>
-    <!-- {% set loopCounter = 0 %}
-    {% for work in collections.work %}
-    {% if work.featured %}
-    {% set loopCounter = loopCounter + 1 %}
-    <div class="divider"></div>
-    <div class="work">
-      <div class="work--left {% if loopCounter % 2 == 0 %}is-right{% endif %}">
-        <div class="work--hover-info">
-          <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
-        </div>
-        <div class="work--image-div">
-          <picture class="work--image">
-            <source srcset="img/1500x.{{ work.image }}.webp" type="image/webp">
-            <source srcset="img/1500x.{{ work.image }}.jpg" type="image/jpeg">
-            <img src="img/1500x.{{ work.image }}.jpg" alt="{{ work.title }}">
-          </picture>
-        </div>
-      </div>
-      <div class="container">
-        <div class="work--content" data-aos="fade-up" data-aos-delay="{{ 100 - loopCounter * 100 }}" data-aos-duration="600">
-          <div class="columns">
-            <div class="column is-4 is-offset-{% if loopCounter % 2 == 0 %}1{% else %}7{% endif %}">
-              <h3 class="title is-4">{{ work.title }}</h3>
-              <p class="work--text">
-                {{ work.description }}
-              </p>
-              <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-    {% endfor %} -->
+    <BaseDivider />
+    <IndexPortfolioPost v-for="(work, index) in blogPosts" :key="index" :work="work" :index="index" />
+    <BaseDivider />
   </section>
 </template>
 <script>
 import CtaButton from "../components/CtaButton.vue";
+import BaseDivider from "../components/BaseDivider.vue";
+import IndexPortfolioPost from "../components/IndexPortfolioPost.vue";
 
 export default {
   name: "TheGuide",
   components: {
-  	CtaButton
+    CtaButton,
+    BaseDivider,
+    IndexPortfolioPost
   },
   props: {
     title: {
@@ -66,6 +39,12 @@ export default {
     subtitle: {
       required: true
     }
-  }
+  },
+  data() {
+    return {
+      'blogPosts': this.$store.state.portfolioPosts.filter(post => post.featured == true),
+    }
+  },
 }
+
 </script>

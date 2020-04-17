@@ -6,6 +6,9 @@
     <TheValue :pretitle="value.pretitle" :title="value.title" :subtitle="value.subtitle" :propositions="value.propositions" />
     <!-- <BaseDivider /> -->
     <TheGuide :title="guide.title" :subtitle="guide.subtitle" />
+    <ThePlan :title="plan.title" :subtitle="plan.subtitle" :steps="plan.steps" :bottom="plan.bottom" />
+    <BaseDivider />
+    <TheFooter />
   </main>
 </template>
 <script>
@@ -14,6 +17,8 @@ import TheStakes from "../components/TheStakes.vue";
 import TheValue from "../components/TheValue.vue";
 import BaseDivider from "../components/BaseDivider.vue";
 import TheGuide from "../components/TheGuide.vue";
+import ThePlan from "../components/ThePlan.vue";
+import TheFooter from "../components/TheFooter.vue";
 
 export default {
   components: {
@@ -21,7 +26,9 @@ export default {
     TheStakes,
     TheValue,
     BaseDivider,
-    TheGuide
+    TheGuide,
+    ThePlan,
+    TheFooter
   },
   data() {
     return {
@@ -102,9 +109,3 @@ export default {
 }
 
 </script>
-<style>
-body {
-  height: 200vh;
-}
-
-</style>

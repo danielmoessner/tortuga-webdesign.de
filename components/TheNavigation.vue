@@ -2,9 +2,9 @@
   <nav class="the-navigation navbar is-light is-top">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <nuxt-link class="navbar-item" to="/">
           <img src="../assets/images/tortuga-webdesign.svg" alt="Tortuga Webdesign Logo">
-        </a>
+        </nuxt-link>
         <a class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -13,9 +13,9 @@
       </div>
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
-          <a class="navbar-item" href="/">
+          <nuxt-link class="navbar-item" to="/">
             Startseite
-          </a>
+          </nuxt-link>
           <a class="navbar-item" href="/ueber-uns">
             Über uns
           </a>
@@ -25,9 +25,9 @@
           <a class="navbar-item" href="/artikel">
             Artikel
           </a>
-          <a class="navbar-item" href="/kontakt">
+          <nuxt-link class="navbar-item" to="/kontakt">
             Kontakt
-          </a>
+          </nuxt-link>
           <div class="navbar-item is-hidden-touch">
             <CtaButton />
           </div>

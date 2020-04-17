@@ -25,10 +25,10 @@ collections:
     slug: '{{fields.title}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-  - name: 'work'
-    label: 'Work'
+  - name: 'portfolio'
+    label: 'Portfolio'
     format: 'json'
-    folder: 'assets/content/work'
+    folder: 'assets/content/portfolio'
     create: true
     identifier_field: 'slug'
     slug: '{{fields.slug}}'
