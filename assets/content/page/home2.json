@@ -1,1 +1,52 @@
-{}
+{
+  "title": "test",
+  "intro": "test",
+  "header": {
+    "title": "test",
+    "subtitle": "test"
+  },
+  "stakes": {
+    "title": "test",
+    "subtitle": "test"
+  },
+  "value": {
+    "pretitle": "test",
+    "title": "test",
+    "subtitle": "test",
+    "propositions": [
+      {
+        "proposition": {
+          "title": "test",
+          "text": "test",
+          "icon": {
+            "type": "test",
+            "name": "test",
+            "margin": "test"
+          }
+        }
+      }
+    ]
+  },
+  "guide": {
+    "title": "test",
+    "subtitle": "test"
+  },
+  "plan": {
+    "title": "tes",
+    "subtitle": "test",
+    "bottom": "test",
+    "steps": [
+      {
+        "step": {
+          "title": "test",
+          "text": "test",
+          "icon": {
+            "type": "test",
+            "name": "test",
+            "margin": "test"
+          }
+        }
+      }
+    ]
+  }
+}
