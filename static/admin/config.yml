@@ -189,7 +189,7 @@ collections:
                         - {label: "Margin", name: "margin", widget: "string"}
       - label: "Home Page 3"
         name: "home3"
-        file: "assets/content/page/home2.json"
+        file: "assets/content/page/home3.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "intro", widget: "markdown"}
