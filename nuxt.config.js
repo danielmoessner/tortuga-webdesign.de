@@ -54,6 +54,19 @@ export default {
         prependData: '@import "./assets/styles/main.scss";',
       }
     },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: false,
+        minifyJS: false,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true
+      }
+    },
     /*
      ** You can extend webpack config here
      */
