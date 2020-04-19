@@ -2,11 +2,11 @@
   <div class="column" data-aos="fade-up" :data-aos-delay="aosDelay">
     <div class="feature is-center">
       <span class="icon is-large has-text-dark">
-        <i class="fa-3x" :class="iconClasses" :style="{ 'margin-left': step.icon.margin }"></i>
+        <i class="fa-3x" :class="iconClasses" :style="{ 'margin-left': step.step.icon.margin }"></i>
       </span>
-      <h3 class="title is-4">{{ step.title }}</h3>
+      <h3 class="title is-4">{{ step.step.title }}</h3>
       <p>
-        {{ step.text }}
+        {{ step.step.text }}
       </p>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
       return this.index * 100 + 50;
     },
     iconClasses() {
-      return this.step.icon.type + " fa-" + this.step.icon.name;
+      return this.step.step.icon.type + " fa-" + this.step.step.icon.name;
     }
   },
 }
