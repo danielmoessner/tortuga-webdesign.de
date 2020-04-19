@@ -51,19 +51,19 @@ collections:
           - {label: "Description", name: "intro", widget: "markdown"}
           - label: "Header"
             name: "header"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Stakes"
             name: "stakes"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Value"
             name: "value"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Pretitle", name: "pretitle", widget: "string"}
               - {label: "Title", name: "title", widget: "string"}
@@ -74,26 +74,26 @@ collections:
                 field:
                   name: "proposition"
                   label: "Proposition"
-                  widget: "list"
+                  widget: "object"
                   fields:
                     - {label: "Title", name: "title", widget: "string"}
                     - {label: "Text", name: "text", widget: "string"}
                     - name: "icon"
                       label: "Icon"
-                      widget: "list"
+                      widget: "object"
                       fields:
                         - {label: "Type", name: "type", widget: "string"}
                         - {label: "Name", name: "name", widget: "string"}
                         - {label: "Margin", name: "margin", widget: "string"}
           - label: "Guide"
             name: "guide"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Plan"
             name: "plan"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
@@ -104,13 +104,13 @@ collections:
                 field: 
                   name: "step"
                   label: "Step"
-                  widget: "list"
+                  widget: "object"
                   fields:
                     - {label: "Title", name: "title", widget: "string"}
                     - {label: "Text", name: "text", widget: "string"}
                     - name: "icon"
                       label: "Icon"
-                      widget: "list"
+                      widget: "object"
                       fields:
                         - {label: "Type", name: "type", widget: "string"}
                         - {label: "Name", name: "name", widget: "string"}
@@ -123,19 +123,19 @@ collections:
           - {label: "Description", name: "intro", widget: "markdown"}
           - label: "Header"
             name: "header"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Stakes"
             name: "stakes"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Value"
             name: "value"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Pretitle", name: "pretitle", widget: "string"}
               - {label: "Title", name: "title", widget: "string"}
@@ -146,26 +146,26 @@ collections:
                 field:
                   name: "proposition"
                   label: "Proposition"
-                  widget: "list"
+                  widget: "object"
                   fields:
                     - {label: "Title", name: "title", widget: "string"}
                     - {label: "Text", name: "text", widget: "string"}
                     - name: "icon"
                       label: "Icon"
-                      widget: "list"
+                      widget: "object"
                       fields:
                         - {label: "Type", name: "type", widget: "string"}
                         - {label: "Name", name: "name", widget: "string"}
                         - {label: "Margin", name: "margin", widget: "string"}
           - label: "Guide"
             name: "guide"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Plan"
             name: "plan"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
@@ -176,13 +176,13 @@ collections:
                 field: 
                   name: "step"
                   label: "Step"
-                  widget: "list"
+                  widget: "object"
                   fields:
                     - {label: "Title", name: "title", widget: "string"}
                     - {label: "Text", name: "text", widget: "string"}
                     - name: "icon"
                       label: "Icon"
-                      widget: "list"
+                      widget: "object"
                       fields:
                         - {label: "Type", name: "type", widget: "string"}
                         - {label: "Name", name: "name", widget: "string"}
