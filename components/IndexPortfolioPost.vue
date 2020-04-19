@@ -1,6 +1,6 @@
 <template>
-  <div class="work">
-    <div class="work--left" :class="getLeftOrRight()" @mouseover="mouseover" @mouseleave="mouseleave">
+  <div class="work container">
+    <div class="work--left" :class="leftOrRight" @mouseover="mouseover" @mouseleave="mouseleave">
       <div class="work--hover-info" :class="{ 'is-visibility-hidden': isScrollable }">
         <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
       </div>
@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="container">
-      <div class="work--content" data-aos="fade-up" :data-aos-delay="getWorkPostAosDealy()" data-aos-duration="600">
+      <div class="work--content" data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
         <div class="columns">
-          <div class="column is-4" :class="getOffset()">
+          <div class="column is-4" :class="offset">
             <h3 class="title is-4">{{ work.title }}</h3>
             <p class="work--text">
               {{ work.description }}
@@ -40,6 +40,17 @@ export default {
       isMouseOver: false
     }
   },
+  computed: {
+    leftOrRight() {
+      return this.index % 2 == 0 ? "is-right" : "is-left";
+    },
+    offset() {
+      return this.index % 2 == 0 ? "is-offset-1" : "is-offset-7";
+    },
+    aosDelay() {
+      return 100 - this.index * 100;
+    }
+  },
   methods: {
     mouseover() {
       this.isMouseOver = true;
@@ -50,15 +61,6 @@ export default {
     setIsScrollable(xKeyPressed) {
       xKeyPressed && this.isMouseOver ? this.isScrollable = true : this.isScrollable = false;
     },
-    getLeftOrRight() {
-      return this.index % 2 == 0 ? "is-right" : "is-left";
-    },
-    getOffset() {
-      return this.index % 2 == 0 ? "is-offset-1" : "is-offset-7";
-    },
-    getWorkPostAosDealy() {
-      return 100 - this.index * 100;
-    }
   },
   mounted() {
     document.addEventListener('keyup', function(event) {
@@ -106,6 +108,10 @@ export default {
     height: 100%;
     z-index: 5;
     cursor: pointer;
+
+    border: 5px solid #1f1d20;
+    // position: relative;
+    box-shadow: 0 0 2.8rem 0 #484847;
 
     &.is-right {
       left: 50%;

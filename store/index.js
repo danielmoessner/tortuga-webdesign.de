@@ -1,19 +1,23 @@
 export const state = () => ({
   blogPosts: [],
   tags: [],
-  workPosts: []
+  workPosts: [],
+  pages: {}
 });
 
 export const mutations = {
-  setBlogPosts(state, list) {
+  SET_BLOG_POSTS(state, list) {
     state.blogPosts = list;
   },
-  setPortfolioPosts(state, list) {
+  SET_PORTFOLIO_POSTS(state, list) {
     state.portfolioPosts = list;
   },
-  setTags(state, list) {
+  SET_TAGS(state, list) {
     state.tags = list;
-  }
+  },
+  SET_PAGES(state, list) {
+    list.forEach(item => state.pages[item.slug] = item)
+  },
 };
 
 export const actions = {
@@ -24,20 +28,27 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
-    await commit('setBlogPosts', blogPosts);
+    await commit('SET_BLOG_POSTS', blogPosts);
     let tagFiles = await require.context('~/assets/content/tag/', false, /\.json$/);
     let tags = tagFiles.keys().map(key => {
       let res = tagFiles(key);
       res.slug = key.slice(2, -5);
       return res;
     });
-    await commit('setTags', tags);
+    await commit('SET_TAGS', tags);
     let portfolioFiles = await require.context('~/assets/content/portfolio/', false, /\.json$/);
     let portfolioPosts = portfolioFiles.keys().map(key => {
       let res = portfolioFiles(key);
       res.slug = key.slice(2, -5);
       return res;
     });
-    await commit('setPortfolioPosts', portfolioPosts);
+    await commit('SET_PORTFOLIO_POSTS', portfolioPosts);
+    let pageFiles = await require.context('~/assets/content/page/', false, /\.json$/);
+    let pages = pageFiles.keys().map(key => {
+      let res = pageFiles(key);
+      res.slug = key.slice(2, -5);
+      return res;
+    });
+    await commit('SET_PAGES', pages);
   },
 };

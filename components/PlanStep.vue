@@ -22,20 +22,14 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      aosDelay: this.getAosDelay(),
-      iconClasses: this.getIconClasses()
-    }
-  },
-  methods: {
-    getAosDelay() {
+  computed: {
+    aosDelay() {
       return this.index * 100 + 50;
     },
-    getIconClasses() {
+    iconClasses() {
       return this.step.icon.type + " fa-" + this.step.icon.name;
     }
-  }
+  },
 }
 
 </script>

@@ -5,10 +5,10 @@
         <div class="column is-6-desktop is-12-tablet">
           <div class="animated fadeIn">
             <h1 class="title is-2 has-text-dark" data-aos="fade-up" data-aos-duration="600">
-              {{ title }}
+              {{ header.title }}
             </h1>
             <div class="subtitle is-4 has-text-dark" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600">
-              {{ subtitle }}
+              {{ header.subtitle }}
             </div>
             <div class="buttons">
               <!-- <a class="button is-primary is-rounded" href="" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">Jetzt zusammenarbeiten</a> -->
@@ -48,14 +48,11 @@ export default {
   components: {
     CtaButton
   },
-  props: {
-    title: {
-      required: true
-    },
-    subtitle: {
-      required: true
+  data() {
+    return {
+      header: this.$store.state.pages.home.header
     }
-  }
+  },
 }
 
 </script>
