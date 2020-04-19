@@ -116,74 +116,87 @@ collections:
                         - {label: "Name", name: "name", widget: "string"}
                         - {label: "Margin", name: "margin", widget: "string"}
       - label: "Home Page 2"
-          name: "home2"
-          file: "assets/content/page/home2.json"
-          fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Description", name: "intro", widget: "markdown"}
-            - label: "Header"
-              name: "header"
-              widget: "list"
-              fields:
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Subtitle", name: "subtitle", widget: "string"}
-            - label: "Stakes"
-              name: "stakes"
-              widget: "list"
-              fields:
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Subtitle", name: "subtitle", widget: "string"}
-            - label: "Value"
-              name: "value"
-              widget: "list"
-              fields:
-                - {label: "Pretitle", name: "pretitle", widget: "string"}
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Subtitle", name: "subtitle", widget: "string"}
-                - label: "Propositions"
-                  name: "propositions"
+        name: "home2"
+        file: "assets/content/page/home2.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "markdown"}
+          - label: "Header"
+            name: "header"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Stakes"
+            name: "stakes"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Value"
+            name: "value"
+            widget: "list"
+            fields:
+              - {label: "Pretitle", name: "pretitle", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Propositions"
+                name: "propositions"
+                widget: "list"
+                field:
+                  name: "proposition"
+                  label: "Proposition"
                   widget: "list"
-                  field:
-                    name: "proposition"
-                    label: "Proposition"
-                    widget: "list"
-                    fields:
-                      - {label: "Title", name: "title", widget: "string"}
-                      - {label: "Text", name: "text", widget: "string"}
-                      - name: "icon"
-                        label: "Icon"
-                        widget: "list"
-                        fields:
-                          - {label: "Type", name: "type", widget: "string"}
-                          - {label: "Name", name: "name", widget: "string"}
-                          - {label: "Margin", name: "margin", widget: "string"}
-            - label: "Guide"
-              name: "guide"
-              widget: "list"
-              fields:
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Subtitle", name: "subtitle", widget: "string"}
-            - label: "Plan"
-              name: "plan"
-              widget: "list"
-              fields:
-                - {label: "Title", name: "title", widget: "string"}
-                - {label: "Subtitle", name: "subtitle", widget: "string"}
-                - {label: "Bottom", name: "bottom", widget: "string"}
-                - label: "Steps"
-                  name: "steps"
+                  fields:
+                    - {label: "Title", name: "title", widget: "string"}
+                    - {label: "Text", name: "text", widget: "string"}
+                    - name: "icon"
+                      label: "Icon"
+                      widget: "list"
+                      fields:
+                        - {label: "Type", name: "type", widget: "string"}
+                        - {label: "Name", name: "name", widget: "string"}
+                        - {label: "Margin", name: "margin", widget: "string"}
+          - label: "Guide"
+            name: "guide"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Plan"
+            name: "plan"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Bottom", name: "bottom", widget: "string"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                field: 
+                  name: "step"
+                  label: "Step"
                   widget: "list"
-                  field: 
-                    name: "step"
-                    label: "Step"
-                    widget: "list"
-                    fields:
-                      - {label: "Title", name: "title", widget: "string"}
-                      - {label: "Text", name: "text", widget: "string"}
-                      - name: "icon"
-                        label: "Icon"
-                        widget: "list"
-                        fields:
-                          - {label: "Type", name: "type", widget: "string"}
-                          - {label: "Name", name: "name", widget: "string"}
-                          - {label: "Margin", name: "margin", widget: "string"}
+                  fields:
+                    - {label: "Title", name: "title", widget: "string"}
+                    - {label: "Text", name: "text", widget: "string"}
+                    - name: "icon"
+                      label: "Icon"
+                      widget: "list"
+                      fields:
+                        - {label: "Type", name: "type", widget: "string"}
+                        - {label: "Name", name: "name", widget: "string"}
+                        - {label: "Margin", name: "margin", widget: "string"}
+      - label: "About Page"
+        name: "about"
+        file: "assets/content/page/about.json"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
