@@ -1,1 +1,11 @@
-{}
+{
+  "title": "test",
+  "intro": "test",
+  "team": [
+    {
+      "name": "test",
+      "position": "test",
+      "photo": "/img/1000x.healedme-iwonthelottery.com.jpg"
+    }
+  ]
+}
