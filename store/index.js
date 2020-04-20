@@ -42,6 +42,7 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
+    portfolioPosts = portfolioPosts.sort((firstPost, secondPost) => { return new Date(secondPost.date) - new Date(firstPost.date)})
     await commit('SET_PORTFOLIO_POSTS', portfolioPosts);
     let pageFiles = await require.context('~/assets/content/page/', false, /\.json$/);
     let pages = pageFiles.keys().map(key => {

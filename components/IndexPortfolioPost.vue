@@ -1,30 +1,37 @@
 <template>
-  <div class="work container">
-    <div class="work--left" :class="leftOrRight" @mouseover="mouseover" @mouseleave="mouseleave">
-      <div class="work--hover-info" :class="{ 'is-visibility-hidden': isScrollable }">
-        <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
-      </div>
-      <div class="work--image-div" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-        <img :src="work.image" :alt="work.title">
+  <div class="columns" :style="columnsReversed">
+    <div class="column is-5" :class="offsetPage">
+      <div class="work">
+        <div class="work--page" @mouseover="mouseover" @mouseleave="mouseleave">
+          <div class="work--hover-info" :class="{ 'is-visibility-hidden': isScrollable }">
+            <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+          </div>
+          <div class="work--image-div" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
+            <img :src="work.image" :alt="work.title">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <div class="work--content" data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
-        <div class="columns">
-          <div class="column is-4" :class="offset">
-            <h3 class="title is-4">{{ work.title }}</h3>
-            <p class="work--text">
-              {{ work.description }}
-            </p>
-            <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
-          </div>
+    <div class="column is-4" :class="offsetText">
+      <div class="work--content">
+        <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
+          <h3 class="title is-4">{{ work.title }}</h3>
+          <p class="work--text">
+            {{ work.description }}
+          </p>
+          <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
+
 export default {
+  components: {
+    PortfolioShowcase
+  },
   name: "IndexPortfolioPost",
   props: {
     work: {
@@ -41,11 +48,14 @@ export default {
     }
   },
   computed: {
-    leftOrRight() {
-      return this.index % 2 == 0 ? "is-right" : "is-left";
+    columnsReversed() {
+      return this.index % 2 == 0 ? { "flex-direction": "row-reverse" } : "";
     },
-    offset() {
-      return this.index % 2 == 0 ? "is-offset-1" : "is-offset-7";
+    offsetPage() {
+      return this.index % 2 == 0 ? "is-offset-2" : "";
+    },
+    offsetText() {
+      return this.index % 2 == 0 ? "is-offset-7" : "is-offset-2";
     },
     aosDelay() {
       return 100 - this.index * 100;
@@ -73,7 +83,7 @@ export default {
 }
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -84,15 +94,15 @@ export default {
 
 .work {
   position: relative;
-  margin-bottom: -1px;
+  height: 100%;
 
   &--hover-info {
     background: rgba($dark, 0.5);
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -100,23 +110,16 @@ export default {
     visibility: hidden;
   }
 
-  &--left {
+  &--page {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
     z-index: 5;
-    cursor: pointer;
 
     border: 5px solid #1f1d20;
-    // position: relative;
     box-shadow: 0 0 2.8rem 0 #484847;
-
-    &.is-right {
-      left: 50%;
-      direction: rtl;
-    }
 
     @include until($tablet) {
       position: static;
@@ -165,17 +168,7 @@ export default {
     margin-bottom: 1.8em;
   }
 
-  @include until($tablet) {
-    &--left {
-      cursor: default;
-    }
-  }
-
   @include until($desktop) {
-    &--left {
-      cursor: default;
-    }
-
     &--hover-info {
       display: none;
     }

@@ -15,9 +15,9 @@
         </div>
       </div>
     </div>
-    <!-- <BaseDivider /> -->
-    <IndexPortfolioPost v-for="(work, index) in blogPosts" :key="index" :work="work" :index="index" />
-    <!-- <BaseDivider /> -->
+    <div class="container">
+      <IndexPortfolioPost v-for="(work, index) in blogPosts" :key="index" :work="work" :index="index" />
+    </div>
   </section>
 </template>
 <script>

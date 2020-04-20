@@ -1,16 +1,19 @@
 <template>
-  <nuxt-link class="showcase" to="/portfolio">
-    <div class="tags">
-      <span class="tag is-dark">{{ portfolioItem.title }}</span><br>
-      <span class="tag is-light">{{ month }}</span>
-      <span v-for="(tag, index) in portfolioItem.tags" :key="index" class="tag is-light">{{ tag }}</span>
-    </div>
-    <img class="showcase--height-set" :src="portfolioItem.image" :alt="portfolioItem.title">
-    <div class="showcase--scroll">
-      <img class="showcase--img" :src="portfolioItem.image" :alt="portfolioItem.title">
-    </div>
-    </div>
-  </nuxt-link>
+  <div ref="showcase" class="showcase" @mousemove="mousemove" @mouseover="mouseover" @mouseleave="mouseleave" :style="{ 'height': showcaseHeight }">
+    <nuxt-link :to="detailPage" @click="mouseleave">
+      <div class="tags">
+        <span class="tag is-dark">{{ portfolioItem.title }}</span><br>
+        <span class="tag is-light">{{ month }}</span>
+        <span v-for="(tag, index) in portfolioItem.tags" :key="index" class="tag is-light">{{ tag }}</span>
+      </div>
+      <img class="showcase--height-set" ref="showcaseHeightSet" :src="portfolioItem.shortImage" :alt="portfolioItem.title">
+      <div class="showcase--scroll">
+        <div class="showcase--img" ref="showcaseImage" style="will-change: transform;">
+          <img :src="portfolioItem.image" :alt="portfolioItem.title">
+        </div>
+      </div>
+    </nuxt-link>
+  </div>
 </template>
 <script>
 export default {
@@ -21,76 +24,81 @@ export default {
   },
   data() {
     return {
-      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
+      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+      speed: 0,
+      mousePosition: {
+        x: -1,
+        y: -1
+      },
+      showcaseLookedAt: false,
+      showcaseInterval: "",
+      showcaseHeight: 0
     }
   },
   computed: {
+    detailPage() {
+      return "/portfolio/" + this.portfolioItem.slug
+    },
+    showcase() {
+      return this.$refs.showcase
+    },
+    showcaseImage() {
+      return this.$refs.showcaseImage
+    },
+    showcaseHeightSet() {
+      return this.$refs.showcaseHeightSet
+    },
+    showcaseImageStyleObject() {
+      return {
+        "will-change": this.showcaseLookedAt ? "transform" : "auto"
+      }
+    },
+    showcaseImageRoute() {
+      return this.showcaseHeightSet.offsetHeight - this.showcaseImage.offsetHeight
+    },
     month() {
       const date = new Date(this.portfolioItem.date)
       return this.months[date.getMonth()] + " " + date.getFullYear()
     }
   },
-  mounted() {
-    window.addEventListener('load', function() {
-      // methods
-      function getMouseInsideElement(mouse, target) {
-        const rect = target.getBoundingClientRect()
-        const x = mouse.x
-        const y = mouse.y
-        return (rect.left <= x) && (x <= rect.right) && (rect.top <= y) && (y <= rect.bottom)
+  watch: {
+    showcaseLookedAt: function(newValue, oldValue) {
+      if (newValue === true) {
+        this.showcaseInterval = setInterval(this.moveImage, 16)
+      } else {
+        clearInterval(this.showcaseInterval)
       }
-
-      function getMousePositionInsideOfElement(event, target) {
-        const rect = target.getBoundingClientRect()
-        const x = event.clientX - rect.left
-        const y = event.clientY - rect.top
-        const xProportion = x / this.getWidthWithBorder(target)
-        const yProportion = y / this.getHeightWithBorder(target)
-        return { x: xProportion, y: yProportion }
+    }
+  },
+  methods: {
+    updateMousePosition(event) {
+      const rect = this.showcase.getBoundingClientRect()
+      const x = event.clientX - rect.left
+      const y = event.clientY - rect.top
+      const xProportion = x / rect.width
+      const yProportion = y / rect.height
+      this.mousePosition = { x: xProportion, y: yProportion }
+    },
+    updateSpeed() {
+      let pos = this.mousePosition
+      if (pos.y >= 0.45 && pos.y <= 0.55) {
+        this.speed = 0
+      } else {
+        this.speed = -10 * (pos.y - 0.5)
       }
-
-      function getHeightWithMargin(el) {
-        const styles = window.getComputedStyle(el)
-        const margin = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom)
-        return this.getHeightWithBorder(el) + margin
-      }
-
-      function getHeightWithBorder(el) {
-        return el.offsetHeight
-      }
-
-      function getHeightWithPadding(el) {
-        return el.clientHeight
-      }
-
-      function getHeight(el) {
-        const styles = window.getComputedStyle(el)
-        return el.clientHeight - (parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom))
-      }
-
-      function getBoundingClientRectHeight(el) {
-        const rect = el.getBoundingClientRect()
-        return rect.height
-      }
-
-      function getWidthWithMargin(el) {
-        var styles = window.getComputedStyle(el)
-        var margin = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight)
-        return el.offsetWidth + margin
-      }
-
-      function getWidthWithBorder(el) {
-        return el.offsetWidth
-      }
-
-      function getWidthWithPadding(el) {
-        return el.clientWidth
-      }
-
-      function getWidth(el) {
-        const computedStyle = getComputedStyle(el)
-        return el.clientWidth - (parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight))
-      }
+    },
+    mousemove(event) {
+      this.updateMousePosition(event)
+      this.updateSpeed()
+    },
+    mouseover(event) {
+      this.showcaseLookedAt = true
+    },
+    mouseleave(event) {
+      this.showcaseLookedAt = false
+    },
+    moveImage() {
+      if (this.showcaseImage === null) { return }
 
       function getTranslateY(obj) {
         const st = window.getComputedStyle(obj, null)
@@ -105,69 +113,83 @@ export default {
         values = values.split(',')
         return parseFloat(values[5])
       }
-      // get all showcase elements
-      const showcases = document.querySelectorAll('.showcase')
-      showcases.forEach((showcase, index) => {
-        // expand the showcase
-        // get the height setting element
-        const showcaseHeightSet = showcase.querySelector('.showcase--height-set')
-        // expand the showcase if the element exists
-        if (showcaseHeightSet) {
-          setTimeout(() => { showcase.style.height = getBoundingClientRectHeight(showcaseHeightSet) + 'px' }, index ** 0.5 * 150)
-        }
-        // move the image
-        // get the image of the showcase element
-        const showcaseImage = showcase.querySelector('.showcase--img')
-        // make it move if it exists
-        if (showcaseImage && showcaseHeightSet) {
-          // variable to check if the image is already moving
-          let imageMoving = false
-          // interval which keeps the image moving
-          let moveImageInterval = ''
-          // speed variable can change depending on the mouse position
-          let speed = 0
-          // calculate how far the image is allowed to move
-          const howFarToMove = -getHeight(showcaseImage) + getHeight(showcaseHeightSet)
-          // moves the image depending on the speed and with approx 60 fps
-          function moveImage() {
-            // get the position and add the speed so that it moves
-            const newPosition = getTranslateY(showcaseImage) + speed
-            // check if it is allowed to move up or down and move it
-            if (newPosition > 0) {
-              showcaseImage.style.transform = 'translateY(0)'
-            } else if (newPosition < howFarToMove) {
-              showcaseImage.style.transform = 'translateY(' + howFarToMove + 'px)'
-            } else {
-              showcaseImage.style.transform = 'translateY(' + newPosition + 'px)'
-            }
-            // keep it moving with approx 60fps
-            moveImageInterval = setTimeout(moveImage, 16)
-          }
-          // start the moving of the image
-          showcase.addEventListener('mouseover', (event) => {
-            showcaseImage.style.willChange = 'transform'
-            if (!imageMoving) moveImage()
-            imageMoving = true
-          })
-          // reset if the mouse doesn't hover the showcase
-          showcase.addEventListener('mouseleave', (event) => {
-            showcaseImage.style.willChange = 'auto'
-            clearInterval(moveImageInterval)
-            imageMoving = false
-          })
-          // set the speed depending on the mouse position
-          showcase.addEventListener('mousemove', (event) => {
-            const pos = getMousePositionInsideOfElement(event, showcase)
-            if (pos.y >= 0.45 && pos.y <= 0.55) {
-              speed = 0
-            } else {
-              speed = -10 * (pos.y - 0.5)
-            }
-          })
-        }
-      })
-    })
+      const newPosition = getTranslateY(this.showcaseImage) + this.speed
+      // check if it is allowed to move up or down and move it
+      if (newPosition > 0) {
+        this.showcaseImage.style.transform = 'translateY(0)'
+      } else if (newPosition < this.showcaseImageRoute) {
+        this.showcaseImage.style.transform = 'translateY(' + this.showcaseImageRoute + 'px)'
+      } else {
+        this.showcaseImage.style.transform = 'translateY(' + newPosition + 'px)'
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('load', (event) => { this.showcaseHeight = this.showcase.offsetHeight + this.showcaseHeightSet.offsetHeight + "px" })
   }
 }
 
 </script>
+<style lang="scss">
+.showcase {
+  border: 5px solid $dark;
+  position: relative;
+  display: block;
+  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
+  overflow: hidden;
+  transition: height 0.6s;
+  box-sizing: content-box;
+  height: 0;
+
+  &>img {
+    display: block;
+  }
+
+  .tags {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 5;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2.8rem 0 rgba($color4, 1);
+
+    .tags {
+      display: block;
+    }
+  }
+
+  &--height-set {
+    display: block;
+    opacity: 0;
+    width: 100%;
+    img {
+      display: block;
+    }
+  }
+
+  &--scroll {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &--img {
+    transform: translateY(0);
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  @include until($tablet) {
+    .tags {
+      display: block;
+    }
+  }
+}
+
+</style>
