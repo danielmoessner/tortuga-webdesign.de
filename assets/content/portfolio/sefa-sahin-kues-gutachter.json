@@ -7,5 +7,6 @@
     "Webflow"
   ],
   "image": "/img/1500x.kues-gutachter.de.jpg",
-  "featured": true
+  "featured": true,
+  "shortImage": "/img/short.kues-gutachter.de.jpg"
 }
