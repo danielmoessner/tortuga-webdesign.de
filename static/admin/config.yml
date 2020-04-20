@@ -152,7 +152,7 @@ collections:
         file: "assets/content/page/portfolio.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Header"
             name: "header"
             widget: "object"
