@@ -48,151 +48,7 @@ collections:
         file: "assets/content/page/home.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "markdown"}
-          - label: "Header"
-            name: "header"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Stakes"
-            name: "stakes"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Value"
-            name: "value"
-            widget: "object"
-            fields:
-              - {label: "Pretitle", name: "pretitle", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - label: "Propositions"
-                name: "propositions"
-                widget: "list"
-                field:
-                  name: "proposition"
-                  label: "Proposition"
-                  widget: "object"
-                  fields:
-                    - {label: "Title", name: "title", widget: "string"}
-                    - {label: "Text", name: "text", widget: "string"}
-                    - name: "icon"
-                      label: "Icon"
-                      widget: "object"
-                      fields:
-                        - {label: "Type", name: "type", widget: "string"}
-                        - {label: "Name", name: "name", widget: "string"}
-                        - {label: "Margin", name: "margin", widget: "number"}
-          - label: "Guide"
-            name: "guide"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Plan"
-            name: "plan"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Bottom", name: "bottom", widget: "string"}
-              - label: "Steps"
-                name: "steps"
-                widget: "list"
-                field: 
-                  name: "step"
-                  label: "Step"
-                  widget: "object"
-                  fields:
-                    - {label: "Title", name: "title", widget: "string"}
-                    - {label: "Text", name: "text", widget: "string"}
-                    - name: "icon"
-                      label: "Icon"
-                      widget: "object"
-                      fields:
-                        - {label: "Type", name: "type", widget: "string"}
-                        - {label: "Name", name: "name", widget: "string"}
-                        - {label: "Margin", name: "margin", widget: "number"}
-      - label: "Home Page 2"
-        name: "home2"
-        file: "assets/content/page/home2.json"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "markdown"}
-          - label: "Header"
-            name: "header"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Stakes"
-            name: "stakes"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Value"
-            name: "value"
-            widget: "object"
-            fields:
-              - {label: "Pretitle", name: "pretitle", widget: "string"}
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - label: "Propositions"
-                name: "propositions"
-                widget: "list"
-                field:
-                  name: "proposition"
-                  label: "Proposition"
-                  widget: "object"
-                  fields:
-                    - {label: "Title", name: "title", widget: "string"}
-                    - {label: "Text", name: "text", widget: "string"}
-                    - name: "icon"
-                      label: "Icon"
-                      widget: "object"
-                      fields:
-                        - {label: "Type", name: "type", widget: "string"}
-                        - {label: "Name", name: "name", widget: "string"}
-                        - {label: "Margin", name: "margin", widget: "number"}
-          - label: "Guide"
-            name: "guide"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-          - label: "Plan"
-            name: "plan"
-            widget: "object"
-            fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Bottom", name: "bottom", widget: "string"}
-              - label: "Steps"
-                name: "steps"
-                widget: "list"
-                field: 
-                  name: "step"
-                  label: "Step"
-                  widget: "object"
-                  fields:
-                    - {label: "Title", name: "title", widget: "string"}
-                    - {label: "Text", name: "text", widget: "string"}
-                    - name: "icon"
-                      label: "Icon"
-                      widget: "object"
-                      fields:
-                        - {label: "Type", name: "type", widget: "string"}
-                        - {label: "Name", name: "name", widget: "string"}
-                        - {label: "Margin", name: "margin", widget: "number"}
-      - label: "Home Page 3"
-        name: "home3"
-        file: "assets/content/page/home3.json"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "markdown"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -263,12 +119,79 @@ collections:
         name: "about"
         file: "assets/content/page/about.json"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "text"}
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Pretitle", name: "pretitle", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
+          - label: "FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - {label: "Question", name: "question", widget: "string"}
+                  - {label: "Answer", name: "answer", widget: "string"}
+      - label: "Portfolio Page"
+        name: "portfolio"
+        file: "assets/content/page/portfolio.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "text"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - label: "Contact Page"
+        name: "contact"
+        file: "assets/content/page/contact.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "text"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - label: "Blog Page"
+        name: "blog"
+        file: "assets/content/page/blog.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "text"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - label: "General"
+        name: "general"
+        file: "assets/content/page/general.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "intro", widget: "text"}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
