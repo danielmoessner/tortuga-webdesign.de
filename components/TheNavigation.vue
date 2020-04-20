@@ -15,13 +15,13 @@
         <div class="navbar-end">
           <nuxt-link class="navbar-item" to="/">
             Startseite
-          </nuxt-link to="/ueber-uns">
-          <a class="navbar-item" href="/ueber-uns">
+          </nuxt-link>
+          <nuxt-link class="navbar-item" to="/ueber-uns">
             Über uns
-          </a>
-          <a class="navbar-item" href="/referenzen">
+          </nuxt-link>
+          <nuxt-link class="navbar-item" to="/portfolio">
             Referenzen
-          </a>
+          </nuxt-link>
           <a class="navbar-item" href="/artikel">
             Artikel
           </a>

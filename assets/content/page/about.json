@@ -1,8 +1,12 @@
 {
   "title": "Über uns",
-  "intro": {
+  "header": {
     "title": "Wer steckt dahinter?",
     "subtitle": "Über uns"
+  },
+  "intro": {
+    "title": "Wir liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
+    "subtitle": "leer"
   },
   "about": {
     "pretitle": "Über uns",

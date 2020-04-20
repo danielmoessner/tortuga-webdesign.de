@@ -37,9 +37,10 @@ collections:
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: "Short Image", name: "shortImage", widget: "image"}
       - { label: 'Featured', name: 'featured', widget: 'boolean', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Tags', name: 'tags', widget: 'relation', multiple: true, searchFields: ['title'], collection: 'tag', valueField: 'title' }
+      - { label: 'Tags', name: 'tags', required: false, widget: 'relation', multiple: true, searchFields: ['title'], collection: 'tag', valueField: 'title' }
   - label: "Page"
     name: "page"
     files:
@@ -48,7 +49,7 @@ collections:
         file: "assets/content/page/home.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -120,13 +121,19 @@ collections:
         file: "assets/content/page/about.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
           - label: "Intro"
             name: "intro"
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
           - label: "About"
             name: "about"
             widget: "object"
@@ -134,7 +141,8 @@ collections:
               - {label: "Pretitle", name: "pretitle", widget: "string"}
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - {label: "Text", name: "text", widget: "text"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - {label: "Image", name: "image", widget: "image"}
           - label: "FAQ"
             name: "faq"
             widget: "object"
@@ -152,7 +160,7 @@ collections:
         file: "assets/content/page/portfolio.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -164,7 +172,7 @@ collections:
         file: "assets/content/page/contact.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -176,7 +184,7 @@ collections:
         file: "assets/content/page/blog.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -188,7 +196,7 @@ collections:
         file: "assets/content/page/general.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Description", name: "description", widget: "text", required: false}
           - label: "Header"
             name: "header"
             widget: "object"
