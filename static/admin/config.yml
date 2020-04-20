@@ -120,7 +120,7 @@ collections:
         file: "assets/content/page/about.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Intro"
             name: "intro"
             widget: "object"
@@ -164,7 +164,7 @@ collections:
         file: "assets/content/page/contact.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -176,7 +176,7 @@ collections:
         file: "assets/content/page/blog.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Header"
             name: "header"
             widget: "object"
@@ -188,7 +188,7 @@ collections:
         file: "assets/content/page/general.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "intro", widget: "text"}
+          - {label: "Description", name: "description", widget: "text"}
           - label: "Header"
             name: "header"
             widget: "object"

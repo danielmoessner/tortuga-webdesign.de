@@ -15,7 +15,7 @@
         <div class="navbar-end">
           <nuxt-link class="navbar-item" to="/">
             Startseite
-          </nuxt-link>
+          </nuxt-link to="/ueber-uns">
           <a class="navbar-item" href="/ueber-uns">
             Über uns
           </a>
