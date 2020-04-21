@@ -1,5 +1,5 @@
 <template>
-  <nav class="the-navigation navbar is-light is-top">
+  <nav ref="navigation" class="the-navigation navbar is-fixed-top" :class="navigationClassList">
     <div class="container">
       <div class="navbar-brand">
         <nuxt-link class="navbar-item" to="/">
@@ -46,45 +46,65 @@ export default {
   name: "TheNavigation",
   data() {
     return {
-      showNav: false
+      showNav: false,
+      scrollTop: 0,
+      lastScrollTop: 0,
+      isTop: true,
+      isInvisible: false,
+      isOut: false
+    }
+  },
+  watch: {
+    scrollTop: function(newValue, oldValue) {
+      this.lastScrollTop = oldValue
+      if (newValue === 0) {
+        this.isTop = true
+      } else if (newValue > 200 && this.isTop) {
+        this.isInvisible = true
+        this.isTop = false
+      }
+      if (newValue > oldValue) {
+        this.isOut = true
+      } else {
+        this.isInvisible = false
+        this.isOut = false
+      }
+    }
+  },
+  computed: {
+    navigationClassList() {
+      return {
+        'is-top': this.isTop,
+        'is-out': this.isOut,
+        'is-invisible': this.isInvisible,
+      }
     }
   },
   mounted() {
-    // slide the navigation in and out
-    let lastScrollTop = 0
-    const navbar = document.querySelector('.the-navigation')
+    const self = this
     document.addEventListener('scroll', function() {
-      const st = window.pageYOffset || document.documentElement.scrollTop
-      if (st === 0) {
-        navbar.classList.add('is-top')
-      }
-      if (st > 200 && navbar.classList.contains('is-top')) {
-        navbar.classList.add('is-invisible')
-        navbar.classList.remove('is-top')
-      }
-      if (st > lastScrollTop) {
-        navbar.classList.add('is-out')
-      } else {
-        navbar.classList.remove('is-invisible')
-        navbar.classList.remove('is-out')
-      }
-      lastScrollTop = st <= 0 ? 0 : st
+      self.scrollTop = window.pageYOffset || document.documentElement.scrollTop
     })
   }
 }
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .the-navigation.navbar {
-  position: fixed;
-  top: 0;
+  
   width: 100%;
-  background-color: $white;
   transition: transform 0.6s, background-color 0.6s, opacity 0s;
-}
 
-.navbar {
-  &-brand img {
+  // &.is-light {
+    background-color: $white;
+  // }
+  
+  a.navbar-item:hover {
+    background: hsl(278, 20%, 92%);
+    color: initial;
+  }
+
+  .navbar-brand .navbar-item img {
     max-height: 2.6rem;
 
     @include until($tablet) {
@@ -99,7 +119,6 @@ export default {
   &.is-top {
     position: absolute;
     background-color: transparent;
-    transform: translateY(0);
   }
 }
 

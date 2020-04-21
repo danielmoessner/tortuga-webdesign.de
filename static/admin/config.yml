@@ -35,6 +35,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Url', name: 'url', widget: 'string'}
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: "Short Image", name: "shortImage", widget: "image"}

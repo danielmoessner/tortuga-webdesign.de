@@ -1,5 +1,5 @@
 <template>
-  <div ref="showcase" class="showcase" @mousemove="mousemove" @mouseover="mouseover" @mouseleave="mouseleave" :style="{ 'height': showcaseHeight }">
+  <div ref="showcase" class="showcase" @mousemove="mousemove" @mouseover="mouseover" @mouseleave="mouseleave">
     <nuxt-link :to="detailPage" @click="mouseleave">
       <div class="tags">
         <span class="tag is-dark">{{ portfolioItem.title }}</span><br>
@@ -8,7 +8,7 @@
       </div>
       <img class="showcase--height-set" ref="showcaseHeightSet" :src="portfolioItem.shortImage" :alt="portfolioItem.title">
       <div class="showcase--scroll">
-        <div class="showcase--img" ref="showcaseImage" style="will-change: transform;">
+        <div class="showcase--img" ref="showcaseImage" style="will-change: transform;" :style="{ transform: showcaseImageTransform }">
           <img :src="portfolioItem.image" :alt="portfolioItem.title">
         </div>
       </div>
@@ -25,17 +25,16 @@ export default {
   data() {
     return {
       months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
-      speed: 0,
-      mousePosition: {
-        x: -1,
-        y: -1
-      },
+      mousePositionY: 0.5,
       showcaseLookedAt: false,
       showcaseInterval: "",
-      showcaseHeight: 0
+      showcaseScrollY: 0
     }
   },
   computed: {
+    showcaseImageTransform() {
+      return "translateY(" + this.showcaseScrollY + "px)"
+    },
     detailPage() {
       return "/portfolio/" + this.portfolioItem.slug
     },
@@ -48,48 +47,40 @@ export default {
     showcaseHeightSet() {
       return this.$refs.showcaseHeightSet
     },
-    showcaseImageStyleObject() {
-      return {
-        "will-change": this.showcaseLookedAt ? "transform" : "auto"
-      }
-    },
     showcaseImageRoute() {
-      return this.showcaseHeightSet.offsetHeight - this.showcaseImage.offsetHeight
+      return Math.min(this.showcaseHeightSet.getBoundingClientRect().height - this.showcaseImage.getBoundingClientRect().height + 0.3, 0)
     },
     month() {
       const date = new Date(this.portfolioItem.date)
       return this.months[date.getMonth()] + " " + date.getFullYear()
-    }
+    },
+    speed() {
+      if (this.mousePositionY >= 0.45 && this.mousePositionY <= 0.55) {
+        return 0
+      } else {
+        return -10 * (this.mousePositionY - 0.5)
+      }
+    },
   },
   watch: {
     showcaseLookedAt: function(newValue, oldValue) {
       if (newValue === true) {
-        this.showcaseInterval = setInterval(this.moveImage, 16)
+        if (this.showcaseInterval === "") this.showcaseInterval = setInterval(this.moveImage, 16)
       } else {
         clearInterval(this.showcaseInterval)
+        this.showcaseInterval = ""
       }
     }
   },
   methods: {
     updateMousePosition(event) {
       const rect = this.showcase.getBoundingClientRect()
-      const x = event.clientX - rect.left
       const y = event.clientY - rect.top
-      const xProportion = x / rect.width
       const yProportion = y / rect.height
-      this.mousePosition = { x: xProportion, y: yProportion }
-    },
-    updateSpeed() {
-      let pos = this.mousePosition
-      if (pos.y >= 0.45 && pos.y <= 0.55) {
-        this.speed = 0
-      } else {
-        this.speed = -10 * (pos.y - 0.5)
-      }
+      this.mousePositionY = yProportion
     },
     mousemove(event) {
       this.updateMousePosition(event)
-      this.updateSpeed()
     },
     mouseover(event) {
       this.showcaseLookedAt = true
@@ -98,34 +89,15 @@ export default {
       this.showcaseLookedAt = false
     },
     moveImage() {
-      if (this.showcaseImage === null) { return }
-
-      function getTranslateY(obj) {
-        const st = window.getComputedStyle(obj, null)
-        const tr = st.getPropertyValue('-webkit-transform') ||
-          st.getPropertyValue('-moz-transform') ||
-          st.getPropertyValue('-ms-transform') ||
-          st.getPropertyValue('-o-transform') ||
-          st.getPropertyValue('transform') ||
-          'fail...'
-        let values = tr.split('(')[1]
-        values = values.split(')')[0]
-        values = values.split(',')
-        return parseFloat(values[5])
-      }
-      const newPosition = getTranslateY(this.showcaseImage) + this.speed
-      // check if it is allowed to move up or down and move it
+      const newPosition = this.showcaseScrollY + this.speed
       if (newPosition > 0) {
-        this.showcaseImage.style.transform = 'translateY(0)'
-      } else if (newPosition < this.showcaseImageRoute) {
-        this.showcaseImage.style.transform = 'translateY(' + this.showcaseImageRoute + 'px)'
+        this.showcaseScrollY = 0
+      } else if (newPosition <= this.showcaseImageRoute) {
+        this.showcaseScrollY = this.showcaseImageRoute
       } else {
-        this.showcaseImage.style.transform = 'translateY(' + newPosition + 'px)'
+        this.showcaseScrollY = newPosition
       }
     }
-  },
-  mounted() {
-    window.addEventListener('load', (event) => { this.showcaseHeight = this.showcase.offsetHeight + this.showcaseHeightSet.offsetHeight + "px" })
   }
 }
 
@@ -137,9 +109,7 @@ export default {
   display: block;
   box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
   overflow: hidden;
-  transition: height 0.6s;
   box-sizing: content-box;
-  height: 0;
 
   &>img {
     display: block;
@@ -165,6 +135,7 @@ export default {
     display: block;
     opacity: 0;
     width: 100%;
+
     img {
       display: block;
     }

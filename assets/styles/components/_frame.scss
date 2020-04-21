@@ -9,7 +9,7 @@
     @extend .content;
     padding: 2rem 1rem;
   }
-  &--img {
+  &--img, img {
     display: block;
     img {
       display: block;
