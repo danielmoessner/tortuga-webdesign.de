@@ -11,7 +11,7 @@ collections:
     format: 'json'
     folder: 'assets/content/blog'
     create: true
-    slug: '{{ fields.title }}'
+    slug: '{{title}}'
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: 'Title', name: 'title', widget: 'string' }
