@@ -2,5 +2,13 @@
   "date": "2020-04-17T11:49:52.834Z",
   "title": "test",
   "description": "test",
-  "body": "test"
+  "body": "test\n\nfdsf\nsfddsaf\n\n\n#sdfdsafdsa\n#sdfdsa#fdsaf#dsafdsafsaffsafs\n\n###sdfdsafsada\n\nsaffsa",
+  "image": "/img/process.1200.opt.jpg",
+  "tags": [
+    "CMS"
+  ],
+  "author": {
+    "name": "Daniel Mössner",
+    "image": "/img/daniel-moessner.120.opt.png"
+  }
 }
