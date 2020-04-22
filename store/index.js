@@ -28,6 +28,7 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
+    blogPosts = blogPosts.sort((firstPost, secondPost) => { return new Date(secondPost.date) - new Date(firstPost.date)})
     await commit('SET_BLOG_POSTS', blogPosts);
     let tagFiles = await require.context('~/assets/content/tag/', false, /\.json$/);
     let tags = tagFiles.keys().map(key => {

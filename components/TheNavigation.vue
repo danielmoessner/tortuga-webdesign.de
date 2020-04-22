@@ -22,9 +22,9 @@
           <nuxt-link class="navbar-item" to="/portfolio">
             Referenzen
           </nuxt-link>
-          <a class="navbar-item" href="/artikel">
+          <nuxt-link class="navbar-item" to="/blog">
             Artikel
-          </a>
+          </nuxt-link>
           <nuxt-link class="navbar-item" to="/kontakt">
             Kontakt
           </nuxt-link>
