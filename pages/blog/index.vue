@@ -1,7 +1,16 @@
 <template>
   <main>
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
-    
+    <section id="artikel">
+      <TheHeaderReflection />
+      <div id="start" class="container">
+        <div class="columns is-multiline">
+          <div class="column is-4" v-for="article in blogPosts" :key="article.slug">
+            <ArticleCard :article="article" />
+          </div>
+        </div>
+      </div>
+    </section>
     <TheFooter />
   </main>
 </template>
@@ -11,6 +20,7 @@ import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import CtaButton from "@/components/CtaButton.vue";
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
+import ArticleCard from "@/components/ArticleCard.vue";
 
 export default {
   components: {
@@ -18,7 +28,8 @@ export default {
     TheFooter,
     TheHeaderReflection,
     CtaButton,
-    PortfolioShowcase
+    PortfolioShowcase,
+    ArticleCard
   },
   data() {
     return {
@@ -28,20 +39,20 @@ export default {
     }
   },
   computed: {
-    
+
   },
   head() {
     return {
       title: this.page.title,
-      description: this.page.description
+      meta: [
+        { hid: "description", name: "description", content: this.page.description }
+      ]
     }
   },
-  mounted() {
-  }
+  mounted() {}
 }
 
 </script>
-<style lang="scss" scoped>
-
+<style lang="scss">
 
 </style>

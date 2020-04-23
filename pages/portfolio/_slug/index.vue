@@ -1,7 +1,7 @@
 <template>
   <main>
     <TheSubpageHeader :title="item.title" :subtitle="subtitle" :buttonText="buttonText" :buttonTarget="buttonTarget" :buttonHref="buttonHref" />
-    <section>
+    <section id="start">
       <TheHeaderReflection />
       <div class="container">
         <div class="columns is-multiline">
@@ -40,10 +40,6 @@ export default {
     TheSubpageHeader,
     TheHeaderReflection
   },
-  validate ({ params }) {
-    // Must be a number
-    return this.$store.state.portfolioPosts.filter(item => item.slug === params.slug).length() === 1
-  },
   data() {
     return {
       slug: this.$route.params.slug,
@@ -67,6 +63,14 @@ export default {
     itemUrlClean() {
       let url = this.item.url
       return url.replace('https://', '').replace('http://', '')
+    }
+  },
+  head() {
+    return {
+      title: this.item.title,
+      meta: [
+        { hid: "description", name: "description", content: this.item.description }
+      ]
     }
   }
 }

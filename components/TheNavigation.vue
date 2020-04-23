@@ -103,6 +103,15 @@ export default {
     background: hsl(278, 20%, 92%);
     color: initial;
   }
+  
+  a.navbar-item:focus {
+    background: transparent;
+    color: initial;
+  }
+
+  a.navbar-item.nuxt-link-active {
+    color: #43444a;
+  }
 
   .navbar-brand .navbar-item img {
     max-height: 2.6rem;

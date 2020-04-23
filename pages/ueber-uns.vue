@@ -2,7 +2,7 @@
   <main>
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
     <!-- intro section -->
-    <section class="small">
+    <section id="start" class="small">
       <TheHeaderReflection />
       <div class="container">
         <div class="header is-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
@@ -106,7 +106,9 @@ export default {
   head() {
     return {
       title: this.page.title,
-      description: this.page.description
+      meta: [
+        { hid: "description", name: "description", content: this.page.description }
+      ]
     }
   },
   mounted() {

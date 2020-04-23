@@ -3,7 +3,7 @@
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
     <section id="referenzen" style="min-height: 500px;">
       <TheHeaderReflection />
-      <div class="container">
+      <div id="start" class="container">
         <div class="portfolio" v-for="year in portfolioPostsByYearSortedKeys" :key="year">
           <div class="portfolio--year">{{ year }}</div>
           <div class="portfolio--grid">
@@ -56,7 +56,9 @@ export default {
   head() {
     return {
       title: this.page.title,
-      description: this.page.description
+      meta: [
+        { hid: "description", name: "description", content: this.page.description }
+      ]
     }
   }
 }

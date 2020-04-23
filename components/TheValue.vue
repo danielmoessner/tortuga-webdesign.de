@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="columns">
-        <ValueProposition v-for="(proposition, index) in value.propositions" :key="index" :proposition="proposition" :index="index" />
+        <ValueProposition v-for="(proposition, index) in value.propositions" :key="index" :proposition="proposition.proposition" :index="index" />
       </div>
     </div>
   </section>

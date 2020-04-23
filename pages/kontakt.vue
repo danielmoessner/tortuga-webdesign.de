@@ -3,8 +3,7 @@
     <TheSubpageHeader :title="header.title" :subtitle="header.subtitle" :buttonText="header.buttonText" />
     <section id="kontakt">
     	<TheHeaderReflection />
-      <div class="header-reflection"></div>
-      <div class="container">
+      <div id="start" class="container">
         <div class="columns is-gapless">
           <div class="column is-4">
             <div class="info-box">

@@ -29,7 +29,8 @@ export default {
       required: false
     },
     buttonHref: {
-      required: false
+      required: false,
+      default: "#start"
     },
     buttonText: {
       required: true
@@ -37,7 +38,7 @@ export default {
     buttonOnclick: {
       required: false
     },
-  }
+  },
 }
 
 </script>
