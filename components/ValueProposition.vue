@@ -1,10 +1,10 @@
 <template>
   <div class="column">
-    <div class="feature" data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
-      <span class="icon is-large has-text-dark" :style="{ marginLeft: proposition.icon.margin + 'px' }">
+    <div class="mb-10" data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
+      <span class="icon mb-10 is-large has-text-dark" :style="{ marginLeft: proposition.icon.margin + 'px' }">
         <FontAwesomeIcon :icon="[proposition.icon.type, proposition.icon.name]" size="3x" />
       </span>
-      <h3 class="title is-4">{{ proposition.title }}</h3>
+      <h3 class="title mb-05 is-4">{{ proposition.title }}</h3>
       <p>{{ proposition.text }}</p>
     </div>
   </div>
@@ -40,27 +40,13 @@ export default {
 }
 
 </script>
-
-
 <style lang="scss">
-  .feature {
-  .icon,
-  .title {
-    margin-bottom: 1em;
-  }
-  .title {
-    margin-bottom: 0.5em;
-  }
-  &.is-center {
-    .title,
-    p {
-      text-align: center;
-    }
-    .icon {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-    }
-  }
+.mb-10 {
+  margin-bottom: 1rem !important;
 }
+
+.mb-05 {
+  margin-bottom: 0.5rem !important;
+}
+
 </style>

@@ -91,19 +91,15 @@ export default {
 </script>
 <style lang="scss">
 .the-navigation.navbar {
-  
   width: 100%;
   transition: transform 0.6s, background-color 0.6s, opacity 0s;
+  background-color: $white;
 
-  // &.is-light {
-    background-color: $white;
-  // }
-  
   a.navbar-item:hover {
     background: hsl(278, 20%, 92%);
     color: initial;
   }
-  
+
   a.navbar-item:focus {
     background: transparent;
     color: initial;

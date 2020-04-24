@@ -48,6 +48,7 @@ header {
   background-size: cover;
   background-position: 50% 50%;
   padding: 14rem 0 10rem 0;
+  overflow-x: hidden;
 
   h1 {
     line-height: 1.25;
@@ -85,8 +86,6 @@ header {
   @include until($tablet) {
     padding: 7rem 0 4rem 0;
   }
-
-  overflow-x: hidden;
 }
 
 </style>

@@ -45,6 +45,12 @@ export default {
     'nuxt-purgecss'
   ],
   /*
+   ** Purgecss Config
+   */
+  purgecss: {
+    whitelist: ['aos-init', 'aos-animate']
+  },
+  /*
    ** Markdown Config
    ** See: https://github.com/markdown-it/markdown-it
    */
