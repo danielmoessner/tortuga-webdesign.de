@@ -24,7 +24,7 @@ export default {
    ** Global CSS
    */
   css: [
-    // { src: '~/assets/styles/main.scss', lang: 'scss' }
+    { src: 'aos/dist/aos.css', lang: 'scss' }
   ],
 
   /*
@@ -48,7 +48,6 @@ export default {
    ** Purgecss Config
    */
   purgecss: {
-    whitelist: ['aos-init', 'aos-animate']
   },
   /*
    ** Markdown Config
