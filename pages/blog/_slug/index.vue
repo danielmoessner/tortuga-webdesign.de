@@ -7,7 +7,7 @@
         <div class="columns is-multiline">
           <div class="column is-3 no-print" data-sticky-container>
             <sticky-info :darkTag="articleDate" :tags="article.tags" :title="article.title" :description="article.description">
-              <button class="sticky-info--button" onclick="window.print();return false;">Jetzt drucken</button>
+              <button class="button is-dark is-rounded is-outlined" onclick="window.print();return false;">Jetzt drucken</button>
             </sticky-info>
           </div>
           <div class="column is-9">

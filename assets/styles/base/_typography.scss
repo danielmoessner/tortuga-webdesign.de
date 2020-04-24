@@ -2,12 +2,6 @@
  * Basic typography style for copy text
  */
 
-body,
-input {
-  font-family: 'VisbyCF-Medium', Helvetica, Arial, Sans-Serif;
-  font-weight: normal !important;
-}
-
 strong,
 b {
   font-family: 'VisbyCF-Bold', Helvetica, Arial, Sans-Serif;
@@ -24,7 +18,12 @@ label {
   font-weight: normal !important;
 }
 
-address, button {
+body,
+address,
+button,
+textarea,
+select,
+input {
   font-family: 'VisbyCF-Medium', Helvetica, Arial, Sans-Serif;
   font-weight: normal !important;
   font-style: normal;

@@ -2,21 +2,21 @@
   <div>
     <TheSubpageHeader :title="header.title" :subtitle="header.subtitle" :buttonText="header.buttonText" />
     <section id="kontakt">
-    	<TheHeaderReflection />
+      <TheHeaderReflection />
       <div id="start" class="container">
         <div class="columns is-gapless">
           <div class="column is-4">
-            <div class="info-box">
-              <div class="info-box--content">
-                <h2 class="info-box--title">Hier finden Sie uns:</h2>
-                <address class="info-box--address">
+            <div class="info-box has-background-dark p-20">
+              <div class="content">
+                <h2 class="title is-3 has-text-white">Hier finden Sie uns:</h2>
+                <address class="info-box--address has-text-white">
                   <b>Tortuga Webdesign</b> <br>
                   Daniel Mössner <br>
                   Albert-Schweitzer-Str. 17b <br>
                   85375 Neufahrn b. Freising
                 </address>
-                <h2 class="info-box--title">Kontaktdaten:</h2>
-                <p class="info-box--text">
+                <h2 class="title is-3 has-text-white">Kontaktdaten:</h2>
+                <p class="has-text-white">
                   <a class="info-box--link" href="mailto:kontakt@tortuga-webdesign.de">kontakt@tortuga-webdesign.de</a><br>
                   <a class="info-box--link" href="tel:004917638385646">0176 38385646</a>
                 </p>
@@ -47,72 +47,72 @@
             </div>
           </div>
           <div class="column is-8">
-            <div class="contact-form">
+            <div class="has-background-white-ter p-20">
               <h2 class="title is-3">Kontaktaufnahme</h2>
               <form action="https://ex4d4.dmoe.tech/postforms/tortugawebdesignde/">
-                <div class="field">
-                  <label class="label">Vor- & Nachname</label>
+                <div class="field mb-0 pt-10">
+                  <label for="name" class="label">Vor- & Nachname</label>
                   <div class="control has-icons-left">
-                    <input class="input" type="text" name="name" placeholder="z.B. Max Müller">
+                    <input id="name" class="input" type="text" name="name" placeholder="z.B. Max Müller">
                     <span class="icon is-small is-left">
-                      <FontAwesomeIcon icon="user"/>
+                      <FontAwesomeIcon icon="user" />
                     </span>
                   </div>
                 </div>
-                <div class="columns">
-                  <div class="column is-6">
-                    <div class="field">
-                      <label class="label">Geschäftliche Email</label>
+                <div class="columns mb-0">
+                  <div class="column py-0 is-6">
+                    <div class="field mb-0 pt-10">
+                      <label class="label" for="mail">Geschäftliche Email</label>
                       <div class="control has-icons-left">
-                        <input class="input" type="email" name="email" placeholder="z.B. max@mustermann.de">
+                        <input id="mail" class="input" type="email" name="email" placeholder="z.B. max@mustermann.de">
                         <span class="icon is-small is-left">
-                          <FontAwesomeIcon icon="envelope"/>
+                          <FontAwesomeIcon icon="envelope" />
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div class="column is-6">
-                    <div class="field">
-                      <label class="label">Webseite (optional)</label>
+                  <div class="column py-0 is-6">
+                    <div class="field mb-0 pt-10">
+                      <label class="label" for="website">Webseite (optional)</label>
                       <div class="control has-icons-left">
-                        <input class="input" type="text" name="website" placeholder="z.B. www.mustermann.de">
+                        <input id="website" class="input" type="text" name="website" placeholder="z.B. www.mustermann.de">
                         <span class="icon is-small is-left">
-                          <FontAwesomeIcon icon="home"/>
+                          <FontAwesomeIcon icon="home" />
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="field">
-                  <label class="label">Weitere Projektdetails (optional)</label>
+                <div class="field mb-0 pt-10">
+                  <label class="label" for="message">Weitere Projektdetails (optional)</label>
                   <div class="control">
-                    <textarea class="textarea" name="message" placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."></textarea>
+                    <textarea id="message" class="textarea" name="message" placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."></textarea>
                   </div>
                 </div>
-                <div class="field">
+                <div class="field mb-0 pt-10">
                   <label class="label">Datenschutz</label>
                   <div class="control">
-                    <div class="checkbox">
-                      <input type="checkbox" class="contact-form--checkbox-input" name="dataprotection" required>
-                      <div>
+                    <div class="checkbox input">
+                      <input id="dataprotection" type="checkbox" class="contact-form--checkbox-input" name="dataprotection" required>
+                      <label for="dataprotection">
                         Ich habe die <a href="/datenschutz">Informationen zur Datenverarbeitung</a> zur Kenntnis genommen. Meine angegebenen Daten werden zum Zweck der Bearbeitung meiner Anfrage von Tortuga Webdesign gespeichert.
-                      </div>
+                      </label>
                     </div>
                   </div>
                 </div>
-                <div class="field is-grouped">
+                <div class="field mb-0 pt-10 is-grouped">
                   <div class="control">
                     <button class="button is-rounded is-primary">Absenden</button>
                   </div>
                 </div>
               </form>
-              <div class="contact-form--error-message">
-                <div class="contact-form--message-body">
+              <div class="message is-danger" style="display: none">
+                <div class="message-body">
                   Da ist leider ein Fehler passiert. Bitte probieren Sie es noch einmal oder schreiben Sie uns eine E-Mail. Bitte beachten Sie das kein HTML-Text in der Nachricht enthalten sein darf.
                 </div>
               </div>
-              <div class="contact-form--success-message">
-                <div class="contact-form--message-body">
+              <div class="message is-success" style="display: none">
+                <div class="message-body">
                   Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen melden.
                 </div>
               </div>
@@ -136,7 +136,10 @@ library.add(faHome, faEnvelope, faUser)
 
 export default {
   components: {
-    TheSubpageHeader, TheFooter, TheHeaderReflection, FontAwesomeIcon
+    TheSubpageHeader,
+    TheFooter,
+    TheHeaderReflection,
+    FontAwesomeIcon
   },
   data() {
     return {
@@ -161,110 +164,75 @@ export default {
     flex-direction: row-reverse;
   }
 }
-.input:focus,
-.textarea:focus,
-.select select:focus,
-.is-focused.input,
-.is-focused.textarea,
-.select select.is-focused,
-.input:active,
-.textarea:active,
-.select select:active,
-.is-active.input,
-.is-active.textarea,
-.select select.is-active {
-  border-color: lighten($color3, 50%);
-  box-shadow: 0 0 0 0.125em rgba(lighten($color3, 50%), 0.5);
+
+.pt-10 {
+  padding-top: 1rem !important;
+}
+
+.mt-10 {
+  margin-top: 1rem !important;
+}
+
+.mb-10 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 form {
-  .field.field {
-    margin-bottom: 1rem;
-  }
-  .columns.columns {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .column {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+
   .checkbox {
-    @extend .input;
+    display: flex;
+    height: auto;
+
     input {
       margin-right: 10px;
       margin-left: 8px;
     }
-    height: auto;
-    &:focus,
-    &:active {
-      border-color: lighten($color3, 50%);
-      box-shadow: none;
+
+    label {
+      cursor: pointer;
     }
   }
+
   .button {
     margin-top: 1.4rem;
   }
 }
 
-form .is-hovered.checkbox,
-.is-hovered.input,
-.is-hovered.textarea,
-.select select.is-hovered,
-.input:hover,
-form .checkbox:hover,
-.textarea:hover,
-.select select:hover {
-  border-color: lighten($color3, 50%);
+.p-20 {
+  padding: 2rem !important;
 }
 
-.contact-form {
-  @extend .has-background-white-ter;
-  padding: 2rem;
-  &--success-message {
-    display: none;
-    @extend .message;
-    @extend .is-success;
-  }
-  &--error-message {
-    display: none;
-    @extend .message;
-    @extend .is-danger;
-  }
-  &--message-body {
-    @extend .message-body;
-  }
-  &--checkbox-input {
-    min-width: 13px;
-  }
+.contact-form--checkbox-input {
+  min-width: 13px;
 }
+
 .info-box {
-  @extend .has-background-dark;
   display: flex;
   padding: 2rem;
   font-size: 1.2rem;
   position: sticky;
   top: 80px;
-  &--content {
-    @extend .content;
-  }
-  &--title {
-    @extend .title;
-    @extend .is-3;
-    @extend .has-text-white;
-  }
+
   &--address {
-    @extend .has-text-white;
     font-style: normal;
   }
-  &--text {
-    @extend .has-text-white;
-  }
+
   &--link {
     color: $light;
+
     &:hover {
       color: $grey-light;
     }
   }
 }
+
 </style>

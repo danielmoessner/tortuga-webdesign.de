@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="columns">
-        <PlanStep v-for="(step, index) in plan.steps" :step="step" :key="index" :index="index" />
+        <PlanStep v-for="(step, index) in plan.steps" :step="step.step" :key="index" :index="index" />
       </div>
       <br>
       <br>
