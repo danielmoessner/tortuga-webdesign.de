@@ -1,31 +1,31 @@
 <template>
-  <div class="article">
+  <div class="article card is-hoverable">
     <nuxt-link :to="articleLink" class="article--hover">
-      <div class="article--image">
-        <figure class="article--figure">
+      <div class="card-image">
+        <figure class="is-5by3 image">
           <img :src="article.image" alt="Artikel Hauptbild">
         </figure>
       </div>
     </nuxt-link>
-    <div class="article--bottom">
-      <div class="article--content">
+    <div class="article--bottom card-content">
+      <div class="mb-18">
         <nuxt-link :to="articleLink" class="article--hover">
-          <h2 class="article--title">{{ article.title }}</h2>
+          <h2 class="title is-3 mb-10">{{ article.title }}</h2>
         </nuxt-link>
         <nuxt-link :to="articleLink" class="article--hover">
           {{ article.description }}
         </nuxt-link>
         <span v-for="(tag, index) in article.tags" :key="index">#{{ tag }}</span>
       </div>
-      <div class="article--author">
-        <div class="article--author-image">
-          <figure class="article--author-figure">
+      <div class="media">
+        <div class="media-left">
+          <figure class="article--author-figure is-48x48 image">
             <img :src="article.author.image" alt="Author Bild">
           </figure>
         </div>
-        <div class="article--author-content">
-          <p class="article--author-name">{{ article.author.name }}</p>
-          <time class="article--date" :datetime="article.date">{{ articleDate }}</time>
+        <div class="media-content">
+          <p class="title is-5">{{ article.author.name }}</p>
+          <time class="subtitle is-6 is-block" :datetime="article.date">{{ articleDate }}</time>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
     }
   },
   data() {
-    return { 
+    return {
       months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
     }
   },
@@ -56,71 +56,46 @@ export default {
 }
 
 </script>
+<style lang="scss">
+.mb-10 {
+  margin-bottom: 1.0rem;
+}
 
-<style lang="scss"> 
+.mb-18 {
+  margin-bottom: 1.8rem;
+}
+
 .article {
-  @extend .card;
-  @extend .is-hoverable;
   height: 100%;
   display: flex;
   flex-direction: column;
-  &--image {
-    @extend .card-image;
-  }
-  &--title {
-    @extend .title;
-    @extend .is-3;
-    margin-bottom: 1rem;
-  }
-  &--content {
-    margin-bottom: 1.8rem;
-  }
+
   &--bottom {
-    @extend .card-content;
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
   }
-  &--figure {
-    @extend .image;
-    @extend .is-5by3;
-  }
+
   &--hover {
     display: block;
     color: $dark;
+
     &:hover {
       * {
         color: $black;
       }
     }
   }
-  &--author {
-    @extend .media;
-  }
-  &--author-image {
-    @extend .media-left;
-  }
+
   &--author-figure {
-    @extend .is-48x48;
-    @extend .image;
     border-radius: 100%;
     overflow: hidden;
   }
-  &--author-content {
-    @extend .media-content;
-  }
-  &--author-name {
-    @extend .title;
-    @extend .is-5;
-  }
-  &--date {
-    @extend .subtitle;
-    @extend .is-6;
-    @extend .is-block;
-  }
+
   &:hover {
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5), 0 0 0 1px rgba(10, 10, 10, 0.02);
   }
 }
+
 </style>

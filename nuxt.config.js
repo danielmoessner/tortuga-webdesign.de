@@ -53,16 +53,26 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: true,
-    // use: [
-    //   'markdown-it-div',
-    //   'markdown-it-attrs'
-    // ]
   },
   /*
    ** Build configuration
    */
   build: {
-    extractCSS: true,
+    extractCSS: {
+      optimization: {
+        splitChunks: {
+          layouts: true,
+          cacheGroups: {
+            styles: {
+              name: 'styles',
+              test: /\.(css|vue)$/,
+              chunks: 'all',
+              enforce: true
+            }
+          }
+        }
+      }
+    },
     postcss: {
       preset: {
         features: {

@@ -50,7 +50,7 @@ export default {
 }
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 #header-cta-button {
   margin-right: .25rem;
 }

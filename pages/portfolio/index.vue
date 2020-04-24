@@ -64,15 +64,22 @@ export default {
 }
 
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .portfolio {
   margin-bottom: 8rem;
-
   &--grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-gap: 8rem;
     gap: 8rem;
+
+    @include from($tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include from($desktop) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   &--year {
@@ -80,13 +87,6 @@ export default {
     font-size: 2.6rem;
   }
 
-  @include until($tablet) {
-    &--item {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 3.2rem;
-    }
-  }
 }
 
 </style>

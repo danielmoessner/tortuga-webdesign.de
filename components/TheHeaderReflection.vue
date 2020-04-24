@@ -24,7 +24,7 @@ export default {
 }
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .header-reflection {
   position: absolute;
   top: 0;

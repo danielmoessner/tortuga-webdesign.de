@@ -5,23 +5,15 @@
       <TheHeaderReflection />
       <div class="container">
         <div class="columns is-multiline">
-          <div class="column is-3" data-sticky-container>
-            <div class="sticky-info">
-              <div data-aos="fade-up" data-aos-duration="600">
-                <div class="tags">
-                  <span class="tag is-dark">{{ itemDate }}</span>
-                  <span v-for="(tag, index) in item.tags" :key="index" class="tag is-light">{{ tag }}</span>
-                </div>
-                <h2 class="sticky-info--title">{{ itemUrlClean }}</h2>
-                <p class="sticky-info--text">{{ item.description }}</p>
-                <a :href="item.url" target="_blank" class="sticky-info--button">Die Webseite besuchen</a>
-              </div>
-            </div>
+          <div class="column is-3">
+            <sticky-info :darkTag="itemDate" :tags="item.tags" :title="itemUrlClean" :description="item.description">
+              <a :href="item.url" target="_blank" class="button is-dark is-rounded is-outlined">Die Webseite besuchen</a>
+            </sticky-info>
           </div>
           <div class="column is-9">
-            <div class="frame">
+            <base-frame>
               <img :src="item.image" :alt="item.title">
-            </div>
+            </base-frame>
           </div>
           <div class="column is-12">
             <nuxt-link to="/portfolio" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Referenzen</nuxt-link>
@@ -34,11 +26,15 @@
 <script>
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import StickyInfo from "@/components/StickyInfo.vue";
+import BaseFrame from "@/components/BaseFrame.vue"
 
 export default {
   components: {
     TheSubpageHeader,
-    TheHeaderReflection
+    TheHeaderReflection,
+    StickyInfo,
+    BaseFrame
   },
   data() {
     return {
@@ -76,41 +72,3 @@ export default {
 }
 
 </script>
-<style lang="scss">
-.frame {
-  border: 5px solid $dark;
-  position: relative;
-  display: block;
-  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
-  margin-bottom: 6rem;
-  overflow: hidden;
-
-  img {
-    display: block;
-  }
-
-}
-.sticky-info {
-  position: sticky;
-  top: 100px;
-  &--title {
-    @extend .title;
-    @extend .is-3;
-    &.sticky-info--title {
-      margin-bottom: 0.4rem;
-    }
-  }
-  &--text {
-    margin-bottom: 2rem;
-  }
-  &--button {
-    @extend .button;
-    @extend .is-dark;
-    @extend .is-rounded;
-    @extend .is-outlined;
-  }
-  @include until($tablet) {
-    margin-bottom: 2.6rem;
-  }
-}
-</style>

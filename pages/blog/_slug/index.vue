@@ -6,26 +6,16 @@
       <div class="container">
         <div class="columns is-multiline">
           <div class="column is-3 no-print" data-sticky-container>
-            <div class="sticky-info">
-              <div data-aos="fade-up" data-aos-duration="600">
-                <div class="tags">
-                  <span class="tag is-dark">{{ articleDate }}</span>
-                  <span class="tag is-light" v-for="(tag, index) in article.tags" :key="index">#{{ tag }}</span>
-                </div>
-                <h2 class="sticky-info--title">
-                  {{ article.title }}
-                </h2>
-                <p class="sticky-info--text">{{ article.description }}</p>
-                <button class="sticky-info--button" onclick="window.print();return false;">Jetzt drucken</button>
-              </div>
-            </div>
+            <sticky-info :darkTag="articleDate" :tags="article.tags" :title="article.title" :description="article.description">
+              <button class="sticky-info--button" onclick="window.print();return false;">Jetzt drucken</button>
+            </sticky-info>
           </div>
           <div class="column is-9">
-            <div class="frame print-area">
+            <base-frame class="print-area">
               <img :src="article.image" alt="Artikelbild">
-              <article v-html="$md.render(article.body)" class="frame--content content">
+              <article v-html="$md.render(article.body)" class="px-20 py-10 content">
               </article>
-            </div>
+            </base-frame>
           </div>
           <div class="column is-12 no-print">
             <nuxt-link to="/blog" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Artikeln</nuxt-link>
@@ -38,11 +28,15 @@
 <script>
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import BaseFrame from "@/components/BaseFrame.vue"
+import StickyInfo from "@/components/StickyInfo.vue"
 
 export default {
   components: {
+    StickyInfo,
     TheSubpageHeader,
-    TheHeaderReflection
+    TheHeaderReflection,
+    BaseFrame
   },
   data() {
     return {
@@ -74,22 +68,14 @@ export default {
 
 </script>
 <style lang="scss">
-.frame {
-  border: 5px solid $dark;
-  position: relative;
-  display: block;
-  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
-  margin-bottom: 6rem;
-  overflow: hidden;
+.px-20 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 
-  &--content {
-    padding: 2rem 1rem;
-  }
-
-  img {
-    display: block;
-  }
-
+.py-10 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media print {
@@ -101,41 +87,19 @@ export default {
   }
 
   .print-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 9999;
-    background-color: #ffffff;
-    box-shadow: none;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: none !important;
   }
 
   .no-print {
     display: none !important;
   }
 }
-.sticky-info {
-  position: sticky;
-  top: 100px;
-  &--title {
-    @extend .title;
-    @extend .is-3;
-    &.sticky-info--title {
-      margin-bottom: 0.4rem;
-    }
-  }
-  &--text {
-    margin-bottom: 2rem;
-  }
-  &--button {
-    @extend .button;
-    @extend .is-dark;
-    @extend .is-rounded;
-    @extend .is-outlined;
-  }
-  @include until($tablet) {
-    margin-bottom: 2.6rem;
-  }
-}
+
 </style>
