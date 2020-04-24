@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns is-multiline">
         <div class="column is-6-desktop is-12-tablet">
-          <div class="animated fadeIn">
+          <div class="">
             <h1 class="title is-2 has-text-dark" data-aos="fade-up" data-aos-duration="600">
               {{ header.title }}
             </h1>

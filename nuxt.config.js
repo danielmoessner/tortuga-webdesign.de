@@ -24,7 +24,7 @@ export default {
    ** Global CSS
    */
   css: [
-    { src: 'aos/dist/aos.css', lang: 'scss' }
+    // { src: 'aos/dist/aos.css', lang: 'scss' }
   ],
 
   /*
