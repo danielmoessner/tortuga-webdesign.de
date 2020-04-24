@@ -3,11 +3,11 @@
     <div class="column is-5" :class="offsetPage">
       <div class="work">
         <div class="work--page" @mouseover="mouseover" @mouseleave="mouseleave">
-          <div class="work--hover-info" :class="{ 'is-visibility-hidden': isScrollable }">
+          <div class="work--hover-info" :class="{ 'is-invisible': isScrollable }">
             <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
           </div>
           <div class="work--image-div" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-            <img :src="work.image" :alt="work.title">
+            <img :src="work.image500" :alt="work.title">
           </div>
         </div>
       </div>
@@ -140,6 +140,7 @@ export default {
 
     img {
       display: block;
+      width: 100%;
     }
 
     &::-webkit-scrollbar {
@@ -174,5 +175,12 @@ export default {
     }
   }
 }
+
+@include until($tablet) {
+  .work--hover-info {
+    display: none;
+  }
+}
+  
 
 </style>

@@ -68,7 +68,11 @@
                   <div class="faq--question-title">
                     {{ item.question }}
                   </div>
-                  <div class="faq--icon"><span class="icon has-text-primary"><i class="fas fa-angle-down"></i></span></div>
+                  <div class="faq--icon">
+                    <span class="icon has-text-primary">
+                      <FontAwesomeIcon icon="angle-down" />
+                    </span>
+                  </div>
                 </div>
                 <div class="faq--answer">
                   <div class="faq--answer-text">
@@ -89,13 +93,18 @@ import TheSubpageHeader from "../components/TheSubpageHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
 import CtaButton from "@/components/CtaButton.vue";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+library.add(faAngleDown)
 
 export default {
   components: {
     TheSubpageHeader,
     TheFooter,
     TheHeaderReflection,
-    CtaButton
+    CtaButton,
+    FontAwesomeIcon
   },
   data() {
     return {
@@ -125,3 +134,61 @@ export default {
 }
 
 </script>
+
+
+<style lang="scss">
+#ueber-uns {
+    img {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    @include until($tablet) {
+      .columns {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  .icons-box {
+  .fa-stack i:nth-child(2) {
+    margin-left: 3px;
+  }
+  .icon {
+    margin-right: 0.3rem;
+  }
+  a {
+    color: $dark;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.faq {
+  @extend .card;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  &--question {
+    @extend .card-header;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &--question-title {
+    @extend .card-header-title;
+  }
+  &--icon {
+    @extend .card-header-icon;
+  }
+  &--answer {
+    height: 0;
+  }
+  &--answer-text {
+    @extend .card-content;
+  }
+  &.is-active {
+    .faq--icon {
+      transform: scaleY(-1);
+    }
+  }
+}
+</style>

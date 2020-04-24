@@ -20,21 +20,15 @@
           </div>
         </div>
         <div class="column is-6-desktop is-12-tablet">
-          <picture id="laptop">
-            <!-- <source srcset="../assets/images/laptop.webp" type="image/webp">
-            <source srcset="../assets/images/laptop.png" type="image/png"> -->
-            <img src="../assets/images/laptop.png" alt="Laptop">
-          </picture>
-          <picture id="iphone-1">
-            <!-- <source srcset="../assets/images/iphone-back.webp" type="image/webp">
-            <source srcset="../assets/images/iphone-back.png" type="image/png"> -->
-            <img src="../assets/images/iphone-back.png" alt="iPhone">
-          </picture>
-          <picture id="iphone-2">
-            <!-- <source srcset="../assets/images/iphone.webp" type="image/webp">
-            <source srcset="../assets/images/iphone.png" type="image/png"> -->
-            <img src="../assets/images/iphone.png" alt="iPhone">
-          </picture>
+          <div id="laptop">
+            <!-- <img src="../assets/images/laptop.png" alt="Laptop"> -->
+          </div>
+          <div id="iphone-1">
+            <!-- <img src="../assets/images/iphone-back.png" alt="iPhone"> -->
+          </div>
+          <div id="iphone-2">
+            <!-- <img src="../assets/images/iphone.png" alt="iPhone"> -->
+          </div>
         </div>
       </div>
     </div>

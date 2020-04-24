@@ -40,3 +40,27 @@ export default {
 }
 
 </script>
+
+
+<style lang="scss">
+  .feature {
+  .icon,
+  .title {
+    margin-bottom: 1em;
+  }
+  .title {
+    margin-bottom: 0.5em;
+  }
+  &.is-center {
+    .title,
+    p {
+      text-align: center;
+    }
+    .icon {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+}
+</style>

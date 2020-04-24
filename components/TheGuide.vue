@@ -22,14 +22,12 @@
 </template>
 <script>
 import CtaButton from "../components/CtaButton.vue";
-import BaseDivider from "../components/BaseDivider.vue";
 import IndexPortfolioPost from "../components/IndexPortfolioPost.vue";
 
 export default {
   name: "TheGuide",
   components: {
     CtaButton,
-    BaseDivider,
     IndexPortfolioPost
   },
   data() {

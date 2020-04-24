@@ -5,6 +5,9 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'de',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -38,7 +41,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'nuxt-purgecss'
   ],
   /*
    ** Markdown Config
@@ -58,11 +62,13 @@ export default {
    ** Build configuration
    */
   build: {
+    extractCSS: true,
     postcss: {
       preset: {
         features: {
           customProperties: false
-        }
+        },
+        plugins: []
       }
     },
     loaders: {

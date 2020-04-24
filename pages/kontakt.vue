@@ -55,7 +55,7 @@
                   <div class="control has-icons-left">
                     <input class="input" type="text" name="name" placeholder="z.B. Max Müller">
                     <span class="icon is-small is-left">
-                      <i class="fas fa-user"></i>
+                      <FontAwesomeIcon icon="user"/>
                     </span>
                   </div>
                 </div>
@@ -66,7 +66,7 @@
                       <div class="control has-icons-left">
                         <input class="input" type="email" name="email" placeholder="z.B. max@mustermann.de">
                         <span class="icon is-small is-left">
-                          <i class="fas fa-envelope"></i>
+                          <FontAwesomeIcon icon="envelope"/>
                         </span>
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                       <div class="control has-icons-left">
                         <input class="input" type="text" name="website" placeholder="z.B. www.mustermann.de">
                         <span class="icon is-small is-left">
-                          <i class="fas fa-home"></i>
+                          <FontAwesomeIcon icon="home"/>
                         </span>
                       </div>
                     </div>
@@ -129,10 +129,14 @@
 import TheSubpageHeader from "../components/TheSubpageHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faHome, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
+library.add(faHome, faEnvelope, faUser)
 
 export default {
   components: {
-    TheSubpageHeader, TheFooter, TheHeaderReflection
+    TheSubpageHeader, TheFooter, TheHeaderReflection, FontAwesomeIcon
   },
   data() {
     return {
@@ -151,11 +155,116 @@ export default {
 }
 
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 #kontakt {
   .columns:nth-child(1) {
     flex-direction: row-reverse;
   }
 }
+.input:focus,
+.textarea:focus,
+.select select:focus,
+.is-focused.input,
+.is-focused.textarea,
+.select select.is-focused,
+.input:active,
+.textarea:active,
+.select select:active,
+.is-active.input,
+.is-active.textarea,
+.select select.is-active {
+  border-color: lighten($color3, 50%);
+  box-shadow: 0 0 0 0.125em rgba(lighten($color3, 50%), 0.5);
+}
 
+form {
+  .field.field {
+    margin-bottom: 1rem;
+  }
+  .columns.columns {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .checkbox {
+    @extend .input;
+    input {
+      margin-right: 10px;
+      margin-left: 8px;
+    }
+    height: auto;
+    &:focus,
+    &:active {
+      border-color: lighten($color3, 50%);
+      box-shadow: none;
+    }
+  }
+  .button {
+    margin-top: 1.4rem;
+  }
+}
+
+form .is-hovered.checkbox,
+.is-hovered.input,
+.is-hovered.textarea,
+.select select.is-hovered,
+.input:hover,
+form .checkbox:hover,
+.textarea:hover,
+.select select:hover {
+  border-color: lighten($color3, 50%);
+}
+
+.contact-form {
+  @extend .has-background-white-ter;
+  padding: 2rem;
+  &--success-message {
+    display: none;
+    @extend .message;
+    @extend .is-success;
+  }
+  &--error-message {
+    display: none;
+    @extend .message;
+    @extend .is-danger;
+  }
+  &--message-body {
+    @extend .message-body;
+  }
+  &--checkbox-input {
+    min-width: 13px;
+  }
+}
+.info-box {
+  @extend .has-background-dark;
+  display: flex;
+  padding: 2rem;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 80px;
+  &--content {
+    @extend .content;
+  }
+  &--title {
+    @extend .title;
+    @extend .is-3;
+    @extend .has-text-white;
+  }
+  &--address {
+    @extend .has-text-white;
+    font-style: normal;
+  }
+  &--text {
+    @extend .has-text-white;
+  }
+  &--link {
+    color: $light;
+    &:hover {
+      color: $grey-light;
+    }
+  }
+}
 </style>

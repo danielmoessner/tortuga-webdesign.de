@@ -11,14 +11,14 @@
         <div class="column">
           <div>
             <h3>Navigation</h3>
-            <ul>
-              <li><a href="/">Startseite</a></li>
-              <li><a href="/ueber-uns">Über uns</a></li>
-              <li><a href="/referenzen">Referenzen</a></li>
-              <li><a href="/artikel">Artikel</a></li>
-              <li><a href="/kontakt">Kontakt</a></li>
+            <ul class="footer-ul">
+              <li><nuxt-link to="/">Startseite</nuxt-link></li>
+              <li><nuxt-link to="/ueber-uns">Über uns</nuxt-link></li>
+              <li><nuxt-link to="/portfolio">Referenzen</nuxt-link></li>
+              <li><nuxt-link to="/blog">Artikel</nuxt-link></li>
+              <li><nuxt-link to="/kontakt">Kontakt</nuxt-link></li>
               <li>
-                <ul>
+                <ul class="footer-ul">
                   <h4>Leistungen (demnächst aktiv)</h4>
                   <li><a>Webdesign</a></li>
                   <li><a>Google Ads</a></li>
@@ -59,9 +59,24 @@ export default {
 }
 
 </script>
-
 <style lang="scss">
-  .footer {
-    margin-top: 12vh;
+iframe {
+  margin-bottom: -6px;
+}
+
+.footer {
+  margin-top: 12vh;
+
+  img {
+    max-height: 3em;
+    margin-bottom: 1em;
   }
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+}
+li > .footer-ul li {
+  margin-left: 1em;
+}
 </style>

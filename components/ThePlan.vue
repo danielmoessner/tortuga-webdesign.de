@@ -19,7 +19,7 @@
       <br>
       <br>
       <br>
-      <p class="has-text-center" data-aos="fade-up" data-aos-delay="200">{{ plan.bottom }}</p>
+      <p class="has-text-centered" data-aos="fade-up" data-aos-delay="200">{{ plan.bottom }}</p>
     </div>
   </section>
 </template>

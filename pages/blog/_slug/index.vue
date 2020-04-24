@@ -115,5 +115,27 @@ export default {
     display: none !important;
   }
 }
-
+.sticky-info {
+  position: sticky;
+  top: 100px;
+  &--title {
+    @extend .title;
+    @extend .is-3;
+    &.sticky-info--title {
+      margin-bottom: 0.4rem;
+    }
+  }
+  &--text {
+    margin-bottom: 2rem;
+  }
+  &--button {
+    @extend .button;
+    @extend .is-dark;
+    @extend .is-rounded;
+    @extend .is-outlined;
+  }
+  @include until($tablet) {
+    margin-bottom: 2.6rem;
+  }
+}
 </style>

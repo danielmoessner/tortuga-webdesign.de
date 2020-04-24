@@ -2,28 +2,28 @@
 
 // 1. Configuration and helpers
 @import
-  "./abstracts/_variables.scss",
-  "./abstracts/functions",
-  "./abstracts/mixins";
+  "./abstracts/variables";
+  // "./abstracts/functions",
+  // "./abstracts/mixins";
 
 // 2. Vendors
 @import
-  "vendors/bulma",
-  "vendors/fontawesome",
+  "vendors/bulma";
+  // "vendors/fontawesome",
   // "vendors/aos",
-  "vendors/cookieconsent";
+  // "vendors/cookieconsent";
 
 // 3. Base stuff
 @import
-  "base/base",
+  // "base/base",
   "base/fonts",
-  "base/typography",
-  "base/helpers";
+  "base/typography";
+  // "base/helpers";
 
 // 4. Layout-related sections
 @import
   // "layout/header",
-  "layout/footer",
+  // "layout/footer",
   "layout/section";
 // "layout/scrollbar"; disabled because buggy
 
@@ -31,33 +31,33 @@
 @import
   // "components/button",
   // "components/navigation",
-  "components/ul",
-  "components/dropdown",
+  // "components/ul",
+  // "components/dropdown",
   // "components/divider",
-  "components/grid",
-  "components/box",
-  "components/feature",
-  "components/work",
-  "components/title",
-  "components/form",
-  "components/container",
+  // "components/grid",
+  // "components/box",
+  // "components/feature",
+  // "components/work",
+  // "components/title",
+  // "components/form",
+  "components/container";
   // "components/showcase",
-  "components/article",
-  "components/sticky-info",
+  // "components/article",
+  // "components/sticky-info",
   // "components/frame",
-  "components/faq",
+  // "components/faq",
   // "components/portfolio",
-  "components/info-box",
-  "components/contact-form";
+  // "components/info-box";
+  // "components/contact-form";
 
 // 6. Page-specific styles
-@import
-  "pages/home",
-  "pages/contact",
-  "pages/portfolio",
-  "pages/article",
-  "pages/about";
+// @import
+//   "pages/home",
+//   "pages/contact",
+//   "pages/portfolio",
+//   "pages/article",
+//   "pages/about";
 
 // 7. Themes
-@import
-  "themes/default";
+// @import
+//   "themes/default";
