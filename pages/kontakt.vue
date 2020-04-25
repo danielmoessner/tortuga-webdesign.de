@@ -137,7 +137,7 @@ export default {
   },
   data() {
     return {
-      page: this.$store.state.pages.home,
+      page: this.$store.state.pages.contact,
       buttonText: "Jetzt loslegen"
     }
   },
