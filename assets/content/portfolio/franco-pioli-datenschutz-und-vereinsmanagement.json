@@ -5,7 +5,8 @@
   "title": "Franco Pioli - Datenschutz und Vereinsmanagement",
   "tags": [
     "Django",
-    "CMS"
+    "CMS",
+    "Tailwind CSS"
   ],
   "image500": "/img/datenschutz-und-vereinsmanagement.500x.jpg",
   "image": "/img/datenschutz-und-vereinsmanagement.1500x.jpg",
