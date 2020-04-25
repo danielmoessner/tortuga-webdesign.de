@@ -62,17 +62,19 @@ export default {
   watch: {
     scrollTop: function(newValue, oldValue) {
       this.lastScrollTop = oldValue
-      if (newValue <= 50) {
+      if (newValue <= 1) {
         this.isTop = true
       } else if (newValue > 200 && this.isTop) {
         this.isInvisible = true
         this.isTop = false
       }
-      if (newValue > oldValue) {
-        this.isOut = true
-      } else {
-        this.isInvisible = false
-        this.isOut = false
+      if (newValue > 1) {
+        if (newValue > oldValue) {
+          this.isOut = true
+        } else {
+          this.isInvisible = false
+          this.isOut = false
+        }
       }
     }
   },
