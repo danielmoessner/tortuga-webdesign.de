@@ -57,7 +57,7 @@ export default {
   methods: {
     nuxtLinkClicked() {
       console.log('nuxt clicked')
-    }
+    } 
   },
   watch: {
     scrollTop: function(newValue, oldValue) {
