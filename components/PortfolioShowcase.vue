@@ -133,7 +133,7 @@ export default {
 
   &--height-set {
     display: block;
-    opacity: 0;
+    // opacity: 0;
     width: 100%;
 
     img {

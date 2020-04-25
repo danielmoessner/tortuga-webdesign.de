@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheSubpageHeader :title="header.title" :subtitle="header.subtitle" :buttonText="header.buttonText" />
+    <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
     <section id="kontakt">
       <TheHeaderReflection />
       <div id="start" class="container">
@@ -21,35 +21,27 @@
                   <a class="info-box--link" href="tel:004917638385646">0176 38385646</a>
                 </p>
                 <br>
-                <!-- <div class="icons-box">
-                <a class="icon-link" href="https://www.instagram.com/tortugawebdesign/" target="_blank">
-                  <span class="icon is-medium">
-                    <span class="fa-stack">
-                      <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                      <i class="fab fa-instagram fa-stack-1x"></i>
-                    </span>
-                  </span>
-                </a>
-                <span class="icon is-medium">
-                  <span class="fa-stack">
-                    <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                    <i class="fab fa-xing fa-stack-1x"></i>
-                  </span>
-                </span>
-                <span class="icon is-medium">
-                  <span class="fa-stack">
-                    <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                  </span>
-                </span>
-              </div> -->
+                <div class="icons-box">
+                  <a class="icon-link" href="https://www.instagram.com/tortugawebdesign/" target="_blank">
+                    <font-awesome-layers class="fa-2x">
+                      <FontAwesomeIcon icon="circle" inverse />
+                      <FontAwesomeIcon :icon="['fab', 'instagram']" transform="shrink-6" />
+                    </font-awesome-layers>
+                  </a>
+                  <a class="icon-link" href="https://www.linkedin.com/in/danielmoessner/" target="_blank">
+                    <font-awesome-layers class="fa-2x">
+                      <FontAwesomeIcon icon="circle" inverse />
+                      <FontAwesomeIcon :icon="['fab', 'linkedin-in']" transform="shrink-7" />
+                    </font-awesome-layers>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="column is-8">
             <div class="has-background-white-ter p-20">
               <h2 class="title is-3">Kontaktaufnahme</h2>
-              <form action="https://ex4d4.dmoe.tech/postforms/tortugawebdesignde/">
+              <form ref="contactForm" @submit="submitContactForm" action="https://ex4d4.dmoe.tech/postforms/tortugawebdesignde/">
                 <div class="field mb-0 pt-10">
                   <label for="name" class="label">Vor- & Nachname</label>
                   <div class="control has-icons-left">
@@ -106,12 +98,12 @@
                   </div>
                 </div>
               </form>
-              <div class="message is-danger" style="display: none">
+              <div ref="errorMessage" class="message is-danger" style="display: none">
                 <div class="message-body">
                   Da ist leider ein Fehler passiert. Bitte probieren Sie es noch einmal oder schreiben Sie uns eine E-Mail. Bitte beachten Sie das kein HTML-Text in der Nachricht enthalten sein darf.
                 </div>
               </div>
-              <div class="message is-success" style="display: none">
+              <div ref="successMessage" class="message is-success" style="display: none">
                 <div class="message-body">
                   Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen melden.
                 </div>
@@ -130,29 +122,62 @@ import TheSubpageHeader from "../components/TheSubpageHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faHome, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
-library.add(faHome, faEnvelope, faUser)
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+import { faHome, faEnvelope, faUser, faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+library.add(faHome, faEnvelope, faUser, faInstagram, faLinkedinIn, faCircle)
 
 export default {
   components: {
     TheSubpageHeader,
     TheFooter,
     TheHeaderReflection,
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    FontAwesomeLayers
   },
   data() {
     return {
-      header: {
-        title: "Sind Sie bereit?",
-        subtitle: "Kontakt",
-        buttonText: "Jetzt loslegen"
-      }
+      page: this.$store.state.pages.home,
+      buttonText: "Jetzt loslegen"
+    }
+  },
+  methods: {
+    submitContactForm(event) {
+      const self = this
+      event.preventDefault()
+      const form = this.$refs.contactForm
+      this.$refs.successMessage.style.display = 'none'
+      this.$refs.errorMessage.style.display = 'none'
+      const formData = new FormData(event.target)
+      const data = {}
+      formData.forEach(function(value, key) {
+        data[key] = value
+      })
+      fetch(form.action, {
+          method: 'post',
+          mode: 'cors',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(function(response) {
+          if (response.is_form_valid) {
+            self.$refs.successMessage.style.display = 'block'
+            form.style.display = 'none'
+          } else {
+            self.$refs.errorMessage.style.display = 'block'
+          }
+        })
+        .catch(function(error) {
+          self.$refs.errorMessage.style.display = 'block'
+        })
     }
   },
   head() {
     return {
-      title: "Kontakt"
+      title: this.page.title,
+      meta: [
+        { hid: "description", name: "description", content: this.page.description }
+      ]
     }
   }
 }
@@ -184,6 +209,19 @@ export default {
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.icons-box {
+  max-height: 42px;
+  overflow: hidden;
+}
+
+.icon-link {
+  color: $dark;
+
+  &:hover {
+    color: $grey-dark;
+  }
 }
 
 form {
@@ -230,7 +268,7 @@ form {
     color: $light;
 
     &:hover {
-      color: $grey-light;
+      color: $grey-lighter;
     }
   }
 }

@@ -1,13 +1,13 @@
-import AOS from "aos";
+// import AOS from "aos";
 
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 
-const preventsPurge = "<div class='aos-init aos-animate' data-aos='fade-up'></div>"
+// const preventsPurge = "<div class='aos-init aos-animate' data-aos='fade-up'></div>"
 
-export default ({ app }) => {
-  app.AOS = new AOS.init({
-    duration: 600,
-    disable: 'mobile',
-    once: 'true'
-  });
-};
+// export default ({ app }) => {
+//   app.AOS = new AOS.init({
+//     duration: 600,
+//     disable: 'mobile',
+//     once: 'true'
+//   });
+// };

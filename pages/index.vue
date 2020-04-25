@@ -18,6 +18,7 @@ import TheValue from "../components/TheValue.vue";
 import TheGuide from "../components/TheGuide.vue";
 import ThePlan from "../components/ThePlan.vue";
 import TheFooter from "../components/TheFooter.vue";
+import AOS from "aos";
 
 export default {
   components: {
@@ -43,7 +44,7 @@ export default {
         { hid: "description", name: "description", content: this.page.description }
       ]
     }
-  }
+  },
 }
 
 </script>

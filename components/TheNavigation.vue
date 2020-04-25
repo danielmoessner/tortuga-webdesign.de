@@ -13,23 +13,23 @@
       </div>
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
-          <nuxt-link class="navbar-item" to="/">
+          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/">
             Startseite
           </nuxt-link>
-          <nuxt-link class="navbar-item" to="/ueber-uns">
+          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/ueber-uns">
             Über uns
           </nuxt-link>
-          <nuxt-link class="navbar-item" to="/portfolio">
+          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/portfolio">
             Referenzen
           </nuxt-link>
-          <nuxt-link class="navbar-item" to="/blog">
+          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/blog">
             Artikel
           </nuxt-link>
-          <nuxt-link class="navbar-item" to="/kontakt">
+          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/kontakt">
             Kontakt
           </nuxt-link>
           <div class="navbar-item is-hidden-touch">
-            <CtaButton />
+            <CtaButton @click.native="showNav = false" />
           </div>
         </div>
       </div>
@@ -52,6 +52,11 @@ export default {
       isTop: true,
       isInvisible: false,
       isOut: false
+    }
+  },
+  methods: {
+    nuxtLinkClicked() {
+      console.log('nuxt clicked')
     }
   },
   watch: {

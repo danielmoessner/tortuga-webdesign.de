@@ -33,9 +33,9 @@ import StickyInfo from "@/components/StickyInfo.vue"
 
 export default {
   components: {
-    StickyInfo,
     TheSubpageHeader,
     TheHeaderReflection,
+    StickyInfo,
     BaseFrame
   },
   data() {
