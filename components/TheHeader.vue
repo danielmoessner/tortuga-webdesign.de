@@ -19,7 +19,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-6-desktop is-12-tablet">
+        <div class="column is-6-desktop is-12-tablet is-hidden">
           <div id="laptop">
             <!-- <img src="../assets/images/laptop.png" alt="Laptop"> -->
           </div>
@@ -65,7 +65,7 @@ header {
     line-height: 1.25;
     margin-bottom: 0.4em;
   }
-
+  
   span {
     margin-top: 1.8em;
   }
@@ -96,6 +96,9 @@ header {
 
   @include until($tablet) {
     padding: 7rem 0 4rem 0;
+    .title.is-2{
+      font-size: 2.4rem;
+    }
   }
 
   overflow-x: hidden;

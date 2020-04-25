@@ -4,6 +4,7 @@
   "url": "https://qc-quality-control.de",
   "slug": "qc-quality-control",
   "image": "/img/1500x.qc-quality-control.de.jpg",
+  "image500": "/img/500x.qc-quality-control.de.jpg",
   "description": "QC Quality Control bietet Produkte für die Halbleiter- und Pharmaindustrie an. Mit der modernen Webseite ist das Einstellen von neuen Produkten eine Leichtigkeit.",
   "tags": [
     "Django",
