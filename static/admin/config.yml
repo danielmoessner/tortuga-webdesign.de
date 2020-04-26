@@ -213,3 +213,29 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - label: "Imprint Page"
+        name: "imprint"
+        file: "assets/content/page/imprint.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Data Protection Page"
+        name: "dataProtection"
+        file: "assets/content/page/data-protection.json"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text", required: false}
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
