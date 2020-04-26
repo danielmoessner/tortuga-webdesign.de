@@ -48,7 +48,6 @@ export default {
     return {
       showNav: false,
       scrollTop: 0,
-      lastScrollTop: 0,
       isTop: true,
       isInvisible: false,
       isOut: false
@@ -57,24 +56,24 @@ export default {
   methods: {
     nuxtLinkClicked() {
       console.log('nuxt clicked')
-    } 
+    }
   },
   watch: {
     scrollTop: function(newValue, oldValue) {
-      this.lastScrollTop = oldValue
       if (newValue <= 1) {
         this.isTop = true
-      } else if (newValue > 200 && this.isTop) {
+        this.isInvisible = false
+        this.isOut = false
+      } else if (newValue > oldValue) {
+        this.isOut = true
+      } else {
+        this.isInvisible = false
+        this.isOut = false
+      }
+      
+      if (newValue > 200 && this.isTop) {
         this.isInvisible = true
         this.isTop = false
-      }
-      if (newValue > 1) {
-        if (newValue > oldValue) {
-          this.isOut = true
-        } else {
-          this.isInvisible = false
-          this.isOut = false
-        }
       }
     }
   },

@@ -35,8 +35,8 @@ export default {
   components: {
     TheSubpageHeader,
     TheHeaderReflection,
+    BaseFrame,
     StickyInfo,
-    BaseFrame
   },
   data() {
     return {

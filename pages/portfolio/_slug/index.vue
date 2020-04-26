@@ -26,15 +26,15 @@
 <script>
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
-import StickyInfo from "@/components/StickyInfo.vue";
 import BaseFrame from "@/components/BaseFrame.vue"
+import StickyInfo from "@/components/StickyInfo.vue";
 
 export default {
   components: {
     TheSubpageHeader,
     TheHeaderReflection,
+    BaseFrame,
     StickyInfo,
-    BaseFrame
   },
   data() {
     return {

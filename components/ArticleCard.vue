@@ -9,17 +9,17 @@
     </nuxt-link>
     <div class="article--bottom card-content">
       <div class="mb-18">
-        <nuxt-link :to="articleLink" class="article--hover">
+        <nuxt-link :to="articleLink" class="has-text-black-ter">
           <h2 class="title is-3 mb-10">{{ article.title }}</h2>
         </nuxt-link>
-        <nuxt-link :to="articleLink" class="article--hover">
+        <nuxt-link :to="articleLink" class="has-text-black-ter">
           {{ article.description }}
         </nuxt-link>
         <span v-for="(tag, index) in article.tags" :key="index">#{{ tag }}</span>
       </div>
       <div class="media">
         <div class="media-left">
-          <figure class="article--author-figure is-48x48 image">
+          <figure class="border-radius-full overflow-hidden is-48x48 image">
             <img :src="article.author.image" alt="Author Bild">
           </figure>
         </div>
@@ -65,6 +65,14 @@ export default {
   margin-bottom: 1.8rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border-radius-full {
+  border-radius: 100%;
+}
+
 .article {
   height: 100%;
   display: flex;
@@ -77,24 +85,11 @@ export default {
     justify-content: space-between;
   }
 
-  &--hover {
-    display: block;
-    color: $dark;
-
-    &:hover {
-      * {
-        color: $black;
-      }
-    }
-  }
-
-  &--author-figure {
-    border-radius: 100%;
-    overflow: hidden;
-  }
-
   &:hover {
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5), 0 0 0 1px rgba(10, 10, 10, 0.02);
+    .title.is-3 {
+      color: $dark;
+    }
   }
 }
 

@@ -8,7 +8,7 @@
     </section>
     <TheFooter />
   </main>
-</template>
+</template> 
 <script>
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
@@ -30,6 +30,6 @@ export default {
       ]
     }
   },
-}
+} 
 
 </script>

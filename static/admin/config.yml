@@ -228,7 +228,7 @@ collections:
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "Data Protection Page"
         name: "dataProtection"
-        file: "assets/content/page/data-protection.json"
+        file: "assets/content/page/dataProtection.json"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text", required: false}
