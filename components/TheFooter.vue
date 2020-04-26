@@ -41,11 +41,11 @@
           </div>
         </div>
         <div class="column">
-          <div>
+          <div class="text-right">
             <h3>Rechtliches</h3>
             <ul>
-              <li><a href="/impressum">Impressum</a></li>
-              <li><a href="/datenschutz">Datenschutz</a></li>
+              <li><nuxt-link to="/impressum">Impressum</nuxt-link></li>
+              <li><nuxt-link to="/datenschutz">Datenschutz</nuxt-link></li>
             </ul>
           </div>
         </div>
@@ -62,6 +62,10 @@ export default {
 <style lang="scss">
 iframe {
   margin-bottom: -6px;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .footer {

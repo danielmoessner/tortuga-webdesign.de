@@ -7,7 +7,9 @@
             <h1 class="title is-2 has-text-dark" data-aos="fade-up" data-aos-duration="600">{{ title }}</h1>
             <div class="subtitle is-4 has-text-dark" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600">{{ subtitle }}</div>
             <div class="buttons">
-              <a class="button is-dark is-rounded is-outlined" :target="buttonTarget" :href="buttonHref" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" :onclick="buttonOnclick">{{ buttonText }}</a>
+              <slot>
+                <a class="button is-dark is-rounded is-outlined" :target="buttonTarget" :href="buttonHref" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600" :onclick="buttonOnclick">{{ buttonText }}</a>
+              </slot>
             </div>
           </div>
         </div>
