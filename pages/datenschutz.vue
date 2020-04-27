@@ -1,25 +1,35 @@
 <template>
   <main>
-    <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" buttonText="Mehr"><div></div></TheSubpageHeader>
-    <section>
-      <TheHeaderReflection />
-    	<div class="container">
-    		<div v-html="$md.render(page.body)" class="content"></div>
-    	</div>
-    </section>
-    <TheFooter />
+    <!---->
+    <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" buttonText="Mehr">
+      <div></div>
+    </TheSubpageHeader>
+    <!---->
+    <base-section class="top-medium">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
+      <div v-html="$md.render(page.body)" class="content"></div>
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
   </main>
-</template> 
+</template>
 <script>
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue"
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
     TheSubpageHeader,
     TheFooter,
-    TheHeaderReflection
+    TheHeaderReflection,
+    BaseSection
   },
   data() {
     return {
@@ -34,6 +44,6 @@ export default {
       ]
     }
   },
-} 
+}
 
 </script>

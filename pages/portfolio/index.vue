@@ -1,8 +1,12 @@
 <template>
   <main>
+    <!---->
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
-    <section id="referenzen" style="min-height: 500px;">
-      <TheHeaderReflection />
+    <!---->
+    <base-section class="top-medium" id="referenzen">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
       <div id="start" class="container">
         <div class="portfolio" v-for="year in portfolioPostsByYearSortedKeys" :key="year">
           <div class="portfolio--year">{{ year }}</div>
@@ -13,8 +17,12 @@
           </div>
         </div>
       </div>
-    </section>
-    <TheFooter />
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
   </main>
 </template>
 <script>
@@ -23,6 +31,7 @@ import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import CtaButton from "@/components/CtaButton.vue";
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
@@ -30,7 +39,8 @@ export default {
     TheFooter,
     TheHeaderReflection,
     CtaButton,
-    PortfolioShowcase
+    PortfolioShowcase,
+    BaseSection
   },
   data() {
     return {

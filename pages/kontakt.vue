@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <main>
+    <!---->
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
-    <section id="kontakt">
-      <TheHeaderReflection />
+    <!---->
+    <base-section class="top-medium" id="kontakt">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
       <div id="start" class="container">
         <div class="columns is-gapless">
           <div class="column is-4">
@@ -113,9 +117,13 @@
           </div>
         </div>
       </div>
-    </section>
-    <TheFooter />
-  </div>
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
+  </main>
 </template>
 <script>
 import TheSubpageHeader from "../components/TheSubpageHeader.vue";
@@ -126,6 +134,7 @@ import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome
 import { faHome, faEnvelope, faUser, faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 library.add(faHome, faEnvelope, faUser, faInstagram, faLinkedinIn, faCircle)
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
@@ -133,7 +142,8 @@ export default {
     TheFooter,
     TheHeaderReflection,
     FontAwesomeIcon,
-    FontAwesomeLayers
+    FontAwesomeLayers,
+    BaseSection
   },
   data() {
     return {

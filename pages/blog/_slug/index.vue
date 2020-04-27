@@ -1,28 +1,31 @@
 <template>
   <main>
+    <!---->
     <TheSubpageHeader class="no-print" :title="article.title" :subtitle="subtitle" :buttonText="buttonText" :buttonOnclick="buttonOnclick" />
-    <section>
-      <TheHeaderReflection class="no-print" />
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-3 no-print" data-sticky-container>
-            <sticky-info :darkTag="articleDate" :tags="article.tags" :title="article.title" :description="article.description">
-              <button class="button is-dark is-rounded is-outlined" onclick="window.print();return false;">Jetzt drucken</button>
-            </sticky-info>
-          </div>
-          <div class="column is-9">
-            <base-frame class="print-area">
-              <img :src="article.image" alt="Artikelbild">
-              <article v-html="$md.render(article.body)" class="px-20 py-10 content">
-              </article>
-            </base-frame>
-          </div>
-          <div class="column is-12 no-print">
-            <nuxt-link to="/blog" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Artikeln</nuxt-link>
-          </div>
+    <!---->
+    <base-section class="top-medium">
+      <template v-slot:no-container>
+        <TheHeaderReflection class="no-print" />
+      </template>
+      <div class="columns is-multiline">
+        <div class="column is-3 no-print">
+          <sticky-info :darkTag="articleDate" :tags="article.tags" :title="article.title" :description="article.description">
+            <button class="button is-dark is-rounded is-outlined" onclick="window.print();return false;">Jetzt drucken</button>
+          </sticky-info>
+        </div>
+        <div class="column is-9">
+          <base-frame class="print-area">
+            <img :src="article.image" alt="Artikelbild">
+            <article v-html="$md.render(article.body)" class="px-20 py-10 content">
+            </article>
+          </base-frame>
+        </div>
+        <div class="column is-12 no-print">
+          <nuxt-link to="/blog" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Artikeln</nuxt-link>
         </div>
       </div>
-    </section>
+    </base-section>
+    <!---->
   </main>
 </template>
 <script>
@@ -30,6 +33,7 @@ import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import BaseFrame from "@/components/BaseFrame.vue"
 import StickyInfo from "@/components/StickyInfo.vue"
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
@@ -37,6 +41,7 @@ export default {
     TheHeaderReflection,
     BaseFrame,
     StickyInfo,
+    BaseSection
   },
   data() {
     return {

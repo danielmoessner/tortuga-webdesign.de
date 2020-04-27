@@ -1,27 +1,29 @@
 <template>
-  <div class="columns" :style="columnsReversed">
-    <div class="column is-5" :class="offsetPage">
-      <div class="relative h-full">
-        <base-frame class="h-full">
-          <div class="group absolute h-full" @mouseover="mouseover" @mouseleave="mouseleave">
-            <div class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center" :class="{ 'is-invisible': isScrollable }">
-              <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+  <div class="index-portfolio-post">
+    <div class="columns" :style="columnsReversed">
+      <div class="column is-5" :class="offsetPage">
+        <div class="relative h-full">
+          <base-frame class="h-full min-h-300">
+            <div class="group absolute h-full w-full" @mouseover="mouseover" @mouseleave="mouseleave">
+              <div class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center" :class="{ 'is-invisible': isScrollable }">
+                <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+              </div>
+              <div class="w-full h-full no-scrollbar" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
+                <img :src="work.image500" :alt="work.title" class="is-block w-full">
+              </div>
             </div>
-            <div class="w-full h-full no-scrollbar" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-              <img :src="work.image500" :alt="work.title" class="is-block w-full">
-            </div>
-          </div>
-        </base-frame>
+          </base-frame>
+        </div>
       </div>
-    </div>
-    <div class="column is-4" :class="offsetText">
-      <div class="py-60">
-        <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
-          <h3 class="title is-4">{{ work.title }}</h3>
-          <p class="mb-18">
-            {{ work.description }}
-          </p>
-          <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
+      <div class="column is-4" :class="offsetText">
+        <div class="index-portfolio-post-text">
+          <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
+            <h3 class="title is-4">{{ work.title }}</h3>
+            <p class="mb-18">
+              {{ work.description }}
+            </p>
+            <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
+          </div>
         </div>
       </div>
     </div>
@@ -92,6 +94,10 @@ export default {
   width: 100%;
 }
 
+.min-h-300 {
+  min-height: 300px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -112,9 +118,20 @@ export default {
   width: 0;
 }
 
-.py-60 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+
+.index-portfolio-post {
+  @include until($tablet) {
+    margin-top: 5rem;
+  }
+
+  &-text {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @include until($tablet) {
+      padding: 0;
+    }
+  }
 }
 
 .mb-18 {

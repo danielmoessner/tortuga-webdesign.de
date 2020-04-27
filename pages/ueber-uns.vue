@@ -2,72 +2,72 @@
   <main>
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
     <!-- intro section -->
-    <section id="start" class="small">
-      <TheHeaderReflection />
-      <div class="container">
-        <div class="header is-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
-          <div class="columns">
-            <div class="column is-6 is-offset-3">
-              <h2 class="is-3 title">
-                {{ page.intro.title }}
-              </h2>
-            </div>
+    <base-section id="start" class="bottom-small top-medium">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
+      <div class="has-text-centered" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            <h2 class="is-3 title">
+              {{ page.intro.title }}
+            </h2>
           </div>
-          <div v-if="page.intro.subtitle" class="columns">
-            <div class="column is-4 is-offset-4">
-              <div class="subtitle">
-                {{ page.intro.subtitle }}
-              </div>
+        </div>
+        <div v-if="page.intro.subtitle" class="columns">
+          <div class="column is-4 is-offset-4">
+            <div class="subtitle mt-n-125">
+              {{ page.intro.subtitle }}
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </base-section>
     <!-- about section -->
-    <section id="ueber-uns">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-6">
-            <div class="header" data-aos="fade-up" data-aos-delay="250" data-aos-duration="600">
-              <div class="pretitle"><small>{{ page.about.pretitle }}</small></div>
-              <h2 class="is-3 title">{{ page.about.title }}</h2>
-              <p class="subtitle">{{ page.about.subtitle }}</p>
-            </div>
-            <div class="content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
-              <p>{{ page.about.text }}</p>
-            </div>
+    <base-section id="ueber-uns">
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="mb-30" data-aos="fade-up" data-aos-delay="250" data-aos-duration="600">
+            <div class="pretitle"><small>{{ page.about.pretitle }}</small></div>
+            <h2 class="is-3 title">{{ page.about.title }}</h2>
+            <p class="subtitle">{{ page.about.subtitle }}</p>
           </div>
-          <div class="column is-4 is-offset-2">
-            <div class="image">
-              <img class="is-rounded" :src="page.about.image" alt="Inhaber">
-            </div>
+          <div class="content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+            <p>{{ page.about.text }}</p>
+          </div>
+        </div>
+        <div class="column is-4 is-offset-2">
+          <div class="image">
+            <img class="is-rounded" :src="page.about.image" alt="Inhaber">
           </div>
         </div>
       </div>
-    </section>
+    </base-section>
     <!-- faq section -->
-    <section id="fragen">
-      <div class="container">
-        <div class="header is-center">
-          <div class="columns">
-            <div class="column is-6 is-offset-3">
-              <h2 class="title is-3" data-aos="fade-up" data-aos-duration="600">{{ page.faq.title }}</h2>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column is-4 is-offset-4">
-              <div class="subtitle" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600">{{ page.faq.subtitle }}</div>
-            </div>
+    <base-section id="fragen">
+      <div class="has-text-centered">
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            <h2 class="title is-3" data-aos="fade-up" data-aos-duration="600">{{ page.faq.title }}</h2>
           </div>
         </div>
         <div class="columns">
-          <div class="column is-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
-            <BaseFaq v-for="(item, index) in page.faq.questions" :question="item.question" :answer="item.answer" :key="index" />
+          <div class="column is-4 is-offset-4">
+            <div class="subtitle mt-n-125 mb-40" data-aos="fade-up" data-aos-delay="50" data-aos-duration="600">{{ page.faq.subtitle }}</div>
           </div>
         </div>
       </div>
-    </section>
-    <TheFooter />
+      <div class="columns">
+        <div class="column is-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+          <BaseFaq v-for="(item, index) in page.faq.questions" :question="item.question" :answer="item.answer" :key="index" />
+        </div>
+      </div>
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
   </main>
 </template>
 <script>
@@ -76,6 +76,7 @@ import TheSubpageHeader from "../components/TheSubpageHeader.vue";
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
 import CtaButton from "@/components/CtaButton.vue";
+import BaseSection from "@/components/BaseSection.vue";
 
 export default {
   components: {
@@ -83,7 +84,8 @@ export default {
     TheFooter,
     TheHeaderReflection,
     CtaButton,
-    BaseFaq
+    BaseFaq,
+    BaseSection
   },
   data() {
     return {
@@ -103,6 +105,24 @@ export default {
 
 </script>
 <style lang="scss">
+.mt-n-125 {
+  margin-top: -1.25rem;
+}
+
+.mb-30 {
+  margin-bottom: 3rem;
+}
+
+.mb-40 {
+  margin-bottom: 4rem;
+}
+
+.pretitle {
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.5rem;
+}
+
 #ueber-uns {
   img {
     max-width: 500px;

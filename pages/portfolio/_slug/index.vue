@@ -1,26 +1,29 @@
 <template>
   <main>
+    <!---->
     <TheSubpageHeader :title="item.title" :subtitle="subtitle" :buttonText="buttonText" :buttonTarget="buttonTarget" :buttonHref="buttonHref" />
-    <section id="start">
-      <TheHeaderReflection />
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-3">
-            <sticky-info :darkTag="itemDate" :tags="item.tags" :title="itemUrlClean" :description="item.description">
-              <a :href="item.url" target="_blank" class="button is-dark is-rounded is-outlined">Die Webseite besuchen</a>
-            </sticky-info>
-          </div>
-          <div class="column is-9">
-            <base-frame>
-              <img :src="item.image" :alt="item.title">
-            </base-frame>
-          </div>
-          <div class="column is-12">
-            <nuxt-link to="/portfolio" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Referenzen</nuxt-link>
-          </div>
+    <!---->
+    <base-section class="top-medium">
+      <template v-slot:no-container>
+        <TheHeaderReflection class="no-print" />
+      </template>
+      <div class="columns is-multiline">
+        <div class="column is-3">
+          <sticky-info :darkTag="itemDate" :tags="item.tags" :title="itemUrlClean" :description="item.description">
+            <a :href="item.url" target="_blank" class="button is-dark is-rounded is-outlined">Die Webseite besuchen</a>
+          </sticky-info>
+        </div>
+        <div class="column is-9">
+          <base-frame>
+            <img :src="item.image" :alt="item.title">
+          </base-frame>
+        </div>
+        <div class="column is-12">
+          <nuxt-link to="/portfolio" class="button is-dark is-rounded is-outlined" data-aos="fade-up" data-aos-duration="600">Zurück zu allen Referenzen</nuxt-link>
         </div>
       </div>
-    </section>
+      </base-section>
+      <!---->
   </main>
 </template>
 <script>
@@ -28,6 +31,7 @@ import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import BaseFrame from "@/components/BaseFrame.vue"
 import StickyInfo from "@/components/StickyInfo.vue";
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
@@ -35,6 +39,7 @@ export default {
     TheHeaderReflection,
     BaseFrame,
     StickyInfo,
+    BaseSection
   },
   data() {
     return {

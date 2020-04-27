@@ -1,8 +1,12 @@
 <template>
   <main>
+    <!---->
     <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
-    <section id="artikel">
-      <TheHeaderReflection />
+    <!---->
+    <base-section class="top-medium" id="artikel">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
       <div id="start" class="container">
         <div class="columns is-multiline">
           <div class="column is-4" v-for="article in blogPosts" :key="article.slug">
@@ -10,8 +14,12 @@
           </div>
         </div>
       </div>
-    </section>
-    <TheFooter />
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
   </main>
 </template>
 <script>
@@ -21,6 +29,7 @@ import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import CtaButton from "@/components/CtaButton.vue";
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
 import ArticleCard from "@/components/ArticleCard.vue";
+import BaseSection from "@/components/BaseSection.vue"
 
 export default {
   components: {
@@ -29,7 +38,8 @@ export default {
     TheHeaderReflection,
     CtaButton,
     PortfolioShowcase,
-    ArticleCard
+    ArticleCard,
+    BaseSection
   },
   data() {
     return {

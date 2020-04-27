@@ -106,8 +106,8 @@ export default {
     color: initial;
   }
 
-  a.navbar-item.nuxt-link-active {
-    color: #43444a;
+  a.navbar-item.nuxt-link-exact-active {
+    color: #000;
   }
 
   .navbar-brand .navbar-item img {

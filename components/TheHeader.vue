@@ -92,6 +92,9 @@ header {
 
   @include until($desktop) {
     padding: 8rem 0 4rem 0;
+    .container {
+      padding: 0 .8rem;
+    }
   }
 
   @include until($tablet) {
