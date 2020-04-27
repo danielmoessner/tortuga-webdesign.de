@@ -1,22 +1,24 @@
 <template>
   <div class="columns" :style="columnsReversed">
     <div class="column is-5" :class="offsetPage">
-      <div class="work">
-        <div class="work--page" @mouseover="mouseover" @mouseleave="mouseleave">
-          <div class="work--hover-info" :class="{ 'is-invisible': isScrollable }">
-            <span class="work--hover-info-text is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+      <div class="relative h-full">
+        <base-frame class="h-full">
+          <div class="group absolute h-full" @mouseover="mouseover" @mouseleave="mouseleave">
+            <div class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center" :class="{ 'is-invisible': isScrollable }">
+              <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+            </div>
+            <div class="w-full h-full no-scrollbar" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
+              <img :src="work.image500" :alt="work.title" class="is-block w-full">
+            </div>
           </div>
-          <div class="work--image-div" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-            <img :src="work.image500" :alt="work.title">
-          </div>
-        </div>
+        </base-frame>
       </div>
     </div>
     <div class="column is-4" :class="offsetText">
-      <div class="work--content">
+      <div class="py-60">
         <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
           <h3 class="title is-4">{{ work.title }}</h3>
-          <p class="work--text">
+          <p class="mb-18">
             {{ work.description }}
           </p>
           <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
@@ -27,10 +29,12 @@
 </template>
 <script>
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
+import BaseFrame from "@/components/BaseFrame.vue";
 
 export default {
   components: {
-    PortfolioShowcase
+    PortfolioShowcase,
+    BaseFrame
   },
   name: "IndexPortfolioPost",
   props: {
@@ -84,6 +88,14 @@ export default {
 
 </script>
 <style lang="scss">
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -92,95 +104,49 @@ export default {
   overflow-y: scroll;
 }
 
-.work {
+.block {
+  display: block;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+}
+
+.py-60 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.mb-18 {
+  margin-bottom: 1.8rem;
+}
+
+.relative {
   position: relative;
-  height: 100%;
-
-  &--hover-info {
-    background: rgba($dark, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-  }
-
-  &--page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-
-    border: 5px solid #1f1d20;
-    box-shadow: 0 0 2.8rem 0 #484847;
-
-    @include until($tablet) {
-      position: static;
-      width: 100%;
-      height: 380px;
-    }
-
-    &:hover {
-      .work--hover-info {
-        visibility: visible;
-      }
-    }
-  }
-
-  &--image-div {
-    width: 100%;
-    height: 100%;
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-  }
-
-  &--image {
-    display: block;
-    min-height: 100%;
-
-    img {
-      display: block;
-    }
-  }
-
-  &--hover-info-text {
-    color: white;
-  }
-
-  &--content {
-    padding: 8em 0;
-  }
-
-  &--text {
-    margin-bottom: 1.8em;
-  }
-
-  @include until($desktop) {
-    &--hover-info {
-      display: none;
-    }
-  }
 }
 
-@include until($tablet) {
-  .work--hover-info {
-    display: none;
-  }
+.absolute {
+  position: absolute;
 }
-  
+
+.invisible {
+  visibility: hidden;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-dark-75 {
+  background-color: rgba($dark, 0.5)
+}
+
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
 
 </style>

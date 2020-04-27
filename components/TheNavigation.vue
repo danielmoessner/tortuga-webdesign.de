@@ -53,11 +53,6 @@ export default {
       isOut: false
     }
   },
-  methods: {
-    nuxtLinkClicked() {
-      console.log('nuxt clicked')
-    }
-  },
   watch: {
     scrollTop: function(newValue, oldValue) {
       if (newValue <= 1) {

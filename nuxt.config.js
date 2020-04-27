@@ -24,7 +24,7 @@ export default {
    ** Global CSS
    */
   css: [
-    // { src: 'aos/dist/aos.css', lang: 'scss' }
+    { src: '~/assets/styles/global-styles.scss', lang: 'scss' }
   ],
 
   /*
@@ -88,7 +88,7 @@ export default {
     },
     loaders: {
       scss: {
-        prependData: '@import "./assets/styles/main.scss";',
+        prependData: '@import "./assets/styles/insert-into-every-component.scss";',
       }
     },
     html: {
