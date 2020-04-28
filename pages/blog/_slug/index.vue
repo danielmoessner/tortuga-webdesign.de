@@ -44,6 +44,10 @@ export default {
     BaseSection
   },
   data() {
+    // if (!(this.$store.state.blogPosts.map(item => item.slug).includes(this.$route.params.slug))) {
+    //   console.log(this.$store.state.blogPosts.map(item => item.slug))
+    //   this.$nuxt.error({ statusCode: 404, message: "Artikel nicht gefunden" })
+    // }
     return {
       slug: this.$route.params.slug,
       buttonText: "Jetzt drucken",
@@ -53,7 +57,7 @@ export default {
     }
   },
   computed: {
-    article() {
+    article() { 
       return this.$store.state.blogPosts.filter(item => item.slug === this.slug)[0]
     },
     articleDate() {
