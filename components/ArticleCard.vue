@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     articleLink() {
-      return "blog/" + this.article.slug
+      return "/blog/" + this.article.slug
     },
     articleDate() {
       const date = new Date(this.article.date)
