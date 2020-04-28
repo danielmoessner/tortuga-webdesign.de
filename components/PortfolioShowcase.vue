@@ -9,7 +9,7 @@
       <img class="showcase--height-set" ref="showcaseHeightSet" :src="portfolioItem.shortImage" :alt="portfolioItem.title">
       <div class="showcase--scroll">
         <div class="showcase--img" ref="showcaseImage" style="will-change: transform;" :style="{ transform: showcaseImageTransform }">
-          <img :src="portfolioItem.image500" :alt="portfolioItem.title">
+          <img :data-src="portfolioItem.image500" :alt="portfolioItem.title" class="lazyload">
         </div>
       </div>
     </nuxt-link>

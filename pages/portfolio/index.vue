@@ -36,11 +36,11 @@ import BaseSection from "@/components/BaseSection.vue"
 export default {
   components: {
     TheSubpageHeader,
-    TheFooter,
     TheHeaderReflection,
     CtaButton,
     PortfolioShowcase,
-    BaseSection
+    BaseSection,
+    TheFooter,
   },
   data() {
     return {

@@ -34,9 +34,9 @@ import TheStakes from "@/components/TheStakes.vue";
 import TheValue from "@/components/TheValue.vue";
 import TheGuide from "@/components/TheGuide.vue";
 import ThePlan from "@/components/ThePlan.vue";
-import TheFooter from "@/components/TheFooter.vue";
 import BaseSection from "@/components/BaseSection.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
   components: {
@@ -45,9 +45,9 @@ export default {
     TheValue,
     TheGuide,
     ThePlan,
-    TheFooter,
     BaseSection,
-    TheHeaderReflection
+    TheHeaderReflection,
+    TheFooter,
   },
   data() {
     return {

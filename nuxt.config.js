@@ -31,7 +31,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: "~/plugins/aos", ssr: false }
+    { src: "~/plugins/lazysizes.client.js" }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -47,8 +47,7 @@ export default {
   /*
    ** Purgecss Config
    */
-  purgecss: {
-  },
+  purgecss: {},
   /*
    ** Markdown Config
    ** See: https://github.com/markdown-it/markdown-it
@@ -107,6 +106,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src']
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+      }
+    }
   }
 }

@@ -9,7 +9,7 @@
                 <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
               </div>
               <div class="w-full h-full no-scrollbar" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-                <img :src="work.image500" :alt="work.title" class="is-block w-full">
+                <img :data-src="work.image500" :alt="work.title" class="is-block w-full lazyload">
               </div>
             </div>
           </base-frame>

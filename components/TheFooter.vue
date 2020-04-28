@@ -12,26 +12,26 @@
           <h3 class="mb-05">Navigation</h3>
           <ul class="footer-ul">
             <li>
-              <nuxt-link to="/">Startseite</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/">Startseite</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/ueber-uns">Über uns</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/ueber-uns">Über uns</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/portfolio">Referenzen</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/portfolio">Referenzen</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/blog">Artikel</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/blog">Artikel</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/kontakt">Kontakt</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/kontakt">Kontakt</nuxt-link>
             </li>
             <li>
               <ul>
-                <h4>Leistungen (demnächst aktiv)</h4>
-                <li class="ml-10"><a>Webdesign</a></li>
-                <li class="ml-10"><a>Google Ads</a></li>
-                <li class="ml-10"><a>Beratung</a></li>
+                <li><h4>Leistungen (demnächst aktiv)</h4></li>
+                <li class="ml-10"><span>Webdesign</span></li>
+                <li class="ml-10"><span>Google Ads</span></li>
+                <li class="ml-10"><span>Beratung</span></li>
               </ul>
             </li>
           </ul>
@@ -54,10 +54,10 @@
           <h3 class="mb-05">Rechtliches</h3>
           <ul>
             <li>
-              <nuxt-link to="/impressum">Impressum</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/impressum">Impressum</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/datenschutz">Datenschutz</nuxt-link>
+              <nuxt-link class="pb-01 mb-02 is-block" to="/datenschutz">Datenschutz</nuxt-link>
             </li>
           </ul>
         </div>
@@ -72,6 +72,14 @@ export default {
 
 </script>
 <style lang="scss">
+.pb-01 {
+  padding-bottom: 0.1rem;
+}
+
+.mb-02 {
+  margin-bottom: 0.2rem;
+}
+
 .ml-10 {
   margin-left: 1rem;
 }
