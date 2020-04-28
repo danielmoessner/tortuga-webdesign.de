@@ -11,23 +11,23 @@
         <div>
           <h3 class="mb-05">Navigation</h3>
           <ul class="footer-ul">
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/">Startseite</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none is-block" to="/">Startseite</nuxt-link>
             </li>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/ueber-uns">Über uns</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none is-block" to="/ueber-uns">Über uns</nuxt-link>
             </li>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/portfolio">Referenzen</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none is-block" to="/portfolio">Referenzen</nuxt-link>
             </li>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/blog">Artikel</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none is-block" to="/blog">Artikel</nuxt-link>
             </li>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/kontakt">Kontakt</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none is-block" to="/kontakt">Kontakt</nuxt-link>
             </li>
-            <li>
-              <ul>
+            <li class="mb-02">
+              <ul class="py-03 md:py-none">
                 <li><h4>Leistungen (demnächst aktiv)</h4></li>
                 <li class="ml-10"><span>Webdesign</span></li>
                 <li class="ml-10"><span>Google Ads</span></li>
@@ -40,7 +40,7 @@
       <div class="column">
         <div>
           <h3 class="mb-05">Kontakt</h3>
-          <address>
+          <address class="py-03 md:py-none">
             Daniel Mössner <br>
             <a href="tel:004917638385646">0176 3838 5646</a> <br>
             <a href="mailto:kontakt@tortuga-webdesign.de">kontakt@tortuga-webdesign.de</a> <br>
@@ -53,11 +53,11 @@
         <div class="text-right">
           <h3 class="mb-05">Rechtliches</h3>
           <ul>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/impressum">Impressum</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none mb-02 is-block" to="/impressum">Impressum</nuxt-link>
             </li>
-            <li>
-              <nuxt-link class="pb-01 mb-02 is-block" to="/datenschutz">Datenschutz</nuxt-link>
+            <li class="mb-02">
+              <nuxt-link class="py-03 md:py-none mb-02 is-block" to="/datenschutz">Datenschutz</nuxt-link>
             </li>
           </ul>
         </div>
@@ -72,8 +72,16 @@ export default {
 
 </script>
 <style lang="scss">
-.pb-01 {
-  padding-bottom: 0.1rem;
+.py-03 {
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+}
+
+.md\:py-none {
+  @include from($tablet) {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
 }
 
 .mb-02 {
