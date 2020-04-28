@@ -1,8 +1,13 @@
-@charset "UTF-8";
+/*
+** These styles will end up in a global stylesheet on every page
+*/
 
-@import "./abstracts/variables";
+// custom variables
+@import "partials/variables";
 
-@import "vendors/bulma";
+// bulma
+@import '~bulma/bulma.sass';
 
-@import "base/fonts",
-"base/typography";
+// custom stuff
+@import "partials/typography";
+@import "partials/scrollbar";
