@@ -1,8 +1,8 @@
 {
-  "name": "dadjokes",
+  "name": "tortuga-webdesign.de",
   "version": "1.0.0",
-  "description": "Lists bad dad jokes",
-  "author": "Daniel",
+  "description": "The tortuga-webdesign.de site.",
+  "author": "Daniel Mössner",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -18,10 +18,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxtjs/axios": "^5.9.7",
-    "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/markdownit": "^1.2.9",
-    "accordion-js": "^2.8.0",
-    "aos": "^2.3.4",
+    "@nuxtjs/sitemap": "^2.2.1",
     "bulma": "^0.8.2",
     "cookieconsent": "^3.1.1",
     "lazysizes": "^5.2.0",
@@ -30,7 +28,7 @@
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
 }

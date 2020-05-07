@@ -22,6 +22,7 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }) {
+
     let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/);
     let blogPosts = blogFiles.keys().map(key => {
       let res = blogFiles(key);
@@ -30,6 +31,7 @@ export const actions = {
     });
     blogPosts = blogPosts.sort((firstPost, secondPost) => { return new Date(secondPost.date) - new Date(firstPost.date)})
     await commit('SET_BLOG_POSTS', blogPosts);
+
     let tagFiles = await require.context('~/assets/content/tag/', false, /\.json$/);
     let tags = tagFiles.keys().map(key => {
       let res = tagFiles(key);
@@ -37,6 +39,7 @@ export const actions = {
       return res;
     });
     await commit('SET_TAGS', tags);
+
     let portfolioFiles = await require.context('~/assets/content/portfolio/', false, /\.json$/);
     let portfolioPosts = portfolioFiles.keys().map(key => {
       let res = portfolioFiles(key);
@@ -45,6 +48,7 @@ export const actions = {
     });
     portfolioPosts = portfolioPosts.sort((firstPost, secondPost) => { return new Date(secondPost.date) - new Date(firstPost.date)})
     await commit('SET_PORTFOLIO_POSTS', portfolioPosts);
+
     let pageFiles = await require.context('~/assets/content/page/', false, /\.json$/);
     let pages = pageFiles.keys().map(key => {
       let res = pageFiles(key);
@@ -52,5 +56,6 @@ export const actions = {
       return res;
     });
     await commit('SET_PAGES', pages);
+
   },
 };
