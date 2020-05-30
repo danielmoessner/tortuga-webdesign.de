@@ -22,6 +22,10 @@
       <ThePlan />
     </base-section>
     <!---->
+    <!-- <base-section>
+      <TheLeadGenerator />
+    </base-section> -->
+    <!---->
     <base-section>
       <TheFooter />
     </base-section>
@@ -37,6 +41,7 @@ import ThePlan from "@/components/ThePlan.vue";
 import BaseSection from "@/components/BaseSection.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import TheLeadGenerator from "@/components/TheLeadGenerator.vue";
 
 export default {
   components: {
@@ -48,6 +53,7 @@ export default {
     BaseSection,
     TheHeaderReflection,
     TheFooter,
+    TheLeadGenerator
   },
   data() {
     return {

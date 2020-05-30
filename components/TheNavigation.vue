@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <nuxt-link class="navbar-item" to="/">
-          <img src="../assets/images/tortuga-webdesign.svg" alt="Tortuga Webdesign Logo">
+          <img src="../assets/images/logo.production.svg" alt="Tortuga Webdesign Logo">
         </nuxt-link>
         <a class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
           <span aria-hidden="true"></span>
@@ -111,10 +111,10 @@ export default {
   }
 
   .navbar-brand .navbar-item img {
-    max-height: 2.6rem;
+    max-height: 3rem;
 
     @include until($tablet) {
-      max-height: 2.2rem;
+      max-height: 2.4rem;
     }
   }
 

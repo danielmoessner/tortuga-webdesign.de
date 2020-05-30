@@ -2,7 +2,7 @@
   <footer class="mt-12vh">
     <div class="columns">
       <div class="column is-two-fifths">
-        <img src="@/assets/images/logored.png" alt="Tortuga Webdesign" class="max-h-30 mb-10">
+        <img src="@/assets/images/logo.production.svg" alt="Tortuga Webdesign" class="max-h-50 mb-10">
         <div class="is-size-6">
           Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.
         </div>
@@ -26,14 +26,14 @@
             <li class="mb-02">
               <nuxt-link class="py-03 md:py-none is-block" to="/kontakt">Kontakt</nuxt-link>
             </li>
-            <li class="mb-02">
+            <!-- <li class="mb-02">
               <ul class="py-03 md:py-none">
                 <li><h4>Leistungen (demnächst aktiv)</h4></li>
                 <li class="ml-10"><span>Webdesign</span></li>
                 <li class="ml-10"><span>Google Ads</span></li>
                 <li class="ml-10"><span>Beratung</span></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -108,8 +108,8 @@ export default {
   text-align: right;
 }
 
-.max-h-30 {
-  max-height: 3rem;
+.max-h-50 {
+  max-height: 5rem;
 }
 
 </style>

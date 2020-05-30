@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header has-text-centered">
+    <div class="header has-text-centered mb-24">
       <div class="columns">
         <div class="column is-6 is-offset-3">
           <h2 class="title is-3" data-aos="fade-up">{{ plan.title }}</h2>
@@ -37,3 +37,12 @@ export default {
 }
 
 </script>
+
+<style lang="scss">
+  .subtitle {
+    margin-top: -1.25rem;
+  }
+  .mb-24 {
+    margin-bottom: 2.4rem;
+  }
+</style>

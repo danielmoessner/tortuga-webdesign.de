@@ -90,6 +90,10 @@ export default {
     position: absolute !important;
     transform: none !important;
   }
+  
+  .navbar-brand {
+    margin-left: -0.7rem;
+  }
 
   .print-area {
     position: absolute !important;
