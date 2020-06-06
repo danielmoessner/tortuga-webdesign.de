@@ -35,7 +35,7 @@ export default {
       default: "#start"
     },
     buttonText: {
-      required: true
+      required: false
     },
     buttonOnclick: {
       required: false

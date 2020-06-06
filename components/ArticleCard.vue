@@ -1,5 +1,5 @@
 <template>
-  <div class="article card is-hoverable">
+  <div class="article card is-hoverable border-radius-6 overflow-hidden">
     <nuxt-link :to="articleLink" class="article--hover">
       <div class="card-image">
         <figure class="is-5by3 image">
@@ -57,6 +57,14 @@ export default {
 
 </script>
 <style lang="scss">
+.border-radius-6 {
+  border-radius: 6px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .mb-10 {
   margin-bottom: 1.0rem;
 }

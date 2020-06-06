@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-12 faq card" @click="clicked">
-    <div ref="question" class="faq--question card-header">
+  <div class="mb-12 faq card border-radius-6" @click="clicked">
+    <div ref="question" class="faq--question card-header border-radius-6">
       <div class="card-header-title">
         {{ question }}
       </div>
@@ -58,6 +58,10 @@ export default {
 
 </script>
 <style lang="scss">
+.border-radius-6 {
+  border-radius: 6px;
+}
+
 .mb-12 {
   margin-bottom: 1.2rem !important;
 }

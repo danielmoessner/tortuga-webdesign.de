@@ -1,15 +1,49 @@
 <template>
-  <div class="frame">
-    <slot></slot>
+  <div class="frame dark-shadow" :class="{ 'border-5': border, 'border-0': !border }">
+    <div class="frame-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
+<script>
+export default {
+  name: "BaseFrame",
+  props: {
+    border: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
+  },
+  data() {
+    return {}
+  }
+}
+
+</script>
 <style lang="scss">
+.border-5 {
+  border-width: 5px;
+}
+
+.border-0 {
+  border-width: 0;
+}
+
 .frame {
-  border: 5px solid $dark;
+  border-color: $dark;
+  border-style: solid;
+  border-radius: 6px;
   position: relative;
   display: block;
-  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
   overflow: hidden;
+  background-color: $dark;
+
+  &-content {
+    border-radius: 3px;
+    overflow: hidden;
+    background: $dark;
+  }
 
   img {
     display: block;

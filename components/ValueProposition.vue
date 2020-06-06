@@ -12,9 +12,9 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserTie, faEye } from '@fortawesome/free-solid-svg-icons'
-import { faSmileBeam } from '@fortawesome/free-regular-svg-icons'
-library.add(faUserTie, faEye, faSmileBeam)
+import { faUserTie, faEye, faBullseye, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faSmileBeam, faSmile } from '@fortawesome/free-regular-svg-icons'
+library.add(faUserTie, faEye, faSmileBeam, faBullseye, faSmile, faWrench)
 
 export default {
   components: {

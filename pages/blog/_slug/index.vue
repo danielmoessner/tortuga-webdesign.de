@@ -15,9 +15,9 @@
         </div>
         <div class="column is-9">
           <base-frame class="print-area">
-            <img :src="article.image" alt="Artikelbild">
-            <article v-html="$md.render(article.body)" class="px-20 py-10 content">
-            </article>
+              <img :src="article.image" alt="Artikelbild">
+              <article v-html="$md.render(article.body)" class="px-20 py-10 content has-background-white">
+              </article>
           </base-frame>
         </div>
         <div class="column is-12 no-print">

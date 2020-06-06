@@ -81,7 +81,7 @@
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <button class="button is-rounded is-primary">Absenden</button>
+              <button class="button is-rounded is-primary mt-08">Absenden</button>
             </div>
           </div>
         </div>
@@ -145,6 +145,10 @@ export default {
 
 </script>
 <style lang="scss">
+.mt-08{
+  margin-top: .8rem;
+}
+
 .checkbox {
   display: flex;
   height: auto;

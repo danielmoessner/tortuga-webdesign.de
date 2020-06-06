@@ -1,4 +1,5 @@
 <template>
+  <base-frame>
   <div ref="showcase" class="showcase" @mousemove="mousemove" @mouseover="mouseover" @mouseleave="mouseleave">
     <nuxt-link :to="detailPage" @click="mouseleave">
       <div class="tags">
@@ -14,9 +15,15 @@
       </div>
     </nuxt-link>
   </div>
+</base-frame>
 </template>
 <script>
+import BaseFrame from "@/components/BaseFrame.vue";
+
 export default {
+  components: {
+    BaseFrame
+  },
   props: {
     portfolioItem: {
       required: true
@@ -104,10 +111,8 @@ export default {
 </script>
 <style lang="scss">
 .showcase {
-  border: 5px solid $dark;
   position: relative;
   display: block;
-  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
   overflow: hidden;
   box-sizing: content-box;
 

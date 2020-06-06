@@ -7,11 +7,11 @@
       <template v-slot:no-container>
         <TheHeaderReflection />
       </template>
-      <TheStakes />
+      <TheStakes :stakes="page.stakes" />
     </base-section>
     <!---->
     <base-section class="top-small" id="value">
-      <TheValue />
+      <TheValue :value="page.value" />
     </base-section>
     <!---->
     <base-section id="guide">
@@ -22,9 +22,9 @@
       <ThePlan />
     </base-section>
     <!---->
-    <!-- <base-section>
-      <TheLeadGenerator />
-    </base-section> -->
+    <base-section>
+      <TheLeadGenerator :leadGenerator="page.leadGenerator" />
+    </base-section>
     <!---->
     <base-section>
       <TheFooter />

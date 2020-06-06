@@ -18,44 +18,34 @@
     "subtitle": "Kunden finden auf Ihrer Webseite ohne Umwege genau das, wonach sie suchen.",
     "propositions": [
     {
-
-      "proposition":
+      "icon":
       {
-        "icon":
-        {
-          "type": "fas",
-          "name": "user-tie",
-          "margin": -3
-        },
-        "title": "Professionellen Internetauftritt",
-        "text": "Mit Ihrer neuen Präsenz sehen Sie online modern aus und stehlen damit allen das Licht."
-      }
+        "type": "fas",
+        "name": "user-tie",
+        "margin": -3
+      },
+      "title": "Professionellen Internetauftritt",
+      "text": "Mit Ihrer neuen Präsenz sehen Sie online modern aus und stehlen damit allen das Licht."
     },
     {
-      "proposition":
+      "icon":
       {
-        "icon":
-        {
-          "type": "fas",
-          "name": "eye",
-          "margin": 7
-        },
-        "title": "Mehr Aufmerksamkeit",
-        "text": "Google & Co. zeigt Sie in den Suchergebnissen an und liefert Ihnen potentielle Kunden."
-      }
+        "type": "fas",
+        "name": "eye",
+        "margin": 7
+      },
+      "title": "Mehr Aufmerksamkeit",
+      "text": "Google & Co. zeigt Sie in den Suchergebnissen an und liefert Ihnen potentielle Kunden."
     },
     {
-      "proposition":
+      "icon":
       {
-        "icon":
-        {
-          "type": "far",
-          "name": "smile-beam",
-          "margin": 0
-        },
-        "title": "Gutes Gefühl mit Ihrer Webseite",
-        "text": "Sie wissen, dass Ihre Seite jetzt perfekt zu Ihnen passt und mit Ihren Zielen im Einklang ist."
-      }
+        "type": "far",
+        "name": "smile-beam",
+        "margin": 0
+      },
+      "title": "Gutes Gefühl mit Ihrer Webseite",
+      "text": "Sie wissen, dass Ihre Seite jetzt perfekt zu Ihnen passt und mit Ihren Zielen im Einklang ist."
     }]
   },
   "guide":
@@ -121,5 +111,12 @@
       }
     }],
     "bottom": "* Nach jeder Phase übernehmen wir Ihre Änderungs- und Anpassungswünsche, sodass Sie am Ende zu 100 % zufrieden sind."
+  },
+  "leadGenerator":
+  {
+    "title": "Erfahren Sie, wie Sie mit Ihrer Webseite mehr Geld verdienen können",
+    "description": "Was ist dem Besucher wichtig? Was können Sie bei Ihrer Seite verbessern? Worauf achten wir bei dem Design von Webseiten? Erfahren Sie jetzt wie Sie Ihre Webseite verbessern und Ihre Webseitenbesucher begeistern können.",
+    "action": "Jetzt herunterladen",
+    "link": "/was-macht-eine-gute-webseite-aus"
   }
 }

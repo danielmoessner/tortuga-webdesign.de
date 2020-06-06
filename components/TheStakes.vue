@@ -15,9 +15,10 @@
 <script>
 export default {
   name: "TheStakes",
-  data() {
-    return {
-      stakes: this.$store.state.pages.home.stakes
+  props: {
+    stakes: {
+      type: Object,
+      required: true
     }
   }
 }

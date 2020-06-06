@@ -4,7 +4,7 @@
       <div class="column is-5" :class="offsetPage">
         <div class="relative h-full">
           <base-frame class="h-full min-h-300">
-            <div class="group absolute h-full w-full" @mouseover="mouseover" @mouseleave="mouseleave">
+            <div class="group absolute h-full w-full border-radius-3 overflow-hidden" @mouseover="mouseover" @mouseleave="mouseleave">
               <div class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center" :class="{ 'is-invisible': isScrollable }">
                 <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
               </div>
@@ -22,7 +22,7 @@
             <p class="mb-18">
               {{ work.description }}
             </p>
-            <a href="/referenzen" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
+            <a href="/portfolio" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
           </div>
         </div>
       </div>

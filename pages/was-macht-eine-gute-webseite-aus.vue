@@ -1,0 +1,91 @@
+<template>
+  <main>
+    <!---->
+    <the-subpage-header :title="page.header.title" :subtitle="page.header.subtitle">
+      <div></div>
+    </the-subpage-header>
+    <!---->
+    <base-section class="bottom-medium top-medium" id="infos">
+      <template v-slot:no-container>
+        <TheHeaderReflection />
+      </template>
+      <TheStakes :stakes="page.stakes" />
+    </base-section>
+    <!---->
+    <base-section class="top-small">
+      <div class="columns">
+        <ValueProposition v-for="(proposition, index) in page.valuePropositions" :key="index" :proposition="proposition" :index="index" />
+      </div>
+    </base-section>
+    <!---->
+    <base-section>
+      <base-frame>
+        <div class="has-background-warning p-50">
+          <div class="columns">
+            <div class="column is-3">
+              <h2 class="title is-3 mb-18">{{ page.download.title }}</h2>
+              <div class="paper-shadow svg-parent is-flex">
+                <LeadGenerator />
+              </div>
+            </div>
+            <div class="column is-8 is-offset-1">
+              <LeadGeneratorForm :download="page.download" />
+            </div>
+          </div>
+        </div>
+      </base-frame>
+    </base-section>
+    <!---->
+    <base-section>
+      <TheFooter />
+    </base-section>
+    <!---->
+  </main>
+</template>
+<script>
+import TheStakes from "@/components/TheStakes.vue"
+import TheSubpageHeader from "../components/TheSubpageHeader.vue";
+import TheFooter from "../components/TheFooter.vue";
+import BaseSection from "@/components/BaseSection.vue"
+import BaseFrame from "@/components/BaseFrame.vue"
+import LeadGenerator from "@/assets/images/leadgenerator.production.svg?inline";
+import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import ValueProposition from "../components/ValueProposition.vue";
+import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue"
+
+export default {
+
+  components: {
+    TheSubpageHeader,
+    TheFooter,
+    BaseSection,
+    BaseFrame,
+    LeadGenerator,
+    TheStakes,
+    TheHeaderReflection,
+    ValueProposition,
+    LeadGeneratorForm
+  },
+  data() {
+    return {
+      page: this.$store.state.pages.leadGenerator
+    }
+  },
+  head() {
+    return {
+      title: this.page.title,
+      meta: [
+        { hid: "description", name: "description", content: this.page.description }
+      ]
+    }
+  },
+}
+
+</script>
+<style lang="scss">
+.svg-parent>svg {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>

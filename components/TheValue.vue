@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="columns">
-      <ValueProposition v-for="(proposition, index) in value.propositions" :key="index" :proposition="proposition.proposition" :index="index" />
+      <ValueProposition v-for="(proposition, index) in value.propositions" :key="index" :proposition="proposition" :index="index" />
     </div>
   </div>
 </template>
@@ -19,9 +19,15 @@ import ValueProposition from "../components/ValueProposition.vue";
 
 export default {
   name: "TheValue",
+  props: {
+    value: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
-      value: this.$store.state.pages.home.value
+      // value: this.$store.state.pages.home.value
     }
   },
   components: {

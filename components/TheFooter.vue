@@ -12,19 +12,19 @@
           <h3 class="mb-05">Navigation</h3>
           <ul class="footer-ul">
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block" to="/">Startseite</nuxt-link>
+              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/">Startseite</nuxt-link>
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block" to="/ueber-uns">Über uns</nuxt-link>
+              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/ueber-uns">Über uns</nuxt-link>
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block" to="/portfolio">Referenzen</nuxt-link>
+              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/portfolio">Referenzen</nuxt-link>
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block" to="/blog">Artikel</nuxt-link>
+              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/blog">Artikel</nuxt-link>
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block" to="/kontakt">Kontakt</nuxt-link>
+              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/kontakt">Kontakt</nuxt-link>
             </li>
             <!-- <li class="mb-02">
               <ul class="py-03 md:py-none">
@@ -42,8 +42,8 @@
           <h3 class="mb-05">Kontakt</h3>
           <address class="py-03 md:py-none">
             Daniel Mössner <br>
-            <a href="tel:004917638385646">0176 3838 5646</a> <br>
-            <a href="mailto:kontakt@tortuga-webdesign.de">kontakt@tortuga-webdesign.de</a> <br>
+            <a class=" has-text-primary" href="tel:004917638385646">0176 3838 5646</a> <br>
+            <a class=" has-text-primary" href="mailto:kontakt@tortuga-webdesign.de">kontakt@tortuga-webdesign.de</a> <br>
             Albert-Schweitzer-Str. 17b <br>
             85375 Neufahrn b. Freising
           </address>
@@ -54,10 +54,10 @@
           <h3 class="mb-05">Rechtliches</h3>
           <ul>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none mb-02 is-block" to="/impressum">Impressum</nuxt-link>
+              <nuxt-link class="py-03 md:py-none mb-02 is-block has-text-primary" to="/impressum">Impressum</nuxt-link>
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none mb-02 is-block" to="/datenschutz">Datenschutz</nuxt-link>
+              <nuxt-link class="py-03 md:py-none mb-02 is-block has-text-primary" to="/datenschutz">Datenschutz</nuxt-link>
             </li>
           </ul>
         </div>

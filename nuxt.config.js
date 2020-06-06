@@ -68,7 +68,8 @@ export default {
   modules: [
     '@nuxtjs/markdownit',
     'nuxt-purgecss',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/svg',
   ],
   /*
    ** Sitemap Config
