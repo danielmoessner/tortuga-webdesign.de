@@ -43,28 +43,28 @@
   </main>
 </template>
 <script>
+import BaseFrame from "@/components/BaseFrame.vue"
+import BaseSection from "@/components/BaseSection.vue"
+import LeadGenerator from "@/assets/images/leadgenerator.production.svg?inline";
+import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue"
+import TheFooter from "../components/TheFooter.vue";
+import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheStakes from "@/components/TheStakes.vue"
 import TheSubpageHeader from "../components/TheSubpageHeader.vue";
-import TheFooter from "../components/TheFooter.vue";
-import BaseSection from "@/components/BaseSection.vue"
-import BaseFrame from "@/components/BaseFrame.vue"
-import LeadGenerator from "@/assets/images/leadgenerator.production.svg?inline";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import ValueProposition from "../components/ValueProposition.vue";
-import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue"
 
 export default {
 
   components: {
-    TheSubpageHeader,
-    TheFooter,
-    BaseSection,
     BaseFrame,
+    BaseSection,
     LeadGenerator,
-    TheStakes,
+    LeadGeneratorForm,
+    TheFooter,
     TheHeaderReflection,
+    TheStakes,
+    TheSubpageHeader,
     ValueProposition,
-    LeadGeneratorForm
   },
   data() {
     return {

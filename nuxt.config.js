@@ -61,7 +61,9 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/gtm',
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -71,6 +73,12 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/svg',
   ],
+  /*
+  ** Google Tag Manager Config
+  */
+  gtm: {
+    id: 'GTM-TQM6M58'
+  },
   /*
    ** Sitemap Config
    */

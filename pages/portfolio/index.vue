@@ -26,21 +26,21 @@
   </main>
 </template>
 <script>
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import BaseSection from "@/components/BaseSection.vue"
 import CtaButton from "@/components/CtaButton.vue";
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
-import BaseSection from "@/components/BaseSection.vue"
+import TheFooter from "@/components/TheFooter.vue";
+import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 
 export default {
   components: {
-    TheSubpageHeader,
-    TheHeaderReflection,
+    BaseSection,
     CtaButton,
     PortfolioShowcase,
-    BaseSection,
     TheFooter,
+    TheHeaderReflection,
+    TheSubpageHeader,
   },
   data() {
     return {

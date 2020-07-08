@@ -72,20 +72,20 @@
 </template>
 <script>
 import BaseFaq from "@/components/BaseFaq.vue"
-import TheSubpageHeader from "../components/TheSubpageHeader.vue";
+import BaseSection from "@/components/BaseSection.vue";
+import CtaButton from "@/components/CtaButton.vue";
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
-import CtaButton from "@/components/CtaButton.vue";
-import BaseSection from "@/components/BaseSection.vue";
+import TheSubpageHeader from "../components/TheSubpageHeader.vue";
 
 export default {
   components: {
-    TheSubpageHeader,
+    BaseFaq,
+    BaseSection,
+    CtaButton,
     TheFooter,
     TheHeaderReflection,
-    CtaButton,
-    BaseFaq,
-    BaseSection
+    TheSubpageHeader,
   },
   data() {
     return {

@@ -33,27 +33,27 @@
   </main>
 </template>
 <script>
+import BaseSection from "@/components/BaseSection.vue";
+import TheGuide from "@/components/TheGuide.vue";
 import TheHeader from "@/components/TheHeader.vue";
+import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import TheLeadGenerator from "@/components/TheLeadGenerator.vue";
+import ThePlan from "@/components/ThePlan.vue";
 import TheStakes from "@/components/TheStakes.vue";
 import TheValue from "@/components/TheValue.vue";
-import TheGuide from "@/components/TheGuide.vue";
-import ThePlan from "@/components/ThePlan.vue";
-import BaseSection from "@/components/BaseSection.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import TheLeadGenerator from "@/components/TheLeadGenerator.vue";
 
 export default {
   components: {
+    BaseSection,
+    TheGuide,
     TheHeader,
+    TheHeaderReflection,
+    TheLeadGenerator,
+    ThePlan,
     TheStakes,
     TheValue,
-    TheGuide,
-    ThePlan,
-    BaseSection,
-    TheHeaderReflection,
     TheFooter,
-    TheLeadGenerator
   },
   data() {
     return {

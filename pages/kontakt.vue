@@ -60,26 +60,27 @@
   </main>
 </template>
 <script>
-import TheSubpageHeader from "../components/TheSubpageHeader.vue";
+import BaseSection from "@/components/BaseSection.vue"
+import ContactForm from "@/components/ContactForm.vue"
 import TheFooter from "../components/TheFooter.vue";
 import TheHeaderReflection from "../components/TheHeaderReflection.vue";
+import TheSubpageHeader from "../components/TheSubpageHeader.vue";
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 import { faHome, faEnvelope, faUser, faCircle } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 library.add(faHome, faEnvelope, faUser, faInstagram, faLinkedinIn, faCircle)
-import BaseSection from "@/components/BaseSection.vue"
-import ContactForm from "@/components/ContactForm.vue"
 
 export default {
   components: {
-    TheSubpageHeader,
+    BaseSection,
+    ContactForm,
     TheFooter,
     TheHeaderReflection,
+    TheSubpageHeader,
     FontAwesomeIcon,
     FontAwesomeLayers,
-    BaseSection,
-    ContactForm
   },
   data() {
     return {

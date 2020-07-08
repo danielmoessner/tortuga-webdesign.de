@@ -19,17 +19,17 @@
   </main>
 </template>
 <script>
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
+import BaseSection from "@/components/BaseSection.vue"
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue"
-import BaseSection from "@/components/BaseSection.vue"
+import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 
 export default {
   components: {
-    TheSubpageHeader,
+    BaseSection,
     TheFooter,
     TheHeaderReflection,
-    BaseSection
+    TheSubpageHeader,
   },
   data() {
     return {

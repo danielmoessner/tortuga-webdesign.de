@@ -27,19 +27,19 @@
   </main>
 </template>
 <script>
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import BaseFrame from "@/components/BaseFrame.vue"
-import StickyInfo from "@/components/StickyInfo.vue";
 import BaseSection from "@/components/BaseSection.vue"
+import StickyInfo from "@/components/StickyInfo.vue";
+import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
+import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 
 export default {
   components: {
-    TheSubpageHeader,
-    TheHeaderReflection,
     BaseFrame,
+    BaseSection,
     StickyInfo,
-    BaseSection
+    TheHeaderReflection,
+    TheSubpageHeader,
   },
   data() {
     return {
