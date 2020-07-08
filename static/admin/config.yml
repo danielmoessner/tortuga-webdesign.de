@@ -45,10 +45,10 @@ collections:
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Url', name: 'url', widget: 'string'}
       - { label: 'Date', name: 'date', widget: 'date' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Image', name: 'image', widget: 'image', hint: 'Preferably 1500 pixels wide and jpg format.' }
       - { label: 'Active', name: 'active', widget: 'boolean', required: false }
-      - { label: 'Image 500', name: 'image500', widget: 'image' }
-      - { label: "Short Image", name: "shortImage", widget: "image"}
+      - { label: 'Image 500', name: 'image500', widget: 'image', hint: 'Preferably 500 pixels wide and jpg format.' }
+      - { label: "Short Image", name: "shortImage", widget: "image", hint: 'Preferably 100 pixels wide and low quality. Should not show the whole page, as it is used as height set for the portfolio showcase.'}
       - { label: 'Featured', name: 'featured', widget: 'boolean', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Tags', name: 'tags', required: false, widget: 'relation', multiple: true, searchFields: ['title'], collection: 'tag', valueField: 'title' }
