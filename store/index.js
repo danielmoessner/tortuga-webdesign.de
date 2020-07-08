@@ -46,6 +46,7 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
+    portfolioPosts = portfolioPosts.filter(post => post.active)
     portfolioPosts = portfolioPosts.sort((firstPost, secondPost) => { return new Date(secondPost.date) - new Date(firstPost.date)})
     await commit('SET_PORTFOLIO_POSTS', portfolioPosts);
 

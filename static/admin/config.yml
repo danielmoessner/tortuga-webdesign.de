@@ -46,6 +46,7 @@ collections:
       - { label: 'Url', name: 'url', widget: 'string'}
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Active', name: 'active', widget: 'boolean', required: false }
       - { label: 'Image 500', name: 'image500', widget: 'image' }
       - { label: "Short Image", name: "shortImage", widget: "image"}
       - { label: 'Featured', name: 'featured', widget: 'boolean', required: false }
