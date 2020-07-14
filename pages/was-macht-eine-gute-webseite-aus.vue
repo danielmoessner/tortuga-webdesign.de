@@ -20,12 +20,14 @@
     <!---->
     <base-section>
       <base-frame>
-        <div class="has-background-warning p-50">
+        <div class="has-background-warning p-30 md:p-50">
           <div class="columns">
             <div class="column is-3">
               <h2 class="title is-3 mb-18">{{ page.download.title }}</h2>
-              <div class="paper-shadow svg-parent is-flex">
-                <LeadGenerator />
+              <div class="is-flex mw-400 h-auto">
+                <div class="paper-shadow svg-parent w-100">
+                  <LeadGenerator />
+                </div>
               </div>
             </div>
             <div class="column is-8 is-offset-1">
@@ -83,9 +85,18 @@ export default {
 
 </script>
 <style lang="scss">
-.svg-parent>svg {
-  max-width: 100%;
-  height: auto;
+.svg-parent {
+  padding-bottom: 126%;
+  position: relative;
+  &>svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 </style>

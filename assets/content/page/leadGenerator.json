@@ -45,7 +45,7 @@
   {
     "title": "Hilfestellung herunterladen",
     "action": "Jetzt herunterladen",
-    "note": "Dieses Formular speichert Ihren Namen und E-Mail, sodass wir Sie zu unserer E-Mail Liste hinzufügen und Ihnen hilfreiche Artikel und Neuigkeiten senden können. Bitte informieren Sie sich in unserem Datenschutz darüber, wie wir Ihre Daten speichern und schützen.",
+    "note": "Dieses Formular speichert Ihren Namen und Ihre E-Mail, sodass wir Sie zu unserer E-Mail Liste hinzufügen und Ihnen hilfreiche Artikel und Neuigkeiten senden können. Bitte informieren Sie sich in unserem Datenschutz darüber, wie wir Ihre Daten speichern und schützen.",
     "error": {
       "message": "Da ist leider ein Fehler passiert. Bitte probieren Sie es noch einmal oder schreiben Sie uns eine E-Mail."
     },
