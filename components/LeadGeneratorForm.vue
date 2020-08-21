@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form class="columns is-multiline" @submit="submitForm" ref="leadGeneratorForm" action="https://ex4d4.dmoe.tech/postforms/tortugawebdesignde-leadgenerator/">
+    <form class="columns is-multiline" @submit="submitForm" ref="leadGeneratorForm" action="https://ex4d4.danielmoessner.de/postforms/tortugawebdesignde-leadgenerator/">
       <div class="column is-6">
         <div class="field">
           <label for="name" class="label">Vorname</label>

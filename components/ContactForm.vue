@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form ref="contactForm" @submit="submitContactForm" action="https://ex4d4.dmoe.tech/postforms/tortugawebdesignde/">
+    <form ref="contactForm" @submit="submitContactForm" action="https://ex4d4.danielmoessner.de/postforms/tortugawebdesignde/">
       <div class="field is-horizontal">
         <div class="field-label is-normal">
           <label for="name" class="label">Vor- & Nachname</label>
