@@ -1,5 +1,4 @@
-# doesnt seem to do anything
-# [[redirects]]
-#   from = "/*"
-#   to = "/"
-#   status = 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
