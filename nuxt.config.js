@@ -1,10 +1,11 @@
 export default {
   mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'Tortuga Webdesign',
     htmlAttrs: {
       lang: 'de',
     },
@@ -19,28 +20,28 @@ export default {
   /*
    ** Generate 
    */
-  generate: {
-    routes: [
-      '/blog/ressourcen',
-      '/blog/webdesign-prozess',
-      '/portfolio/franco-pioli-datenschutz-und-vereinsmanagement',
-      '/portfolio/healed-me-i-won-the-lottery',
-      '/portfolio/internationale-gesellschaft-orientalischer-christen-ev',
-      '/portfolio/katzenbetreuung-tigerfreund',
-      '/portfolio/kristina-boess-yoga-und-coaching',
-      '/portfolio/maschinenverleih-schaetz',
-      '/portfolio/praeventionszentrum-muenchen-ost',
-      '/portfolio/qc-quality-control',
-      '/portfolio/rabe-sport-gmbh',
-      '/portfolio/schaetz-bautrockner-verleih',
-      '/portfolio/schaetz-shop-autozubehoer-fuer-ihren-mercedes',
-      '/portfolio/sefa-sahin-kues-gutachter',
-      '/portfolio/selma-selcuk-haarsysteme',
-      '/portfolio/silke-tolkmitt-marketingmanagement',
-      '/portfolio/sn-trockenbau-gmbh',
-      '/portfolio/the-corner-house',
-    ]
-  },
+  // generate: {
+  //   routes: [
+  //     '/blog/ressourcen',
+  //     '/blog/webdesign-prozess',
+  //     '/portfolio/franco-pioli-datenschutz-und-vereinsmanagement',
+  //     '/portfolio/healed-me-i-won-the-lottery',
+  //     '/portfolio/internationale-gesellschaft-orientalischer-christen-ev',
+  //     '/portfolio/katzenbetreuung-tigerfreund',
+  //     '/portfolio/kristina-boess-yoga-und-coaching',
+  //     '/portfolio/maschinenverleih-schaetz',
+  //     '/portfolio/praeventionszentrum-muenchen-ost',
+  //     '/portfolio/qc-quality-control',
+  //     '/portfolio/rabe-sport-gmbh',
+  //     '/portfolio/schaetz-bautrockner-verleih',
+  //     '/portfolio/schaetz-shop-autozubehoer-fuer-ihren-mercedes',
+  //     '/portfolio/sefa-sahin-kues-gutachter',
+  //     '/portfolio/selma-selcuk-haarsysteme',
+  //     '/portfolio/silke-tolkmitt-marketingmanagement',
+  //     '/portfolio/sn-trockenbau-gmbh',
+  //     '/portfolio/the-corner-house',
+  //   ]
+  // },
   /*
    ** Customize the progress-bar color
    */
