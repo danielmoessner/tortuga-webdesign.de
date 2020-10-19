@@ -5,7 +5,7 @@
       name="lead"
       data-netlify="true"
       ref="leadGeneratorForm"
-      method="GET"
+      method="post"
       action="/was-macht-eine-gute-webseite-aus/danke/"
     >
       <input type="hidden" name="form-name" value="lead" />
