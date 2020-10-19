@@ -2,8 +2,8 @@
   <main>
     <!---->
     <TheSubpageHeader
-      title="Vielen Dank für Ihr Interesse!"
-      subtitle="Hilfestellung"
+      :title="page.thankYou.header.title"
+      :subtitle="page.thankYou.header.subtitle"
     />
     <!---->
     <base-section class="top-medium" id="kontakt">
@@ -13,12 +13,12 @@
       <div class="message is-success">
         <div class="message-body">
           <h3 class="title is-4 color-inherit">
-            {{ page.download.success.title }}
+            {{ page.thankYou.text.title }}
           </h3>
-          <p class="mb-02">{{ page.download.success.message }}</p>
+          <p class="mb-02">{{ page.thankYou.text.text }}</p>
           <p class="">
-            <a class="" target="_blank" :href="page.download.link">
-              {{ page.download.action }}
+            <a class="" target="_blank" :href="page.thankYou.text.link.to">
+              {{ page.thankYou.text.link.text }}
             </a>
           </p>
         </div>

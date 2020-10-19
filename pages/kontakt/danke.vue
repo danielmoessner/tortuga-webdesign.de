@@ -2,8 +2,8 @@
   <main>
     <!---->
     <TheSubpageHeader
-      title="Vielen Dank für Ihre Anfrage!"
-      subtitle="Kontakt"
+      :title="page.thankYou.header.title"
+      :subtitle="page.thankYou.header.subtitle"
     />
     <!---->
     <base-section class="top-medium" id="kontakt">
@@ -13,15 +13,14 @@
       <div class="message is-success">
         <div class="message-body">
           <h3 class="title is-4 color-inherit">
-            Vielen Dank!
+            {{ page.thankYou.text.title }}
           </h3>
           <p class="mb-02">
-            Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei
-            Ihnen melden.
+            {{ page.thankYou.text.text }}
           </p>
           <p class="">
-            <nuxt-link class="" to="/">
-              Zurück zur Startseite
+            <nuxt-link class="" :to="page.thankYou.text.link.to">
+              {{ page.thankYou.text.link.text }}
             </nuxt-link>
           </p>
         </div>
