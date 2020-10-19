@@ -8,6 +8,7 @@
       method="GET"
       action="/was-macht-eine-gute-webseite-aus/danke/"
     >
+      <input type="hidden" name="form-name" value="lead" />
       <div class="column is-6">
         <div class="field">
           <label for="name" class="label">Vorname</label>

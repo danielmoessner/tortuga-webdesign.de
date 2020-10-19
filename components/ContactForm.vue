@@ -7,6 +7,7 @@
       method="post"
       action="/kontakt/danke/"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div class="field is-horizontal">
         <div class="field-label is-normal">
           <label for="name" class="label">Vor- &amp; Nachname</label>
