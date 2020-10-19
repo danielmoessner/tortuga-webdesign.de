@@ -6,6 +6,7 @@
       data-netlify="true"
       ref="leadGeneratorForm"
       method="POST"
+      action="/was-macht-eine-gute-webseite-aus/danke/"
     >
       <div class="column is-6">
         <div class="field">
@@ -99,22 +100,6 @@
         </p>
       </div>
     </form>
-    <div ref="errorMessage" class="message is-danger" style="display: none">
-      <div class="message-body">
-        {{ download.error.message }}
-      </div>
-    </div>
-    <div ref="successMessage" class="message is-success" style="display: none">
-      <div class="message-body">
-        <h3 class="title is-4 color-inherit">{{ download.success.title }}</h3>
-        <p class="mb-02">{{ download.success.message }}</p>
-        <p class="">
-          <a class="" target="_blank" :href="download.link">{{
-            download.action
-          }}</a>
-        </p>
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -137,37 +122,6 @@ export default {
     download: {
       type: Object,
       required: true
-    }
-  },
-  methods: {
-    submitForm(event) {
-      const self = this;
-      event.preventDefault();
-      const form = this.$refs.leadGeneratorForm;
-      this.$refs.successMessage.style.display = "none";
-      this.$refs.errorMessage.style.display = "none";
-      const formData = new FormData(event.target);
-      const data = {};
-      formData.forEach(function(value, key) {
-        data[key] = value;
-      });
-      fetch(form.action, {
-        method: "post",
-        mode: "cors",
-        body: formData
-      })
-        .then(response => response.json())
-        .then(function(response) {
-          if (response.is_form_valid) {
-            self.$refs.successMessage.style.display = "block";
-            form.style.display = "none";
-          } else {
-            self.$refs.errorMessage.style.display = "block";
-          }
-        })
-        .catch(function(error) {
-          self.$refs.errorMessage.style.display = "block";
-        });
     }
   }
 };

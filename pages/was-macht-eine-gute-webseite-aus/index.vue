@@ -49,11 +49,11 @@ import BaseFrame from "@/components/BaseFrame.vue"
 import BaseSection from "@/components/BaseSection.vue"
 import LeadGenerator from "@/assets/images/leadgenerator.production.svg?inline";
 import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue"
-import TheFooter from "../components/TheFooter.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheStakes from "@/components/TheStakes.vue"
-import TheSubpageHeader from "../components/TheSubpageHeader.vue";
-import ValueProposition from "../components/ValueProposition.vue";
+import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
+import ValueProposition from "@/components/ValueProposition.vue";
 
 export default {
 

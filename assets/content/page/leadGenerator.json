@@ -7,7 +7,7 @@
   },
   "stakes":
   {
-    "title": "Erfahren Sie, wie Sie mit Ihrer Webseite mehr Geld verdienen können",
+    "title": "Erfahren Sie wie eine Webseite begeistert",
     "subtitle": "Was ist dem Besucher wichtig? Was können Sie bei Ihrer Seite verbessern? Worauf achten wir bei dem Design von Webseiten?"
   },
   "valuePropositions": [
@@ -50,10 +50,9 @@
       "message": "Da ist leider ein Fehler passiert. Bitte probieren Sie es noch einmal oder schreiben Sie uns eine E-Mail."
     },
     "success": {
-      "title": "Vielen Dank!",
+      "title": "Viel Erfolg mit unserer Hilfestellung!",
       "message": "Bereit unsere Hiflestellung anzusehen? Klicken Sie einfach auf den Link. Keine Sorge, falls Sie gerade keine Zeit haben zum durchlesen, es ist bereits alles unterwegs zu Ihrem Postfach."
     },
-    "link": "/hilfestellungen/Was-macht-eine-gute-Webseite-aus.pdf",
-    "action": "Jetzt herunterladen"
+    "link": "/hilfestellungen/Was-macht-eine-gute-Webseite-aus.pdf"
   }
 }

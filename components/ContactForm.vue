@@ -1,6 +1,12 @@
 <template>
   <div>
-    <form ref="contactForm" name="contact" data-netlify="true" method="POST">
+    <form
+      ref="contactForm"
+      name="contact"
+      data-netlify="true"
+      method="POST"
+      action="/kontakt/danke/"
+    >
       <div class="field is-horizontal">
         <div class="field-label is-normal">
           <label for="name" class="label">Vor- &amp; Nachname</label>
@@ -123,19 +129,6 @@
         </div>
       </div>
     </form>
-    <div ref="errorMessage" class="message is-danger" style="display: none">
-      <div class="message-body">
-        Da ist leider ein Fehler passiert. Bitte probieren Sie es noch einmal
-        oder schreiben Sie uns eine E-Mail. Bitte beachten Sie das kein
-        HTML-Text in der Nachricht enthalten sein darf.
-      </div>
-    </div>
-    <div ref="successMessage" class="message is-success" style="display: none">
-      <div class="message-body">
-        Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen
-        melden.
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -148,37 +141,6 @@ export default {
   name: "ContactForm",
   components: {
     FontAwesomeIcon
-  },
-  methods: {
-    submitContactForm(event) {
-      const self = this;
-      event.preventDefault();
-      const form = this.$refs.contactForm;
-      this.$refs.successMessage.style.display = "none";
-      this.$refs.errorMessage.style.display = "none";
-      const formData = new FormData(event.target);
-      const data = {};
-      formData.forEach(function(value, key) {
-        data[key] = value;
-      });
-      fetch(form.action, {
-        method: "post",
-        mode: "cors",
-        body: formData
-      })
-        .then(response => response.json())
-        .then(function(response) {
-          if (response.is_form_valid) {
-            self.$refs.successMessage.style.display = "block";
-            form.style.display = "none";
-          } else {
-            self.$refs.errorMessage.style.display = "block";
-          }
-        })
-        .catch(function(error) {
-          self.$refs.errorMessage.style.display = "block";
-        });
-    }
   }
 };
 </script>
