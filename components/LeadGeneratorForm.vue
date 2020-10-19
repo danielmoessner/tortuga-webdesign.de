@@ -5,6 +5,7 @@
       name="lead"
       data-netlify="true"
       ref="leadGeneratorForm"
+      method="POST"
     >
       <div class="column is-6">
         <div class="field">

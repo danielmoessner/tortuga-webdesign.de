@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form ref="contactForm" name="contact" data-netlify="true">
+    <form ref="contactForm" name="contact" data-netlify="true" method="POST">
       <div class="field is-horizontal">
         <div class="field-label is-normal">
           <label for="name" class="label">Vor- &amp; Nachname</label>
