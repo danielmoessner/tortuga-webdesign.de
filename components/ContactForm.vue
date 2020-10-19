@@ -4,7 +4,7 @@
       ref="contactForm"
       name="contact"
       data-netlify="true"
-      method="POST"
+      method="GET"
       action="/kontakt/danke/"
     >
       <div class="field is-horizontal">

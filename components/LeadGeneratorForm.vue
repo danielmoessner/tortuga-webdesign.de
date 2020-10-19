@@ -5,7 +5,7 @@
       name="lead"
       data-netlify="true"
       ref="leadGeneratorForm"
-      method="POST"
+      method="GET"
       action="/was-macht-eine-gute-webseite-aus/danke/"
     >
       <div class="column is-6">
