@@ -2,7 +2,7 @@
 ** This file contains the style for a custom scrollbar
 */
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 ::-webkit-scrollbar {
   position: fixed;
   right: 0;
@@ -24,4 +24,4 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #1f1d20;
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */

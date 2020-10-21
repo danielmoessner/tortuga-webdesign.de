@@ -134,8 +134,6 @@ collections:
                     widget: "object"
                     fields:
                       - { label: "Svg", name: "svg", widget: "text" }
-                      - { label: "Type", name: "type", widget: "string" }
-                      - { label: "Name", name: "name", widget: "string" }
                       - { label: "Margin", name: "margin", widget: "number" }
           - label: "Guide"
             name: "guide"
@@ -165,8 +163,6 @@ collections:
                       widget: "object"
                       fields:
                         - { label: "Svg", name: "svg", widget: "text" }
-                        - { label: "Type", name: "type", widget: "string" }
-                        - { label: "Name", name: "name", widget: "string" }
                         - { label: "Margin", name: "margin", widget: "number" }
       - label: "About Page"
         name: "about"
@@ -387,8 +383,6 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Svg", name: "svg", widget: "text" }
-                  - { label: "Type", name: "type", widget: "string" }
-                  - { label: "Name", name: "name", widget: "string" }
                   - { label: "Margin", name: "margin", widget: "number" }
           - label: "Thank You"
             name: "thankYou"
