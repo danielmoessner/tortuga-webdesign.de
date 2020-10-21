@@ -8,7 +8,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "bulma": "node-sass assets/styles/bulma.scss -o assets/styles"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
@@ -20,14 +21,15 @@
     "@nuxtjs/gtm": "^2.3.2",
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/typography": "^0.2.0",
     "bulma": "^0.8.2",
     "cookieconsent": "^3.1.1",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.14.7",
-    "nuxt-purgecss": "^0.2.1"
+    "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
-    "@nuxtjs/style-resources": "^1.0.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"

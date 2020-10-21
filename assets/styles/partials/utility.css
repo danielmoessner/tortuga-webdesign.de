@@ -2,7 +2,7 @@
 ** sizes
 */
 
-// width
+/* // width */
 .w-50 {
   width: 50%;
 }
@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-// height
+/* // height */
 .h-200 {
   height: 200px;
 }
@@ -32,7 +32,7 @@
 ** margins
 **/
 
-// bottom
+/* // bottom */
 
 .mb-08 {
   margin-bottom: 0.8rem !important;
@@ -46,7 +46,7 @@
   margin-bottom: 2.8rem;
 }
 
-// top
+/* // top */
 .mt-18 {
   margin-top: 1.8rem;
 }
@@ -92,17 +92,17 @@
 */
 
 .shadow {
-  // used on articles or cards
+  /* // used on articles or cards */
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
 }
 
 .dark-shadow {
-  // used on showcases and base-frames
-  box-shadow: 0 0 2.8rem 0 rgba($color3, 1);
+  /* // used on showcases and base-frames */
+  box-shadow: 0 0 2.8rem 0 #484847;
 }
 
 .paper-shadow {
-  // used on the lead generator
+  /* // used on the lead generator */
   box-shadow: 4px 4px 8px 0px #484847;
 }
 
@@ -122,7 +122,7 @@
 ** border
 */
 
-// radius
+/* // radius */
 .border-radius-6 {
   border-radius: 6px;
 }
@@ -131,12 +131,12 @@
   border-radius: 3px;
 }
 
-// color 
+/* // color  */
 .border-dark {
-  border-color: $dark !important;
+  border-color: hsla(280%, 5%, 12%, 1) !important;
 }
 
-// reset
+/* // reset */
 .border-none {
   border: none !important;
 }

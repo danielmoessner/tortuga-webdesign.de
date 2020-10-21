@@ -1,10 +1,13 @@
+const path = require("path");
+const purgecss = require("@fullhuman/postcss-purgecss");
+
 export default {
   target: "static",
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "Tortuga Webdesign",
+    title: "Tortuga Webdesign",
     htmlAttrs: {
       lang: "de"
     },
@@ -21,31 +24,21 @@ export default {
     fallback: "404.html"
   },
   /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: "#fff" },
-  /*
    ** Global CSS
    */
-  css: [{ src: "~/assets/styles/global-styles.scss", lang: "scss" }],
-
+  css: ["@/assets/styles/tailwind.css"],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [{ src: "~/plugins/lazysizes.client.js" }],
   /*
-   ** Nuxt.js dev-modules
+   ** Nuxt.js build-modules
    */
   buildModules: ["@nuxtjs/gtm"],
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    "@nuxtjs/markdownit",
-    "nuxt-purgecss",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/svg"
-  ],
+  modules: ["@nuxtjs/markdownit", "@nuxtjs/sitemap", "@nuxtjs/svg"],
   /*
    ** Google Tag Manager Config
    */
@@ -80,10 +73,6 @@ export default {
     ]
   },
   /*
-   ** Purgecss Config
-   */
-  purgecss: {},
-  /*
    ** Markdown Config
    ** See: https://github.com/markdown-it/markdown-it
    */
@@ -97,27 +86,44 @@ export default {
    ** Build configuration
    */
   build: {
-    extractCSS: {
-      optimization: {
-        splitChunks: {
-          layouts: true,
-          cacheGroups: {
-            styles: {
-              name: "styles",
-              test: /\.(css|vue)$/,
-              chunks: "all",
-              enforce: true
-            }
-          }
-        }
-      }
-    },
+    extractCSS: true,
     postcss: {
-      preset: {
-        features: {
-          customProperties: false
-        },
-        plugins: []
+      // preset: {
+      //   features: {
+      //     customProperties: false
+      //   }
+      // },
+      plugins: {
+        "postcss-import": {},
+        tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
+        "@fullhuman/postcss-purgecss":
+          process.env.NODE_ENV === "production"
+            ? {
+                content: [
+                  "./components/**/*.vue",
+                  "./layouts/**/*.vue",
+                  "./pages/**/*.vue"
+                ],
+                safelist: [
+                  "body",
+                  "html",
+                  "nuxt-progress",
+                  "__nuxt",
+                  "__layout",
+                  /-(leave|enter|appear)(|-(to|from|active))$/, // Normal transitions
+                  /^nuxt-link(|-exact)-active$/, // Nuxt link classes
+                  /^(?!cursor-move).+-move$/, // Move transitions
+                  /data-v-.*/ // Keep scoped styles
+                ],
+                defaultExtractor: content => {
+                  const broadMatches =
+                    content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+                  const innerMatches =
+                    content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+                  return broadMatches.concat(innerMatches);
+                }
+              }
+            : false
       }
     },
     loaders: {
@@ -126,19 +132,19 @@ export default {
           '@import "./assets/styles/insert-into-every-component.scss";'
       }
     },
-    html: {
-      minify: {
-        collapseBooleanAttributes: true,
-        decodeEntities: true,
-        minifyCSS: false,
-        minifyJS: false,
-        processConditionalComments: true,
-        removeEmptyAttributes: true,
-        removeRedundantAttributes: true,
-        trimCustomFragments: true,
-        useShortDoctype: true
-      }
-    },
+    // html: {
+    //   minify: {
+    //     collapseBooleanAttributes: true,
+    //     decodeEntities: true,
+    //     minifyCSS: false,
+    //     minifyJS: false,
+    //     processConditionalComments: true,
+    //     removeEmptyAttributes: true,
+    //     removeRedundantAttributes: true,
+    //     trimCustomFragments: true,
+    //     useShortDoctype: true
+    //   }
+    // },
     /*
      ** You can extend webpack config here
      */
