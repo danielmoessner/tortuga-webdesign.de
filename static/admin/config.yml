@@ -133,6 +133,7 @@ collections:
                     label: "Icon"
                     widget: "object"
                     fields:
+                      - { label: "Svg", name: "svg", widget: "text" }
                       - { label: "Type", name: "type", widget: "string" }
                       - { label: "Name", name: "name", widget: "string" }
                       - { label: "Margin", name: "margin", widget: "number" }
@@ -163,6 +164,7 @@ collections:
                       label: "Icon"
                       widget: "object"
                       fields:
+                        - { label: "Svg", name: "svg", widget: "text" }
                         - { label: "Type", name: "type", widget: "string" }
                         - { label: "Name", name: "name", widget: "string" }
                         - { label: "Margin", name: "margin", widget: "number" }
@@ -384,6 +386,7 @@ collections:
                 label: "Icon"
                 widget: "object"
                 fields:
+                  - { label: "Svg", name: "svg", widget: "text" }
                   - { label: "Type", name: "type", widget: "string" }
                   - { label: "Name", name: "name", widget: "string" }
                   - { label: "Margin", name: "margin", widget: "number" }
