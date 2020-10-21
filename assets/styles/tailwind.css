@@ -5,7 +5,7 @@
 @import "tailwindcss/utilities";
 
 @import "./bulma.css";
-@import "./partials/scrollbar.css";
 @import "./partials/utility.css";
 @import "./partials/typography.css";
+@import "./partials/scrollbar.css";
 @import "./partials/fontawesome.css";

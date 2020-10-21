@@ -1,10 +1,11 @@
 const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: ["./components/**/*.vue", "./layouts/**/*.vue", "./pages/**/*.vue"]
-  },
+  // purge: {
+  //   enabled: process.env.NODE_ENV === "production",
+  //   content: ["./components/**/*.vue", "./layouts/**/*.vue", "./pages/**/*.vue"]
+  // },
+  purge: false,
   theme: {
     extend: {
       colors: {
