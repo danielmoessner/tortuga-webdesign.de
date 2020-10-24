@@ -86,6 +86,12 @@ export default {
    ** Build configuration
    */
   build: {
+    devMiddleware: {
+      headers: {
+        "Cache-Control": "no-store",
+        Vary: "*"
+      }
+    },
     extractCSS: true,
     postcss: {
       // preset: {
