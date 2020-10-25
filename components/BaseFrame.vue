@@ -1,5 +1,8 @@
 <template>
-  <div class="frame dark-shadow" :class="{ 'border-5': border, 'border-0': !border }">
+  <div
+    class="frame dark-shadow"
+    :class="{ 'border-5': border, 'border-0': !border }"
+  >
     <div class="frame-content">
       <slot></slot>
     </div>
@@ -16,12 +19,11 @@ export default {
     }
   },
   data() {
-    return {}
+    return {};
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .border-5 {
   border-width: 5px;
 }
@@ -48,7 +50,5 @@ export default {
   img {
     display: block;
   }
-
 }
-
 </style>

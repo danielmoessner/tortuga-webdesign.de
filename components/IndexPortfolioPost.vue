@@ -4,12 +4,31 @@
       <div class="column is-5" :class="offsetPage">
         <div class="relative h-full">
           <base-frame class="h-full min-h-300">
-            <div class="group absolute h-full w-full border-radius-3 overflow-hidden" @mouseover="mouseover" @mouseleave="mouseleave">
-              <div class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center" :class="{ 'is-invisible': isScrollable }">
-                <span class="has-text-centered has-text-white is-size-4"><b>Verwende X+Scrollen zum Interagieren</b></span>
+            <div
+              class="group absolute h-full w-full border-radius-3 overflow-hidden"
+              @mouseover="mouseover"
+              @mouseleave="mouseleave"
+            >
+              <div
+                class="group-hover:visible invisible bg-dark-75 absolute h-full w-full is-hidden-touch is-flex items-center justify-center"
+                :class="{ 'is-invisible': isScrollable }"
+              >
+                <span class="has-text-centered has-text-white is-size-4"
+                  ><b>Verwende X+Scrollen zum Interagieren</b></span
+                >
               </div>
-              <div class="w-full h-full no-scrollbar" :class="{ 'overflow-y-hidden': !isScrollable, 'overflow-y-scroll': isScrollable }">
-                <img :data-src="work.image500" :alt="work.title" class="is-block w-full lazyload">
+              <div
+                class="w-full h-full no-scrollbar"
+                :class="{
+                  'overflow-y-hidden': !isScrollable,
+                  'overflow-y-scroll': isScrollable
+                }"
+              >
+                <img
+                  :data-src="work.image500"
+                  :alt="work.title"
+                  class="is-block w-full lazyload"
+                />
               </div>
             </div>
           </base-frame>
@@ -17,12 +36,18 @@
       </div>
       <div class="column is-4" :class="offsetText">
         <div class="index-portfolio-post-text">
-          <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
+          <div
+            data-aos="fade-up"
+            :data-aos-delay="aosDelay"
+            data-aos-duration="600"
+          >
             <h3 class="title is-4">{{ work.title }}</h3>
             <p class="mb-18">
               {{ work.description }}
             </p>
-            <a href="/portfolio" class="button is-dark is-rounded is-outlined">Alle Referenzen ansehen</a>
+            <a href="/portfolio" class="button is-dark is-rounded is-outlined"
+              >Alle Referenzen ansehen</a
+            >
           </div>
         </div>
       </div>
@@ -51,7 +76,7 @@ export default {
     return {
       isScrollable: false,
       isMouseOver: false
-    }
+    };
   },
   computed: {
     columnsReversed() {
@@ -75,21 +100,28 @@ export default {
       this.isMouseOver = false;
     },
     setIsScrollable(xKeyPressed) {
-      xKeyPressed && this.isMouseOver ? this.isScrollable = true : this.isScrollable = false;
-    },
+      xKeyPressed && this.isMouseOver
+        ? (this.isScrollable = true)
+        : (this.isScrollable = false);
+    }
   },
   mounted() {
-    document.addEventListener('keyup', function(event) {
-      if (event.key === 'x' || event.key === 'X') this.setIsScrollable(false);
-    }.bind(this))
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'x' || event.key === 'X') this.setIsScrollable(true);
-    }.bind(this))
+    document.addEventListener(
+      "keyup",
+      function(event) {
+        if (event.key === "x" || event.key === "X") this.setIsScrollable(false);
+      }.bind(this)
+    );
+    document.addEventListener(
+      "keydown",
+      function(event) {
+        if (event.key === "x" || event.key === "X") this.setIsScrollable(true);
+      }.bind(this)
+    );
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .w-full {
   width: 100%;
 }
@@ -117,7 +149,6 @@ export default {
 .no-scrollbar::-webkit-scrollbar {
   width: 0;
 }
-
 
 .index-portfolio-post {
   @include until($tablet) {
@@ -159,11 +190,10 @@ export default {
 }
 
 .bg-dark-75 {
-  background-color: rgba($dark, 0.5)
+  background-color: rgba($dark, 0.5);
 }
 
 .group:hover .group-hover\:visible {
   visibility: visible;
 }
-
 </style>

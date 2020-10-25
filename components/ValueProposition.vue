@@ -42,7 +42,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .mb-10 {
   margin-bottom: 1rem !important;
 }

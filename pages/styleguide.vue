@@ -66,7 +66,7 @@
           <PrimaryButton />
         </StyleguideColumn>
         <StyleguideColumn text="Secondary">
-          <SecondaryButton />
+          <TealButton />
         </StyleguideColumn>
         <StyleguideColumn text="Tertiary">
           <TertiaryButton />
@@ -314,7 +314,7 @@ import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
 import PrimaryButton from "@/components/PrimaryButton.vue";
-import SecondaryButton from "@/components/SecondaryButton.vue";
+import TealButton from "@/components/TealButton.vue";
 import TertiaryButton from "@/components/TertiaryButton.vue";
 import StyleguideColumn from "@/components/StyleguideColumn.vue";
 import StyleguideHeading from "@/components/StyleguideHeading.vue";
@@ -328,7 +328,7 @@ export default {
     TertiaryButton,
     StyleguideHeading,
     PrimaryButton,
-    SecondaryButton,
+    TealButton,
     BaseSection,
     TheFooter,
     TheHeaderReflection,

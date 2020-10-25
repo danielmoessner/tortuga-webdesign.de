@@ -67,7 +67,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .border-radius-6 {
   border-radius: 6px;
 }

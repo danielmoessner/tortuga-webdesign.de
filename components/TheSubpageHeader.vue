@@ -66,7 +66,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   background-image: url("../assets/images/low-poly-white.opt.jpg");
   background-size: cover;

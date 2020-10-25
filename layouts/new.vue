@@ -1,16 +1,16 @@
 <template>
   <div>
-    <TheNavigation />
+    <NewNavigation />
     <nuxt />
   </div>
 </template>
 
 <script>
-import TheNavigation from "../components/TheNavigation";
+import NewNavigation from "@/components/NewNavigation.vue";
 
 export default {
   components: {
-    TheNavigation
+    NewNavigation
   }
 };
 </script>

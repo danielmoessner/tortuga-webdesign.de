@@ -3,7 +3,7 @@
     <nuxt-link :to="articleLink" class="article--hover">
       <div class="card-image">
         <figure class="is-5by3 image">
-          <img :src="article.image" alt="Artikel Hauptbild">
+          <img :src="article.image" alt="Artikel Hauptbild" />
         </figure>
       </div>
     </nuxt-link>
@@ -15,17 +15,21 @@
         <nuxt-link :to="articleLink" class="has-text-black-ter">
           {{ article.description }}
         </nuxt-link>
-        <span v-for="(tag, index) in article.tags" :key="index">#{{ tag }}</span>
+        <span v-for="(tag, index) in article.tags" :key="index"
+          >#{{ tag }}</span
+        >
       </div>
       <div class="media">
         <div class="media-left">
           <figure class="border-radius-full overflow-hidden is-48x48 image">
-            <img :src="article.author.image" alt="Author Bild">
+            <img :src="article.author.image" alt="Author Bild" />
           </figure>
         </div>
         <div class="media-content">
           <p class="title is-5">{{ article.author.name }}</p>
-          <time class="subtitle is-6 is-block" :datetime="article.date">{{ articleDate }}</time>
+          <time class="subtitle is-6 is-block" :datetime="article.date">{{
+            articleDate
+          }}</time>
         </div>
       </div>
     </div>
@@ -41,22 +45,40 @@ export default {
   },
   data() {
     return {
-      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
-    }
+      months: [
+        "Jan",
+        "Feb",
+        "Mär",
+        "Apr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dez"
+      ]
+    };
   },
   computed: {
     articleLink() {
-      return "/blog/" + this.article.slug
+      return "/blog/" + this.article.slug;
     },
     articleDate() {
-      const date = new Date(this.article.date)
-      return date.getDate() + ". " + this.months[date.getMonth()] + " " + date.getFullYear()
+      const date = new Date(this.article.date);
+      return (
+        date.getDate() +
+        ". " +
+        this.months[date.getMonth()] +
+        " " +
+        date.getFullYear()
+      );
     }
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .border-radius-6 {
   border-radius: 6px;
 }
@@ -66,7 +88,7 @@ export default {
 }
 
 .mb-10 {
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
 }
 
 .mb-18 {
@@ -94,11 +116,11 @@ export default {
   }
 
   &:hover {
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5), 0 0 0 1px rgba(10, 10, 10, 0.02);
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.5),
+      0 0 0 1px rgba(10, 10, 10, 0.02);
     .title.is-3 {
       color: $dark;
     }
   }
 }
-
 </style>

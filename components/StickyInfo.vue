@@ -3,7 +3,9 @@
     <div data-aos="fade-up" data-aos-duration="600">
       <div class="tags">
         <span class="tag is-dark">{{ darkTag }}</span>
-        <span v-for="(tag, index) in tags" :key="index" class="tag is-light">{{ tag }}</span>
+        <span v-for="(tag, index) in tags" :key="index" class="tag is-light">{{
+          tag
+        }}</span>
       </div>
       <h2 class="is-3 title mb-04">{{ title }}</h2>
       <p class="mb-20">{{ description }}</p>
@@ -28,10 +30,9 @@ export default {
       required: true
     }
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .sticky-info {
   position: sticky;
   top: 100px;
@@ -48,5 +49,4 @@ export default {
 .mb-26 {
   margin-bottom: 2.6rem !important;
 }
-
 </style>

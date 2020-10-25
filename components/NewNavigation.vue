@@ -1,62 +1,30 @@
 <template>
-  <nav
-    ref="navigation"
-    class="the-navigation navbar is-fixed-top"
-    :class="navigationClassList"
-  >
+  <nav ref="navigation" class="bg-teal-700" :class="navigationClassList">
     <div class="container">
-      <div class="navbar-brand">
-        <nuxt-link class="navbar-item" to="/">
-          <img
-            src="../assets/images/logo.production.svg"
-            alt="Tortuga Webdesign Logo"
-          />
-        </nuxt-link>
-        <a
-          class="navbar-burger"
-          @click="showNav = !showNav"
-          :class="{ 'is-active': showNav }"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu" :class="{ 'is-active': showNav }">
-        <div class="navbar-end">
-          <nuxt-link @click.native="showNav = false" class="navbar-item" to="/">
-            Startseite
+      <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center">
+          <nuxt-link class="" to="/">
+            <div class="h-16 p-4 bg-teal-800">
+              <LogoSvg class="fill-current w-auto" :invert="true" />
+            </div>
           </nuxt-link>
-          <nuxt-link
-            @click.native="showNav = false"
-            class="navbar-item"
-            to="/ueber-uns"
+          <a
+            class=""
+            @click="showNav = !showNav"
+            :class="{ 'is-active': showNav }"
           >
-            Über uns
-          </nuxt-link>
-          <nuxt-link
-            @click.native="showNav = false"
-            class="navbar-item"
-            to="/portfolio"
-          >
-            Referenzen
-          </nuxt-link>
-          <nuxt-link
-            @click.native="showNav = false"
-            class="navbar-item"
-            to="/blog"
-          >
-            Artikel
-          </nuxt-link>
-          <nuxt-link
-            @click.native="showNav = false"
-            class="navbar-item"
-            to="/kontakt"
-          >
-            Kontakt
-          </nuxt-link>
-          <div class="navbar-item is-hidden-touch">
-            <CtaButton @click.native="showNav = false" />
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="text-white" :class="{ 'is-active': showNav }">
+          <div class="flex">
+            <NavigationLink to="/index-neu/" text="Startseite" />
+            <NavigationLink to="/ueber-uns/" text="Über uns" />
+            <NavigationLink to="/referenzen/" text="Referenzen" />
+            <NavigationLink to="/blog/" text="Blog" />
+            <NavigationLink to="/kontakt/neu/" text="Kontakt" />
           </div>
         </div>
       </div>
@@ -65,12 +33,16 @@
 </template>
 <script>
 import CtaButton from "../components/CtaButton.vue";
+import LogoSvg from "@/components/LogoSvg.vue";
+import NavigationLink from "@/components/NavigationLink.vue";
 
 export default {
   components: {
-    CtaButton
+    CtaButton,
+    LogoSvg,
+    NavigationLink
   },
-  name: "TheNavigation",
+  name: "NewNavigation",
   data() {
     return {
       showNav: false,
@@ -116,7 +88,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .the-navigation.navbar {
   width: 100%;
   transition: transform 0.6s, background-color 0.6s, opacity 0s;

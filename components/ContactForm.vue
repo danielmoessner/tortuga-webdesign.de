@@ -167,9 +167,11 @@
         <div class="field-body">
           <div class="field">
             <div class="control">
-              <button class="button is-rounded is-primary mt-08">
-                Absenden
-              </button>
+              <slot>
+                <button class="button is-rounded is-primary mt-08">
+                  Absenden
+                </button>
+              </slot>
             </div>
           </div>
         </div>

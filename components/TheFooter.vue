@@ -2,9 +2,16 @@
   <footer class="mt-12vh">
     <div class="columns">
       <div class="column is-two-fifths">
-        <img src="@/assets/images/logo.production.svg" alt="Tortuga Webdesign" class="max-h-50 mb-10">
+        <img
+          src="@/assets/images/logo.production.svg"
+          alt="Tortuga Webdesign"
+          class="max-h-50 mb-10"
+        />
         <div class="is-size-6">
-          Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.
+          Viele Personen oder Unternehmen werden online nachteilig
+          repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte &
+          attraktive Webseiten, sodass Sie online modern dargestellt und von
+          Webseitenbesuchern geliebt werden.
         </div>
       </div>
       <div class="column">
@@ -12,19 +19,39 @@
           <h3 class="mb-05">Navigation</h3>
           <ul class="footer-ul">
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/">Startseite</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none is-block has-text-primary"
+                to="/"
+                >Startseite</nuxt-link
+              >
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/ueber-uns">Über uns</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none is-block has-text-primary"
+                to="/ueber-uns"
+                >Über uns</nuxt-link
+              >
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/portfolio">Referenzen</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none is-block has-text-primary"
+                to="/portfolio"
+                >Referenzen</nuxt-link
+              >
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/blog">Artikel</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none is-block has-text-primary"
+                to="/blog"
+                >Artikel</nuxt-link
+              >
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none is-block has-text-primary" to="/kontakt">Kontakt</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none is-block has-text-primary"
+                to="/kontakt"
+                >Kontakt</nuxt-link
+              >
             </li>
             <!-- <li class="mb-02">
               <ul class="py-03 md:py-none">
@@ -41,10 +68,18 @@
         <div>
           <h3 class="mb-05">Kontakt</h3>
           <address class="py-03 md:py-none">
-            Daniel Mössner <br>
-            <a class=" has-text-primary" href="tel:004917638385646">0176 3838 5646</a> <br>
-            <a class=" has-text-primary" href="mailto:kontakt@tortuga-webdesign.de">kontakt@tortuga-webdesign.de</a> <br>
-            Albert-Schweitzer-Str. 17b <br>
+            Daniel Mössner <br />
+            <a class=" has-text-primary" href="tel:004917638385646"
+              >0176 3838 5646</a
+            >
+            <br />
+            <a
+              class=" has-text-primary"
+              href="mailto:kontakt@tortuga-webdesign.de"
+              >kontakt@tortuga-webdesign.de</a
+            >
+            <br />
+            Albert-Schweitzer-Str. 17b <br />
             85375 Neufahrn b. Freising
           </address>
         </div>
@@ -54,10 +89,18 @@
           <h3 class="mb-05">Rechtliches</h3>
           <ul>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none mb-02 is-block has-text-primary" to="/impressum">Impressum</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none mb-02 is-block has-text-primary"
+                to="/impressum"
+                >Impressum</nuxt-link
+              >
             </li>
             <li class="mb-02">
-              <nuxt-link class="py-03 md:py-none mb-02 is-block has-text-primary" to="/datenschutz">Datenschutz</nuxt-link>
+              <nuxt-link
+                class="py-03 md:py-none mb-02 is-block has-text-primary"
+                to="/datenschutz"
+                >Datenschutz</nuxt-link
+              >
             </li>
           </ul>
         </div>
@@ -68,10 +111,9 @@
 <script>
 export default {
   name: "TheFooter"
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .py-03 {
   padding-bottom: 0.3rem;
   padding-top: 0.3rem;
@@ -111,5 +153,4 @@ export default {
 .max-h-50 {
   max-height: 5rem;
 }
-
 </style>

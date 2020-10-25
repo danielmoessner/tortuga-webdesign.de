@@ -160,7 +160,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .checkbox {
   display: flex;
   height: auto;

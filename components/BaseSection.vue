@@ -9,10 +9,9 @@
 <script>
 export default {
   name: "BaseSection"
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .section {
   padding: 10rem 0;
 
@@ -68,9 +67,8 @@ export default {
     }
 
     .container {
-      padding: 0 .8rem;
+      padding: 0 0.8rem;
     }
   }
 }
-
 </style>

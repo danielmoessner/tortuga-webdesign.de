@@ -24,10 +24,6 @@
   height: 100%;
 }
 
-.h-auto {
-  height: auto;
-}
-
 /**
 ** margins
 **/
@@ -64,11 +60,11 @@
 }
 
 .p-20 {
-  padding: 2.0rem;
+  padding: 2rem;
 }
 
 .p-30 {
-  padding: 3.0rem;
+  padding: 3rem;
 }
 
 .py-60 {
@@ -77,13 +73,13 @@
 }
 
 .px-50 {
-  padding-left: 5.0rem;
-  padding-right: 5.0rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 @include desktop {
   md\:p-50 {
-    padding: 5.0rem;
+    padding: 5rem;
   }
 }
 
@@ -93,7 +89,8 @@
 
 .shadow {
   /* // used on articles or cards */
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0px 0 1px rgba(10, 10, 10, 0.02);
 }
 
 .dark-shadow {
@@ -139,11 +136,4 @@
 /* // reset */
 .border-none {
   border: none !important;
-}
-
-/*
-** other
-*/
-.overflow-hidden{
-	overflow: hidden;
 }

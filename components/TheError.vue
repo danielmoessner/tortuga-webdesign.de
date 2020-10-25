@@ -22,21 +22,21 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      required: true
     },
     code: {
       type: String,
-      required: true,
+      required: true
     },
     message: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .error {
   min-height: 100vh;
   min-width: 100%;

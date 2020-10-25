@@ -1,6 +1,6 @@
 <template>
   <main>
-    <!---->
+    <!--  -->
     <TheSubpageHeader
       :title="page.header.title"
       :subtitle="page.header.subtitle"
@@ -166,14 +166,22 @@ import ContactForm from "@/components/ContactForm.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
 import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
+import SubNavigation from "@/components/SubNavigation.vue";
+import BlueButton from "@/components/BlueButton.vue";
+import NewFooter from "@/components/NewFooter.vue";
+import TealButton from "@/components/TealButton.vue";
 
 export default {
   components: {
+    TealButton,
+    NewFooter,
+    BlueButton,
+    SubNavigation,
     BaseSection,
     ContactForm,
     TheFooter,
     TheHeaderReflection,
-    TheSubpageHeader,
+    TheSubpageHeader
   },
   data() {
     return {
@@ -195,7 +203,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 #kontakt {
   .columns:nth-child(1) {
     flex-direction: row-reverse;

@@ -1,21 +1,47 @@
 <template>
   <base-frame>
-  <div ref="showcase" class="showcase" @mousemove="mousemove" @mouseover="mouseover" @mouseleave="mouseleave">
-    <nuxt-link :to="detailPage" @click="mouseleave">
-      <div class="tags">
-        <span class="tag is-dark">{{ portfolioItem.title }}</span><br>
-        <span class="tag is-light">{{ month }}</span>
-        <span v-for="(tag, index) in portfolioItem.tags" :key="index" class="tag is-light">{{ tag }}</span>
-      </div>
-      <img class="showcase--height-set" ref="showcaseHeightSet" :src="portfolioItem.shortImage" :alt="portfolioItem.title">
-      <div class="showcase--scroll">
-        <div class="showcase--img" ref="showcaseImage" style="will-change: transform;" :style="{ transform: showcaseImageTransform }">
-          <img :data-src="portfolioItem.image500" :alt="portfolioItem.title" class="lazyload">
+    <div
+      ref="showcase"
+      class="showcase"
+      @mousemove="mousemove"
+      @mouseover="mouseover"
+      @mouseleave="mouseleave"
+    >
+      <nuxt-link :to="detailPage" @click="mouseleave">
+        <div class="tags">
+          <span class="tag is-dark">{{ portfolioItem.title }}</span
+          ><br />
+          <span class="tag is-light">{{ month }}</span>
+          <span
+            v-for="(tag, index) in portfolioItem.tags"
+            :key="index"
+            class="tag is-light"
+            >{{ tag }}</span
+          >
         </div>
-      </div>
-    </nuxt-link>
-  </div>
-</base-frame>
+        <img
+          class="showcase--height-set"
+          ref="showcaseHeightSet"
+          :src="portfolioItem.shortImage"
+          :alt="portfolioItem.title"
+        />
+        <div class="showcase--scroll">
+          <div
+            class="showcase--img"
+            ref="showcaseImage"
+            style="will-change: transform;"
+            :style="{ transform: showcaseImageTransform }"
+          >
+            <img
+              :data-src="portfolioItem.image500"
+              :alt="portfolioItem.title"
+              class="lazyload"
+            />
+          </div>
+        </div>
+      </nuxt-link>
+    </div>
+  </base-frame>
 </template>
 <script>
 import BaseFrame from "@/components/BaseFrame.vue";
@@ -31,92 +57,110 @@ export default {
   },
   data() {
     return {
-      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+      months: [
+        "Jan",
+        "Feb",
+        "Mär",
+        "Apr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dez"
+      ],
       mousePositionY: 0.5,
       showcaseLookedAt: false,
       showcaseInterval: "",
       showcaseScrollY: 0
-    }
+    };
   },
   computed: {
     showcaseImageTransform() {
-      return "translateY(" + this.showcaseScrollY + "px)"
+      return "translateY(" + this.showcaseScrollY + "px)";
     },
     detailPage() {
-      return "/portfolio/" + this.portfolioItem.slug
+      return "/portfolio/" + this.portfolioItem.slug;
     },
     showcase() {
-      return this.$refs.showcase
+      return this.$refs.showcase;
     },
     showcaseImage() {
-      return this.$refs.showcaseImage
+      return this.$refs.showcaseImage;
     },
     showcaseHeightSet() {
-      return this.$refs.showcaseHeightSet
+      return this.$refs.showcaseHeightSet;
     },
     showcaseImageRoute() {
-      return Math.min(this.showcaseHeightSet.getBoundingClientRect().height - this.showcaseImage.getBoundingClientRect().height + 0.3, 0)
+      return Math.min(
+        this.showcaseHeightSet.getBoundingClientRect().height -
+          this.showcaseImage.getBoundingClientRect().height +
+          0.3,
+        0
+      );
     },
     month() {
-      const date = new Date(this.portfolioItem.date)
-      return this.months[date.getMonth()] + " " + date.getFullYear()
+      const date = new Date(this.portfolioItem.date);
+      return this.months[date.getMonth()] + " " + date.getFullYear();
     },
     speed() {
       if (this.mousePositionY >= 0.45 && this.mousePositionY <= 0.55) {
-        return 0
+        return 0;
       } else {
-        return -10 * (this.mousePositionY - 0.5)
+        return -10 * (this.mousePositionY - 0.5);
       }
-    },
+    }
   },
   watch: {
     showcaseLookedAt: function(newValue, oldValue) {
       if (newValue === true) {
-        if (this.showcaseInterval === "") this.showcaseInterval = setInterval(this.moveImage, 16)
+        if (this.showcaseInterval === "")
+          this.showcaseInterval = setInterval(this.moveImage, 16);
       } else {
-        clearInterval(this.showcaseInterval)
-        this.showcaseInterval = ""
+        clearInterval(this.showcaseInterval);
+        this.showcaseInterval = "";
       }
     }
   },
   methods: {
     updateMousePosition(event) {
-      const rect = this.showcase.getBoundingClientRect()
-      const y = event.clientY - rect.top
-      const yProportion = y / rect.height
-      this.mousePositionY = yProportion
+      const rect = this.showcase.getBoundingClientRect();
+      const y = event.clientY - rect.top;
+      const yProportion = y / rect.height;
+      this.mousePositionY = yProportion;
     },
     mousemove(event) {
-      this.updateMousePosition(event)
+      this.updateMousePosition(event);
     },
     mouseover(event) {
-      this.showcaseLookedAt = true
+      this.showcaseLookedAt = true;
     },
     mouseleave(event) {
-      this.showcaseLookedAt = false
+      this.showcaseLookedAt = false;
     },
     moveImage() {
-      const newPosition = this.showcaseScrollY + this.speed
+      const newPosition = this.showcaseScrollY + this.speed;
       if (newPosition > 0) {
-        this.showcaseScrollY = 0
+        this.showcaseScrollY = 0;
       } else if (newPosition <= this.showcaseImageRoute) {
-        this.showcaseScrollY = this.showcaseImageRoute
+        this.showcaseScrollY = this.showcaseImageRoute;
       } else {
-        this.showcaseScrollY = newPosition
+        this.showcaseScrollY = newPosition;
       }
     }
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .showcase {
   position: relative;
   display: block;
   overflow: hidden;
   box-sizing: content-box;
 
-  &>img {
+  & > img {
     display: block;
   }
 
@@ -167,5 +211,4 @@ export default {
     }
   }
 }
-
 </style>

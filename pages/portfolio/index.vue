@@ -1,17 +1,29 @@
 <template>
   <main>
     <!---->
-    <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" :buttonText="buttonText" />
+    <TheSubpageHeader
+      :title="page.header.title"
+      :subtitle="page.header.subtitle"
+      :buttonText="buttonText"
+    />
     <!---->
     <base-section class="top-medium" id="referenzen">
       <template v-slot:no-container>
         <TheHeaderReflection />
       </template>
       <div id="start" class="container">
-        <div class="portfolio" v-for="year in portfolioPostsByYearSortedKeys" :key="year">
+        <div
+          class="portfolio"
+          v-for="year in portfolioPostsByYearSortedKeys"
+          :key="year"
+        >
           <div class="portfolio--year">{{ year }}</div>
           <div class="portfolio--grid">
-            <div v-for="(item, index) in portfolioPostsByYear[year]" :key="index" class="portfolio--item">
+            <div
+              v-for="(item, index) in portfolioPostsByYear[year]"
+              :key="index"
+              class="portfolio--item"
+            >
               <PortfolioShowcase :portfolioItem="item" />
             </div>
           </div>
@@ -26,7 +38,7 @@
   </main>
 </template>
 <script>
-import BaseSection from "@/components/BaseSection.vue"
+import BaseSection from "@/components/BaseSection.vue";
 import CtaButton from "@/components/CtaButton.vue";
 import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
 import TheFooter from "@/components/TheFooter.vue";
@@ -40,7 +52,7 @@ export default {
     PortfolioShowcase,
     TheFooter,
     TheHeaderReflection,
-    TheSubpageHeader,
+    TheSubpageHeader
   },
   data() {
     return {
@@ -48,33 +60,40 @@ export default {
       portfolioPosts: this.$store.state.portfolioPosts,
       buttonText: "Jetzt ansehen",
       year: ""
-    }
+    };
   },
   computed: {
     portfolioPostsByYear() {
-      const postsByYear = {}
-      this.portfolioPosts.forEach((item) => {
-        const year = new Date(item.date).getFullYear()
-        year in postsByYear ? postsByYear[year].push(item) : postsByYear[year] = [item]
-      })
-      return postsByYear
+      const postsByYear = {};
+      this.portfolioPosts.forEach(item => {
+        const year = new Date(item.date).getFullYear();
+        year in postsByYear
+          ? postsByYear[year].push(item)
+          : (postsByYear[year] = [item]);
+      });
+      return postsByYear;
     },
     portfolioPostsByYearSortedKeys() {
-      return Object.keys(this.portfolioPostsByYear).sort().reverse()
+      return Object.keys(this.portfolioPostsByYear)
+        .sort()
+        .reverse();
     }
   },
   head() {
     return {
       title: this.page.title,
       meta: [
-        { hid: "description", name: "description", content: this.page.description }
+        {
+          hid: "description",
+          name: "description",
+          content: this.page.description
+        }
       ]
-    }
+    };
   }
-}
-
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .portfolio {
   margin-bottom: 8rem;
   &--grid {
@@ -96,7 +115,5 @@ export default {
     font-weight: 600;
     font-size: 2.6rem;
   }
-
 }
-
 </style>
