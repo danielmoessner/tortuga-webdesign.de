@@ -1,182 +1,125 @@
 <template>
   <main>
-    <TheSubpageHeader
-      :title="page.header.title"
-      :subtitle="page.header.subtitle"
-      :buttonText="buttonText"
-    />
-    <!-- intro section -->
-    <base-section id="start" class="bottom-small top-medium">
-      <template v-slot:no-container>
-        <TheHeaderReflection />
-      </template>
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
+    <!--  -->
+    <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="has-text-centered"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="600"
-      >
-        <div class="columns">
-          <div class="column is-6 is-offset-3">
-            <h2 class="is-3 title">
-              {{ page.intro.title }}
-            </h2>
-          </div>
-        </div>
-        <div v-if="page.intro.subtitle" class="columns">
-          <div class="column is-4 is-offset-4">
-            <div class="subtitle mt-n-125">
-              {{ page.intro.subtitle }}
-            </div>
+        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
+        style="background-image: url('/ueber-uns.svg');background-size: 900px auto;background-position: 50% -165px;"></div>
+      <div class="container">
+        <div class="">
+          <div class="flex justify-center items-center flex-col">
+            <h1
+              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            >
+              {{ page.header.title }}
+            </h1>
+            <p
+              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            >
+              {{ page.header.subtitle }}
+            </p>
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              to="/kontakt/"
+              class="mb-1"
+            />
+            <span class="tracking-wide text-sm font-light text-white"
+              >Kostenloses Erstgespräch</span
+            >
           </div>
         </div>
       </div>
-    </base-section>
-    <!-- about section -->
-    <base-section id="ueber-uns">
-      <div class="columns is-multiline">
-        <div class="column is-6">
-          <div
-            class="mb-30"
-            data-aos="fade-up"
-            data-aos-delay="250"
-            data-aos-duration="600"
-          >
-            <div class="pretitle">
+    </section>
+    <!---->
+    <section class="pt-32 pb-40 bg-teal-800">
+      <div class="container">
+        <div class="grid grid-cols-7 gap-12">
+          <div class="col-span-7 md:col-span-4">
+            <div class="uppercase font-light text-white tracking-wide mb-3">
               <small>{{ page.about.pretitle }}</small>
             </div>
-            <h2 class="is-3 title">{{ page.about.title }}</h2>
-            <p class="subtitle">{{ page.about.subtitle }}</p>
+            <h2
+              class="text-4xl text-white font-bold tracking-tight leading-tight"
+            >
+              {{ page.about.title }}
+            </h2>
+            <p class="text-lg text-gray-300 mb-10">{{ page.about.subtitle }}</p>
+            <p class="text-lg text-gray-100">{{ page.about.text }}</p>
           </div>
-          <div
-            class="content"
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-duration="600"
-          >
-            <p>{{ page.about.text }}</p>
-          </div>
-        </div>
-        <div class="column is-4 is-offset-2">
-          <div class="image">
-            <img class="is-rounded" :src="page.about.image" alt="Inhaber" />
+          <div class="col-span-7 md:col-span-2 md:col-start-6 row-start-1">
+            <div class="roun">
+              <img
+                class="rounded-full border-4 bg-white border-sunshine-500"
+                :src="page.about.image"
+                alt="Daniel Mössner"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </base-section>
+    </section>
     <!-- faq section -->
-    <base-section id="fragen">
-      <div class="has-text-centered">
-        <div class="columns">
-          <div class="column is-6 is-offset-3">
-            <h2 class="title is-3" data-aos="fade-up" data-aos-duration="600">
+    <section class="pt-32 pb-40 bg-gray-100">
+      <div class="container">
+        <div class="flex flex-col items-center mb-20">
+          <div class="max-w-xl">
+            <h2 class="text-3xl font-bold text-center">
               {{ page.faq.title }}
             </h2>
           </div>
-        </div>
-        <div class="columns">
-          <div class="column is-4 is-offset-4">
-            <div
-              class="subtitle mt-n-125 mb-40"
-              data-aos="fade-up"
-              data-aos-delay="50"
-              data-aos-duration="600"
-            >
+          <div class="max-w-xl">
+            <div class="text-lg text-gray-800">
               {{ page.faq.subtitle }}
             </div>
           </div>
         </div>
-      </div>
-      <div class="columns">
-        <div
-          class="column is-12"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="600"
-        >
-          <BaseFaq
-            v-for="(item, index) in page.faq.questions"
-            :question="item.question"
-            :answer="item.answer"
-            :key="index"
-          />
+        <div class="">
+          <div class="">
+            <BaseFaq
+              v-for="(item, index) in page.faq.questions"
+              :key="index"
+              :question="item.question"
+              :answer="item.answer"
+            />
+          </div>
         </div>
       </div>
-    </base-section>
+    </section>
     <!---->
-    <base-section>
-      <TheFooter />
-    </base-section>
+    <NewFooter
+      bg-color="bg-teal-900"
+      text-color="text-white"
+      link-color="text-sunshine-200"
+      hover-color="text-sunshine-300"
+      :invert-logo="true"
+    />
     <!---->
   </main>
 </template>
 <script>
+import SubNavigation from "@/components/SubNavigation.vue";
+import NewFooter from "@/components/NewFooter.vue";
+import TealButton from "@/components/TealButton.vue";
 import BaseFaq from "@/components/BaseFaq.vue";
-import BaseSection from "@/components/BaseSection.vue";
-import CtaButton from "@/components/CtaButton.vue";
-import TheFooter from "../components/TheFooter.vue";
-import TheHeaderReflection from "../components/TheHeaderReflection.vue";
-import TheSubpageHeader from "../components/TheSubpageHeader.vue";
+import MetaTags from "@/mixins/MetaTags.js";
 
 export default {
   components: {
     BaseFaq,
-    BaseSection,
-    CtaButton,
-    TheFooter,
-    TheHeaderReflection,
-    TheSubpageHeader
+    TealButton,
+    NewFooter,
+    SubNavigation,
   },
-  data() {
+  mixins: [MetaTags],
+  layout: "new",
+  async asyncData({ $content }) {
+    const page = await $content("page/about").fetch();
+
     return {
-      page: this.$store.state.pages.about,
-      buttonText: "Mehr erfahren"
+      page,
     };
   },
-  head() {
-    return {
-      title: this.page.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.page.description
-        }
-      ]
-    };
-  }
+  computed: {},
 };
 </script>
-<style lang="scss" scoped>
-.mt-n-125 {
-  margin-top: -1.25rem;
-}
-
-.mb-30 {
-  margin-bottom: 3rem;
-}
-
-.mb-40 {
-  margin-bottom: 4rem;
-}
-
-.pretitle {
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  margin-bottom: 0.5rem;
-}
-
-#ueber-uns {
-  img {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  @include until($tablet) {
-    .columns {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  }
-}
-</style>

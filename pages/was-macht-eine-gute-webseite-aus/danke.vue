@@ -1,15 +1,35 @@
 <template>
   <main>
+    <SubNavigation :text="page.thankYou.title" class="bg-sunshine-100" />
+    <!--  -->
+    <section class="pt-32 pb-40 relative bg-sunshine-200">
+      <div
+        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
+        style="background-image: url('/hilfestellung.svg');background-size: 800px auto;background-position: 50% -110px;"
+      ></div>
+      <div class="container">
+        <div class="">
+          <div class="flex justify-center items-center flex-col">
+            <div
+              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            >
+              {{ page.thankYou.header.title }}
+            </div>
+            <h1
+              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            >
+              {{ page.thankYou.header.subtitle }}
+            </h1>
+            <TealButton text="Jetzt zusammenarbeiten" class="mb-1" />
+            <div class="tracking-wide text-sm font-light text-white">
+              Kostenloses Erstgespräch
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!---->
-    <TheSubpageHeader
-      :title="page.thankYou.header.title"
-      :subtitle="page.thankYou.header.subtitle"
-    />
-    <!---->
-    <base-section class="top-medium" id="kontakt">
-      <template v-slot:no-container>
-        <TheHeaderReflection />
-      </template>
+    <BaseSection id="kontakt" class="top-medium">
       <div class="message is-success">
         <div class="message-body">
           <h3 class="title is-4 color-inherit">
@@ -23,34 +43,37 @@
           </p>
         </div>
       </div>
-    </base-section>
+    </BaseSection>
     <!---->
-    <base-section>
-      <TheFooter />
-    </base-section>
+    <NewFooter
+      bg-color="bg-teal-900"
+      text-color="text-white"
+      link-color="text-sunshine-200"
+      hover-color="text-sunshine-300"
+      :invert-logo="true"
+    />
     <!---->
   </main>
 </template>
 <script>
 import BaseSection from "@/components/BaseSection.vue";
-import ContactForm from "@/components/ContactForm.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
-import BaseButton from "@/components/BaseButton.vue";
+import SubNavigation from "@/components/SubNavigation.vue";
+import NewFooter from "@/components/NewFooter.vue";
+import TealButton from "@/components/TealButton.vue";
 
 export default {
   components: {
+    TealButton,
+    NewFooter,
+    SubNavigation,
     BaseSection,
-    BaseButton,
-    ContactForm,
-    TheFooter,
-    TheHeaderReflection,
-    TheSubpageHeader
   },
-  data() {
+  layout: "new",
+  async asyncData({ $content }) {
+    const page = await $content("page/leadGenerator").fetch();
+
     return {
-      page: this.$store.state.pages.leadGenerator
+      page,
     };
   },
   head() {
@@ -60,10 +83,10 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.page.description
-        }
-      ]
+          content: this.page.description,
+        },
+      ],
     };
-  }
+  },
 };
 </script>

@@ -3,7 +3,7 @@
     <div class="columns" :style="columnsReversed">
       <div class="column is-5" :class="offsetPage">
         <div class="relative h-full">
-          <base-frame class="h-full min-h-300">
+          <BaseFrame class="h-full min-h-300">
             <div
               class="group absolute h-full w-full border-radius-3 overflow-hidden"
               @mouseover="mouseover"
@@ -21,7 +21,7 @@
                 class="w-full h-full no-scrollbar"
                 :class="{
                   'overflow-y-hidden': !isScrollable,
-                  'overflow-y-scroll': isScrollable
+                  'overflow-y-scroll': isScrollable,
                 }"
               >
                 <img
@@ -31,7 +31,7 @@
                 />
               </div>
             </div>
-          </base-frame>
+          </BaseFrame>
         </div>
       </div>
       <div class="column is-4" :class="offsetText">
@@ -55,27 +55,27 @@
   </div>
 </template>
 <script>
-import PortfolioShowcase from "@/components/PortfolioShowcase.vue";
 import BaseFrame from "@/components/BaseFrame.vue";
 
 export default {
-  components: {
-    PortfolioShowcase,
-    BaseFrame
-  },
   name: "IndexPortfolioPost",
+  components: {
+    BaseFrame,
+  },
   props: {
     work: {
-      required: true
+      required: true,
+      type: Object,
     },
     index: {
-      required: true
-    }
+      required: true,
+      type: Number,
+    },
   },
   data() {
     return {
       isScrollable: false,
-      isMouseOver: false
+      isMouseOver: false,
     };
   },
   computed: {
@@ -90,7 +90,21 @@ export default {
     },
     aosDelay() {
       return 100 - this.index * 100;
-    }
+    },
+  },
+  mounted() {
+    document.addEventListener(
+      "keyup",
+      function (event) {
+        if (event.key === "x" || event.key === "X") this.setIsScrollable(false);
+      }.bind(this)
+    );
+    document.addEventListener(
+      "keydown",
+      function (event) {
+        if (event.key === "x" || event.key === "X") this.setIsScrollable(true);
+      }.bind(this)
+    );
   },
   methods: {
     mouseover() {
@@ -103,22 +117,8 @@ export default {
       xKeyPressed && this.isMouseOver
         ? (this.isScrollable = true)
         : (this.isScrollable = false);
-    }
+    },
   },
-  mounted() {
-    document.addEventListener(
-      "keyup",
-      function(event) {
-        if (event.key === "x" || event.key === "X") this.setIsScrollable(false);
-      }.bind(this)
-    );
-    document.addEventListener(
-      "keydown",
-      function(event) {
-        if (event.key === "x" || event.key === "X") this.setIsScrollable(true);
-      }.bind(this)
-    );
-  }
 };
 </script>
 <style lang="scss" scoped>

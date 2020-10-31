@@ -15,12 +15,12 @@ export default {
     border: {
       type: Boolean,
       required: false,
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

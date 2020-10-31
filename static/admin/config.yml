@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -9,7 +11,7 @@ collections:
   - name: "blog"
     label: "Blog"
     format: "json"
-    folder: "assets/content/blog"
+    folder: "content/blog"
     create: true
     slug: "{{title}}"
     fields:
@@ -37,7 +39,7 @@ collections:
   - name: "tag"
     label: "Tag"
     format: "json"
-    folder: "assets/content/tag"
+    folder: "content/tag"
     create: true
     slug: "{{fields.title}}"
     fields:
@@ -45,7 +47,7 @@ collections:
   - name: "portfolio"
     label: "Portfolio"
     format: "json"
-    folder: "assets/content/portfolio"
+    folder: "content/portfolio"
     create: true
     identifier_field: "title"
     slug: "{{fields.slug}}"
@@ -95,7 +97,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "assets/content/page/home.json"
+        file: "content/page/home.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -106,17 +108,20 @@ collections:
             }
           - label: "Header"
             name: "header"
-            widget: "object"
+            widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
           - label: "Stakes"
             name: "stakes"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - label: "Value"
+              - { label: "Button", name: "button", widget: "string" }
+          - label: "Value Proposition"
             name: "value"
             widget: "object"
             fields:
@@ -129,44 +134,37 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "string" }
-                  - name: "icon"
-                    label: "Icon"
-                    widget: "object"
-                    fields:
-                      - { label: "Svg", name: "svg", widget: "text" }
-                      - { label: "Margin", name: "margin", widget: "number" }
+              - { label: "Bottom Left", name: "bottomLeft", widget: "string" }
+              - { label: "Bottom Right", name: "bottomRight", widget: "string" }
           - label: "Guide"
             name: "guide"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Button", name: "button", widget: "string" }
           - label: "Plan"
             name: "plan"
             widget: "object"
             fields:
+              - { label: "Pretitle", name: "pretitle", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Bottom", name: "bottom", widget: "string" }
               - label: "Steps"
                 name: "steps"
                 widget: "list"
-                field:
-                  name: "step"
-                  label: "Step"
-                  widget: "object"
-                  fields:
-                    - { label: "Title", name: "title", widget: "string" }
-                    - { label: "Text", name: "text", widget: "string" }
-                    - name: "icon"
-                      label: "Icon"
-                      widget: "object"
-                      fields:
-                        - { label: "Svg", name: "svg", widget: "text" }
-                        - { label: "Margin", name: "margin", widget: "number" }
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+          - label: "Lead Generator Ad"
+            name: "leadGeneratorAd"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Html Text", name: "htmlText", widget: "text" }
+              - { label: "Button", name: "button", widget: "string" }
       - label: "About Page"
         name: "about"
-        file: "assets/content/page/about.json"
+        file: "content/page/about.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -181,17 +179,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - label: "Intro"
-            name: "intro"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - {
-                  label: "Subtitle",
-                  name: "subtitle",
-                  widget: "string",
-                  required: false,
-                }
           - label: "About"
             name: "about"
             widget: "object"
@@ -215,7 +202,7 @@ collections:
                   - { label: "Answer", name: "answer", widget: "string" }
       - label: "Portfolio Page"
         name: "portfolio"
-        file: "assets/content/page/portfolio.json"
+        file: "content/page/portfolio.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -232,7 +219,7 @@ collections:
               - { label: "Subtitle", name: "subtitle", widget: "string" }
       - label: "Contact Page"
         name: "contact"
-        file: "assets/content/page/contact.json"
+        file: "content/page/contact.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -251,6 +238,13 @@ collections:
             name: "thankYou"
             widget: "object"
             fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Header"
                 name: "header"
                 widget: "object"
@@ -271,7 +265,7 @@ collections:
                       - { label: "Text", name: "text", widget: "string" }
       - label: "Blog Page"
         name: "blog"
-        file: "assets/content/page/blog.json"
+        file: "content/page/blog.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -288,24 +282,23 @@ collections:
               - { label: "Subtitle", name: "subtitle", widget: "string" }
       - label: "General"
         name: "general"
-        file: "assets/content/page/general.json"
+        file: "content/page/general.json"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              required: false,
-            }
-          - label: "Header"
-            name: "header"
+          - label: "Head"
+            name: "head"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "text" }
       - label: "Imprint Page"
         name: "imprint"
-        file: "assets/content/page/imprint.json"
+        extension: "md"
+        file: "content/page/imprint.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -328,7 +321,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Data Protection Page"
         name: "dataProtection"
-        file: "assets/content/page/dataProtection.json"
+        file: "content/page/dataProtection.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -351,7 +344,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Lead Generator Page"
         name: "leadGenerator"
-        file: "assets/content/page/leadGenerator.json"
+        file: "content/page/leadGenerator.json"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -371,23 +364,31 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
           - label: "Value Propositions"
             name: "valuePropositions"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-              - name: "icon"
-                label: "Icon"
-                widget: "object"
-                fields:
-                  - { label: "Svg", name: "svg", widget: "text" }
-                  - { label: "Margin", name: "margin", widget: "number" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Button", name: "button", widget: "string" }
+              - { label: "Legal Notice", name: "legalNotice", widget: "text" }
           - label: "Thank You"
             name: "thankYou"
             widget: "object"
             fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Header"
                 name: "header"
                 widget: "object"

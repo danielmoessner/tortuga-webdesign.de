@@ -1,6 +1,7 @@
 <template>
   <nuxt-link
-    class="py-3 text-teal-700 hover:text-teal-800 transition ease-in-out duration-150 font-medium"
+    class="py-1 text-teal-700 hover:text-teal-800 transition ease-in-out duration-150 font-medium inline-block"
+    :class="linkColor"
     :to="to"
     >{{ text }}</nuxt-link
   >
@@ -12,12 +13,25 @@ export default {
   props: {
     text: {
       type: String,
-      default: "Link"
+      default: "Link",
     },
     to: {
       type: String,
-      default: "#"
-    }
-  }
+      default: "#",
+    },
+    color: {
+      type: String,
+      default: "text-teal-700",
+    },
+    hoverColor: {
+      type: String,
+      default: "text-teal-800",
+    },
+  },
+  computed: {
+    linkColor() {
+      return this.color + " hover:" + this.hoverColor;
+    },
+  },
 };
 </script>

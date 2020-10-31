@@ -1,0 +1,79 @@
+{
+  "plan": {
+    "title": "Der Weg zur perfekten Webseite",
+    "subtitle": "Wir wollen, dass Sie am Ende zu 100 % zufrieden sind.",
+    "steps": [
+      {
+        "title": "Strategie",
+        "text": "Melden Sie sich einfach bei uns zur Vereinbarung eines unverbindlichen Erstgesprächs. Hier klären wir wie Ihnen am besten geholfen werden kann. Danach wissen Sie ganz genau wie eine Zusammenarbeit ausschauen würde."
+      },
+      {
+        "title": "Entwicklung",
+        "text": "In der Strategiephase beschäftigen wir uns mit den Zielen Ihrer Webseite. Außerdem besprechen wir die nötigen Inhalte und die visuelle Richtung Ihrer Internetpräsenz. Nach dieser Phase steht das Fundament für den späteren Projektverlauf."
+      },
+      {
+        "title": "Launch",
+        "text": "In der Designphase nehmen wir die in der Strategie Phase besprochenen Inhalte und bringen sie in ein attraktives Design. Dafür erstellen wir Wireframes, die uns einen klaren Eindruck über das spätere Aussehen Ihrer Webseite vermitteln."
+      }
+    ],
+    "bottom": "* Nach jeder Phase übernehmen wir Ihre Änderungs- und Anpassungswünsche, sodass Sie am Ende zu 100 % zufrieden sind.",
+    "pretitle": "Unser Plan"
+  },
+  "value": {
+    "pretitle": "Unser Komplettpaket liefert Ihnen",
+    "title": "Besseres Geschäft durch begeisterte Webseitenbesucher",
+    "subtitle": "Ihre Kunden sollen auf Ihrer Webseite eine positive Erfahrung erleben genauso, wie wenn Sie einen Laden haben.",
+    "propositions": [
+      {
+        "title": "Professioneller Internetauftritt",
+        "text": "Mit Ihrer neuen Präsenz sehen Sie online modern aus und stehlen damit allen das Licht."
+      },
+      {
+        "title": "Mehr Kunden",
+        "text": "Google & Co. zeigt Sie in den Suchergebnissen an und liefert Ihnen potentielle Kunden."
+      },
+      {
+        "title": "Mehr Bewerber",
+        "text": "Sie wissen, dass Ihre Seite jetzt perfekt zu Ihnen passt und mit Ihren Zielen im Einklang ist."
+      }
+    ],
+    "bottomLeft": "Ausführung",
+    "bottomRight": "Langfristiges Ergebnis"
+  },
+  "title": "Werden Sie modern & geliebt von Ihren Webseiten&shy;besuchern",
+  "stakes": {
+    "title": "Sie benötigen eine professionelle Onlinepräsenz?",
+    "subtitle": "Wir liefern das Komplettpaket.",
+    "button": "Was bringt eine Webseite?"
+  },
+  "leadGeneratorAd": {
+    "title": "Was macht eine gute Webseite aus?",
+    "button": "Jetzt PDF herunterladen",
+    "htmlText": "Welche <b>5 Punkte</b> sind ausschlaggebend für eine\n              <b>gute Webseite</b>? Wir wird <b>Ihre Webseite</b> zum\n              <b>Erfolg</b>? Erfahren Sie die <b>Antworten</b> in dem von uns\n              für Sie erstellten <b>PDF</b>."
+  },
+  "guide": {
+    "title": "Wir bleiben langfristig an Ihrer Seite, überzeugen Sie sich selbst:",
+    "button": "Zu allen Referenzen"
+  },
+  "description": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
+  "header": [
+    {
+      "title": "Webseiten",
+      "subtitle": "Klar strukturiert & attraktiv",
+      "buttonText": "Mehr erfahren",
+      "buttonLink": "/"
+    },
+    {
+      "title": "CMS Systeme",
+      "subtitle": "Einfach & funktional",
+      "buttonText": "Mehr erfahren",
+      "buttonLink": "/"
+    },
+    {
+      "title": "Google Ads",
+      "subtitle": "Ordentlich & zielorientiert",
+      "buttonText": "Mehr erfahren",
+      "buttonLink": "/"
+    }
+  ]
+}

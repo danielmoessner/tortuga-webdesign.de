@@ -3,11 +3,11 @@
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     viewBox="0 0 513.24243 158.41342"
-    :style="invert ? { filter: 'invert(1)' } : {}"
+    :style="invert ? { filter: 'invert(0.9)' } : {}"
     class="w-auto"
   >
     <defs id="defs8238" />
-    <g transform="translate(384.80562,-29.561147)" id="layer1">
+    <g id="layer1" transform="translate(384.80562,-29.561147)">
       <rect
         ry="0"
         y="161.65964"
@@ -33,9 +33,31 @@
       <text
         y="181.52246"
         x="-363.36011"
-        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:23.02903938px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:5.75725985px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.28786299"
+        style="
+          font-style: normal;
+          font-variant: normal;
+          font-weight: bold;
+          font-stretch: normal;
+          font-size: 23.02903938px;
+          line-height: 1.25;
+          font-family: sans-serif;
+          -inkscape-font-specification: 'sans-serif, Bold';
+          font-variant-ligatures: normal;
+          font-variant-caps: normal;
+          font-variant-numeric: normal;
+          font-feature-settings: normal;
+          text-align: start;
+          letter-spacing: 5.75725985px;
+          word-spacing: 0px;
+          writing-mode: lr-tb;
+          text-anchor: start;
+          fill: #ffffff;
+          fill-opacity: 1;
+          stroke: none;
+          stroke-width: 0.28786299;
+        "
       >
-        <tspan style="stroke-width:0.28786299" y="181.52246" x="-363.36011">
+        <tspan style="stroke-width: 0.28786299" y="181.52246" x="-363.36011">
           webdesign
         </tspan>
       </text>
@@ -55,8 +77,8 @@ export default {
   props: {
     invert: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>

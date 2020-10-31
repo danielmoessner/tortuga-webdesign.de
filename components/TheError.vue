@@ -1,54 +1,38 @@
 <template>
-  <div class="error">
-    <div class="error--contant">
-      <h1 class="error--heading title">{{ code }} - {{ title }}</h1>
-      <p class="error--message">{{ message }}</p>
-      <a
-        href="/"
-        class="button is-dark is-rounded is-outlined error--button"
-        data-aos="fade-up"
-        data-aos-delay="150"
-        data-aos-duration="600"
-      >
-        Zur Startseite
-      </a>
+  <div
+    class="flex justify-center items-center p-12 min-h-screen min-w-full bg-teal-700"
+  >
+    <div class="">
+      <h1 class="mb-1 text-3xl font-bold text-gray-100">
+        {{ code }} - {{ title }}
+      </h1>
+      <p class="mb-12 text-gray-100">{{ message }}</p>
+      <GrayButton to="/" text="Zur Startseite" />
     </div>
   </div>
 </template>
 
 <script>
+import GrayButton from "@/components/GrayButton.vue";
+
 export default {
   name: "TheError",
+  components: {
+    GrayButton,
+  },
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     code: {
       type: String,
-      required: true
+      required: true,
     },
     message: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.error {
-  min-height: 100vh;
-  min-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  &--heading {
-    margin-bottom: 12px !important;
-  }
-  &--message {
-    margin-bottom: 2rem;
-  }
-}
-</style>

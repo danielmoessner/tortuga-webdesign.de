@@ -1,66 +1,111 @@
 <template>
-  <footer class="bg-sunshine-300 py-32">
-    <div class="container grid grid-cols-5 gap-4">
-      <div class="col-span-2">
-        <LogoSvg class="h-24 mb-10" :invert="false" />
-        <div class="text-lg text-gray-800 pr-12">
-          Viele Personen oder Unternehmen werden online nachteilig
-          repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte &
-          attraktive Webseiten, sodass Sie online modern dargestellt und von
-          Webseitenbesuchern geliebt werden.
+  <footer class="py-32" :class="bgColor">
+    <div
+      class="container grid grid-cols-2 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5 gap-4"
+    >
+      <div class="col-span-2 md:col-span-3 lg:col-span-2">
+        <LogoSvg class="h-24 mb-10 max-w-full" :invert="invertLogo" />
+        <div class="text-lg pr-12" :class="textColor">
+          <p>{{ $store.getters.footer.text }}</p>
         </div>
       </div>
       <div class="">
         <div>
-          <h3 class="text-gray-800 text-xl font-semibold mb-2">Navigation</h3>
+          <h3 class="text-xl font-semibold mb-2" :class="textColor">
+            Navigation
+          </h3>
           <ul class="">
             <li class="mb-2">
-              <FooterLink text="Startseite" to="/index-neu/" />
+              <FooterLink
+                text="Startseite"
+                to="/"
+                :color="linkColor"
+                :hover-color="hoverColor"
+              />
             </li>
             <li class="mb-2">
-              <FooterLink text="Über uns" />
+              <FooterLink
+                text="Über uns"
+                to="/ueber-uns/"
+                :color="linkColor"
+                :hover-color="hoverColor"
+              />
             </li>
             <li class="mb-2">
-              <FooterLink text="Referenzen" />
+              <FooterLink
+                text="Referenzen"
+                to="/referenzen/"
+                :color="linkColor"
+                :hover-color="hoverColor"
+              />
             </li>
-            <li class="mb-2">
-              <FooterLink text="Artikel" />
-            </li>
-            <li class="mb-2">
-              <FooterLink text="Kontakt" />
-            </li>
-            <!-- <li class="mb-02">
-              <ul class="py-03 md:py-none">
-                <li><h4>Leistungen (demnächst aktiv)</h4></li>
-                <li class="ml-10"><span>Webdesign</span></li>
-                <li class="ml-10"><span>Google Ads</span></li>
-                <li class="ml-10"><span>Beratung</span></li>
-              </ul>
+            <!-- <li class="mb-2">
+              <FooterLink
+                text="Artikel"
+                :color="linkColor"
+                :hoverColor="hoverColor"
+              />
             </li> -->
+            <li class="mb-2">
+              <FooterLink
+                text="Kontakt"
+                to="/kontakt/"
+                :color="linkColor"
+                :hover-color="hoverColor"
+              />
+            </li>
           </ul>
         </div>
       </div>
       <div class="">
         <div>
-          <h3 class="text-gray-800 text-xl font-semibold mb-2">Kontakt</h3>
-          <address class="not-italic text-gray-800">
-            <span class="font-medium">Daniel Mössner</span> <br />
-            <FooterLink text="0176 3838 5646" /> <br />
-            <FooterLink text="kontakt@tortuga-webdesign.de" /> <br />
+          <h3 class="text-xl font-semibold mb-2" :class="textColor">Kontakt</h3>
+          <address class="not-italic" :class="textColor">
+            <span class="font-medium inline-block py-1">Daniel Mössner</span>
+            <br />
+            <FooterLink
+              class=""
+              text="0176 3838 5646"
+              :color="linkColor"
+              :hover-color="hoverColor"
+            />
+            <br />
+            <FooterLink
+              class="mb-3"
+              text="kontakt@tortuga-webdesign.de"
+              :color="linkColor"
+              :hover-color="hoverColor"
+            />
+            <br />
+            <span class="font-medium">Tortuga Webdesign </span><br />
             Albert-Schweitzer-Str. 17b <br />
             85375 Neufahrn b. Freising <br />
           </address>
         </div>
       </div>
-      <div class="">
+      <div class="col-start-2 md:col-start-auto">
         <div class="text-right">
-          <h3 class="text-gray-800 text-xl font-semibold mb-2">Rechtliches</h3>
+          <h3 class="text-xl font-semibold mb-2" :class="textColor">
+            Rechtliches
+          </h3>
           <ul>
             <li class="mb-2">
-              <FooterLink text="Impressum" />
+              <FooterLink
+                text="Impressum"
+                :link-color="linkColor"
+                :color="linkColor"
+                :hover-color="hoverColor"
+                to="/impressum/"
+              />
             </li>
             <li class="mb-2">
-              <FooterLink text="Datenschutz" />
+              <FooterLink
+                text="Datenschutz"
+                :link-color="linkColor"
+                :color="linkColor"
+                :hover-color="hoverColor"
+                to="/datenschutz/"
+              />
             </li>
           </ul>
         </div>
@@ -73,10 +118,32 @@ import LogoSvg from "@/components/LogoSvg.vue";
 import FooterLink from "@/components/FooterLink.vue";
 
 export default {
-  name: "TheFooter",
+  name: "NewFooter",
   components: {
     LogoSvg,
-    FooterLink
-  }
+    FooterLink,
+  },
+  props: {
+    textColor: {
+      type: String,
+      default: "text-gray-800",
+    },
+    linkColor: {
+      type: String,
+      default: "text-teal-700",
+    },
+    bgColor: {
+      type: String,
+      default: "bg-sunshine-200",
+    },
+    hoverColor: {
+      type: String,
+      default: "text-teal-800",
+    },
+    invertLogo: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>

@@ -22,7 +22,9 @@
                 name="name"
                 placeholder="Max Müller"
               />
-              <span class="icon is-small is-left">
+              <span
+                class="icon flex items-center justify-center is-small is-left"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -58,7 +60,9 @@
                 name="email"
                 placeholder="max@mustermann.de"
               />
-              <span class="icon is-small is-left">
+              <span
+                class="icon flex items-center justify-center is-small is-left"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -94,7 +98,9 @@
                 name="website"
                 placeholder="maxmustermann.de"
               />
-              <span class="icon is-small is-left">
+              <span
+                class="icon flex items-center justify-center is-small is-left"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -182,7 +188,7 @@
 <script>
 export default {
   name: "ContactForm",
-  components: {}
+  components: {},
 };
 </script>
 <style lang="scss">

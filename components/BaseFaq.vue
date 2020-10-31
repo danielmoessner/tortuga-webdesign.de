@@ -1,11 +1,19 @@
 <template>
-  <div class="mb-12 faq card border-radius-6" @click="clicked">
-    <div ref="question" class="faq--question card-header border-radius-6">
-      <div class="card-header-title">
+  <div class="mb-6 overflow-hidden rounded-lg card" @click="clicked">
+    <div
+      ref="question"
+      class="cursor-pointer flex justify-between shadow rounded-lg"
+    >
+      <div
+        class="font-bold text-lg text-gray-800 flex items-center flex-grow px-4 py-3"
+      >
         {{ question }}
       </div>
-      <div class="card-header-icon" :style="iconStyle">
-        <span class="icon has-text-primary">
+      <div
+        class="flex items-center justify-center px-3 py-3"
+        :style="iconStyle"
+      >
+        <span class="icon text-teal-700">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -14,7 +22,7 @@
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
-            class="svg-inline--fa fa-angle-down fa-w-10"
+            class="svg-inline--fa fa-angle-down fa-w-10 fill-current w-8"
           >
             <path
               fill="currentColor"
@@ -25,7 +33,11 @@
         </span>
       </div>
     </div>
-    <div ref="answer" class="faq--answer" :style="{ height: answerHeight }">
+    <div
+      ref="answer"
+      class="transition-all ease-in-out duration-500"
+      :style="{ height: answerHeight }"
+    >
       <div class="card-content">
         {{ answer }}
       </div>
@@ -39,21 +51,18 @@ export default {
   components: {},
   props: {
     question: {
-      required: true
+      required: true,
+      type: String,
     },
     answer: {
-      required: true
-    }
+      required: true,
+      type: String,
+    },
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
     };
-  },
-  methods: {
-    clicked() {
-      this.isOpen = this.isOpen ? false : true;
-    }
   },
   computed: {
     answerHeight() {
@@ -63,30 +72,12 @@ export default {
     },
     iconStyle() {
       return this.isOpen ? { transform: "scaleY(-1)" } : {};
-    }
-  }
+    },
+  },
+  methods: {
+    clicked() {
+      this.isOpen = this.isOpen ? false : true;
+    },
+  },
 };
 </script>
-<style lang="scss" scoped>
-.border-radius-6 {
-  border-radius: 6px;
-}
-
-.mb-12 {
-  margin-bottom: 1.2rem !important;
-}
-
-.faq--answer {
-  transition: height 0.6s;
-}
-
-.faq {
-  overflow: hidden;
-
-  &--question {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-</style>

@@ -1,0 +1,19 @@
+.container {
+  @apply px-5;
+}
+
+@screen sm {
+  .container {
+    @apply px-6;
+  }
+}
+@screen md {
+  .container {
+    @apply px-8;
+  }
+}
+@screen lg {
+  .container {
+    @apply px-0;
+  }
+}

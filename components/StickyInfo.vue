@@ -1,52 +1,51 @@
 <template>
-  <div class="sticky-info mb-26">
+  <div class="sticky-info sticky top-0 pt-24">
     <div data-aos="fade-up" data-aos-duration="600">
-      <div class="tags">
-        <span class="tag is-dark">{{ darkTag }}</span>
-        <span v-for="(tag, index) in tags" :key="index" class="tag is-light">{{
-          tag
-        }}</span>
+      <div class="mb-3">
+        <RoundedTag :text="darkTag" />
+        <RoundedTag
+          v-for="(tag, index) in tags"
+          :key="index"
+          bg-color="bg-gray-100"
+          text-color="text-black"
+          :text="tag"
+        />
       </div>
-      <h2 class="is-3 title mb-04">{{ title }}</h2>
-      <p class="mb-20">{{ description }}</p>
+      <h2
+        class="text-3xl tracking-tight leading-tight font-bold text-black mb-6"
+      >
+        {{ title }}
+      </h2>
+      <p class="mb-12 text-black">{{ description }}</p>
       <slot></slot>
     </div>
   </div>
 </template>
 <script>
+import RoundedTag from "@/components/RoundedTag.vue";
+
 export default {
   name: "StickyInfo",
+  components: {
+    RoundedTag,
+  },
   props: {
     darkTag: {
-      required: true
+      required: true,
+      type: String,
     },
     tags: {
-      required: true
+      required: true,
+      type: Array,
     },
     title: {
-      required: true
+      required: true,
+      type: String,
     },
     description: {
-      required: true
-    }
-  }
+      required: true,
+      type: String,
+    },
+  },
 };
 </script>
-<style lang="scss" scoped>
-.sticky-info {
-  position: sticky;
-  top: 100px;
-}
-
-.mb-04 {
-  margin-bottom: 0.4rem !important;
-}
-
-.mb-20 {
-  margin-bottom: 2rem !important;
-}
-
-.mb-26 {
-  margin-bottom: 2.6rem !important;
-}
-</style>

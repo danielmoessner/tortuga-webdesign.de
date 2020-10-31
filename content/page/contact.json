@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Kontakt",
+    "subtitle": "Wir freuen uns auf Sie"
+  },
+  "title": "Kontakt",
+  "intro": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
+  "thankYou": {
+    "header": {
+      "title": "Kontakt",
+      "subtitle": "Vielen Dank für Ihre Anfrage!"
+    },
+    "text": {
+      "title": "Vielen Dank!",
+      "text": "Vielen Dank für Ihre Anfrage. Wir werden uns schnellstmöglich bei Ihnen melden.",
+      "link": {
+        "text": "Zurück zur Startseite",
+        "to": "/"
+      }
+    },
+    "title": "Kontakt - Danke für Ihre Anfrage"
+  }
+}

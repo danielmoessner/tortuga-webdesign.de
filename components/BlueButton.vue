@@ -21,17 +21,17 @@ import TriangleSvg from "@/components/TriangleSvg.vue";
 export default {
   name: "BlueButton",
   components: {
-    TriangleSvg
+    TriangleSvg,
   },
   props: {
     text: {
       type: String,
-      default: "Click me"
+      default: "Click me",
     },
     to: {
       type: String,
-      default: "#"
-    }
-  }
+      default: "#",
+    },
+  },
 };
 </script>

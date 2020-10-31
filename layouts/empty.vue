@@ -8,7 +8,7 @@
 export default {
   components: {},
   head() {
-    script: [];
+    [];
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    class="text-gray-200 hover:text-gray-100 text-lg p-2 ml-4 transition ease-in-out duration-150 font-medium"
+    class="text-gray-200 hover:text-gray-100 text-lg p-2 md:ml-4 transition ease-in-out duration-150 font-medium"
     :to="to"
   >
     {{ text }}
@@ -13,13 +13,13 @@ export default {
   props: {
     to: {
       type: String,
-      default: "/"
+      default: "/",
     },
     text: {
       type: String,
-      default: "Startseite"
-    }
-  }
+      default: "Startseite",
+    },
+  },
 };
 </script>
 

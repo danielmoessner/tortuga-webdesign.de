@@ -1,16 +1,11 @@
 <template>
   <div>
-    <TheNavigation />
     <nuxt />
   </div>
 </template>
 
 <script>
-import TheNavigation from "../components/TheNavigation";
-
 export default {
-  components: {
-    TheNavigation
-  }
+  components: {},
 };
 </script>

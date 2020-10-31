@@ -12,8 +12,8 @@
     "bulma": "node-sass assets/styles/bulma.scss -o assets/styles"
   },
   "dependencies": {
+    "@nuxt/content": "^1.10.0",
     "@nuxtjs/gtm": "^2.3.2",
-    "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.2.0",
     "bulma": "^0.8.2",
@@ -23,9 +23,16 @@
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^6.15.0",
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@nuxtjs/svg": "^0.1.12",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.1.0",
     "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
     "sass-loader": "^8.0.2"
   }
 }

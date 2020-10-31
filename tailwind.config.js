@@ -85,7 +85,9 @@ module.exports = {
     borderRadius: ({ after }) => after(["first", "last"]),
     margin: ({ after }) => after(["first", "last"]),
     textColor: ({ after }) => after(["active", "first", "last"]),
-    backgroundColor: ({ after }) => after(["active", "odd", "even"])
+    backgroundColor: ({ after }) => after(["active", "odd", "even"]),
+    display: ({ after }) => after(["group-hover"]),
+    opacity: ({ after }) => after(["group-hover"])
   },
   plugins: [require("@tailwindcss/typography")],
   future: {

@@ -10,7 +10,7 @@ import NewNavigation from "@/components/NewNavigation.vue";
 
 export default {
   components: {
-    NewNavigation
-  }
+    NewNavigation,
+  },
 };
 </script>

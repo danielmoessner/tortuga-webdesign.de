@@ -23,12 +23,12 @@ export default {
   props: {
     color1: {
       type: String,
-      required: true
+      required: true,
     },
     color2: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>

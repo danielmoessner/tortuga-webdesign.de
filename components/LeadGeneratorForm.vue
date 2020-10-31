@@ -1,10 +1,10 @@
 <template>
   <div>
     <form
+      ref="leadGeneratorForm"
       class="columns is-multiline"
       name="lead"
       data-netlify="true"
-      ref="leadGeneratorForm"
       method="post"
       action="/was-macht-eine-gute-webseite-aus/danke/"
     >
@@ -20,7 +20,9 @@
               name="firstname"
               placeholder="Max / Susi"
             />
-            <span class="icon is-small is-left">
+            <span
+              class="icon flex items-center justify-center is-small is-left"
+            >
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -52,7 +54,9 @@
               name="lastname"
               placeholder="Müller"
             />
-            <span class="icon is-small is-left">
+            <span
+              class="icon flex items-center justify-center is-small is-left"
+            >
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -84,7 +88,9 @@
               name="email"
               placeholder="mueller@mail.de"
             />
-            <span class="icon is-small is-left">
+            <span
+              class="icon flex items-center justify-center is-small is-left"
+            >
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -132,16 +138,18 @@
       <div class="column is-6">
         <div class="field">
           <div class="control">
-            <button class="button is-rounded is-light mt-40">
-              {{ download.action }}
-            </button>
+            <slot>
+              <button class="button is-rounded is-light mt-40">
+                {{ download.button }}
+              </button>
+            </slot>
           </div>
         </div>
       </div>
       <div class="column is-12">
         <p class="mt-18">
           <small>
-            {{ download.note }}
+            {{ download.legalNotice }}
           </small>
         </p>
       </div>
@@ -155,9 +163,9 @@ export default {
   props: {
     download: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

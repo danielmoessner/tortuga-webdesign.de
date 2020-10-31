@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/portfolio"
+  to = "/referenzen/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404"
   status = 404

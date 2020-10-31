@@ -17,6 +17,6 @@
 
 <script>
 export default {
-  name: "TriangleSvg"
+  name: "TriangleSvg",
 };
 </script>

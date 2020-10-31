@@ -12,12 +12,12 @@
 import TheError from "@/components/TheError";
 
 export default {
-  layout: "empty",
   components: {
     TheError,
   },
+  layout: "empty",
   head() {
-    script: [];
+    [];
   },
 };
 </script>

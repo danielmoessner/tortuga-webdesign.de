@@ -1,49 +1,79 @@
 <template>
   <main>
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
+    <!--  -->
+    <section class="pt-32 pb-40 relative bg-sunshine-200">
+      <div
+        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
+        style="background-image: url('/rechtliches.svg');background-size: 1000px auto;background-position: 50% -30px;"></div>
+      <div class="container">
+        <div class="">
+          <div class="flex justify-center items-center flex-col">
+            <div
+              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            >
+              {{ page.header.title }}
+            </div>
+            <h1
+              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            >
+              {{ page.header.subtitle }}
+            </h1>
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              class="mb-1"
+              to="/kontakt/"
+            />
+            <span class="tracking-wide text-sm font-light text-white"
+              >Kostenloses Erstgespräch</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <!---->
-    <TheSubpageHeader :title="page.header.title" :subtitle="page.header.subtitle" buttonText="Mehr">
-      <div></div>
-    </TheSubpageHeader>
+    <section class="">
+      <div
+        class="px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
+      >
+        <article
+          class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
+        >
+          <nuxt-content :document="page"></nuxt-content>
+        </article>
+      </div>
+    </section>
     <!---->
-    <base-section class="top-medium">
-      <template v-slot:no-container>
-        <TheHeaderReflection />
-      </template>
-      <div v-html="$md.render(page.body)" class="content"></div>
-    </base-section>
-    <!---->
-    <base-section>
-      <TheFooter />
-    </base-section>
+    <NewFooter
+      bg-color="bg-teal-900"
+      text-color="text-white"
+      link-color="text-sunshine-200"
+      hover-color="text-sunshine-300"
+      :invert-logo="true"
+    />
     <!---->
   </main>
 </template>
 <script>
-import BaseSection from "@/components/BaseSection.vue"
-import TheFooter from "@/components/TheFooter.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue"
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
+import SubNavigation from "@/components/SubNavigation.vue";
+import NewFooter from "@/components/NewFooter.vue";
+import TealButton from "@/components/TealButton.vue";
+import MetaTags from "@/mixins/MetaTags.js";
 
 export default {
   components: {
-    BaseSection,
-    TheFooter,
-    TheHeaderReflection,
-    TheSubpageHeader,
+    TealButton,
+    NewFooter,
+    SubNavigation,
   },
-  data() {
-    return {
-      page: this.$store.state.pages.dataProtection
-    }
-  },
-  head() {
-    return {
-      title: this.page.title,
-      meta: [
-        { hid: "description", name: "description", content: this.page.description }
-      ]
-    }
-  },
-}
+  mixins: [MetaTags],
+  layout: "new",
+  async asyncData({ $content }) {
+    const page = await $content("page/dataProtection").fetch();
 
+    return {
+      page,
+    };
+  },
+};
 </script>

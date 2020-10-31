@@ -40,8 +40,9 @@ export default {
   name: "ArticleCard",
   props: {
     article: {
-      required: true
-    }
+      required: true,
+      type: Object,
+    },
   },
   data() {
     return {
@@ -57,8 +58,8 @@ export default {
         "Sep",
         "Okt",
         "Nov",
-        "Dez"
-      ]
+        "Dez",
+      ],
     };
   },
   computed: {
@@ -74,8 +75,8 @@ export default {
         " " +
         date.getFullYear()
       );
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

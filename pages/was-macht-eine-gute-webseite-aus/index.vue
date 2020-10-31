@@ -1,109 +1,107 @@
 <template>
   <main>
-    <!---->
-    <the-subpage-header
-      :title="page.header.title"
-      :subtitle="page.header.subtitle"
-    >
-      <div></div>
-    </the-subpage-header>
-    <!---->
-    <base-section class="bottom-medium top-medium" id="infos">
-      <template v-slot:no-container>
-        <TheHeaderReflection />
-      </template>
-      <TheStakes :stakes="page.stakes" />
-    </base-section>
-    <!---->
-    <base-section class="top-small">
-      <div class="columns">
-        <ValueProposition
-          v-for="(proposition, index) in page.valuePropositions"
-          :key="index"
-          :proposition="proposition"
-          :index="index"
-        />
-      </div>
-    </base-section>
-    <!---->
-    <base-section>
-      <base-frame>
-        <div class="has-background-warning p-30 md:p-50">
-          <div class="columns">
-            <div class="column is-3">
-              <h2 class="title is-3 mb-18">{{ page.download.title }}</h2>
-              <div class="is-flex mw-400 h-auto">
-                <div class="paper-shadow svg-parent w-100">
-                  <LeadGenerator />
-                </div>
-              </div>
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
+    <!--  -->
+    <section class="pt-32 pb-40 relative bg-sunshine-200">
+      <div
+        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
+        style="background-image: url('/hilfestellung.svg');background-size: 800px auto;background-position: 50% -100px;"></div>
+      <div class="container">
+        <div class="">
+          <div class="flex justify-center items-center flex-col">
+            <div
+              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            >
+              {{ page.header.title }}
             </div>
-            <div class="column is-8 is-offset-1">
-              <LeadGeneratorForm :download="page.download" />
+            <h1
+              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            >
+              {{ page.header.subtitle }}
+            </h1>
+            <TealButton text="Jetzt zusammenarbeiten" class="mb-1" />
+            <span class="tracking-wide text-sm font-light text-white">
+              Kostenloses Erstgespräch
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <section class="pt-32 pb-40 bg-teal-800">
+      <div class="container">
+        <div class="flex flex-col justify-center items-center mb-24">
+          <div class="text-center max-w-2xl flex flex-col items-center">
+            <h2 class="font-bold text-gray-100 text-3xl mb-3 leading-tight">
+              {{ page.stakes.title }}
+            </h2>
+            <p class="text-lg text-gray-100 max-w-lg">
+              {{ page.stakes.subtitle }}
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-y-16 md:gap-y-8 md:grid-cols-3 gap-8 mb-20">
+          <div
+            v-for="(proposition, index) in page.valuePropositions"
+            :key="index"
+          >
+            <h3 class="text-2xl text-gray-100 font-bold mb-2">
+              {{ proposition.title }}
+            </h3>
+            <p class="text-lg text-gray-200">{{ proposition.text }}</p>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div>
+            <h2 class="text-3xl text-gray-100 font-bold">
+              {{ page.form.title }}
+            </h2>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-sunshine-200 px-8 py-5 rounded-lg">
+              <LeadGeneratorForm :download="page.form"
+                ><TealButton :text="page.form.button"
+              /></LeadGeneratorForm>
             </div>
           </div>
         </div>
-      </base-frame>
-    </base-section>
+      </div>
+    </section>
     <!---->
-    <base-section>
-      <TheFooter />
-    </base-section>
+    <NewFooter
+      bg-color="bg-teal-900"
+      text-color="text-white"
+      link-color="text-sunshine-200"
+      hover-color="text-sunshine-300"
+      :invert-logo="true"
+    />
     <!---->
   </main>
 </template>
 <script>
-import BaseFrame from "@/components/BaseFrame.vue";
-import BaseSection from "@/components/BaseSection.vue";
-import LeadGenerator from "@/assets/images/leadgenerator.production.svg?inline";
+import SubNavigation from "@/components/SubNavigation.vue";
+import NewFooter from "@/components/NewFooter.vue";
+import TealButton from "@/components/TealButton.vue";
 import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
-import TheStakes from "@/components/TheStakes.vue";
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
-import ValueProposition from "@/components/ValueProposition.vue";
+import MetaTags from "@/mixins/MetaTags.js";
 
 export default {
   components: {
-    BaseFrame,
-    BaseSection,
-    LeadGenerator,
     LeadGeneratorForm,
-    TheFooter,
-    TheHeaderReflection,
-    TheStakes,
-    TheSubpageHeader,
-    ValueProposition
+    TealButton,
+    NewFooter,
+    SubNavigation,
   },
-  data() {
+  mixins: [MetaTags],
+  layout: "new",
+  async asyncData({ $content }) {
+    const page = await $content("page/leadGenerator").fetch();
+
     return {
-      page: this.$store.state.pages.leadGenerator
+      page,
     };
   },
-  head() {
-    return {
-      title: this.page.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.page.description
-        }
-      ]
-    };
-  }
+  computed: {},
 };
 </script>
-<style lang="scss" scoped>
-.svg-parent {
-  padding-bottom: 126%;
-  position: relative;
-  & > svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>

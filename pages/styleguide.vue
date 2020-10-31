@@ -1,7 +1,7 @@
 <template>
   <main>
     <!---->
-    <base-section>
+    <BaseSection>
       <h1 class="text-6xl mb-24">Styleguide</h1>
       <!--  -->
       <StyleguideHeading text="Typography" />
@@ -61,15 +61,18 @@
       </div>
       <!--  -->
       <StyleguideHeading text="Buttons" />
-      <div class="grid grid-cols-3 gap-8">
-        <StyleguideColumn text="Primary">
-          <PrimaryButton />
+      <div class="grid grid-cols-4 gap-8">
+        <StyleguideColumn text="Red">
+          <RedButton />
         </StyleguideColumn>
-        <StyleguideColumn text="Secondary">
+        <StyleguideColumn text="Teal">
           <TealButton />
         </StyleguideColumn>
-        <StyleguideColumn text="Tertiary">
-          <TertiaryButton />
+        <StyleguideColumn text="Sunshine">
+          <SunshineButton />
+        </StyleguideColumn>
+        <StyleguideColumn text="Blue">
+          <BlueButton />
         </StyleguideColumn>
       </div>
       <!--  -->
@@ -78,98 +81,114 @@
         <StyleguideColumn text="Warm" class="col-span-2">
           <div class="grid grid-cols-2">
             <StyleguideColumn text="Red (Hue: 0)">
-              <div class="h-12 realtive bg-red-100"></div>
-              <div class="h-12 realtive bg-red-200"></div>
-              <div class="h-12 realtive bg-red-300">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 realtive bg-red-400">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 realtive bg-red-500"></div>
-              <div class="h-12 realtive bg-red-600">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 realtive bg-red-700">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 realtive bg-red-800"></div>
-              <div class="h-12 realtive bg-red-900"></div>
+              <StyleguideColor color="FFFAFA"></StyleguideColor>
+              <StyleguideColor color="FCD7D8"></StyleguideColor>
+              <StyleguideColor
+                color="FAB5B6"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="EF7577"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="DD4447"></StyleguideColor>
+              <StyleguideColor
+                color="C12326"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="9B0F11"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="690506"></StyleguideColor>
+              <StyleguideColor color="330102"></StyleguideColor>
             </StyleguideColumn>
             <StyleguideColumn text="Sunshine (Hue: 40)">
-              <div class="h-12 relative bg-sunshine-100"></div>
-              <div class="h-12 relative bg-sunshine-200"></div>
-              <div class="h-12 relative bg-sunshine-300"></div>
-              <div class="h-12 relative bg-sunshine-400">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-sunshine-500">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-sunshine-600">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-sunshine-700">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-sunshine-800"></div>
-              <div class="h-12 relative bg-sunshine-900"></div>
+              <StyleguideColor color="FFFDFA"></StyleguideColor>
+              <StyleguideColor color="FEF2D8"></StyleguideColor>
+              <StyleguideColor color="FDE6B7"></StyleguideColor>
+              <StyleguideColor
+                color="F6CC79"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="E0AC45"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="926A1B"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="724F0B"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="684705"></StyleguideColor>
+              <StyleguideColor color="664502"></StyleguideColor>
             </StyleguideColumn>
           </div>
         </StyleguideColumn>
         <StyleguideColumn text="Cool" class="col-span-2">
           <div class="grid grid-cols-2">
             <StyleguideColumn text="Teal (Hue: 180)">
-              <div class="h-12 relative bg-teal-100"></div>
-              <div class="h-12 relative bg-teal-200"></div>
-              <div class="h-12 relative bg-teal-300">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-teal-400">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-teal-500"></div>
-              <div class="h-12 relative bg-teal-600"></div>
-              <div class="h-12 relative bg-teal-700">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-teal-800">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-teal-900"></div>
+              <StyleguideColor color="FAFFFF"></StyleguideColor>
+              <StyleguideColor color="D6FBFB"></StyleguideColor>
+              <StyleguideColor
+                color="B2F6F6"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="6DDFDF"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="38B6B6"></StyleguideColor>
+              <StyleguideColor
+                color="188282"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="085656"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="033C3C"></StyleguideColor>
+              <StyleguideColor color="013333"></StyleguideColor>
             </StyleguideColumn>
             <StyleguideColumn text="Blue (Hue: 220)">
-              <div class="h-12 relative bg-blue-100"></div>
-              <div class="h-12 relative bg-blue-200"></div>
-              <div class="h-12 relative bg-blue-300">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-blue-400">
-                <div class="absolute bg-black w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-blue-500"></div>
-              <div class="h-12 relative bg-blue-600"></div>
-              <div class="h-12 relative bg-blue-700">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-blue-800">
-                <div class="absolute bg-gray-100 w-4 h-12 left-0"></div>
-              </div>
-              <div class="h-12 relative bg-blue-900"></div>
+              <StyleguideColor color="FAFCFF"></StyleguideColor>
+              <StyleguideColor color="D7E4FD"></StyleguideColor>
+              <StyleguideColor
+                color="B6CDFB"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="77A0F3"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="477CE5"></StyleguideColor>
+              <StyleguideColor color="265FD1"></StyleguideColor>
+              <StyleguideColor
+                color="1148B4"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor
+                color="07348F"
+                :selected="true"
+              ></StyleguideColor>
+              <StyleguideColor color="022366"></StyleguideColor>
             </StyleguideColumn>
           </div>
         </StyleguideColumn>
         <StyleguideColumn text="Neutral" class="">
           <StyleguideColumn text="Gray">
-            <div class="h-12 bg-gray-100"></div>
-            <div class="h-12 bg-gray-200"></div>
-            <div class="h-12 bg-gray-300"></div>
-            <div class="h-12 bg-gray-400"></div>
-            <div class="h-12 bg-gray-500"></div>
-            <div class="h-12 bg-gray-600"></div>
-            <div class="h-12 bg-gray-700"></div>
-            <div class="h-12 bg-gray-800"></div>
-            <div class="h-12 bg-gray-900"></div>
+            <StyleguideColor color="eaebeb"></StyleguideColor>
+            <StyleguideColor color="d5d7d8"></StyleguideColor>
+            <StyleguideColor color="b7bbbd"></StyleguideColor>
+            <StyleguideColor color="92979b"></StyleguideColor>
+            <StyleguideColor color="72777b"></StyleguideColor>
+            <StyleguideColor color="62676a"></StyleguideColor>
+            <StyleguideColor color="4e5255"></StyleguideColor>
+            <StyleguideColor color="36393a"></StyleguideColor>
+            <StyleguideColor color="1d1f20"></StyleguideColor>
           </StyleguideColumn>
         </StyleguideColumn>
       </div>
@@ -300,47 +319,43 @@
           <ColorCombination color1="sunshine-700" color2="blue-300" />
         </div>
       </div>
-    </base-section>
+    </BaseSection>
     <!---->
-    <base-section>
-      <TheFooter />
-    </base-section>
     <!---->
   </main>
 </template>
 <script>
 import BaseSection from "@/components/BaseSection.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheHeaderReflection from "@/components/TheHeaderReflection.vue";
-import TheSubpageHeader from "@/components/TheSubpageHeader.vue";
-import PrimaryButton from "@/components/PrimaryButton.vue";
+import RedButton from "@/components/RedButton.vue";
 import TealButton from "@/components/TealButton.vue";
-import TertiaryButton from "@/components/TertiaryButton.vue";
+import SunshineButton from "@/components/SunshineButton.vue";
 import StyleguideColumn from "@/components/StyleguideColumn.vue";
 import StyleguideHeading from "@/components/StyleguideHeading.vue";
 import ColorCombination from "@/components/ColorCombination.vue";
+import StyleguideColor from "@/components/StyleguideColor.vue";
+import BlueButton from "@/components/BlueButton.vue";
 
 export default {
   name: "Styleguide",
   components: {
+    StyleguideColor,
+    BlueButton,
     ColorCombination,
     StyleguideColumn,
-    TertiaryButton,
+    SunshineButton,
     StyleguideHeading,
-    PrimaryButton,
+    RedButton,
     TealButton,
     BaseSection,
-    TheFooter,
-    TheHeaderReflection,
-    TheSubpageHeader
   },
+  layout: "new",
   data() {
     return {};
   },
   head() {
     return {
-      title: "Styleguide"
+      title: "Styleguide",
     };
-  }
+  },
 };
 </script>

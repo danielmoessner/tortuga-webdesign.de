@@ -1,8 +1,10 @@
 <template>
-  <nav class="bg-white border-b sticky top-0 z-50">
+  <nav class="bg-white border-b sticky top-0 z-40">
     <div class="container">
       <div class="flex items-center h-16">
-        <h1 class="font-medium text-xl tracking-tight">{{ text }}</h1>
+        <h1 class="font-medium text-xl leading-tight tracking-tight">
+          {{ text }}
+        </h1>
       </div>
     </div>
   </nav>
@@ -14,8 +16,8 @@ export default {
   props: {
     text: {
       type: String,
-      default: "Subnavigation"
-    }
-  }
+      default: "Subnavigation",
+    },
+  },
 };
 </script>

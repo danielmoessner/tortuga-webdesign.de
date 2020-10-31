@@ -1,5 +1,4 @@
 const path = require("path");
-const purgecss = require("@fullhuman/postcss-purgecss");
 
 export default {
   target: "static",
@@ -9,19 +8,19 @@ export default {
   head: {
     title: "Tortuga Webdesign",
     htmlAttrs: {
-      lang: "de"
+      lang: "de",
     },
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" }
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Generate
    */
   generate: {
-    fallback: "404.html"
+    fallback: "404.html",
   },
   /*
    ** Global CSS
@@ -38,12 +37,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/markdownit", "@nuxtjs/sitemap", "@nuxtjs/svg"],
+  modules: ["@nuxtjs/sitemap", "@nuxt/content"],
   /*
    ** Google Tag Manager Config
    */
   gtm: {
-    id: "GTM-TQM6M58"
+    id: "GTM-TQM6M58",
   },
   /*
    ** Sitemap Config
@@ -69,18 +68,8 @@ export default {
       "/portfolio/silke-tolkmitt-marketingmanagement",
       "/portfolio/sn-trockenbau-gmbh",
       "/portfolio/the-corner-house",
-      "/portfolio/clever-und-entspannt-lernen"
-    ]
-  },
-  /*
-   ** Markdown Config
-   ** See: https://github.com/markdown-it/markdown-it
-   */
-  markdownit: {
-    injected: true,
-    preset: "default",
-    linkify: true,
-    breaks: true
+      "/portfolio/clever-und-entspannt-lernen",
+    ],
   },
   /*
    ** Build configuration
@@ -89,16 +78,11 @@ export default {
     devMiddleware: {
       headers: {
         "Cache-Control": "no-store",
-        Vary: "*"
-      }
+        Vary: "*",
+      },
     },
     extractCSS: true,
     postcss: {
-      // preset: {
-      //   features: {
-      //     customProperties: false
-      //   }
-      // },
       plugins: {
         "postcss-import": {},
         tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
@@ -108,7 +92,7 @@ export default {
                 content: [
                   "./components/**/*.vue",
                   "./layouts/**/*.vue",
-                  "./pages/**/*.vue"
+                  "./pages/**/*.vue",
                 ],
                 safelist: [
                   "body",
@@ -119,24 +103,24 @@ export default {
                   /-(leave|enter|appear)(|-(to|from|active))$/, // Normal transitions
                   /^nuxt-link(|-exact)-active$/, // Nuxt link classes
                   /^(?!cursor-move).+-move$/, // Move transitions
-                  /data-v-.*/ // Keep scoped styles
+                  /data-v-.*/, // Keep scoped styles
                 ],
-                defaultExtractor: content => {
+                defaultExtractor: (content) => {
                   const broadMatches =
                     content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
                   const innerMatches =
                     content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
                   return broadMatches.concat(innerMatches);
-                }
+                },
               }
-            : false
-      }
+            : false,
+      },
     },
     loaders: {
       scss: {
         prependData:
-          '@import "./assets/styles/insert-into-every-component.scss";'
-      }
+          '@import "./assets/styles/insert-into-every-component.scss";',
+      },
     },
     // html: {
     //   minify: {
@@ -159,6 +143,14 @@ export default {
         vue.transformAssetUrls.img = ["data-src", "src"];
         vue.transformAssetUrls.source = ["data-srcset", "srcset"];
       }
-    }
-  }
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue|ts)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+        });
+      }
+    },
+  },
 };
