@@ -33,11 +33,17 @@ export default {
   /*
    ** Nuxt.js build-modules
    */
-  buildModules: ["@nuxtjs/gtm"],
+  buildModules: ["@nuxtjs/gtm", '@aceforth/nuxt-optimized-images'],
   /*
    ** Nuxt.js modules
    */
   modules: ["@nuxtjs/sitemap", "@nuxt/content"],
+  /*
+  ** Nuxt Optimized Images Config
+  */
+ optimizedImages: {
+  optimizeImages: true
+},
   /*
    ** Google Tag Manager Config
    */
@@ -75,12 +81,6 @@ export default {
    ** Build configuration
    */
   build: {
-    devMiddleware: {
-      headers: {
-        "Cache-Control": "no-store",
-        Vary: "*",
-      },
-    },
     extractCSS: true,
     postcss: {
       plugins: {
@@ -116,12 +116,12 @@ export default {
             : false,
       },
     },
-    loaders: {
-      scss: {
-        prependData:
-          '@import "./assets/styles/insert-into-every-component.scss";',
-      },
-    },
+    // loaders: {
+    //   scss: {
+    //     prependData:
+    //       '@import "./assets/styles/insert-into-every-component.scss";',
+    //   },
+    // },
     // html: {
     //   minify: {
     //     collapseBooleanAttributes: true,

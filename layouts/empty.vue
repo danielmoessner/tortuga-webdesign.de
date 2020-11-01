@@ -7,12 +7,5 @@
 <script>
 export default {
   components: {},
-  head() {
-    [];
-  },
 };
 </script>
-
-<style lang="scss">
-// automatically imports the main style sheet
-</style>

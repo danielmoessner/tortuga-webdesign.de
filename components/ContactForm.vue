@@ -191,7 +191,7 @@ export default {
   components: {},
 };
 </script>
-<style lang="scss">
+<style scoped>
 .mt-08 {
   margin-top: 0.8rem;
 }
@@ -199,17 +199,17 @@ export default {
 .checkbox {
   display: flex;
   height: auto;
-
-  input {
+}
+ .checkbox input {
     margin-right: 10px;
     margin-left: 8px;
     min-width: 13px;
   }
 
-  label {
+ .checkbox label {
     cursor: pointer;
   }
-}
+
 
 .field-label {
   flex-grow: 2;

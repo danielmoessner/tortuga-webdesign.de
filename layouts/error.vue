@@ -16,12 +16,5 @@ export default {
     TheError,
   },
   layout: "empty",
-  head() {
-    [];
-  },
 };
 </script>
-
-<style lang="scss">
-// automatically imports the main style sheet
-</style>

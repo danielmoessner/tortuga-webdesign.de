@@ -1,7 +1,7 @@
 <template>
   <main>
     <!---->
-    <BaseSection>
+    <section class="pt-32 pb-40">
       <h1 class="text-6xl mb-24">Styleguide</h1>
       <!--  -->
       <StyleguideHeading text="Typography" />
@@ -319,13 +319,12 @@
           <ColorCombination color1="sunshine-700" color2="blue-300" />
         </div>
       </div>
-    </BaseSection>
+    </section>
     <!---->
     <!---->
   </main>
 </template>
 <script>
-import BaseSection from "@/components/BaseSection.vue";
 import RedButton from "@/components/RedButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
@@ -346,7 +345,6 @@ export default {
     StyleguideHeading,
     RedButton,
     TealButton,
-    BaseSection,
   },
   layout: "new",
   data() {

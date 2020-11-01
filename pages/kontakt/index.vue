@@ -5,12 +5,15 @@
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
         class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="
-        background-image: url('/kontakt.svg');
-        background-size: 800px auto;
-        background-position: 50% -105px;
-        "
-      />
+        
+        :style="'background-image: url(' + require('@/assets/svg/kontakt.svg?include') + ');background-size: 800px auto;background-position: 50% -105px;'"
+      ></div>
+      <!-- <div
+        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
+        style="width: 800px; height: auto; left: 50%; top: -105px;"
+        v-html="'kontakt.svg'"
+      ></div>
+      <div v-html="require('@/assets/svg/kontakt.svg')"></div> -->
       <div class="container">
         <div class="">
           <div class="flex justify-center items-center flex-col">

@@ -29,7 +29,7 @@
       </div>
     </section>
     <!---->
-    <BaseSection id="kontakt" class="top-medium">
+    <section class="pt-32 pb-40">
       <div class="message is-success">
         <div class="message-body">
           <h3 class="title is-4 color-inherit">
@@ -43,7 +43,7 @@
           </p>
         </div>
       </div>
-    </BaseSection>
+    </section>
     <!---->
     <NewFooter
       bg-color="bg-teal-900"
@@ -56,7 +56,6 @@
   </main>
 </template>
 <script>
-import BaseSection from "@/components/BaseSection.vue";
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import TealButton from "@/components/TealButton.vue";
@@ -66,7 +65,6 @@ export default {
     TealButton,
     NewFooter,
     SubNavigation,
-    BaseSection,
   },
   layout: "new",
   async asyncData({ $content }) {

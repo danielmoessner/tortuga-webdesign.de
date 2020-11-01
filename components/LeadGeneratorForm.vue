@@ -168,19 +168,19 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .checkbox {
   display: flex;
   height: auto;
-
-  input {
+}
+.checkbox input {
     margin-right: 10px;
     margin-left: 8px;
     min-width: 13px;
   }
 
-  label {
+ .checkbox label {
     cursor: pointer;
   }
-}
+
 </style>
