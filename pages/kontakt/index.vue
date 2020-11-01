@@ -5,7 +5,11 @@
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
         class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="background-image: url('/kontakt.svg');background-size: 800px auto;background-position: 50% -105px;"
+        style="
+        background-image: url('/kontakt.svg');
+        background-size: 800px auto;
+        background-position: 50% -105px;
+        "
       />
       <div class="container">
         <div class="">
