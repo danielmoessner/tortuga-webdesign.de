@@ -6,7 +6,7 @@
       <div
         class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
         
-        :style="'background-image: url(' + require('@/assets/svg/kontakt.svg?include') + ');background-size: 800px auto;background-position: 50% -105px;'"
+        style="background-image: url('/kontakt.svg');background-size: 800px auto;background-position: 50% -105px;"
       ></div>
       <!-- <div
         class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
