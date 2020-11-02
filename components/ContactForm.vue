@@ -8,22 +8,26 @@
       action="/kontakt/danke/"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label for="name" class="label">Vor- &amp; Nachname</label>
+      <div class="grid grid-cols-5 md:grid-cols-7 md:gap-4 gap-y-1">
+        <div
+          class="col-span-5 md:col-span-2 flex items-start md:justify-end mt-4 md:mt-2"
+        >
+          <label for="name" class="pl-1 md:pr-0 block text-right"
+            >Vor- &amp; Nachname</label
+          >
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control has-icons-left">
+        <div class="col-span-5">
+          <div class="flex items-center w-full">
+            <div class="relative w-full w-full">
               <input
                 id="name"
-                class="input"
+                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="text"
                 name="name"
                 placeholder="Max Müller"
               />
               <span
-                class="icon flex items-center justify-center is-small is-left"
+                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
               >
                 <svg
                   aria-hidden="true"
@@ -45,23 +49,25 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label" for="mail">Geschäftliche E-Mail</label>
+        <div class="col-span-2">
+          <div class="flex items-start md:justify-end mt-4 md:mt-2">
+            <label class="pl-1 md:pr-0 block text-right" for="mail">
+              Geschäftliche E-Mail
+            </label>
+          </div>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control has-icons-left">
+        <div class="col-span-5">
+          <div class="flex items-center">
+            <div class="relative w-full">
               <input
                 id="mail"
-                class="input"
+                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="email"
                 name="email"
                 placeholder="max@mustermann.de"
               />
               <span
-                class="icon flex items-center justify-center is-small is-left"
+                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
               >
                 <svg
                   aria-hidden="true"
@@ -83,23 +89,25 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label" for="website">Webseite (optional)</label>
+        <div class="col-span-5 md:col-span-2">
+          <div class="flex items-start md:justify-end mt-4 md:mt-2">
+            <label class="pl-1 md:pr-0 block text-right" for="website"
+              >Webseite (optional)
+            </label>
+          </div>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control has-icons-left">
+        <div class="col-span-5">
+          <div class="flex items-center">
+            <div class="relative w-full">
               <input
                 id="website"
-                class="input"
+                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="text"
                 name="website"
                 placeholder="maxmustermann.de"
               />
               <span
-                class="icon flex items-center justify-center is-small is-left"
+                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
               >
                 <svg
                   aria-hidden="true"
@@ -121,44 +129,45 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label" for="message"
-            >Weitere Projektdetails (optional)</label
-          >
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <textarea
-                id="message"
-                class="textarea"
-                name="message"
-                placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."
-              ></textarea>
-            </div>
+        <div class="col-span-5 md:col-span-2">
+          <div class="flex items-start md:justify-end mt-4 md:mt-2">
+            <label class="pl-1 md:pr-0 block text-right" for="message"
+              >Weitere Projektdetails (optional)
+            </label>
           </div>
         </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label" for="message">Datenschutz</label>
+        <div class="col-span-5">
+          <div class="flex items-center">
+            <textarea
+              id="message"
+              rows="4"
+              class="form-textarea w-full border-opacity-75 focus:shadow-teal"
+              name="message"
+              placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."
+            ></textarea>
+          </div>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <div class="checkbox input">
+        <div class="col-span-5 md:col-span-2">
+          <div class="flex items-start mt-2 md:justify-end">
+            <label class="pl-1 md:pr-0 block text-right">Datenschutz</label>
+          </div>
+        </div>
+        <div class="col-span-5">
+          <div class="flex items-center">
+            <div class="relative w-full">
+              <div class="flex items-center form-input">
                 <input
                   id="dataprotection"
                   type="checkbox"
-                  class="contact-form--checkbox-input"
+                  class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-3 w-5 h-5"
                   name="dataprotection"
                   required
                 />
-                <label for="dataprotection">
+                <label class="leading-tight" for="dataprotection">
                   Ich habe die
-                  <a href="/datenschutz">Informationen zur Datenverarbeitung</a>
+                  <a class="underline" href="/datenschutz"
+                    >Informationen zur Datenverarbeitung</a
+                  >
                   zur Kenntnis genommen. Meine angegebenen Daten werden zum
                   Zweck der Bearbeitung meiner Anfrage von Tortuga Webdesign
                   gespeichert.
@@ -167,18 +176,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label"></div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <slot>
-                <button class="button is-rounded is-primary mt-08">
-                  Absenden
-                </button>
-              </slot>
-            </div>
+        <div class="col-span-5 md:col-start-3">
+          <div class="flex items-center col-start-3 pt-6 md:pt-3 pb-2">
+            <slot> </slot>
           </div>
         </div>
       </div>
@@ -200,16 +200,15 @@ export default {
   display: flex;
   height: auto;
 }
- .checkbox input {
-    margin-right: 10px;
-    margin-left: 8px;
-    min-width: 13px;
-  }
+.checkbox input {
+  margin-right: 10px;
+  margin-left: 8px;
+  min-width: 13px;
+}
 
- .checkbox label {
-    cursor: pointer;
-  }
-
+.checkbox label {
+  cursor: pointer;
+}
 
 .field-label {
   flex-grow: 2;

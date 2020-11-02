@@ -9,6 +9,9 @@ module.exports = {
       inset: {
         "1/2": "50%",
       },
+      boxShadow: {
+        teal: "0 0 0 .2rem rgba(8, 86, 86, 0.43)",
+      },
       colors: {
         black: "#1d1f20",
         red: {
@@ -90,7 +93,10 @@ module.exports = {
     display: ({ after }) => after(["group-hover"]),
     opacity: ({ after }) => after(["group-hover"]),
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/custom-forms"),
+  ],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,

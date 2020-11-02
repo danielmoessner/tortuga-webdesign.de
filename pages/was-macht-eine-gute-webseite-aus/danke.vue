@@ -21,7 +21,11 @@
             >
               {{ page.thankYou.header.subtitle }}
             </h1>
-            <TealButton text="Jetzt zusammenarbeiten" class="mb-1" />
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              to="/kontakt/"
+              class="mb-1"
+            />
             <div class="tracking-wide text-sm font-light text-white">
               Kostenloses Erstgespräch
             </div>

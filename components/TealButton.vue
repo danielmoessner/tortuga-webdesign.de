@@ -20,11 +20,13 @@
 <script>
 import TriangleSvg from "@/components/TriangleSvg.vue";
 import JustA from "@/components/JustA.vue";
+import JustButton from "@/components/JustButton.vue";
 
 export default {
   name: "TealButton",
   components: {
     JustA,
+    JustButton,
     TriangleSvg,
   },
   props: {
@@ -40,10 +42,18 @@ export default {
       type: String,
       default: "",
     },
+    submit: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     which() {
-      return this.href == "" ? "nuxt-link" : "just-a";
+      return this.submit
+        ? "just-button"
+        : this.href == ""
+        ? "nuxt-link"
+        : "just-a";
     },
   },
 };

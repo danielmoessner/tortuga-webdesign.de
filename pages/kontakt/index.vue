@@ -75,7 +75,9 @@
           </div>
           <div class="col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
-              <ContactForm><TealButton text="Absenden" /></ContactForm>
+              <ContactForm
+                ><TealButton text="Absenden" :submit="true"
+              /></ContactForm>
             </div>
           </div>
           <div class="col-start-1">

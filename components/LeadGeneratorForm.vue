@@ -9,19 +9,19 @@
       action="/was-macht-eine-gute-webseite-aus/danke/"
     >
       <input type="hidden" name="form-name" value="lead" />
-      <div class="column is-6">
-        <div class="field">
-          <label for="name" class="label">Vorname</label>
-          <div class="control has-icons-left">
+      <div class="grid gap-y-1 md:gap-y-0 gap-x-2 md:grid-cols-2">
+        <div class="p-3">
+          <label for="name" class="block mb-1">Vorname</label>
+          <div class="relative">
             <input
               id="name"
-              class="input"
+              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="firstname"
               placeholder="Max / Susi"
             />
             <span
-              class="icon flex items-center justify-center is-small is-left"
+              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
             >
               <svg
                 aria-hidden="true"
@@ -42,20 +42,18 @@
             </span>
           </div>
         </div>
-      </div>
-      <div class="column is-6">
-        <div class="field">
-          <label for="name" class="label">Nachname</label>
-          <div class="control has-icons-left">
+        <div class="p-3">
+          <label for="name" class="block mb-1">Nachname</label>
+          <div class="relative">
             <input
               id="name"
-              class="input"
+              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="lastname"
               placeholder="Müller"
             />
             <span
-              class="icon flex items-center justify-center is-small is-left"
+              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
             >
               <svg
                 aria-hidden="true"
@@ -76,20 +74,18 @@
             </span>
           </div>
         </div>
-      </div>
-      <div class="column is-6">
-        <div class="field">
-          <label class="label" for="mail">E-Mail</label>
-          <div class="control has-icons-left">
+        <div class="p-3">
+          <label class="mb-1 block" for="mail">E-Mail</label>
+          <div class="relative">
             <input
               id="mail"
-              class="input"
+              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="email"
               name="email"
               placeholder="mueller@mail.de"
             />
             <span
-              class="icon flex items-center justify-center is-small is-left"
+              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
             >
               <svg
                 aria-hidden="true"
@@ -110,48 +106,36 @@
             </span>
           </div>
         </div>
-      </div>
-      <div class="column is-6"></div>
-      <div class="column is-6">
-        <div class="field">
-          <label class="label" for="message"
-            >Dürfen wir Ihnen E-Mails schicken?</label
-          >
-          <div class="control">
-            <div class="checkbox input">
+        <div class="p-3 col-start-1">
+          <label class="block mb-1">Dürfen wir Ihnen E-Mails schicken?</label>
+          <div class="relative">
+            <div class="flex items-center form-input">
               <input
                 id="dataprotection"
                 type="checkbox"
-                class="contact-form--checkbox-input"
+                class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-2 w-5 h-5"
                 name="dataprotection"
                 required
               />
-              <label for="dataprotection">
+              <label class="block leading-tight" for="dataprotection">
                 Ja, ich würde gerne Marketing E-Mails von Tortuga Webdesign
                 erhalten.
               </label>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column is-6"></div>
-      <div class="column is-6">
-        <div class="field">
-          <div class="control">
-            <slot>
-              <button class="button is-rounded is-light mt-40">
-                {{ download.button }}
-              </button>
-            </slot>
+        <div class="p-3 mt-5 col-start-1">
+          <div class="">
+            <slot></slot>
           </div>
         </div>
-      </div>
-      <div class="column is-12">
-        <p class="mt-18">
-          <small>
-            {{ download.legalNotice }}
-          </small>
-        </p>
+        <div class="p-3 md:col-span-2">
+          <p class="mt-8">
+            <small>
+              {{ download.legalNotice }}
+            </small>
+          </p>
+        </div>
       </div>
     </form>
   </div>
@@ -168,19 +152,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.checkbox {
-  display: flex;
-  height: auto;
-}
-.checkbox input {
-    margin-right: 10px;
-    margin-left: 8px;
-    min-width: 13px;
-  }
-
- .checkbox label {
-    cursor: pointer;
-  }
-
-</style>

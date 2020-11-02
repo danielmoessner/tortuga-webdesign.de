@@ -21,7 +21,11 @@
             >
               {{ page.header.subtitle }}
             </h1>
-            <TealButton text="Jetzt zusammenarbeiten" class="mb-1" />
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              to="/kontakt/"
+              class="mb-1"
+            />
             <span class="tracking-wide text-sm font-light text-white">
               Kostenloses Erstgespräch
             </span>
@@ -63,7 +67,7 @@
           <div class="lg:col-span-2">
             <div class="bg-sunshine-200 px-8 py-5 rounded-lg">
               <LeadGeneratorForm :download="page.form"
-                ><TealButton :text="page.form.button"
+                ><TealButton :submit="true" :text="page.form.button"
               /></LeadGeneratorForm>
             </div>
           </div>
