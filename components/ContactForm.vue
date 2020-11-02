@@ -18,7 +18,7 @@
         </div>
         <div class="col-span-5">
           <div class="flex items-center w-full">
-            <div class="relative w-full w-full">
+            <div class="relative w-full">
               <input
                 id="name"
                 class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"

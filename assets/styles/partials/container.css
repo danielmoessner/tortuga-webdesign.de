@@ -1,3 +1,7 @@
+/* 
+** This file contains styles for the tailwind container
+*/
+
 .container {
   @apply px-5;
 }
