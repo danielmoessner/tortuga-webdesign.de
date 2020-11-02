@@ -4,16 +4,10 @@
     <!---->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        
-        style="background-image: url('/kontakt.svg');background-size: 800px auto;background-position: 50% -105px;"
+        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
+        style="width: 800px; top: -105px"
+        v-html="require('@/assets/svg/kontakt.svg?include')"
       ></div>
-      <!-- <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="width: 800px; height: auto; left: 50%; top: -105px;"
-        v-html="'kontakt.svg'"
-      ></div>
-      <div v-html="require('@/assets/svg/kontakt.svg')"></div> -->
       <div class="container">
         <div class="">
           <div class="flex justify-center items-center flex-col">

@@ -3,7 +3,11 @@
     <!---->
     <section
       class="bg-teal-800 bg-no-repeat bg-center"
-      style="background-image: url('/drawing.svg');background-size: 1600px auto;">
+      style="background-size: 1600px auto"
+      :style="{
+        'background-image': 'url(\'data:image/svg+xml;utf8,' + bgSvg + '\')',
+      }"
+    >
       <div
         class="bg-gradient-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800 divide-y"
       >
@@ -369,6 +373,14 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    svgUrl() {
+      return require("@/assets/svg/index.svg?include");
+    },
+    bgSvg() {
+      return this.svgUrl.split("#").join("%23").replace("\n", "");
+    },
   },
 };
 </script>

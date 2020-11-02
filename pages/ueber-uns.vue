@@ -4,8 +4,10 @@
     <!--  -->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="background-image: url('/ueber-uns.svg');background-size: 900px auto;background-position: 50% -165px;"></div>
+        class="absolute min-h-screen z-0 mx-auto left-1/2 transform -translate-x-1/2"
+        style="width: 900px; top: -165px"
+        v-html="require('@/assets/svg/ueber-uns.svg?include')"
+      ></div>
       <div class="container">
         <div class="">
           <div class="flex justify-center items-center flex-col">

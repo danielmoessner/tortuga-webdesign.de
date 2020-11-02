@@ -4,8 +4,10 @@
     <!--  -->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="background-image: url('/hilfestellung.svg');background-size: 800px auto;background-position: 50% -100px;"></div>
+        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
+        style="width: 800px; top: -110px"
+        v-html="require('@/assets/svg/hilfestellung.svg?include')"
+      ></div>
       <div class="container">
         <div class="">
           <div class="flex justify-center items-center flex-col">

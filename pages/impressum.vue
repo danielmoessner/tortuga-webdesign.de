@@ -4,8 +4,10 @@
     <!--  -->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="background-image: url('/rechtliches.svg');background-size: 1000px auto;background-position: 50% -30px;"></div>
+        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
+        style="width: 1000px; top: -30px"
+        v-html="require('@/assets/svg/rechtliches.svg?include')"
+      ></div>
       <div class="container">
         <div class="">
           <div class="flex justify-center items-center flex-col">

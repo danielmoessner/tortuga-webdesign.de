@@ -9,11 +9,11 @@ module.exports = {
     "plugin:vue/recommended",
     // https://eslint.org/docs/rules/
     "eslint:recommended",
+    // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
+    "plugin:prettier/recommended",
     // https://github.com/prettier/eslint-config-prettier#eslint-config-prettier
     "prettier",
     "prettier/vue",
-    // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
-    // "plugin:prettier/recommended",
   ],
   rules: {
     "vue/component-name-in-template-casing": ["error", "PascalCase"],

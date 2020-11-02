@@ -5,8 +5,9 @@
     <!---->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
       <div
-        class="absolute bg-no-repeat bg-cover w-full top-0 min-h-screen z-0"
-        style="background-image: url('/kontakt.svg');background-size: 800px auto;background-position: 50% -105px;"
+        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
+        style="width: 800px; top: -105px"
+        v-html="require('@/assets/svg/kontakt.svg?include')"
       ></div>
       <div class="container">
         <div class="">
@@ -31,19 +32,21 @@
     </section>
     <!---->
     <section class="pt-32 pb-40">
-      <div class="message is-success">
-        <div class="message-body">
-          <h3 class="title is-4 color-inherit">
-            {{ page.thankYou.text.title }}
-          </h3>
-          <p class="mb-02">
-            {{ page.thankYou.text.text }}
-          </p>
-          <p class="">
-            <nuxt-link class="" :to="page.thankYou.text.link.to">
-              {{ page.thankYou.text.link.text }}
-            </nuxt-link>
-          </p>
+      <div class="container">
+        <div class="message is-success">
+          <div class="message-body">
+            <h3 class="title is-4 color-inherit">
+              {{ page.thankYou.text.title }}
+            </h3>
+            <p class="mb-02">
+              {{ page.thankYou.text.text }}
+            </p>
+            <p class="">
+              <nuxt-link class="" :to="page.thankYou.text.link.to">
+                {{ page.thankYou.text.link.text }}
+              </nuxt-link>
+            </p>
+          </div>
         </div>
       </div>
     </section>

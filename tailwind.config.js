@@ -1,5 +1,3 @@
-const { colors } = require("tailwindcss/defaultTheme");
-
 module.exports = {
   // purge: {
   //   enabled: process.env.NODE_ENV === "production",
@@ -8,6 +6,9 @@ module.exports = {
   purge: false,
   theme: {
     extend: {
+      inset: {
+        '1/2': "50%"
+      },
       colors: {
         black: "#1d1f20",
         red: {

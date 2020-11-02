@@ -1,5 +1,5 @@
 <template>
-  <nav ref="navigation" class="bg-teal-700">
+  <nav ref="navigation" class="bg-teal-700 z-50 relative">
     <div class="container">
       <div
         class="flex flex-col md:flex-row justify-between items-center relative"
