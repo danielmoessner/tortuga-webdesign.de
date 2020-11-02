@@ -33,17 +33,17 @@ export default {
   /*
    ** Nuxt.js build-modules
    */
-  buildModules: ["@nuxtjs/gtm", '@aceforth/nuxt-optimized-images'],
+  buildModules: ["@nuxtjs/gtm", "@aceforth/nuxt-optimized-images"],
   /*
    ** Nuxt.js modules
    */
   modules: ["@nuxtjs/sitemap", "@nuxt/content"],
   /*
-  ** Nuxt Optimized Images Config
-  */
- optimizedImages: {
-  optimizeImages: true
-},
+   ** Nuxt Optimized Images Config
+   */
+  optimizedImages: {
+    optimizeImages: true,
+  },
   /*
    ** Google Tag Manager Config
    */
