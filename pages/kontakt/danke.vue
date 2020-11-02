@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-hidden">
     <!---->
     <SubNavigation :text="page.thankYou.title" class="bg-sunshine-100" />
     <!---->
@@ -9,7 +9,7 @@
         style="width: 800px; top: -105px"
         v-html="require('@/assets/svg/kontakt.svg?include')"
       ></div>
-      <div class="container">
+      <div class="container relative z-10">
         <div class="">
           <div class="flex justify-center items-center flex-col">
             <h1
@@ -33,16 +33,19 @@
     <!---->
     <section class="pt-32 pb-40">
       <div class="container">
-        <div class="message is-success">
-          <div class="message-body">
-            <h3 class="title is-4 color-inherit">
+        <div class="bg-sunshine-200 border-sunshine-700 rounded-md border-l-4">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-sunshine-900 mb-4">
               {{ page.thankYou.text.title }}
             </h3>
-            <p class="mb-02">
+            <p class="mb-1 text-sunshine-900">
               {{ page.thankYou.text.text }}
             </p>
             <p class="">
-              <nuxt-link class="" :to="page.thankYou.text.link.to">
+              <nuxt-link
+                class="underline text-sunshine-900 hover:text-sunshine-600"
+                :to="page.thankYou.text.link.to"
+              >
                 {{ page.thankYou.text.link.text }}
               </nuxt-link>
             </p>

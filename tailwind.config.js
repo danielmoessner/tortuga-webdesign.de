@@ -83,6 +83,9 @@ module.exports = {
         },
       },
     },
+    container: {
+      center: true,
+    },
   },
   variants: {
     borderWidth: ({ after }) => after(["first", "last"]),

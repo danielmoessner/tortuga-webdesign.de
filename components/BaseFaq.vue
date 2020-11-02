@@ -1,11 +1,14 @@
 <template>
-  <div class="mb-6 overflow-hidden rounded-lg card" @click="clicked">
+  <div
+    class="mb-6 overflow-hidden rounded-lg bg-white shadow-md relative"
+    @click="clicked"
+  >
     <div
       ref="question"
-      class="cursor-pointer flex justify-between shadow rounded-lg"
+      class="cursor-pointer flex justify-between shadow relative rounded-lg"
     >
       <div
-        class="font-bold text-lg text-gray-800 flex items-center flex-grow px-4 py-3"
+        class="font-bold text-lg text-gray-800 flex items-center flex-grow px-4 py-3 pl-5"
       >
         {{ question }}
       </div>
@@ -35,10 +38,10 @@
     </div>
     <div
       ref="answer"
-      class="transition-all ease-in-out duration-500"
+      class="transition-all ease-in-out duration-500 bg-white"
       :style="{ height: answerHeight }"
     >
-      <div class="card-content">
+      <div class="p-4 pl-5 text-lg">
         {{ answer }}
       </div>
     </div>

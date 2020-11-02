@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-hidden">
     <!---->
     <section
       class="bg-teal-800 bg-no-repeat bg-center"
@@ -30,7 +30,7 @@
               <GrayButton
                 :text="object.buttonText"
                 :to="object.buttonLink"
-                class="opacity-0"
+                class="opacity-0 hidden"
               />
             </div>
           </div>

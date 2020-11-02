@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-hidden">
     <SubNavigation :text="page.title" class="bg-sunshine-100" />
     <!--  -->
     <section class="pt-32 pb-40 relative bg-sunshine-200">
@@ -8,7 +8,7 @@
         style="width: 1000px; top: -30px"
         v-html="require('@/assets/svg/rechtliches.svg?include')"
       ></div>
-      <div class="container">
+      <div class="container relative z-10">
         <div class="">
           <div class="flex justify-center items-center flex-col">
             <div
