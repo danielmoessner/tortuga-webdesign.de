@@ -5,6 +5,7 @@
     >
       <div class="col-span-2 md:col-span-3 lg:col-span-2">
         <LogoSvg class="h-24 mb-10 max-w-full" :invert="invertLogo" />
+        <h2 class="sr-only">Tortuga Webdesign</h2>
         <div class="text-lg pr-12" :class="textColor">
           <p>{{ $store.getters.footer.text }}</p>
         </div>

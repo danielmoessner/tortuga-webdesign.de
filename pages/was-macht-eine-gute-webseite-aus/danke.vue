@@ -38,9 +38,9 @@
       <div class="container">
         <div class="bg-sunshine-200 border-sunshine-700 rounded-md border-l-4">
           <div class="p-6">
-            <h3 class="text-2xl font-bold text-sunshine-900 mb-4">
+            <h2 class="text-2xl font-bold text-sunshine-900 mb-4">
               {{ page.thankYou.text.title }}
-            </h3>
+            </h2>
             <p class="mb-1 text-sunshine-900">
               {{ page.thankYou.text.text }}
             </p>

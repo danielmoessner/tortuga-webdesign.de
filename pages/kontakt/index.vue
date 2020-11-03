@@ -40,28 +40,28 @@
           class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 md:gap-y-16 md:gap-x-8"
         >
           <div class="col-span-2 md:col-span-1">
-            <h3 class="text-3xl font-bold text-gray-100">Kontaktdaten</h3>
+            <h2 class="text-3xl font-bold text-gray-100">Kontaktdaten</h2>
           </div>
           <div>
-            <h4 class="text-xl font-bold text-gray-100 mb-1">Telefon</h4>
+            <h3 class="text-xl font-bold text-gray-100 mb-1">Telefon</h3>
             <p class="text-lg text-gray-200">Daniel Mössner</p>
             <a
               class="text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
-              href=""
+              href="tel:004917638385646"
             >
               0176 38385646
             </a>
           </div>
           <div>
-            <h4 class="text-xl font-bold text-gray-100 mb-1">E-Mail</h4>
+            <h3 class="text-xl font-bold text-gray-100 mb-1">E-Mail</h3>
             <a
               class="text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
-              href=""
+              href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
               >kontakt@tortuga-webdesign.de
             </a>
           </div>
           <div class="md:col-start-2">
-            <h4 class="text-xl font-bold text-gray-100 mb-1">Adresse</h4>
+            <h3 class="text-xl font-bold text-gray-100 mb-1">Adresse</h3>
             <address class="text-gray-200 text-lg not-italic">
               <span class="font-medium">Tortuga Webdesign</span> <br />
               Albert-Schweitzer-Str. 17b <br />
@@ -69,9 +69,9 @@
             </address>
           </div>
           <div class="col-start-1">
-            <h3 class="text-3xl font-bold text-gray-100 mt-12 md:mt-0">
+            <h2 class="text-3xl font-bold text-gray-100 mt-12 md:mt-0">
               Kontaktformular
-            </h3>
+            </h2>
           </div>
           <div class="col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
@@ -88,6 +88,7 @@
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170187.9866221967!2d11.496716990307563!3d48.203008313388644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e6df61b80d737%3A0xb6121f1e0704ba6a!2sTortuga+Webdesign!5e0!3m2!1sde!2sde!4v1551033670191"
                 frameborder="0"
+                title="Standort"
                 style="border: 0; width: 100%; height: 450px"
                 allowfullscreen=""
               />

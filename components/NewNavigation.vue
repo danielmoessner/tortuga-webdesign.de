@@ -12,6 +12,7 @@
           </nuxt-link>
           <button
             type="button"
+            aria-label="Menü Button"
             class="md:hidden inline-flex border border-transparent hover:border-gray-200 items-center justify-center p-2 rounded-md text-teal-800 bg-gray-200 hover:text-teal-800 focus:outline-none transition duration-150 ease-in-out"
             @click="showNav = !showNav"
           >

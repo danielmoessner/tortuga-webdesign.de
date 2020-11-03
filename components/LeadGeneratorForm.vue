@@ -11,10 +11,10 @@
       <input type="hidden" name="form-name" value="lead" />
       <div class="grid gap-y-1 md:gap-y-0 gap-x-2 md:grid-cols-2">
         <div class="p-3">
-          <label for="name" class="block mb-1">Vorname</label>
+          <label for="firstname" class="block mb-1">Vorname</label>
           <div class="relative">
             <input
-              id="name"
+              id="firstname"
               class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="firstname"
@@ -43,10 +43,10 @@
           </div>
         </div>
         <div class="p-3">
-          <label for="name" class="block mb-1">Nachname</label>
+          <label for="lastname" class="block mb-1">Nachname</label>
           <div class="relative">
             <input
-              id="name"
+              id="lastname"
               class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="lastname"

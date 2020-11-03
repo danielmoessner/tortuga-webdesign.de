@@ -41,9 +41,9 @@
           :key="year"
           class="mb-40"
         >
-          <div class="text-5xl text-teal-600 font-black mb-6">
+          <h2 class="text-5xl text-sunshine-200 font-black mb-6">
             {{ year }}
-          </div>
+          </h2>
           <div
             class="grid gap-4 sm:gap-8 grid-cols-2 md:gap-20 lg:gap-22 lg:grid-cols-3 xl:gap-25"
           >
