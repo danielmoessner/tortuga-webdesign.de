@@ -21,7 +21,7 @@
             <div class="relative w-full">
               <input
                 id="name"
-                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="text"
                 name="name"
                 placeholder="Max Müller"
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-5">
           <div class="flex items-start md:justify-end mt-4 md:mt-2">
             <label class="pl-1 md:pr-0 block text-right" for="mail">
               Geschäftliche E-Mail
@@ -61,7 +61,7 @@
             <div class="relative w-full">
               <input
                 id="mail"
-                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="email"
                 name="email"
                 placeholder="max@mustermann.de"
@@ -101,7 +101,7 @@
             <div class="relative w-full">
               <input
                 id="website"
-                class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
                 type="text"
                 name="website"
                 placeholder="maxmustermann.de"
@@ -141,7 +141,7 @@
             <textarea
               id="message"
               rows="4"
-              class="form-textarea w-full border-opacity-75 focus:shadow-teal"
+              class="form-textarea placeholder-gray-300 w-full border-opacity-75 focus:shadow-teal"
               name="message"
               placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."
             ></textarea>
@@ -155,11 +155,11 @@
         <div class="col-span-5">
           <div class="flex items-center">
             <div class="relative w-full">
-              <div class="flex items-center form-input">
+              <div class="flex items-center form-input placeholder-gray-300">
                 <input
                   id="dataprotection"
                   type="checkbox"
-                  class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-3 w-5 h-5"
+                  class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-3 w-5 h-5 cursor-pointer"
                   name="dataprotection"
                   required
                 />

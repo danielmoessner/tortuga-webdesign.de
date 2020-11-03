@@ -8,7 +8,7 @@
         @mouseover="mouseover"
         @mouseleave="mouseleave"
       >
-        <nuxt-link :to="detailPage" @click="mouseleave">
+        <nuxt-link :to="detailPage">
           <div
             class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-10 pl-1 pt-1"
           >
@@ -31,12 +31,11 @@
               </span>
             </div>
           </div>
-          <img
+          <div
             ref="showcaseHeightSet"
             class="w-full block"
-            :src="portfolioItem.shortImage"
-            :alt="portfolioItem.title"
-          />
+            :style="{ 'padding-top': height }"
+          ></div>
           <div class="absolute w-full top-0">
             <div
               ref="showcaseImage"
@@ -45,7 +44,9 @@
               :style="{ transform: showcaseImageTransform }"
             >
               <img
-                :data-src="portfolioItem.image500"
+                :data-src="
+                  require(`@/content/media/${portfolioItem.image}?sqip&resize&size=400`)
+                "
                 :alt="portfolioItem.title"
                 class="lazyload block"
               />
@@ -88,6 +89,9 @@ export default {
     };
   },
   computed: {
+    height() {
+      return this.portfolioItem.height || "100%";
+    },
     showcaseImageTransform() {
       return "translateY(" + this.showcaseScrollY + "px)";
     },

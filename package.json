@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "bulma": "node-sass assets/styles/bulma.scss -o assets/styles"
+    "bulma": "node-sass assets/styles/bulma.scss -o assets/styles",
+    "cms": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
     "@nuxt/content": "^1.10.0",
@@ -17,8 +18,12 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.2.0",
     "cookieconsent": "^3.1.1",
+    "jimp": "^0.16.1",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.14.7",
+    "responsive-loader": "^2.2.0",
+    "sharp": "^0.26.2",
+    "sqip-loader": "^1.0.0",
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {

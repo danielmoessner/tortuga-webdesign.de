@@ -4,8 +4,8 @@ backend:
 
 local_backend: true
 
-media_folder: static/img
-public_folder: /img
+media_folder: /content/media
+public_folder: ""
 
 collections:
   - name: "blog"
@@ -54,7 +54,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Url", name: "url", widget: "string" }
+      - { label: "Url", name: "url", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "date" }
       - {
           label: "Image",
@@ -64,16 +64,11 @@ collections:
         }
       - { label: "Active", name: "active", widget: "boolean", required: false }
       - {
-          label: "Image 500",
-          name: "image500",
-          widget: "image",
-          hint: "Preferably 500 pixels wide and jpg format.",
-        }
-      - {
-          label: "Short Image",
-          name: "shortImage",
-          widget: "image",
-          hint: "Preferably 100 pixels wide and low quality. Should not show the whole page, as it is used as height set for the portfolio showcase.",
+          label: "Height",
+          name: "height",
+          widget: "string",
+          required: false,
+          hint: "Has to be a percentage, e.g. 10%, 90% or 200%.",
         }
       - {
           label: "Featured",

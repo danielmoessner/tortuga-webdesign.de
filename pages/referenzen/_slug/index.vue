@@ -1,10 +1,10 @@
 <template>
-  <main class="overflow-hidden">
+  <main class="">
     <SubNavigation :text="item.title" class="bg-sunshine-100" />
     <!---->
-    <section class="pt-32 pb-40 relative bg-sunshine-200">
+    <section class="pt-32 pb-48 -mb-8 relative bg-sunshine-200 overflow-hidden">
       <div
-        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
+        class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
         style="width: 800px; top: -120px"
         v-html="require('@/assets/svg/referenzen.svg?include')"
       ></div>
@@ -30,7 +30,7 @@
       </div>
     </section>
     <!---->
-    <section class="pt-32 pb-40 bg-sunshine-100">
+    <section class="pt-32 pb-40 bg-sunshine-100 relative z-0">
       <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div class="">
@@ -38,30 +38,35 @@
               :dark-tag="itemDate"
               :tags="item.tags"
               :title="item.title"
-              :description="item.description"
+              :description="description"
             >
               <a
+                v-if="item.url"
                 class="underline transition ease-in-out duration-150 text-gray-900 hover:text-gray-700"
                 :href="item.url"
-                >{{ itemUrlClean }}</a
               >
+                {{ itemUrlClean }}
+              </a>
+              <div class="flex flex-wrap mt-20">
+                <GrayButton
+                  text="Zurück zu allen Referenzen"
+                  to="/referenzen/"
+                  class="mb-2"
+                />
+                <!-- <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" /> -->
+              </div>
             </StickyInfo>
           </div>
           <div class="col-span-1 lg:col-span-2">
             <div class="border-4 border-teal-700 shadow-lg rounded-lg">
               <div class="bg-teal-700 rounded overflow-hidden">
-                <img :src="item.image" :alt="item.title" />
+                <img
+                  :src="
+                    require(`@/content/media/${item.image}?resize&size=1000`)
+                  "
+                  :alt="item.title"
+                />
               </div>
-            </div>
-          </div>
-          <div class="lg:col-span-3">
-            <div class="flex flex-wrap">
-              <GrayButton
-                text="Zurück zu allen Referenzen"
-                to="/referenzen/"
-                class="mb-2"
-              />
-              <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" />
             </div>
           </div>
         </div>
@@ -148,7 +153,7 @@ export default {
       return this.item.title + " - Referenz";
     },
     description() {
-      return this.item.description;
+      return this.item.description.split("\n").join("<br>");
     },
   },
 };

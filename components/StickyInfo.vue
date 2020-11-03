@@ -16,7 +16,7 @@
       >
         {{ title }}
       </h2>
-      <p class="mb-12 text-black">{{ description }}</p>
+      <p class="mb-12 text-black" v-html="description"></p>
       <slot></slot>
     </div>
   </div>

@@ -53,7 +53,7 @@
             <div class="roun">
               <img
                 class="rounded-full border-4 bg-white border-sunshine-500"
-                :src="page.about.image"
+                :src="require(`@/content/media/${page.about.image}?sqlib`)"
                 alt="Daniel Mössner"
               />
             </div>

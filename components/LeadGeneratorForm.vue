@@ -15,7 +15,7 @@
           <div class="relative">
             <input
               id="name"
-              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="firstname"
               placeholder="Max / Susi"
@@ -47,7 +47,7 @@
           <div class="relative">
             <input
               id="name"
-              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="text"
               name="lastname"
               placeholder="Müller"
@@ -79,7 +79,7 @@
           <div class="relative">
             <input
               id="mail"
-              class="form-input pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
               type="email"
               name="email"
               placeholder="mueller@mail.de"
@@ -109,11 +109,11 @@
         <div class="p-3 col-start-1">
           <label class="block mb-1">Dürfen wir Ihnen E-Mails schicken?</label>
           <div class="relative">
-            <div class="flex items-center form-input">
+            <div class="flex items-center form-input placeholder-gray-300">
               <input
                 id="dataprotection"
                 type="checkbox"
-                class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-2 w-5 h-5"
+                class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-2 w-5 h-5 cursor-pointer"
                 name="dataprotection"
                 required
               />
