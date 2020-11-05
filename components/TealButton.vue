@@ -6,7 +6,9 @@
       :to="to"
       :href="href"
     >
-      <div class="px-4 py-2 text-white text-base leading-6 font-bold">
+      <div
+        class="px-3 md:px-4 py-1 md:py-2 text-white text-sm md:text-base leading-6 font-bold"
+      >
         {{ text }}
       </div>
       <TriangleSvg class="absolute transform right-0 translate-x-1/2" />

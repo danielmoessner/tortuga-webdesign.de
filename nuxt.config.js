@@ -56,12 +56,13 @@ export default {
   sitemap: {
     hostname: "https://tortuga-webdesign.de",
     routes: [
-      "/blog/ressourcen",
-      "/blog/webdesign-prozess",
+      "/google-ads",
+      "/cms-systeme",
+      "/webseiten",
       "/portfolio/franco-pioli-datenschutz-und-vereinsmanagement",
       "/portfolio/healed-me-i-won-the-lottery",
       "/portfolio/internationale-gesellschaft-orientalischer-christen-ev",
-      // "/portfolio/katzenbetreuung-tigerfreund",
+      "/portfolio/katzenbetreuung-tigerfreund",
       "/portfolio/kristina-boess-yoga-und-coaching",
       "/portfolio/maschinenverleih-schaetz",
       "/portfolio/praeventionszentrum-muenchen-ost",

@@ -7,7 +7,7 @@
         <div class="flex justify-between items-center w-full md:w-auto">
           <nuxt-link class="" to="/">
             <div class="h-16 p-4 bg-teal-800">
-              <LogoSvg class="fill-current w-auto" :invert="true" />
+              <LogoSvg :invert="true" />
             </div>
           </nuxt-link>
           <button
@@ -49,7 +49,7 @@
           </button>
         </div>
         <div
-          class="text-white md:block md:static absolute transform md:p-0 translate-y-full md:transform-none md:bg-transparent md:w-auto md:shadow-none right-0 bottom-0 bg-teal-800 z-50 px-6 w-64 py-6 rounded-lg shadow-lg"
+          class="text-white rounded-t-none w-full md:block md:static absolute transform md:p-0 translate-y-full md:transform-none md:bg-transparent md:w-auto md:shadow-none right-0 bottom-0 bg-sunshine-100 z-50 px-6 py-6 rounded-lg shadow-lg"
           :class="{ hidden: !showNav }"
         >
           <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">

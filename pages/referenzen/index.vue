@@ -87,7 +87,10 @@ export default {
   layout: "new",
   async asyncData({ $content }) {
     const page = await $content("page/portfolio").fetch();
-    const portfolioPosts = await $content("portfolio").fetch();
+    const portfolioPosts = await $content("portfolio")
+      .where({ active: true })
+      .sortBy("date", "desc")
+      .fetch();
 
     return {
       page,

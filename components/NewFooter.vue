@@ -4,15 +4,15 @@
       class="container grid grid-cols-2 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5 gap-4"
     >
       <div class="col-span-2 md:col-span-3 lg:col-span-2">
-        <LogoSvg class="h-24 mb-10 max-w-full" :invert="invertLogo" />
+        <LogoSvg class="h-16 md:h-24 mb-10 max-w-full" :invert="invertLogo" />
         <h2 class="sr-only">Tortuga Webdesign</h2>
-        <div class="text-lg pr-12" :class="textColor">
+        <div class="text-sm sm:text-base md:text-lg pr-12" :class="textColor">
           <p>{{ $store.getters.footer.text }}</p>
         </div>
       </div>
       <div class="">
         <div>
-          <h3 class="text-xl font-semibold mb-2" :class="textColor">
+          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
             Navigation
           </h3>
           <ul class="">
@@ -60,9 +60,13 @@
       </div>
       <div class="">
         <div>
-          <h3 class="text-xl font-semibold mb-2" :class="textColor">Kontakt</h3>
-          <address class="not-italic" :class="textColor">
-            <span class="font-medium inline-block py-1">Daniel Mössner</span>
+          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
+            Kontakt
+          </h3>
+          <address class="text-sm md:text-base not-italic" :class="textColor">
+            <span class="text-sm md:text-base font-medium inline-block py-1"
+              >Daniel Mössner</span
+            >
             <br />
             <FooterLink
               class=""
@@ -86,7 +90,7 @@
       </div>
       <div class="col-start-2 md:col-start-auto">
         <div class="text-right">
-          <h3 class="text-xl font-semibold mb-2" :class="textColor">
+          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
             Rechtliches
           </h3>
           <ul>

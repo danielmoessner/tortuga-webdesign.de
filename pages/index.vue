@@ -20,17 +20,19 @@
               :class="{ 'md:pl-8': index % 2 === 1 }"
             >
               <h2
-                class="font-bold leading-tight tracking-tight text-gray-100 text-5xl mb-1"
+                class="font-bold leading-tight tracking-tight text-gray-100 text-4xl md:text-5xl mb-1"
               >
                 {{ object.title }}
               </h2>
-              <p class="text-2xl text-gray-100 font-light tracking-wide mb-10">
+              <p
+                class="text-xl md:text-2xl text-gray-100 font-light tracking-wide mb-10"
+              >
                 {{ object.subtitle }}
               </p>
               <GrayButton
                 :text="object.buttonText"
                 :to="object.buttonLink"
-                class="opacity-0 hidden"
+                class=""
               />
             </div>
           </div>
@@ -38,7 +40,7 @@
       </div>
     </section>
     <!---->
-    <section class="bg-gray-100 pt-32 pb-32">
+    <section class="bg-gray-100 pt-20 pb-20 md:pt-32 md:pb-32">
       <div class="container">
         <div class="xl:flex xl:items-center xl:justify-between">
           <h2
@@ -62,11 +64,14 @@
       </div>
     </section>
     <!---->
-    <section id="was-bringt-eine-webseite" class="pt-48 pb-56 bg-teal-900">
+    <section
+      id="was-bringt-eine-webseite"
+      class="pt-32 pb-32 md:pt-48 md:pb-56 bg-teal-900"
+    >
       <div class="container">
         <div class="max-w-3xl">
           <span
-            class="text-gray-200 font-light uppercase tracking-wider leading-tight"
+            class="text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.value.pretitle }}
           </span>
@@ -79,7 +84,7 @@
             {{ page.value.subtitle }}
           </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-y-16 gap-8 mt-24">
+        <div class="grid md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-8 mt-24">
           <div
             v-for="(proposition, index) in page.value.propositions"
             :key="index"
@@ -87,11 +92,11 @@
           >
             <div class="flex-col">
               <h3
-                class="text-gray-200 text-xl font-bold flex items-end mb-3 md:mb-6 relative z-10"
+                class="text-gray-200 text-xl font-bold flex items-end mb-1 md:mb-6 relative z-10"
               >
                 {{ proposition.title }}
               </h3>
-              <p class="text-lg text-gray-200">
+              <p class="text-base md:text-lg text-gray-200">
                 {{ proposition.text }}
               </p>
             </div>
@@ -114,11 +119,11 @@
     <!---->
     <section
       id="wir-bleiben-langfristig-an-ihrer-seite"
-      class="pt-40 pb-48 bg-gray-100"
+      class="pt-24 pb-32 md:pt-40 md:pb-48 bg-gray-100"
     >
       <div class="container">
         <h2
-          class="text-3xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
+          class="text-2xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
         >
           {{ page.guide.title }}
         </h2>
@@ -211,12 +216,12 @@
     <!---->
     <section
       id="der-weg-zur-perfekten-webseite"
-      class="pt-48 pb-56 bg-teal-900"
+      class="pt-24 pb-32 md:pt-48 md:pb-56 bg-teal-900"
     >
       <div class="container">
         <div class="max-w-xl">
           <span
-            class="text-gray-200 font-light uppercase tracking-wider leading-tight"
+            class="text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.plan.pretitle }}
           </span>
@@ -264,11 +269,11 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-200 text-2xl font-bold flex items-end mb-2"
+                  class="text-gray-200 text-xl md:text-2xl font-bold flex items-end mb-2"
                 >
                   {{ page.plan.steps[1].title }}
                 </h3>
-                <p class="text-lg text-gray-200">
+                <p class="text-base md:text-lg text-gray-200">
                   {{ page.plan.steps[1].text }}
                 </p>
               </div>
@@ -286,11 +291,11 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-200 text-2xl font-bold flex items-end mb-2"
+                  class="text-gray-200 text-xl md:text-2xl font-bold flex items-end mb-2"
                 >
                   {{ page.plan.steps[2].title }}
                 </h3>
-                <p class="text-lg text-gray-200">
+                <p class="text-base md:text-lg text-gray-200">
                   {{ page.plan.steps[2].text }}
                 </p>
               </div>
@@ -300,7 +305,7 @@
       </div>
     </section>
     <!---->
-    <section class="pt-40 pb-48 bg-gray-100">
+    <section class="pt-24 pb-32 md:pt-40 md:pb-48 bg-gray-100">
       <div class="container">
         <div class="flex items-center justify-center flex-col">
           <div class="max-w-2xl text-center flex-col flex items-center">
@@ -310,7 +315,7 @@
               {{ page.leadGeneratorAd.title }}
             </h2>
             <p
-              class="text-base sm:text-lg leading-tight max-w-xl mb-12"
+              class="text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
               v-html="page.leadGeneratorAd.htmlText"
             ></p>
             <div class="flex flex-wrap justify-center">

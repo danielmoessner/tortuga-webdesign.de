@@ -8,7 +8,7 @@
         @mouseover="mouseover"
         @mouseleave="mouseleave"
       >
-        <nuxt-link :to="detailPage">
+        <nuxt-link :to="detailPage" @click.native="mouseleave">
           <div
             class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-10 pl-1 pt-1"
           >

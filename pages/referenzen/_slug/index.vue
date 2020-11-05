@@ -2,7 +2,9 @@
   <main class="">
     <SubNavigation :text="item.title" class="bg-sunshine-100" />
     <!---->
-    <section class="pt-32 pb-48 -mb-8 relative bg-sunshine-200 overflow-hidden">
+    <section
+      class="pt-32 pb-64 -mb-24 relative bg-sunshine-200 overflow-hidden"
+    >
       <div
         class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
         style="width: 800px; top: -120px"

@@ -18,6 +18,11 @@
 }
 @screen lg {
   .container {
-    @apply px-0;
+    @apply px-8;
+  }
+}
+@screen xl {
+  .container {
+    @apply px-8;
   }
 }

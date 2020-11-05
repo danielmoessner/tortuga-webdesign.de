@@ -87,6 +87,18 @@ collections:
           collection: "tag",
           valueField: "title",
         }
+  - label: "Service"
+    name: "service"
+    folder: "content/service"
+    create: true
+    identifier_field: "title"
+    format: "frontmatter"
+    fields:
+      - { label: 'Title', name: "title", widget: "string" }
+      - { label: 'Subtitle', name: "subtitle", widget: "string" }
+      - { label: 'Sr-Only Title', name: "srOnlyTitle", widget: "string" }
+      - { label: 'Meta-Description', name: "metaDescription", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - label: "Page"
     name: "page"
     files:

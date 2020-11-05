@@ -12,6 +12,10 @@ module.exports = {
       boxShadow: {
         teal: "0 0 0 .2rem rgba(8, 86, 86, 0.43)",
       },
+      padding: {
+        96: "24rem",
+        128: "32rem",
+      },
       colors: {
         black: "#1d1f20",
         red: {

@@ -48,6 +48,7 @@
               <a
                 class="underline text-sunshine-900 hover:text-sunshine-600"
                 :href="page.thankYou.text.link.to"
+                target="_blank"
               >
                 {{ page.thankYou.text.link.text }}
               </a>
