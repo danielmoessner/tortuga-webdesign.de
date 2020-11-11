@@ -12,11 +12,14 @@
         />
       </div>
       <h2
-        class="text-3xl tracking-tight leading-tight font-bold text-black mb-6"
+        class="text-2xl md:text-3xl tracking-tight leading-tight font-bold text-black mb-6"
       >
         {{ title }}
       </h2>
-      <p class="mb-12 text-black" v-html="description"></p>
+      <p
+        class="text-sm md:text-base mb-8 md:mb-12 text-black"
+        v-html="description"
+      ></p>
       <slot></slot>
     </div>
   </div>

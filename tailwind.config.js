@@ -8,13 +8,17 @@ module.exports = {
     extend: {
       inset: {
         "1/2": "50%",
+        "1/5": "20%",
       },
       boxShadow: {
         teal: "0 0 0 .2rem rgba(8, 86, 86, 0.43)",
       },
       padding: {
+        72: "18rem",
+        88: "22rem",
         96: "24rem",
         128: "32rem",
+        "1/5": "20%",
       },
       colors: {
         black: "#1d1f20",

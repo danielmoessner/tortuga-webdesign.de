@@ -1,10 +1,16 @@
 <template>
-  <section class="pt-32 pb-96 -mb-56 relative bg-sunshine-200 overflow-hidden">
+  <section
+    class="pt-32 pb-88 md:pb-96 -mb-56 relative bg-sunshine-200 overflow-hidden"
+  >
     <div
       class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
       :style="{ width: width + 'px', top: top + 'px' }"
-      v-html="require(`@/assets/svg/${svgName}.svg?include`)"
-    ></div>
+    >
+      <div
+        class="w-4/5 pt-10 md:pt-0 mx-auto md:w-full"
+        v-html="require(`@/assets/svg/${svgName}.svg?include`)"
+      ></div>
+    </div>
     <div class="container relative z-10">
       <div class="">
         <div class="flex justify-center items-center flex-col">
@@ -16,23 +22,28 @@
           </h1>
           <component
             :is="headingElement"
-            class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            class="text-gray-100 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
           >
             {{ title }}
           </component>
-          <div
-            class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+          <component
+            :is="subtitleElement"
+            class="max-w-xl text-center text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
           >
             {{ subtitle }}
-          </div>
-          <TealButton
-            text="Jetzt zusammenarbeiten"
-            to="/kontakt/"
-            class="mb-1"
-          />
-          <span class="tracking-wide text-sm font-light text-white">
-            Kostenloses Erstgespräch
-          </span>
+          </component>
+          <slot>
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              to="/kontakt/"
+              class="mb-1"
+            />
+            <span
+              class="tracking-wide text-xs md:text-sm font-light text-white"
+            >
+              Kostenloses Erstgespräch
+            </span>
+          </slot>
         </div>
       </div>
     </div>
@@ -66,16 +77,23 @@ export default {
     },
     subtitle: {
       type: String,
-      default: "Untertitle",
+      default: "Untertitel",
     },
     srOnlyTitle: {
       type: String,
       default: "",
     },
+    swapHeadingElement: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     headingElement() {
-      return this.srOnlyTitle ? "div" : "h1";
+      return this.srOnlyTitle ? "div" : this.swapHeadingElement ? "div" : "h1";
+    },
+    subtitleElement() {
+      return this.srOnlyTitle ? "div" : this.swapHeadingElement ? "h1" : "div";
     },
   },
 };

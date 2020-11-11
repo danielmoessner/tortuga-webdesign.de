@@ -1,75 +1,70 @@
 <template>
-  <main class="overflow-hidden">
+  <main class="">
     <SubNavigation :text="page.title" class="bg-sunshine-100" />
     <!---->
-    <section class="pt-32 pb-40 relative bg-sunshine-200">
-      <div
-        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
-        style="width: 800px; top: -105px"
-        v-html="require('@/assets/svg/kontakt.svg?include')"
-      ></div>
-      <div class="container relative z-10">
-        <div class="">
-          <div class="flex justify-center items-center flex-col">
-            <h1
-              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
-            >
-              {{ page.header.title }}
-            </h1>
-            <p
-              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
-            >
-              {{ page.header.subtitle }}
-            </p>
-            <TealButton
-              text="Anfrage per Mail stellen"
-              href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
-              class="mb-1"
-            />
-            <span class="tracking-wide text-sm font-light text-white"
-              >Kostenloses Erstgespräch</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <SvgHeader
+      :title="page.header.title"
+      :subtitle="page.header.subtitle"
+      width="800"
+      top="-105"
+      svg-name="kontakt"
+    >
+      <TealButton
+        text="Anfrage per Mail stellen"
+        href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
+        class="mb-1"
+      />
+      <span class="tracking-wide text-sm font-light text-white"
+        >Kostenloses Erstgespräch</span
+      >
+    </SvgHeader>
     <!---->
-    <section class="pt-24 pb-32 bg-teal-700">
+    <section class="pt-20 pb-24 md:pt-24 md:pb-32 bg-teal-700 relative">
       <div class="container">
         <div
-          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 md:gap-y-16 md:gap-x-8"
+          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-y-16 md:gap-x-8"
         >
           <div class="col-span-2 md:col-span-1">
-            <h2 class="text-3xl font-bold text-gray-100">Kontaktdaten</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-100">
+              Kontaktdaten
+            </h2>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-gray-100 mb-1">Telefon</h3>
-            <p class="text-lg text-gray-200">Daniel Mössner</p>
+            <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
+              Telefon
+            </h3>
+            <p class="text-base md:text-lg text-gray-200">Daniel Mössner</p>
             <a
-              class="text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
+              class="text-base md:text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
               href="tel:004917638385646"
             >
               0176 38385646
             </a>
           </div>
           <div>
-            <h3 class="text-xl font-bold text-gray-100 mb-1">E-Mail</h3>
+            <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
+              E-Mail
+            </h3>
             <a
-              class="text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
+              class="text-base md:text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
               href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
               >kontakt@tortuga-webdesign.de
             </a>
           </div>
-          <div class="md:col-start-2">
-            <h3 class="text-xl font-bold text-gray-100 mb-1">Adresse</h3>
-            <address class="text-gray-200 text-lg not-italic">
+          <div class="md:col-start-2 col-span-2 md:col-span-2">
+            <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
+              Adresse
+            </h3>
+            <address class="text-gray-200 text-base md:text-lg not-italic">
               <span class="font-medium">Tortuga Webdesign</span> <br />
               Albert-Schweitzer-Str. 17b <br />
               85375 Neufahrn b. Freising
             </address>
           </div>
           <div class="col-start-1">
-            <h2 class="text-3xl font-bold text-gray-100 mt-12 md:mt-0">
+            <h2
+              class="text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
+            >
               Kontaktformular
             </h2>
           </div>
@@ -81,7 +76,11 @@
             </div>
           </div>
           <div class="col-start-1">
-            <h3 class="text-3xl font-bold text-gray-100 mt-12 md:mt-0">Maps</h3>
+            <h3
+              class="text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
+            >
+              Maps
+            </h3>
           </div>
           <div class="col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
@@ -108,9 +107,11 @@ import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import TealButton from "@/components/TealButton.vue";
 import MetaTags from "@/mixins/MetaTags.js";
+import SvgHeader from "@/components/SvgHeader.vue";
 
 export default {
   components: {
+    SvgHeader,
     TealButton,
     NewFooter,
     SubNavigation,

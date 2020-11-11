@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-32" :class="bgColor">
+  <footer class="pt-20 pb-24 md:py-32" :class="bgColor">
     <div
       class="container grid grid-cols-2 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5 gap-4"
     >

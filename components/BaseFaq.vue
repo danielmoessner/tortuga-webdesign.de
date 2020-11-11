@@ -8,7 +8,7 @@
       class="cursor-pointer flex justify-between shadow relative rounded-lg"
     >
       <div
-        class="font-bold text-lg text-gray-800 flex items-center flex-grow px-4 py-3 pl-5"
+        class="font-bold text-base md:text-lg text-gray-800 flex items-center flex-grow px-3 md:px-4 py-2 md:py-3 pl-4 md:pl-5 leading-tight"
       >
         {{ question }}
       </div>
@@ -41,7 +41,7 @@
       class="transition-all ease-in-out duration-500 bg-white"
       :style="{ height: answerHeight }"
     >
-      <div class="p-4 pl-5 text-lg">
+      <div class="p-3 md:p-4 pl-4 md:pl-5 text-base md:text-lg">
         {{ answer }}
       </div>
     </div>

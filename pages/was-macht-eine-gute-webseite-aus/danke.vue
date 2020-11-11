@@ -1,40 +1,16 @@
 <template>
-  <main class="overflow-hidden">
+  <main class="">
     <SubNavigation :text="page.thankYou.title" class="bg-sunshine-100" />
     <!--  -->
-    <section class="pt-32 pb-40 relative bg-sunshine-200">
-      <div
-        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
-        style="width: 800px; top: -110px"
-        v-html="require('@/assets/svg/hilfestellung.svg?include')"
-      ></div>
-      <div class="container relative z-10">
-        <div class="">
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
-            >
-              {{ page.thankYou.header.title }}
-            </div>
-            <h1
-              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
-            >
-              {{ page.thankYou.header.subtitle }}
-            </h1>
-            <TealButton
-              text="Jetzt zusammenarbeiten"
-              to="/kontakt/"
-              class="mb-1"
-            />
-            <div class="tracking-wide text-sm font-light text-white">
-              Kostenloses Erstgespräch
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <SvgHeader
+      :title="page.thankYou.header.title"
+      :subtitle="page.thankYou.header.subtitle"
+      width="800"
+      top="-110"
+      svg-name="hilfestellung"
+    />
     <!---->
-    <section class="pt-32 pb-40">
+    <section class="pt-24 pb-24 md:pt-32 md:pb-40 relative bg-white">
       <div class="container">
         <div class="bg-sunshine-200 border-sunshine-700 rounded-md border-l-4">
           <div class="p-6">
@@ -71,11 +47,11 @@
 <script>
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import TealButton from "@/components/TealButton.vue";
+import SvgHeader from "@/components/SvgHeader.vue";
 
 export default {
   components: {
-    TealButton,
+    SvgHeader,
     NewFooter,
     SubNavigation,
   },

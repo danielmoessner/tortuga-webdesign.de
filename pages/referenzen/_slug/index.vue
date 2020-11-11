@@ -2,37 +2,16 @@
   <main class="">
     <SubNavigation :text="item.title" class="bg-sunshine-100" />
     <!---->
-    <section
-      class="pt-32 pb-64 -mb-24 relative bg-sunshine-200 overflow-hidden"
-    >
-      <div
-        class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
-        style="width: 800px; top: -120px"
-        v-html="require('@/assets/svg/referenzen.svg?include')"
-      ></div>
-      <div class="container relative z-10">
-        <div class="">
-          <div class="flex justify-center items-center flex-col">
-            <h1
-              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
-            >
-              Referenz
-            </h1>
-            <p
-              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
-            >
-              {{ item.title }}
-            </p>
-            <TealButton text="Jetzt zusammenarbeiten" class="mb-1" />
-            <span class="tracking-wide text-sm font-light text-white"
-              >Kostenloses Erstgespräch</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <SvgHeader
+      width="800"
+      top="-120"
+      svg-name="referenzen"
+      title="Referenz"
+      :swap-heading-element="true"
+      :subtitle="item.title"
+    />
     <!---->
-    <section class="pt-32 pb-40 bg-sunshine-100 relative z-0">
+    <section class="pb-20 md:pt-32 md:pb-40 bg-sunshine-100 relative">
       <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div class="">
@@ -50,13 +29,12 @@
               >
                 {{ itemUrlClean }}
               </a>
-              <div class="flex flex-wrap mt-20">
+              <div class="flex flex-wrap mt-12 md:mt-20">
                 <GrayButton
                   text="Zurück zu allen Referenzen"
                   to="/referenzen/"
                   class="mb-2"
                 />
-                <!-- <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" /> -->
               </div>
             </StickyInfo>
           </div>
@@ -90,16 +68,16 @@
 <script>
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import TealButton from "@/components/TealButton.vue";
 import StickyInfo from "@/components/StickyInfo.vue";
 import GrayButton from "@/components/GrayButton.vue";
 import MetaTags from "@/mixins/MetaTags.js";
+import SvgHeader from "@/components/SvgHeader.vue";
 
 export default {
   components: {
     GrayButton,
     StickyInfo,
-    TealButton,
+    SvgHeader,
     NewFooter,
     SubNavigation,
   },
