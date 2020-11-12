@@ -1,16 +1,16 @@
 <template>
   <div class="border-sunshine-400 border-4 rounded-xl shadow-2xl">
-    <div class="bg-sunshine-400 rounded-lg overflow-hidden">
+    <div class="bg-sunshine-400 rounded-lg overflow-hidden relative z-10">
       <div
         ref="showcase"
-        class="relative block overflow-hidden box-content group"
+        class="relative block overflow-hidden box-content group z-0"
         @mousemove="mousemove"
         @mouseover="mouseover"
         @mouseleave="mouseleave"
       >
         <nuxt-link :to="detailPage" @click.native="mouseleave">
           <div
-            class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-10 pl-1 pt-1"
+            class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-0 pl-1 pt-1"
           >
             <span
               class="bg-gray-800 text-white rounded p-1 text-xs mr-1 mb-1"
