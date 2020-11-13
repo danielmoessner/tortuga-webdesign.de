@@ -19,6 +19,11 @@
   status = 301
 
 [[redirects]]
+  from = "/leistungen"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404"
   status = 404

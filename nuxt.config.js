@@ -27,15 +27,6 @@ export default {
    */
   css: ["@/assets/styles/tailwind.css"],
   /*
-   ** Global JS
-   */
-  // script: [
-  //   {
-  //     src:
-  //       "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver",
-  //   },
-  // ],
-  /*
    ** Plugins to load before mounting the App
    */
   plugins: [
@@ -68,9 +59,9 @@ export default {
   sitemap: {
     hostname: "https://tortuga-webdesign.de",
     routes: [
-      "/google-ads",
-      "/cms-systeme",
-      "/webseiten",
+      "/leistungen/google-ads",
+      "/leistungen/cms-systeme",
+      "/leistungen/webseiten",
       "/portfolio/franco-pioli-datenschutz-und-vereinsmanagement",
       "/portfolio/healed-me-i-won-the-lottery",
       "/portfolio/internationale-gesellschaft-orientalischer-christen-ev",

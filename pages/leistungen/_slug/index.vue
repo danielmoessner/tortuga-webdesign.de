@@ -50,7 +50,8 @@ export default {
   async asyncData({ $content, params, error }) {
     let item;
     try {
-      item = await $content("service", params.slug).fetch();
+      // item = await $content("service", params.slug).fetch();
+      item = await $content(`service/${params.slug}`).fetch();
     } catch (e) {
       error({ message: "Leistung nicht gefunden." });
     }
