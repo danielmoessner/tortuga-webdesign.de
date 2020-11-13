@@ -85,7 +85,7 @@ export default {
    ** Build configuration
    */
   build: {
-    extractCSS: true,
+    extractCSS: false,
     postcss: {
       plugins: {
         "postcss-import": {},
