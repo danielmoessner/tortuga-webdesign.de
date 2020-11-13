@@ -27,9 +27,21 @@ export default {
    */
   css: ["@/assets/styles/tailwind.css"],
   /*
+   ** Global JS
+   */
+  // script: [
+  //   {
+  //     src:
+  //       "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver",
+  //   },
+  // ],
+  /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "~/plugins/lazysizes.client.js" }],
+  plugins: [
+    { src: "~/plugins/lazysizes.client.js" },
+    { src: "@/plugins/animateonscroll.js" },
+  ],
   /*
    ** Nuxt.js build-modules
    */

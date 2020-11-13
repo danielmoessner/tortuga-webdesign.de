@@ -22,24 +22,28 @@
           </h1>
           <component
             :is="headingElement"
+            v-aos
             class="text-gray-100 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
           >
             {{ title }}
           </component>
           <component
             :is="subtitleElement"
-            class="max-w-xl text-center text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            v-aos
+            class="delay-150 max-w-xl text-center text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
           >
             {{ subtitle }}
           </component>
           <slot>
             <TealButton
+              v-aos
               text="Jetzt zusammenarbeiten"
               to="/kontakt/"
-              class="mb-1"
+              class="mb-1 delay-250"
             />
             <span
-              class="tracking-wide text-xs md:text-sm font-light text-white"
+              v-aos
+              class="delay-300 block tracking-wide text-xs md:text-sm font-light text-white"
             >
               Kostenloses Erstgespräch
             </span>

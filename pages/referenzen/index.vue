@@ -30,7 +30,17 @@
               :key="index"
               class="portfolio--item"
             >
-              <ReferenceItem :portfolio-item="item" />
+              <ReferenceItem
+                v-aos
+                :class="
+                  index % 3 == 0
+                    ? ''
+                    : (index - 1) % 3 == 0
+                    ? 'delay-100'
+                    : 'delay-200'
+                "
+                :portfolio-item="item"
+              />
             </div>
           </div>
         </div>

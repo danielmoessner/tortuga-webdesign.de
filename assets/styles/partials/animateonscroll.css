@@ -1,0 +1,11 @@
+.before-enter {
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.enter {
+  opacity: 1;
+  transform: translateY(0);
+}

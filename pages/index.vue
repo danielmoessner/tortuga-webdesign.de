@@ -20,19 +20,38 @@
               :class="{ 'md:pl-8': index % 2 === 1 }"
             >
               <h2
+                v-aos
                 class="font-bold leading-tight tracking-tight text-gray-100 text-4xl md:text-5xl mb-1"
+                :class="
+                  index == 0 ? '' : index == 1 ? 'delay-200' : 'delay-400'
+                "
               >
                 {{ object.title }}
               </h2>
               <p
-                class="text-xl md:text-2xl text-gray-100 font-light tracking-wide mb-10"
+                v-aos
+                class="text-xl delay-75 md:text-2xl text-gray-100 font-light tracking-wide mb-10"
+                :class="
+                  index == 0
+                    ? 'delay-50'
+                    : index == 1
+                    ? 'delay-250'
+                    : 'delay-450'
+                "
               >
                 {{ object.subtitle }}
               </p>
               <GrayButton
+                v-aos
                 :text="object.buttonText"
                 :to="object.buttonLink"
-                class=""
+                :class="
+                  index == 0
+                    ? 'delay-100'
+                    : index == 1
+                    ? 'delay-300'
+                    : 'delay-500'
+                "
               />
             </div>
           </div>
@@ -46,18 +65,25 @@
           <h2
             class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
-            {{ page.stakes.title }}
-            <br />
-            <span class="text-teal-700">{{ page.stakes.subtitle }}</span>
+            <span v-aos class="block">{{ page.stakes.title }}</span>
+            <span v-aos class="text-teal-700 delay-150 block">{{
+              page.stakes.subtitle
+            }}</span>
           </h2>
           <div class="mt-8 flex lg:flex-shrink-0 xl:mt-0">
             <div class="flex flex-wrap">
               <GrayButton
-                class="mb-2"
+                v-aos
+                class="mb-2 delay-50"
                 href="#was-bringt-eine-webseite"
                 :text="page.stakes.button"
               />
-              <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" />
+              <TealButton
+                v-aos
+                class="delay-200"
+                text="Jetzt zusammenarbeiten"
+                to="/kontakt/"
+              />
             </div>
           </div>
         </div>
@@ -71,16 +97,21 @@
       <div class="container">
         <div class="max-w-3xl">
           <span
-            class="text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            v-aos
+            class="block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.value.pretitle }}
           </span>
           <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            v-aos
+            class="delay-100 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
           >
             {{ page.value.title }}
           </h2>
-          <p class="text-gray-200 text-base md:text-lg max-w-xl">
+          <p
+            v-aos
+            class="delay-150 text-gray-200 text-base md:text-lg max-w-xl"
+          >
             {{ page.value.subtitle }}
           </p>
         </div>
@@ -88,7 +119,10 @@
           <div
             v-for="(proposition, index) in page.value.propositions"
             :key="index"
-            class=""
+            v-aos
+            :class="
+              index == 0 ? 'delay-350' : index == 1 ? 'delay-500' : 'delay-650'
+            "
           >
             <div class="flex-col">
               <h3
@@ -123,6 +157,7 @@
     >
       <div class="container">
         <h2
+          v-aos
           class="text-2xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
         >
           {{ page.guide.title }}
@@ -132,55 +167,61 @@
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/thecornerhouse.opt.png"
               alt="The Corner House Logo"
               style="filter: invert(1)"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-100"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/francopioli.opt.png"
               alt="Franco Pioli Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-200"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/susannesoelch.opt.png"
               alt="Susanne Sölch Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-300"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/kues.opt.png"
               alt="Küs Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-400"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/sn-trockenbau.opt.png"
               alt="SN Trockenbau Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-500"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/schaetz.opt.png"
               alt="Schätz Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-600"
               style="filter: invert(1)"
             />
           </div>
@@ -188,28 +229,36 @@
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/rabe-sport.opt.png"
               alt="Rabe Sport Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-700"
             />
           </div>
           <div
             class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
           >
             <img
+              v-aos
               src="/logos/qc.opt.png"
               alt="QC Quality Control Logo"
-              class="w-auto h-auto max-h-full"
+              class="w-auto h-auto max-h-full delay-800"
             />
           </div>
         </div>
         <div class="flex flex-wrap">
           <TealButton
+            v-aos
             text="Jetzt zusammenarbeiten"
             to="/kontakt/"
-            class="mb-2"
+            class="mb-2 delay-200"
           />
-          <GrayButton :text="page.guide.button" to="/referenzen/" />
+          <GrayButton
+            v-aos
+            class="delay-350"
+            :text="page.guide.button"
+            to="/referenzen/"
+          />
         </div>
       </div>
     </section>
@@ -221,22 +270,24 @@
       <div class="container">
         <div class="max-w-xl">
           <span
-            class="text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            v-aos
+            class="block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.plan.pretitle }}
           </span>
           <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            v-aos
+            class="delay-100 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
           >
             {{ page.plan.title }}
           </h2>
-          <p class="text-gray-200 text-base md:text-lg">
+          <p v-aos class="delay-250 text-gray-200 text-base md:text-lg">
             {{ page.plan.subtitle }}
           </p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
           <div class="">
-            <div class="flex">
+            <div v-aos class="flex">
               <div
                 class="font-bold text-6xl text-sunshine-200 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -258,7 +309,7 @@
             </div>
           </div>
           <div>
-            <div class="flex">
+            <div v-aos class="flex delay-150">
               <div
                 class="font-bold text-6xl text-sunshine-300 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -280,7 +331,7 @@
             </div>
           </div>
           <div class="">
-            <div class="flex">
+            <div v-aos class="delay-300 flex">
               <div
                 class="font-bold text-6xl text-sunshine-400 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -310,21 +361,26 @@
         <div class="flex items-center justify-center flex-col">
           <div class="max-w-2xl text-center flex-col flex items-center">
             <h2
+              v-aos
               class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
             >
               {{ page.leadGeneratorAd.title }}
             </h2>
             <p
-              class="text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
+              v-aos
+              class="delay-150 text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
               v-html="page.leadGeneratorAd.htmlText"
             ></p>
             <div class="flex flex-wrap justify-center">
               <TealButton
+                v-aos
                 text="Jetzt zusammenarbeiten"
                 to="/kontakt/"
-                class="mb-2"
+                class="mb-2 delay-300"
               />
               <SunshineButton
+                v-aos
+                class="delay-100"
                 :text="page.leadGeneratorAd.button"
                 to="/was-macht-eine-gute-webseite-aus/"
               />

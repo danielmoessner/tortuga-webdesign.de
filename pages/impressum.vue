@@ -1,40 +1,16 @@
 <template>
-  <main class="overflow-hidden">
+  <main class="">
     <SubNavigation :text="page.title" class="bg-sunshine-100" />
     <!--  -->
-    <section class="pt-32 pb-40 relative bg-sunshine-200">
-      <div
-        class="absolute min-h-screen z-0 left-1/2 transform -translate-x-1/2"
-        style="width: 1000px; top: -30px"
-        v-html="require('@/assets/svg/rechtliches.svg?include')"
-      ></div>
-      <div class="container relative z-10">
-        <div class="">
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="text-gray-100 text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
-            >
-              {{ page.header.title }}
-            </div>
-            <h1
-              class="max-w-xl text-center text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
-            >
-              {{ page.header.subtitle }}
-            </h1>
-            <TealButton
-              text="Jetzt zusammenarbeiten"
-              to="/kontakt/"
-              class="mb-1"
-            />
-            <span class="tracking-wide text-sm font-light text-white"
-              >Kostenloses Erstgespräch</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <SvgHeader
+      top="-30"
+      width="1000"
+      svg-name="rechtliches"
+      :title="page.header.title"
+      :subtitle="page.header.subtitle"
+    />
     <!---->
-    <section class="">
+    <section class="relative bg-white">
       <div
         class="px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
       >
@@ -59,12 +35,12 @@
 <script>
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import TealButton from "@/components/TealButton.vue";
 import MetaTags from "@/mixins/MetaTags.js";
+import SvgHeader from "@/components/SvgHeader.vue";
 
 export default {
   components: {
-    TealButton,
+    SvgHeader,
     NewFooter,
     SubNavigation,
   },

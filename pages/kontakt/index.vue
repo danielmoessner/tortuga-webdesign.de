@@ -10,11 +10,14 @@
       svg-name="kontakt"
     >
       <TealButton
+        v-aos
         text="Anfrage per Mail stellen"
         href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
-        class="mb-1"
+        class="mb-1 delay-250"
       />
-      <span class="tracking-wide text-sm font-light text-white"
+      <span
+        v-aos
+        class="block delay-300 tracking-wide text-sm font-light text-white"
         >Kostenloses Erstgespräch</span
       >
     </SvgHeader>
