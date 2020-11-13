@@ -4,6 +4,21 @@
   status = 301
 
 [[redirects]]
+  from = "/google-ads"
+  to = "/leistugen/google-ads/"
+  status = 301
+
+[[redirects]]
+  from = "/webseiten"
+  to = "/leistungen/webseiten/"
+  status = 301
+
+[[redirects]]
+  from = "/cms-systeme"
+  to = "/leistungen/cms-systeme/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404"
   status = 404

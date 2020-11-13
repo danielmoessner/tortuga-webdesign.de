@@ -61,19 +61,19 @@
       "title": "Webseiten",
       "subtitle": "Klar strukturiert & attraktiv",
       "buttonText": "Mehr erfahren",
-      "buttonLink": "/webseiten/"
+      "buttonLink": "/leistungen/webseiten/"
     },
     {
       "title": "CMS Systeme",
       "subtitle": "Einfach & funktional",
       "buttonText": "Mehr erfahren",
-      "buttonLink": "/cms-systeme/"
+      "buttonLink": "/leistungen/cms-systeme/"
     },
     {
       "title": "Google Ads",
       "subtitle": "Ordentlich & zielorientiert",
       "buttonText": "Mehr erfahren",
-      "buttonLink": "/google-ads/"
+      "buttonLink": "/leistungen/google-ads/"
     }
   ]
 }
