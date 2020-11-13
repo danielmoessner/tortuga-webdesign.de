@@ -1,3 +1,8 @@
+/* 
+** This file contains styles used to animate the text
+*/
+
+/*! purgecss start ignore */
 .before-enter {
   opacity: 0;
   transform: translateY(50px);
@@ -9,3 +14,4 @@
   opacity: 1;
   transform: translateY(0);
 }
+/*! purgecss end ignore */
