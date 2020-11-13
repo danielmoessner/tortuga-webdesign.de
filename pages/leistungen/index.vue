@@ -9,7 +9,6 @@
     </nuxt-link>
   </div>
 </template>
-
 <script>
 export default {
   async asyncData({ $content }) {
