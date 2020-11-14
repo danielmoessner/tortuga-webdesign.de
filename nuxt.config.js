@@ -120,25 +120,6 @@ export default {
             : false,
       },
     },
-    // loaders: {
-    //   scss: {
-    //     prependData:
-    //       '@import "./assets/styles/insert-into-every-component.scss";',
-    //   },
-    // },
-    // html: {
-    //   minify: {
-    //     collapseBooleanAttributes: true,
-    //     decodeEntities: true,
-    //     minifyCSS: false,
-    //     minifyJS: false,
-    //     processConditionalComments: true,
-    //     removeEmptyAttributes: true,
-    //     removeRedundantAttributes: true,
-    //     trimCustomFragments: true,
-    //     useShortDoctype: true
-    //   }
-    // },
     /*
      ** You can extend webpack config here
      */

@@ -168,10 +168,14 @@
           >
             <img
               v-aos
-              src="/logos/thecornerhouse.opt.png"
+              :src="
+                require('@/assets/logos/thecornerhouse.opt.negate.png?lqip')
+              "
+              :data-src="
+                require('@/assets/logos/thecornerhouse.opt.negate.png')
+              "
               alt="The Corner House Logo"
-              style="filter: invert(1)"
-              class="w-auto h-auto max-h-full delay-100"
+              class="w-auto h-full max-h-full delay-100 lazyload blur-up"
             />
           </div>
           <div
@@ -179,9 +183,10 @@
           >
             <img
               v-aos
-              src="/logos/francopioli.opt.png"
+              :src="require('@/assets/logos/francopioli.opt.png?lqip')"
+              :data-src="require('@/assets/logos/francopioli.opt.png')"
               alt="Franco Pioli Logo"
-              class="w-auto h-auto max-h-full delay-200"
+              class="w-full h-auto max-h-full delay-200 lazyload blur-up"
             />
           </div>
           <div
@@ -189,9 +194,10 @@
           >
             <img
               v-aos
-              src="/logos/susannesoelch.opt.png"
+              :src="require('@/assets/logos/susannesoelch.opt.png?lqip')"
+              :data-src="require('@/assets/logos/susannesoelch.opt.png')"
               alt="Susanne Sölch Logo"
-              class="w-auto h-auto max-h-full delay-300"
+              class="w-full h-auto max-h-full delay-300 lazyload blur-up"
             />
           </div>
           <div
@@ -199,9 +205,10 @@
           >
             <img
               v-aos
-              src="/logos/kues.opt.png"
+              :src="require('@/assets/logos/kues.opt.png?lqip')"
+              :data-src="require('@/assets/logos/kues.opt.png')"
               alt="Küs Logo"
-              class="w-auto h-auto max-h-full delay-400"
+              class="w-auto h-full max-h-full delay-400 lazyload blur-up"
             />
           </div>
           <div
@@ -209,9 +216,10 @@
           >
             <img
               v-aos
-              src="/logos/sn-trockenbau.opt.png"
+              :src="require('@/assets/logos/sn-trockenbau.opt.png?lqip')"
+              :data-src="require('@/assets/logos/sn-trockenbau.opt.png')"
               alt="SN Trockenbau Logo"
-              class="w-auto h-auto max-h-full delay-500"
+              class="w-auto h-full max-h-full delay-500 lazyload blur-up"
             />
           </div>
           <div
@@ -219,10 +227,10 @@
           >
             <img
               v-aos
-              src="/logos/schaetz.opt.png"
+              :src="require('@/assets/logos/schaetz.opt.negate.png?lqip')"
+              :data-src="require('@/assets/logos/schaetz.opt.negate.png')"
               alt="Schätz Logo"
-              class="w-auto h-auto max-h-full delay-600"
-              style="filter: invert(1)"
+              class="w-auto h-full max-h-full delay-600 lazyload blur-up"
             />
           </div>
           <div
@@ -230,9 +238,10 @@
           >
             <img
               v-aos
-              src="/logos/rabe-sport.opt.png"
+              :src="require('@/assets/logos/rabe-sport.opt.png?lqip')"
+              :data-src="require('@/assets/logos/rabe-sport.opt.png')"
               alt="Rabe Sport Logo"
-              class="w-auto h-auto max-h-full delay-700"
+              class="w-full h-auto max-h-full delay-700 lazyload blur-up"
             />
           </div>
           <div
@@ -240,9 +249,11 @@
           >
             <img
               v-aos
-              src="/logos/qc.opt.png"
+              :src="require('@/assets/logos/qc.opt.png?lqip')"
+              :data-src="require('@/assets/logos/qc.opt.png')"
               alt="QC Quality Control Logo"
-              class="w-auto h-auto max-h-full delay-800"
+              class="w-auto h-full max-w-full max-h-full delay-800 lazyload blur-up"
+              width="200"
             />
           </div>
         </div>

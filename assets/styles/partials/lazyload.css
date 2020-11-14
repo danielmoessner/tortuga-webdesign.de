@@ -1,0 +1,14 @@
+/* 
+** This file contains styles used to animate the text
+*/
+
+/*! purgecss start ignore */
+.blur-up {
+  filter: blur(7px);
+  transition: filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  filter: blur(0);
+}
+/*! purgecss end ignore */

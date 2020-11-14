@@ -44,11 +44,12 @@
               :style="{ transform: showcaseImageTransform }"
             >
               <img
+                :src="require(`@/content/media/${portfolioItem.image}?lqip`)"
                 :data-src="
-                  require(`@/content/media/${portfolioItem.image}?sqip&resize&size=400`)
+                  require(`@/content/media/${portfolioItem.image}?resize&size=400`)
                 "
                 :alt="portfolioItem.title"
-                class="lazyload block"
+                class="lazyload block w-full blur-up"
               />
             </div>
           </div>

@@ -42,7 +42,9 @@
             <div class="border-4 border-teal-700 shadow-lg rounded-lg">
               <div class="bg-teal-700 rounded overflow-hidden">
                 <img
-                  :src="
+                  class="blur-up lazyload w-full"
+                  :src="require(`@/content/media/${item.image}?lqip`)"
+                  :data-src="
                     require(`@/content/media/${item.image}?resize&size=1000`)
                   "
                   :alt="item.title"
@@ -87,7 +89,6 @@ export default {
     let item;
     try {
       item = await $content("portfolio", params.slug).fetch();
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
       error({ message: "Referenz nicht gefunden." });
     }
