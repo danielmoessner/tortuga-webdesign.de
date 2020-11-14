@@ -32,7 +32,7 @@
               Kontaktdaten
             </h2>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
               Telefon
             </h3>

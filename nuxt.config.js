@@ -32,6 +32,7 @@ export default {
   plugins: [
     { src: "~/plugins/lazysizes.client.js" },
     { src: "@/directives/animateonscroll.js" },
+    { src: "@/plugins/aos.client.js", mode: "client" },
   ],
   /*
    ** Nuxt.js build-modules
@@ -108,6 +109,12 @@ export default {
                   /^nuxt-link(|-exact)-active$/, // Nuxt link classes
                   /^(?!cursor-move).+-move$/, // Move transitions
                   /data-v-.*/, // Keep scoped styles
+                  "aos-init", // aos stuff
+                  "aos-animate",
+                  "data-aos-delay",
+                  "data-aos-duration",
+                  "fade-up",
+                  "zoom-in", // end aos stuff
                 ],
                 defaultExtractor: (content) => {
                   const broadMatches =
