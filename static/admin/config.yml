@@ -13,10 +13,11 @@ collections:
     format: "json"
     folder: "content/blog"
     create: true
-    slug: "{{title}}"
+    slug: "{{fields.slug}}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - {
@@ -41,7 +42,6 @@ collections:
     format: "json"
     folder: "content/tag"
     create: true
-    slug: "{{fields.title}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
   - name: "portfolio"
