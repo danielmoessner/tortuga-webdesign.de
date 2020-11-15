@@ -21,7 +21,7 @@
             >
               <h2
                 v-aos
-                class="font-bold leading-tight tracking-tight text-gray-100 text-4xl md:text-5xl mb-1"
+                class="before-enter font-bold leading-tight tracking-tight text-gray-100 text-4xl md:text-5xl mb-1"
                 :class="
                   index == 0 ? '' : index == 1 ? 'delay-200' : 'delay-400'
                 "
@@ -30,7 +30,7 @@
               </h2>
               <p
                 v-aos
-                class="text-xl delay-75 md:text-2xl text-gray-100 font-light tracking-wide mb-10"
+                class="before-enter text-xl delay-75 md:text-2xl text-gray-100 font-light tracking-wide mb-10"
                 :class="
                   index == 0
                     ? 'delay-50'
@@ -45,6 +45,7 @@
                 v-aos
                 :text="object.buttonText"
                 :to="object.buttonLink"
+                class="before-enter"
                 :class="
                   index == 0
                     ? 'delay-100'
@@ -65,8 +66,10 @@
           <h2
             class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
-            <span v-aos class="block">{{ page.stakes.title }}</span>
-            <span v-aos class="text-teal-700 delay-150 block">{{
+            <span v-aos class="before-enter block">{{
+              page.stakes.title
+            }}</span>
+            <span v-aos class="before-enter text-teal-700 delay-150 block">{{
               page.stakes.subtitle
             }}</span>
           </h2>
@@ -74,13 +77,13 @@
             <div class="flex flex-wrap">
               <GrayButton
                 v-aos
-                class="mb-2 delay-50"
+                class="before-enter mb-2 delay-50"
                 href="#was-bringt-eine-webseite"
                 :text="page.stakes.button"
               />
               <TealButton
                 v-aos
-                class="delay-200"
+                class="before-enter delay-200"
                 text="Jetzt zusammenarbeiten"
                 to="/kontakt/"
               />
@@ -98,19 +101,19 @@
         <div class="max-w-3xl">
           <span
             v-aos
-            class="block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            class="before-enter block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.value.pretitle }}
           </span>
           <h2
             v-aos
-            class="delay-100 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            class="before-enter delay-100 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
           >
             {{ page.value.title }}
           </h2>
           <p
             v-aos
-            class="delay-150 text-gray-200 text-base md:text-lg max-w-xl"
+            class="before-enter delay-150 text-gray-200 text-base md:text-lg max-w-xl"
           >
             {{ page.value.subtitle }}
           </p>
@@ -120,6 +123,7 @@
             v-for="(proposition, index) in page.value.propositions"
             :key="index"
             v-aos
+            class="before-enter"
             :class="
               index == 0 ? 'delay-350' : index == 1 ? 'delay-500' : 'delay-650'
             "
@@ -158,7 +162,7 @@
       <div class="container">
         <h2
           v-aos
-          class="text-2xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
+          class="before-enter text-2xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
         >
           {{ page.guide.title }}
         </h2>
@@ -175,7 +179,7 @@
                 require('@/assets/logos/thecornerhouse.opt.negate.png')
               "
               alt="The Corner House Logo"
-              class="w-auto h-full max-h-full delay-100 lazyload blur-up"
+              class="w-auto h-full max-h-full delay-100 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -186,7 +190,7 @@
               :src="require('@/assets/logos/francopioli.opt.png?lqip')"
               :data-src="require('@/assets/logos/francopioli.opt.png')"
               alt="Franco Pioli Logo"
-              class="w-full h-auto max-h-full delay-200 lazyload blur-up"
+              class="w-full h-auto max-h-full delay-200 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -197,7 +201,7 @@
               :src="require('@/assets/logos/susannesoelch.opt.png?lqip')"
               :data-src="require('@/assets/logos/susannesoelch.opt.png')"
               alt="Susanne Sölch Logo"
-              class="w-full h-auto max-h-full delay-300 lazyload blur-up"
+              class="w-full h-auto max-h-full delay-300 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -208,7 +212,7 @@
               :src="require('@/assets/logos/kues.opt.png?lqip')"
               :data-src="require('@/assets/logos/kues.opt.png')"
               alt="Küs Logo"
-              class="w-auto h-full max-h-full delay-400 lazyload blur-up"
+              class="w-auto h-full max-h-full delay-400 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -219,7 +223,7 @@
               :src="require('@/assets/logos/sn-trockenbau.opt.png?lqip')"
               :data-src="require('@/assets/logos/sn-trockenbau.opt.png')"
               alt="SN Trockenbau Logo"
-              class="w-auto h-full max-h-full delay-500 lazyload blur-up"
+              class="w-auto h-full max-h-full delay-500 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -230,7 +234,7 @@
               :src="require('@/assets/logos/schaetz.opt.negate.png?lqip')"
               :data-src="require('@/assets/logos/schaetz.opt.negate.png')"
               alt="Schätz Logo"
-              class="w-auto h-full max-h-full delay-600 lazyload blur-up"
+              class="w-auto h-full max-h-full delay-600 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -241,7 +245,7 @@
               :src="require('@/assets/logos/rabe-sport.opt.png?lqip')"
               :data-src="require('@/assets/logos/rabe-sport.opt.png')"
               alt="Rabe Sport Logo"
-              class="w-full h-auto max-h-full delay-700 lazyload blur-up"
+              class="w-full h-auto max-h-full delay-700 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -252,7 +256,7 @@
               :src="require('@/assets/logos/qc.opt.png?lqip')"
               :data-src="require('@/assets/logos/qc.opt.png')"
               alt="QC Quality Control Logo"
-              class="w-auto h-full max-w-full max-h-full delay-800 lazyload blur-up"
+              class="w-auto h-full max-w-full max-h-full delay-800 lazyload blur-up before-enter"
               width="200"
             />
           </div>
@@ -262,11 +266,11 @@
             v-aos
             text="Jetzt zusammenarbeiten"
             to="/kontakt/"
-            class="mb-2 delay-200"
+            class="mb-2 delay-200 before-enter"
           />
           <GrayButton
             v-aos
-            class="delay-350"
+            class="before-enter delay-350"
             :text="page.guide.button"
             to="/referenzen/"
           />
@@ -282,13 +286,13 @@
         <div class="max-w-xl">
           <span
             v-aos
-            class="block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            class="before-enter block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
           >
             {{ page.plan.pretitle }}
           </span>
           <h2
             v-aos
-            class="delay-100 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            class="before-enter delay-100 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
           >
             {{ page.plan.title }}
           </h2>
@@ -373,13 +377,13 @@
           <div class="max-w-2xl text-center flex-col flex items-center">
             <h2
               v-aos
-              class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
+              class="before-enter text-3xl md:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
             >
               {{ page.leadGeneratorAd.title }}
             </h2>
             <p
               v-aos
-              class="delay-150 text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
+              class="before-enter delay-150 text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
               v-html="page.leadGeneratorAd.htmlText"
             ></p>
             <div class="flex flex-wrap justify-center">
@@ -391,7 +395,7 @@
               />
               <SunshineButton
                 v-aos
-                class="delay-100"
+                class="before-enter delay-100"
                 :text="page.leadGeneratorAd.button"
                 to="/was-macht-eine-gute-webseite-aus/"
               />

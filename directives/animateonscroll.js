@@ -20,7 +20,12 @@ const animatedScrollObserver = () =>
         Because we don’t have to observe it anymore.
       */
       if (entry.isIntersecting) {
+        // document.addEventListener("DOMContentLoaded", () => {
+        //   console.log("loaded");
+        //   console.log(document.readyState);
         entry.target.classList.add("enter");
+        // });
+
         animatedScrollObserver.unobserve(entry.target);
       }
     });
@@ -36,7 +41,7 @@ const animatedScrollObserver = () =>
 */
 Vue.directive("aos", {
   bind(el) {
-    el.classList.add("before-enter");
+    // el.classList.add("before-enter");
     animatedScrollObserver().observe(el);
   },
 });

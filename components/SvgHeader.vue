@@ -23,14 +23,14 @@
           <component
             :is="headingElement"
             v-aos
-            class="text-gray-100 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
+            class="text-gray-100 before-enter text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-none"
           >
             {{ title }}
           </component>
           <component
             :is="subtitleElement"
             v-aos
-            class="delay-150 max-w-xl text-center text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
+            class="delay-150 max-w-xl before-enter text-center text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide mb-10"
           >
             {{ subtitle }}
           </component>
@@ -39,11 +39,11 @@
               v-aos
               text="Jetzt zusammenarbeiten"
               to="/kontakt/"
-              class="mb-1 delay-250"
+              class="mb-1 delay-250 before-enter"
             />
             <span
               v-aos
-              class="delay-300 block tracking-wide text-xs md:text-sm font-light text-white"
+              class="delay-300 before-enter block tracking-wide text-xs md:text-sm font-light text-white"
             >
               Kostenloses Erstgespräch
             </span>

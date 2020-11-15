@@ -5,7 +5,7 @@
 /*! purgecss start ignore */
 .blur-up {
   filter: blur(7px);
-  transition: filter 400ms;
+  /* transition: filter 400ms; */
 }
 
 .blur-up.lazyloaded {

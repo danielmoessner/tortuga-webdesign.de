@@ -15,26 +15,35 @@
         <div class="grid grid-cols-7 gap-12">
           <div class="col-span-7 md:col-span-4">
             <div
-              class="uppercase font-light text-sm md:text-base text-white tracking-wider leading-tight"
+              v-aos
+              class="before-enter uppercase font-light text-sm md:text-base text-white tracking-wider leading-tight"
             >
               <span>{{ page.about.pretitle }}</span>
             </div>
             <h2
-              class="text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
+              v-aos
+              class="beofre-enter delay-100 text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
             >
               {{ page.about.title }}
             </h2>
-            <p class="text-base md:text-lg text-gray-300 mb-10">
+            <p
+              v-aos
+              class="before-enter delay-200 text-base md:text-lg text-gray-300 mb-10"
+            >
               {{ page.about.subtitle }}
             </p>
-            <p class="text-base md:text-lg text-gray-100">
+            <p
+              v-aos
+              class="before-enter delay-300 text-base md:text-lg text-gray-100"
+            >
               {{ page.about.text }}
             </p>
           </div>
           <div class="col-span-7 md:col-span-2 md:col-start-6 row-start-1">
             <div class="w-4/5 md:w-full mx-auto">
               <img
-                class="rounded-full border-4 bg-white border-sunshine-500"
+                v-aos
+                class="before-enter rounded-full border-4 bg-white border-sunshine-500"
                 :src="require(`@/content/media/${page.about.image}?sqlib`)"
                 alt="Daniel Mössner"
               />
@@ -47,12 +56,12 @@
     <section class="pt-20 md:pt-32 pb-20 md:pb-40 bg-gray-100">
       <div class="container">
         <div class="flex flex-col items-center mb-10 md:mb-20">
-          <div class="max-w-xl">
+          <div v-aos class="before-enter max-w-xl">
             <h2 class="text-2xl md:text-3xl font-bold text-center">
               {{ page.faq.title }}
             </h2>
           </div>
-          <div class="max-w-xl">
+          <div v-aos class="before-enter delay-100 max-w-xl">
             <div class="text-base md:text-lg text-gray-800">
               {{ page.faq.subtitle }}
             </div>
@@ -63,6 +72,8 @@
             <BaseFaq
               v-for="(item, index) in page.faq.questions"
               :key="index"
+              v-aos
+              class="before-enter"
               :question="item.question"
               :answer="item.answer"
             />

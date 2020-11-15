@@ -13,11 +13,11 @@
         v-aos
         text="Anfrage per Mail stellen"
         href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
-        class="mb-1 delay-250"
+        class="mb-1 delay-250 before-enter"
       />
       <span
         v-aos
-        class="block delay-300 tracking-wide text-sm font-light text-white"
+        class="block delay-300 before-enter tracking-wide text-sm font-light text-white"
         >Kostenloses Erstgespräch</span
       >
     </SvgHeader>
@@ -28,11 +28,14 @@
           class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-y-16 md:gap-x-8"
         >
           <div class="col-span-2 md:col-span-1">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-100">
+            <h2
+              v-aos
+              class="before-enter text-2xl md:text-3xl font-bold text-gray-100"
+            >
               Kontaktdaten
             </h2>
           </div>
-          <div data-aos="fade-up">
+          <div v-aos class="before-enter delay-100">
             <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
               Telefon
             </h3>
@@ -44,7 +47,7 @@
               0176 38385646
             </a>
           </div>
-          <div>
+          <div v-aos class="before-enter delay-200">
             <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
               E-Mail
             </h3>
@@ -54,7 +57,10 @@
               >kontakt@tortuga-webdesign.de
             </a>
           </div>
-          <div class="md:col-start-2 col-span-2 md:col-span-2">
+          <div
+            v-aos
+            class="before-enter delay-300 md:col-start-2 col-span-2 md:col-span-2"
+          >
             <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
               Adresse
             </h3>
@@ -66,12 +72,13 @@
           </div>
           <div class="col-start-1">
             <h2
-              class="text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
+              v-aos
+              class="before-enter text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
             >
               Kontaktformular
             </h2>
           </div>
-          <div class="col-span-2">
+          <div v-aos class="before-enter delay-100 col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
               <ContactForm
                 ><TealButton text="Absenden" :submit="true"
@@ -80,12 +87,13 @@
           </div>
           <div class="col-start-1">
             <h3
+              v-aos
               class="text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
             >
               Maps
             </h3>
           </div>
-          <div class="col-span-2">
+          <div v-aos class="delay-100 col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170187.9866221967!2d11.496716990307563!3d48.203008313388644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e6df61b80d737%3A0xb6121f1e0704ba6a!2sTortuga+Webdesign!5e0!3m2!1sde!2sde!4v1551033670191"

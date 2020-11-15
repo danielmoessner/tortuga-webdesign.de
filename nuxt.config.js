@@ -31,8 +31,7 @@ export default {
    */
   plugins: [
     { src: "~/plugins/lazysizes.client.js" },
-    { src: "@/directives/animateonscroll.js" },
-    { src: "@/plugins/aos.client.js", mode: "client" },
+    { src: "@/directives/animateonscroll.js", mode: "client" },
   ],
   /*
    ** Nuxt.js build-modules
