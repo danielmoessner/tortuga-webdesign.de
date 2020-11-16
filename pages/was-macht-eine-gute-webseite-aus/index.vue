@@ -104,5 +104,9 @@ export default {
     };
   },
   computed: {},
+  mounted() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "page-view-lead-generator" });
+  },
 };
 </script>

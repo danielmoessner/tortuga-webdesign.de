@@ -75,5 +75,9 @@ export default {
       ],
     };
   },
+  mounted() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "page-view-lead-generator-thank-you" });
+  },
 };
 </script>
