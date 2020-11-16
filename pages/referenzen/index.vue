@@ -32,6 +32,7 @@
             >
               <ReferenceItem
                 v-aos
+                class="before-enter"
                 :class="
                   index % 3 == 0
                     ? ''
