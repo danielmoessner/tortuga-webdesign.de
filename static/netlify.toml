@@ -5,7 +5,12 @@
 
 [[redirects]]
   from = "/google-ads"
-  to = "/leistungen/google-ads/"
+  to = "/leistungen/google-werbung/"
+  status = 301
+
+[[redirects]]
+  from = "/leistungen/google-ads"
+  to = "/leistungen/google-werbung/"
   status = 301
 
 [[redirects]]
@@ -27,3 +32,6 @@
   from = "/*"
   to = "/404"
   status = 404
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
