@@ -7,7 +7,7 @@
         {{ code }} - {{ title }}
       </h1>
       <p class="mb-12 text-gray-100">{{ message }}</p>
-      <GrayButton to="/" text="Zur Startseite" />
+      <GrayButton href="/" text="Zur Startseite" />
     </div>
   </div>
 </template>
