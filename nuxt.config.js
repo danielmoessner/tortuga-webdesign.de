@@ -142,6 +142,15 @@ export default {
           exclude: /(node_modules)/,
         });
       }
+      config.module.rules.unshift({
+        test: /\.(jpe?g|png|webp)$/i,
+        use: {
+          loader: "responsive-loader",
+          options: {
+            adapter: require("responsive-loader/sharp"),
+          },
+        },
+      });
     },
   },
 };
