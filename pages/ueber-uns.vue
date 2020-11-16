@@ -22,7 +22,7 @@
             </div>
             <h2
               v-aos
-              class="beofre-enter delay-100 text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
+              class="before-enter delay-100 text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
             >
               {{ page.about.title }}
             </h2>
