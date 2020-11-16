@@ -34,4 +34,6 @@
   status = 404
 
 [[plugins]]
-  package = "@netlify/plugin-sitemap"
+package = "@netlify/plugin-sitemap"
+  [plugins.inputs]
+  buildDir = "dist"
