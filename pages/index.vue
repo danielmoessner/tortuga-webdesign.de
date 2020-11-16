@@ -190,7 +190,7 @@
               :src="require('@/assets/logos/francopioli.opt.png?lqip')"
               :data-src="require('@/assets/logos/francopioli.opt.png')"
               alt="Franco Pioli Logo"
-              class="w-full h-auto max-h-full delay-200 lazyload blur-up before-enter"
+              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-200 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -201,7 +201,7 @@
               :src="require('@/assets/logos/susannesoelch.opt.png?lqip')"
               :data-src="require('@/assets/logos/susannesoelch.opt.png')"
               alt="Susanne Sölch Logo"
-              class="w-full h-auto max-h-full delay-300 lazyload blur-up before-enter"
+              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-300 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -245,7 +245,7 @@
               :src="require('@/assets/logos/rabe-sport.opt.png?lqip')"
               :data-src="require('@/assets/logos/rabe-sport.opt.png')"
               alt="Rabe Sport Logo"
-              class="w-full h-auto max-h-full delay-700 lazyload blur-up before-enter"
+              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-700 lazyload blur-up before-enter"
             />
           </div>
           <div
@@ -296,13 +296,16 @@
           >
             {{ page.plan.title }}
           </h2>
-          <p v-aos class="delay-250 text-gray-200 text-base md:text-lg">
+          <p
+            v-aos
+            class="before-enter delay-250 text-gray-200 text-base md:text-lg"
+          >
             {{ page.plan.subtitle }}
           </p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
           <div class="">
-            <div v-aos class="flex">
+            <div v-aos class="before-enter flex">
               <div
                 class="font-bold text-6xl text-sunshine-200 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -324,7 +327,7 @@
             </div>
           </div>
           <div>
-            <div v-aos class="flex delay-150">
+            <div v-aos class="before-enter flex delay-150">
               <div
                 class="font-bold text-6xl text-sunshine-300 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -346,7 +349,7 @@
             </div>
           </div>
           <div class="">
-            <div v-aos class="delay-300 flex">
+            <div v-aos class="before-enter delay-300 flex">
               <div
                 class="font-bold text-6xl text-sunshine-400 leading-none mr-6 flex items-start relative flex-col"
               >
@@ -391,7 +394,7 @@
                 v-aos
                 text="Jetzt zusammenarbeiten"
                 to="/kontakt/"
-                class="mb-2 delay-300"
+                class="mb-2 delay-300 before-enter"
               />
               <SunshineButton
                 v-aos
