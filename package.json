@@ -15,11 +15,10 @@
   "dependencies": {
     "@nuxt/content": "^1.10.0",
     "@nuxtjs/gtm": "^2.3.2",
-    "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/typography": "^0.2.0",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.14.7",
-    "@tailwindcss/custom-forms": "^0.2.1",
     "tailwindcss": "^1.9.5"
   },
   "devDependencies": {

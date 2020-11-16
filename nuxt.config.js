@@ -40,7 +40,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/sitemap", "@nuxt/content"],
+  modules: ["@nuxt/content"],
   /*
    ** Nuxt Optimized Images Config
    */
@@ -52,34 +52,6 @@ export default {
    */
   gtm: {
     id: "GTM-TQM6M58",
-  },
-  /*
-   ** Sitemap Config
-   */
-  sitemap: {
-    hostname: "https://tortuga-webdesign.de",
-    routes: [
-      "/leistungen/google-ads",
-      "/leistungen/cms-systeme",
-      "/leistungen/webseiten",
-      "/portfolio/franco-pioli-datenschutz-und-vereinsmanagement",
-      "/portfolio/healed-me-i-won-the-lottery",
-      "/portfolio/internationale-gesellschaft-orientalischer-christen-ev",
-      "/portfolio/katzenbetreuung-tigerfreund",
-      "/portfolio/kristina-boess-yoga-und-coaching",
-      "/portfolio/maschinenverleih-schaetz",
-      "/portfolio/praeventionszentrum-muenchen-ost",
-      "/portfolio/qc-quality-control",
-      "/portfolio/rabe-sport-gmbh",
-      "/portfolio/schaetz-bautrockner-verleih",
-      "/portfolio/schaetz-shop-autozubehoer-fuer-ihren-mercedes",
-      "/portfolio/sefa-sahin-kues-gutachter",
-      "/portfolio/selma-selcuk-haarsysteme",
-      "/portfolio/silke-tolkmitt-marketingmanagement",
-      "/portfolio/sn-trockenbau-gmbh",
-      "/portfolio/the-corner-house",
-      "/portfolio/clever-und-entspannt-lernen",
-    ],
   },
   /*
    ** Build configuration
