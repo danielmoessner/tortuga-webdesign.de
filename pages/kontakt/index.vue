@@ -88,12 +88,12 @@
           <div class="col-start-1">
             <h3
               v-aos
-              class="text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
+              class="before-enter text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
             >
               Maps
             </h3>
           </div>
-          <div v-aos class="delay-100 col-span-2">
+          <div v-aos class="before-enter delay-100 col-span-2">
             <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170187.9866221967!2d11.496716990307563!3d48.203008313388644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e6df61b80d737%3A0xb6121f1e0704ba6a!2sTortuga+Webdesign!5e0!3m2!1sde!2sde!4v1551033670191"
