@@ -1,5 +1,14 @@
 <template>
   <main class="">
+    <!-- LinkedIn Tracker -->
+    <img
+      height="1"
+      width="1"
+      style="display: none"
+      alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=2989681&conversionId=3651521&fmt=gif"
+    />
+    <!--  -->
     <SubNavigation :text="page.thankYou.title" class="bg-sunshine-100" />
     <!--  -->
     <SvgHeader
