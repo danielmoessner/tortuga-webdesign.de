@@ -8,7 +8,7 @@
     >
       <img
         class="w-4/5 pt-10 md:pt-0 mx-auto md:w-full"
-        :src="require(`@/assets/svg/${svgName}.svg?include`)"
+        :src="require(`@/assets/svg/${svgName}.svg?data`)"
       />
     </div>
     <div class="container relative z-10">

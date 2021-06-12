@@ -713,11 +713,7 @@ export default {
   },
   computed: {
     svgUrl() {
-      return require("@/assets/svg/index.svg?include");
-    },
-    bgSvg() {
-      console.log(this.svgUrl);
-      return this.svgUrl.split("#").join("%23").replace("\n", "");
+      return require("@/assets/svg/index.svg?data");
     },
   },
 };
