@@ -1,6 +1,16 @@
 <template>
   <nuxt-link
-    class="text-gray-600 md:text-gray-200 md:hover:text-gray-100 text-lg p-2 md:ml-4 transition ease-in-out duration-150 font-medium"
+    class="
+      text-gray-600
+      md:text-gray-200 md:hover:text-gray-100
+      text-lg
+      p-2
+      md:ml-4
+      transition
+      ease-in-out
+      duration-150
+      font-medium
+    "
     :to="to"
   >
     {{ text }}

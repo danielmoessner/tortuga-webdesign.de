@@ -1,7 +1,15 @@
 <template>
   <footer class="pt-20 pb-24 md:py-32" :class="bgColor">
     <div
-      class="container grid grid-cols-2 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5 gap-4"
+      class="
+        container
+        grid grid-cols-2
+        md:grid-cols-3
+        gap-y-16
+        md:gap-y-20
+        lg:gap-y-4 lg:grid-cols-5
+        gap-4
+      "
     >
       <div class="col-span-2 md:col-span-3 lg:col-span-2">
         <LogoSvg class="h-16 md:h-24 mb-10 max-w-full" :invert="invertLogo" />

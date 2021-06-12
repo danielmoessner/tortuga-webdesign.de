@@ -1,7 +1,20 @@
 <template>
   <div class="px-3 inline-flex">
     <nuxt-link
-      class="cursor-pointer border-0 hover:bg-red-600 hover:text-red-600 active:bg-red-700 active:text-red-700 relative bg-red-500 text-red-500 inline-flex transition duration-150 ease-in-out focus:outline-none"
+      class="
+        cursor-pointer
+        border-0
+        hover:bg-red-600 hover:text-red-600
+        active:bg-red-700 active:text-red-700
+        relative
+        bg-red-500
+        text-red-500
+        inline-flex
+        transition
+        duration-150
+        ease-in-out
+        focus:outline-none
+      "
       :to="to"
     >
       <div class="px-4 py-2 text-white text-base leading-6 font-bold">

@@ -1,6 +1,13 @@
 <template>
   <div
-    class="flex justify-center items-center p-12 min-h-screen min-w-full bg-teal-700"
+    class="
+      flex
+      justify-center
+      items-center
+      p-12
+      min-h-screen min-w-full
+      bg-teal-700
+    "
   >
     <div class="">
       <h1 class="mb-1 text-3xl font-bold text-gray-100">

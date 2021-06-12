@@ -24,7 +24,14 @@
               <a
                 v-if="item.url"
                 target="_blank"
-                class="underline transition ease-in-out duration-150 text-gray-900 hover:text-gray-700"
+                class="
+                  underline
+                  transition
+                  ease-in-out
+                  duration-150
+                  text-gray-900
+                  hover:text-gray-700
+                "
                 :href="item.url"
               >
                 {{ itemUrlClean }}

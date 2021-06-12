@@ -2,12 +2,35 @@
   <div class="flex-inline px-3">
     <component
       :is="which"
-      class="custom-button cursor-pointer border-0 active:bg-teal-900 active:text-teal-900 hover:bg-teal-800 hover:text-teal-800 relative bg-teal-700 text-teal-700 inline-flex transition duration-150 ease-in-out focus:outline-none"
+      class="
+        custom-button
+        cursor-pointer
+        border-0
+        active:bg-teal-900 active:text-teal-900
+        hover:bg-teal-800 hover:text-teal-800
+        relative
+        bg-teal-700
+        text-teal-700
+        inline-flex
+        transition
+        duration-150
+        ease-in-out
+        focus:outline-none
+      "
       :to="to"
       :href="href"
     >
       <div
-        class="px-3 md:px-4 py-1 md:py-2 text-white text-sm md:text-base leading-6 font-bold"
+        class="
+          px-3
+          md:px-4
+          py-1
+          md:py-2
+          text-white text-sm
+          md:text-base
+          leading-6
+          font-bold
+        "
       >
         {{ text }}
       </div>

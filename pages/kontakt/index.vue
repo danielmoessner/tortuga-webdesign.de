@@ -17,7 +17,15 @@
       />
       <span
         v-aos
-        class="block delay-300 before-enter tracking-wide text-sm font-light text-white"
+        class="
+          block
+          delay-300
+          before-enter
+          tracking-wide
+          text-sm
+          font-light
+          text-white
+        "
         >Kostenloses Erstgespräch</span
       >
     </SvgHeader>
@@ -25,7 +33,12 @@
     <section class="pt-20 pb-24 md:pt-24 md:pb-32 bg-teal-700 relative">
       <div class="container">
         <div
-          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-y-16 md:gap-x-8"
+          class="
+            grid grid-cols-2
+            md:grid-cols-3
+            gap-x-4 gap-y-5
+            md:gap-y-16 md:gap-x-8
+          "
         >
           <div class="col-span-2 md:col-span-1">
             <h2
@@ -41,7 +54,17 @@
             </h3>
             <p class="text-base md:text-lg text-gray-200">Daniel Mössner</p>
             <a
-              class="text-base md:text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
+              class="
+                text-base
+                md:text-lg
+                text-gray-200
+                underline
+                hover:text-gray-100
+                active:text-white
+                transition
+                ease-in-out
+                duration-150
+              "
               href="tel:004917638385646"
             >
               0176 38385646
@@ -52,14 +75,30 @@
               E-Mail
             </h3>
             <a
-              class="text-base md:text-lg text-gray-200 underline hover:text-gray-100 active:text-white transition ease-in-out duration-150"
+              class="
+                text-base
+                md:text-lg
+                text-gray-200
+                underline
+                hover:text-gray-100
+                active:text-white
+                transition
+                ease-in-out
+                duration-150
+              "
               href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
               >kontakt@tortuga-webdesign.de
             </a>
           </div>
           <div
             v-aos
-            class="before-enter delay-300 md:col-start-2 col-span-2 md:col-span-2"
+            class="
+              before-enter
+              delay-300
+              md:col-start-2
+              col-span-2
+              md:col-span-2
+            "
           >
             <h3 class="text-lg md:text-xl font-bold text-gray-100 mb-1">
               Adresse
@@ -71,24 +110,17 @@
             </address>
           </div>
           <div class="col-start-1">
-            <h2
-              v-aos
-              class="before-enter text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
-            >
-              Kontaktformular
-            </h2>
-          </div>
-          <div v-aos class="before-enter delay-100 col-span-2">
-            <div class="p-4 bg-sunshine-200 rounded-lg overflow-hidden">
-              <ContactForm
-                ><TealButton text="Absenden" :submit="true"
-              /></ContactForm>
-            </div>
-          </div>
-          <div class="col-start-1">
             <h3
               v-aos
-              class="before-enter text-2xl md:text-3xl font-bold text-gray-100 mt-12 md:mt-0"
+              class="
+                before-enter
+                text-2xl
+                md:text-3xl
+                font-bold
+                text-gray-100
+                mt-12
+                md:mt-0
+              "
             >
               Maps
             </h3>
@@ -113,7 +145,6 @@
   </main>
 </template>
 <script>
-import ContactForm from "@/components/ContactForm.vue";
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import TealButton from "@/components/TealButton.vue";
@@ -126,7 +157,6 @@ export default {
     TealButton,
     NewFooter,
     SubNavigation,
-    ContactForm,
   },
   mixins: [MetaTags],
   layout: "new",

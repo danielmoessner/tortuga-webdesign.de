@@ -12,7 +12,15 @@
         />
       </div>
       <h2
-        class="text-2xl md:text-3xl tracking-tight leading-tight font-bold text-black mb-6"
+        class="
+          text-2xl
+          md:text-3xl
+          tracking-tight
+          leading-tight
+          font-bold
+          text-black
+          mb-6
+        "
       >
         {{ title }}
       </h2>

@@ -8,7 +8,22 @@
       class="cursor-pointer flex justify-between shadow relative rounded-lg"
     >
       <div
-        class="font-bold text-base md:text-lg text-gray-800 flex items-center flex-grow px-3 md:px-4 py-2 md:py-3 pl-4 md:pl-5 leading-tight"
+        class="
+          font-bold
+          text-base
+          md:text-lg
+          text-gray-800
+          flex
+          items-center
+          flex-grow
+          px-3
+          md:px-4
+          py-2
+          md:py-3
+          pl-4
+          md:pl-5
+          leading-tight
+        "
       >
         {{ question }}
       </div>

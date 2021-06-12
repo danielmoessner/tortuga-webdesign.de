@@ -1,5 +1,3 @@
-const path = require("path");
-
 export default {
   target: "static",
   /*
@@ -36,7 +34,11 @@ export default {
   /*
    ** Nuxt.js build-modules
    */
-  buildModules: ["@nuxtjs/gtm", "@aceforth/nuxt-optimized-images"],
+  buildModules: [
+    "@nuxtjs/gtm",
+    "@aceforth/nuxt-optimized-images",
+    "@nuxtjs/tailwindcss",
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -58,46 +60,6 @@ export default {
    */
   build: {
     extractCSS: false,
-    postcss: {
-      plugins: {
-        "postcss-import": {},
-        tailwindcss: path.resolve(__dirname, "./tailwind.config.js"),
-        "@fullhuman/postcss-purgecss":
-          process.env.NODE_ENV === "production"
-            ? {
-                content: [
-                  "./components/**/*.vue",
-                  "./layouts/**/*.vue",
-                  "./pages/**/*.vue",
-                ],
-                safelist: [
-                  "body",
-                  "html",
-                  "nuxt-progress",
-                  "__nuxt",
-                  "__layout",
-                  /-(leave|enter|appear)(|-(to|from|active))$/, // Normal transitions
-                  /^nuxt-link(|-exact)-active$/, // Nuxt link classes
-                  /^(?!cursor-move).+-move$/, // Move transitions
-                  /data-v-.*/, // Keep scoped styles
-                  "aos-init", // aos stuff
-                  "aos-animate",
-                  "data-aos-delay",
-                  "data-aos-duration",
-                  "fade-up",
-                  "zoom-in", // end aos stuff
-                ],
-                defaultExtractor: (content) => {
-                  const broadMatches =
-                    content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-                  const innerMatches =
-                    content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
-                  return broadMatches.concat(innerMatches);
-                },
-              }
-            : false,
-      },
-    },
     /*
      ** You can extend webpack config here
      */

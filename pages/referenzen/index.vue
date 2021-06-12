@@ -18,12 +18,27 @@
           class="mb-20 md:mb-40"
         >
           <h2
-            class="text-4xl md:text-5xl text-sunshine-200 font-black mb-3 md:mb-6"
+            class="
+              text-4xl
+              md:text-5xl
+              text-sunshine-200
+              font-black
+              mb-3
+              md:mb-6
+            "
           >
             {{ year }}
           </h2>
           <div
-            class="grid gap-4 sm:gap-8 grid-cols-2 md:gap-20 lg:gap-22 lg:grid-cols-3 xl:gap-25"
+            class="
+              grid
+              gap-4
+              sm:gap-8
+              grid-cols-2
+              md:gap-20
+              lg:gap-22 lg:grid-cols-3
+              xl:gap-25
+            "
           >
             <div
               v-for="(item, index) in portfolioPostsByYear[year]"

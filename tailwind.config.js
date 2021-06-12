@@ -1,9 +1,6 @@
 module.exports = {
-  // purge: {
-  //   enabled: process.env.NODE_ENV === "production",
-  //   content: ["./components/**/*.vue", "./layouts/**/*.vue", "./pages/**/*.vue"]
-  // },
-  purge: false,
+  purge: ["./components/**/*.vue", "./layouts/**/*.vue", "./pages/**/*.vue"],
+  mode: "jit",
   theme: {
     extend: {
       transitionDelay: {
@@ -127,12 +124,5 @@ module.exports = {
     display: ({ after }) => after(["group-hover"]),
     opacity: ({ after }) => after(["group-hover"]),
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/custom-forms"),
-  ],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };

@@ -10,7 +10,15 @@
       <input type="hidden" name="form-name" value="contact" />
       <div class="grid grid-cols-5 md:grid-cols-7 md:gap-4 gap-y-1">
         <div
-          class="col-span-5 md:col-span-2 flex items-start md:justify-end mt-4 md:mt-2"
+          class="
+            col-span-5
+            md:col-span-2
+            flex
+            items-start
+            md:justify-end
+            mt-4
+            md:mt-2
+          "
         >
           <label for="name" class="pl-1 md:pr-0 block text-right"
             >Vor- &amp; Nachname</label
@@ -21,13 +29,30 @@
             <div class="relative w-full">
               <input
                 id="name"
-                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="
+                  form-input
+                  placeholder-gray-300
+                  pl-10
+                  w-full
+                  border-opacity-75
+                  focus:shadow-teal
+                "
                 type="text"
                 name="name"
                 placeholder="Max Müller"
               />
               <span
-                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+                class="
+                  absolute
+                  flex
+                  h-10
+                  items-center
+                  justify-center
+                  left-0
+                  text-gray-300
+                  top-0
+                  w-10
+                "
               >
                 <svg
                   aria-hidden="true"
@@ -61,13 +86,30 @@
             <div class="relative w-full">
               <input
                 id="mail"
-                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="
+                  form-input
+                  placeholder-gray-300
+                  pl-10
+                  w-full
+                  border-opacity-75
+                  focus:shadow-teal
+                "
                 type="email"
                 name="email"
                 placeholder="max@mustermann.de"
               />
               <span
-                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+                class="
+                  absolute
+                  flex
+                  h-10
+                  items-center
+                  justify-center
+                  left-0
+                  text-gray-300
+                  top-0
+                  w-10
+                "
               >
                 <svg
                   aria-hidden="true"
@@ -101,13 +143,30 @@
             <div class="relative w-full">
               <input
                 id="website"
-                class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+                class="
+                  form-input
+                  placeholder-gray-300
+                  pl-10
+                  w-full
+                  border-opacity-75
+                  focus:shadow-teal
+                "
                 type="text"
                 name="website"
                 placeholder="maxmustermann.de"
               />
               <span
-                class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+                class="
+                  absolute
+                  flex
+                  h-10
+                  items-center
+                  justify-center
+                  left-0
+                  text-gray-300
+                  top-0
+                  w-10
+                "
               >
                 <svg
                   aria-hidden="true"
@@ -141,7 +200,13 @@
             <textarea
               id="message"
               rows="4"
-              class="form-textarea placeholder-gray-300 w-full border-opacity-75 focus:shadow-teal"
+              class="
+                form-textarea
+                placeholder-gray-300
+                w-full
+                border-opacity-75
+                focus:shadow-teal
+              "
               name="message"
               placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."
             ></textarea>
@@ -159,7 +224,17 @@
                 <input
                   id="dataprotection"
                   type="checkbox"
-                  class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-3 w-5 h-5 cursor-pointer"
+                  class="
+                    form-checkbox
+                    text-teal-600
+                    focus:shadow-teal
+                    border-opacity-75
+                    ml-0
+                    mr-3
+                    w-5
+                    h-5
+                    cursor-pointer
+                  "
                   name="dataprotection"
                   required
                 />

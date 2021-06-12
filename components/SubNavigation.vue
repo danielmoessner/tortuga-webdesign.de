@@ -3,7 +3,15 @@
     <div class="container">
       <div class="flex items-center h-12 md:h-16">
         <h1
-          class="text-gray-800 md:text-black font-medium text-lg md:text-xl leading-tight tracking-tight"
+          class="
+            text-gray-800
+            md:text-black
+            font-medium
+            text-lg
+            md:text-xl
+            leading-tight
+            tracking-tight
+          "
         >
           {{ text }}
         </h1>

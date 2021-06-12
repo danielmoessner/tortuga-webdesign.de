@@ -15,13 +15,30 @@
           <div class="relative">
             <input
               id="firstname"
-              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="
+                form-input
+                placeholder-gray-300
+                pl-10
+                w-full
+                border-opacity-75
+                focus:shadow-teal
+              "
               type="text"
               name="firstname"
               placeholder="Max / Susi"
             />
             <span
-              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+              class="
+                absolute
+                flex
+                h-10
+                items-center
+                justify-center
+                left-0
+                text-gray-300
+                top-0
+                w-10
+              "
             >
               <svg
                 aria-hidden="true"
@@ -47,13 +64,30 @@
           <div class="relative">
             <input
               id="lastname"
-              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="
+                form-input
+                placeholder-gray-300
+                pl-10
+                w-full
+                border-opacity-75
+                focus:shadow-teal
+              "
               type="text"
               name="lastname"
               placeholder="Müller"
             />
             <span
-              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+              class="
+                absolute
+                flex
+                h-10
+                items-center
+                justify-center
+                left-0
+                text-gray-300
+                top-0
+                w-10
+              "
             >
               <svg
                 aria-hidden="true"
@@ -79,13 +113,30 @@
           <div class="relative">
             <input
               id="mail"
-              class="form-input placeholder-gray-300 pl-10 w-full border-opacity-75 focus:shadow-teal"
+              class="
+                form-input
+                placeholder-gray-300
+                pl-10
+                w-full
+                border-opacity-75
+                focus:shadow-teal
+              "
               type="email"
               name="email"
               placeholder="mueller@mail.de"
             />
             <span
-              class="absolute flex h-10 items-center justify-center left-0 text-gray-300 top-0 w-10"
+              class="
+                absolute
+                flex
+                h-10
+                items-center
+                justify-center
+                left-0
+                text-gray-300
+                top-0
+                w-10
+              "
             >
               <svg
                 aria-hidden="true"
@@ -113,7 +164,17 @@
               <input
                 id="dataprotection"
                 type="checkbox"
-                class="form-checkbox text-teal-600 focus:shadow-teal border-opacity-75 ml-0 mr-2 w-5 h-5 cursor-pointer"
+                class="
+                  form-checkbox
+                  text-teal-600
+                  focus:shadow-teal
+                  border-opacity-75
+                  ml-0
+                  mr-2
+                  w-5
+                  h-5
+                  cursor-pointer
+                "
                 name="dataprotection"
                 required
               />

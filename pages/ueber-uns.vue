@@ -16,19 +16,45 @@
           <div class="col-span-7 md:col-span-4">
             <div
               v-aos
-              class="before-enter uppercase font-light text-sm md:text-base text-white tracking-wider leading-tight"
+              class="
+                before-enter
+                uppercase
+                font-light
+                text-sm
+                md:text-base
+                text-white
+                tracking-wider
+                leading-tight
+              "
             >
               <span>{{ page.about.pretitle }}</span>
             </div>
             <h2
               v-aos
-              class="before-enter delay-100 text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
+              class="
+                before-enter
+                delay-100
+                text-3xl
+                md:text-4xl
+                text-white
+                font-bold
+                tracking-tight
+                leading-tight
+                mb-2
+              "
             >
               {{ page.about.title }}
             </h2>
             <p
               v-aos
-              class="before-enter delay-200 text-base md:text-lg text-gray-300 mb-10"
+              class="
+                before-enter
+                delay-200
+                text-base
+                md:text-lg
+                text-gray-300
+                mb-10
+              "
             >
               {{ page.about.subtitle }}
             </p>
@@ -43,7 +69,13 @@
             <div class="w-4/5 md:w-full mx-auto">
               <img
                 v-aos
-                class="before-enter rounded-full border-4 bg-white border-sunshine-500"
+                class="
+                  before-enter
+                  rounded-full
+                  border-4
+                  bg-white
+                  border-sunshine-500
+                "
                 :src="require(`@/content/media/${page.about.image}?sqlib`)"
                 alt="Daniel Mössner"
               />

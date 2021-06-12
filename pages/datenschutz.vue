@@ -12,7 +12,15 @@
     <!---->
     <section class="relative bg-white">
       <div
-        class="px-4 py-10 max-w-3xl mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
+        class="
+          px-4
+          py-10
+          max-w-3xl
+          mx-auto
+          sm:px-6 sm:py-12
+          lg:max-w-4xl lg:py-16 lg:px-8
+          xl:max-w-5xl
+        "
       >
         <article
           class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"

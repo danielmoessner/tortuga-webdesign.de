@@ -9,7 +9,14 @@
       }"
     >
       <div
-        class="bg-gradient-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800 divide-y"
+        class="
+          bg-gradient-to-tr
+          from-teal-800
+          md:from-transparent md:to-transparent md:via-transparent
+          to-sunshine-400
+          via-teal-800
+          divide-y
+        "
       >
         <div class="container">
           <div class="grid md:grid-cols-2 divide-y md:divide-y-0">
@@ -21,7 +28,15 @@
             >
               <h2
                 v-aos
-                class="before-enter font-bold leading-tight tracking-tight text-gray-100 text-4xl md:text-5xl mb-1"
+                class="
+                  before-enter
+                  font-bold
+                  leading-tight
+                  tracking-tight
+                  text-gray-100 text-4xl
+                  md:text-5xl
+                  mb-1
+                "
                 :class="
                   index == 0 ? '' : index == 1 ? 'delay-200' : 'delay-400'
                 "
@@ -30,7 +45,16 @@
               </h2>
               <p
                 v-aos
-                class="before-enter text-xl delay-75 md:text-2xl text-gray-100 font-light tracking-wide mb-10"
+                class="
+                  before-enter
+                  text-xl
+                  delay-75
+                  md:text-2xl
+                  text-gray-100
+                  font-light
+                  tracking-wide
+                  mb-10
+                "
                 :class="
                   index == 0
                     ? 'delay-50'
@@ -64,7 +88,14 @@
       <div class="container">
         <div class="xl:flex xl:items-center xl:justify-between">
           <h2
-            class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+            class="
+              text-3xl
+              leading-9
+              font-extrabold
+              tracking-tight
+              text-gray-900
+              sm:text-4xl sm:leading-10
+            "
           >
             <span v-aos class="before-enter block">{{
               page.stakes.title
@@ -101,19 +132,45 @@
         <div class="max-w-3xl">
           <span
             v-aos
-            class="before-enter block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            class="
+              before-enter
+              block
+              text-gray-200 text-sm
+              md:text-base
+              font-light
+              uppercase
+              tracking-wider
+              leading-tight
+            "
           >
             {{ page.value.pretitle }}
           </span>
           <h2
             v-aos
-            class="before-enter delay-100 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            class="
+              before-enter
+              delay-100
+              text-3xl
+              sm:text-4xl
+              md:text-5xl
+              font-bold
+              leading-tight
+              text-gray-200
+              mb-6
+              lg:mb-4
+            "
           >
             {{ page.value.title }}
           </h2>
           <p
             v-aos
-            class="before-enter delay-150 text-gray-200 text-base md:text-lg max-w-xl"
+            class="
+              before-enter
+              delay-150
+              text-gray-200 text-base
+              md:text-lg
+              max-w-xl
+            "
           >
             {{ page.value.subtitle }}
           </p>
@@ -130,7 +187,16 @@
           >
             <div class="flex-col">
               <h3
-                class="text-gray-200 text-xl font-bold flex items-end mb-1 md:mb-6 relative z-10"
+                class="
+                  text-gray-200 text-xl
+                  font-bold
+                  flex
+                  items-end
+                  mb-1
+                  md:mb-6
+                  relative
+                  z-10
+                "
               >
                 {{ proposition.title }}
               </h3>
@@ -142,12 +208,27 @@
         </div>
         <div class="grid-cols-3 gap-8 hidden lg:grid">
           <div
-            class="font-bold text-5xl xl:text-6xl text-teal-800 leading-none mt-8"
+            class="
+              font-bold
+              text-5xl
+              xl:text-6xl
+              text-teal-800
+              leading-none
+              mt-8
+            "
           >
             {{ page.value.bottomLeft }}
           </div>
           <div
-            class="font-bold text-5xl xl:text-6xl text-teal-800 leading-none mt-8 col-span-2"
+            class="
+              font-bold
+              text-5xl
+              xl:text-6xl
+              text-teal-800
+              leading-none
+              mt-8
+              col-span-2
+            "
           >
             {{ page.value.bottomRight }}
           </div>
@@ -162,13 +243,30 @@
       <div class="container">
         <h2
           v-aos
-          class="before-enter text-2xl md:text-4xl tracking-tight font-bold mb-8 leading-tight"
+          class="
+            before-enter
+            text-2xl
+            md:text-4xl
+            tracking-tight
+            font-bold
+            mb-8
+            leading-tight
+          "
         >
           {{ page.guide.title }}
         </h2>
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
@@ -179,84 +277,217 @@
                 require('@/assets/logos/thecornerhouse.opt.negate.png')
               "
               alt="The Corner House Logo"
-              class="w-auto h-full max-h-full delay-100 lazyload blur-up before-enter"
+              class="
+                w-auto
+                h-full
+                max-h-full
+                delay-100
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/francopioli.opt.png?lqip')"
               :data-src="require('@/assets/logos/francopioli.opt.png')"
               alt="Franco Pioli Logo"
-              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-200 lazyload blur-up before-enter"
+              class="
+                w-full
+                h-auto
+                sm:h-full sm:w-auto
+                xl:w-full xl:h-auto
+                max-h-full
+                delay-200
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/susannesoelch.opt.png?lqip')"
               :data-src="require('@/assets/logos/susannesoelch.opt.png')"
               alt="Susanne Sölch Logo"
-              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-300 lazyload blur-up before-enter"
+              class="
+                w-full
+                h-auto
+                sm:h-full sm:w-auto
+                xl:w-full xl:h-auto
+                max-h-full
+                delay-300
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/kues.opt.png?lqip')"
               :data-src="require('@/assets/logos/kues.opt.png')"
               alt="Küs Logo"
-              class="w-auto h-full max-h-full delay-400 lazyload blur-up before-enter"
+              class="
+                w-auto
+                h-full
+                max-h-full
+                delay-400
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/sn-trockenbau.opt.png?lqip')"
               :data-src="require('@/assets/logos/sn-trockenbau.opt.png')"
               alt="SN Trockenbau Logo"
-              class="w-auto h-full max-h-full delay-500 lazyload blur-up before-enter"
+              class="
+                w-auto
+                h-full
+                max-h-full
+                delay-500
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/schaetz.opt.negate.png?lqip')"
               :data-src="require('@/assets/logos/schaetz.opt.negate.png')"
               alt="Schätz Logo"
-              class="w-auto h-full max-h-full delay-600 lazyload blur-up before-enter"
+              class="
+                w-auto
+                h-full
+                max-h-full
+                delay-600
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/rabe-sport.opt.png?lqip')"
               :data-src="require('@/assets/logos/rabe-sport.opt.png')"
               alt="Rabe Sport Logo"
-              class="w-full h-auto sm:h-full sm:w-auto xl:w-full xl:h-auto max-h-full delay-700 lazyload blur-up before-enter"
+              class="
+                w-full
+                h-auto
+                sm:h-full sm:w-auto
+                xl:w-full xl:h-auto
+                max-h-full
+                delay-700
+                lazyload
+                blur-up
+                before-enter
+              "
             />
           </div>
           <div
-            class="items-center justify-center flex p-4 md:p-8 h-16 md:h-24 lg:h-32 lg:p-10"
+            class="
+              items-center
+              justify-center
+              flex
+              p-4
+              md:p-8
+              h-16
+              md:h-24
+              lg:h-32 lg:p-10
+            "
           >
             <img
               v-aos
               :src="require('@/assets/logos/qc.opt.png?lqip')"
               :data-src="require('@/assets/logos/qc.opt.png')"
               alt="QC Quality Control Logo"
-              class="w-auto h-full max-w-full max-h-full delay-800 lazyload blur-up before-enter"
+              class="
+                w-auto
+                h-full
+                max-w-full max-h-full
+                delay-800
+                lazyload
+                blur-up
+                before-enter
+              "
               width="200"
             />
           </div>
@@ -286,13 +517,33 @@
         <div class="max-w-xl">
           <span
             v-aos
-            class="before-enter block text-gray-200 text-sm md:text-base font-light uppercase tracking-wider leading-tight"
+            class="
+              before-enter
+              block
+              text-gray-200 text-sm
+              md:text-base
+              font-light
+              uppercase
+              tracking-wider
+              leading-tight
+            "
           >
             {{ page.plan.pretitle }}
           </span>
           <h2
             v-aos
-            class="before-enter delay-100 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-200 mb-6 lg:mb-4"
+            class="
+              before-enter
+              delay-100
+              text-3xl
+              md:text-4xl
+              lg:text-5xl
+              font-bold
+              leading-tight
+              text-gray-200
+              mb-6
+              lg:mb-4
+            "
           >
             {{ page.plan.title }}
           </h2>
@@ -307,7 +558,16 @@
           <div class="">
             <div v-aos class="before-enter flex">
               <div
-                class="font-bold text-6xl text-sunshine-200 leading-none mr-6 flex items-start relative flex-col"
+                class="
+                  font-bold
+                  text-6xl text-sunshine-200
+                  leading-none
+                  mr-6
+                  flex
+                  items-start
+                  relative
+                  flex-col
+                "
               >
                 1.
                 <div class="tracking-wide text-sm text-sunshine-200">
@@ -316,7 +576,14 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-200 text-xl md:text-2xl font-bold flex items-end mb-2"
+                  class="
+                    text-gray-200 text-xl
+                    md:text-2xl
+                    font-bold
+                    flex
+                    items-end
+                    mb-2
+                  "
                 >
                   {{ page.plan.steps[0].title }}
                 </h3>
@@ -329,7 +596,16 @@
           <div>
             <div v-aos class="before-enter flex delay-150">
               <div
-                class="font-bold text-6xl text-sunshine-300 leading-none mr-6 flex items-start relative flex-col"
+                class="
+                  font-bold
+                  text-6xl text-sunshine-300
+                  leading-none
+                  mr-6
+                  flex
+                  items-start
+                  relative
+                  flex-col
+                "
               >
                 2.
                 <div class="tracking-wide text-sm text-sunshine-300">
@@ -338,7 +614,14 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-200 text-xl md:text-2xl font-bold flex items-end mb-2"
+                  class="
+                    text-gray-200 text-xl
+                    md:text-2xl
+                    font-bold
+                    flex
+                    items-end
+                    mb-2
+                  "
                 >
                   {{ page.plan.steps[1].title }}
                 </h3>
@@ -351,7 +634,16 @@
           <div class="">
             <div v-aos class="before-enter delay-300 flex">
               <div
-                class="font-bold text-6xl text-sunshine-400 leading-none mr-6 flex items-start relative flex-col"
+                class="
+                  font-bold
+                  text-6xl text-sunshine-400
+                  leading-none
+                  mr-6
+                  flex
+                  items-start
+                  relative
+                  flex-col
+                "
               >
                 3.
                 <div class="font-bold text-sm text-sunshine-400 tracking-wide">
@@ -360,7 +652,14 @@
               </div>
               <div>
                 <h3
-                  class="text-gray-200 text-xl md:text-2xl font-bold flex items-end mb-2"
+                  class="
+                    text-gray-200 text-xl
+                    md:text-2xl
+                    font-bold
+                    flex
+                    items-end
+                    mb-2
+                  "
                 >
                   {{ page.plan.steps[2].title }}
                 </h3>
@@ -380,13 +679,30 @@
           <div class="max-w-2xl text-center flex-col flex items-center">
             <h2
               v-aos
-              class="before-enter text-3xl md:text-4xl font-extrabold tracking-tight mb-4 leading-tight"
+              class="
+                before-enter
+                text-3xl
+                md:text-4xl
+                font-extrabold
+                tracking-tight
+                mb-4
+                leading-tight
+              "
             >
               {{ page.leadGeneratorAd.title }}
             </h2>
             <p
               v-aos
-              class="before-enter delay-150 text-sm sm:text-base md:text-lg leading-tight max-w-xl mb-12"
+              class="
+                before-enter
+                delay-150
+                text-sm
+                sm:text-base
+                md:text-lg
+                leading-tight
+                max-w-xl
+                mb-12
+              "
               v-html="page.leadGeneratorAd.htmlText"
             ></p>
             <div class="flex flex-wrap justify-center">

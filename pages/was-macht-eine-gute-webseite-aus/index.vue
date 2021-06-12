@@ -17,13 +17,27 @@
           <div class="text-center max-w-2xl flex flex-col items-center">
             <h2
               v-aos
-              class="before-enter font-bold text-gray-100 text-2xl md:text-3xl mb-3 leading-tight"
+              class="
+                before-enter
+                font-bold
+                text-gray-100 text-2xl
+                md:text-3xl
+                mb-3
+                leading-tight
+              "
             >
               {{ page.stakes.title }}
             </h2>
             <p
               v-aos
-              class="before-enter delay-100 text-base md:text-lg text-gray-100 max-w-lg"
+              class="
+                before-enter
+                delay-100
+                text-base
+                md:text-lg
+                text-gray-100
+                max-w-lg
+              "
             >
               {{ page.stakes.subtitle }}
             </p>
@@ -57,7 +71,15 @@
           <div class="lg:col-span-2">
             <div
               v-aos
-              class="before-enter delay-100 bg-sunshine-200 px-2 py-3 md:px-8 md:py-5 rounded-lg"
+              class="
+                before-enter
+                delay-100
+                bg-sunshine-200
+                px-2
+                py-3
+                md:px-8 md:py-5
+                rounded-lg
+              "
             >
               <LeadGeneratorForm :download="page.form"
                 ><TealButton :submit="true" :text="page.form.button"
