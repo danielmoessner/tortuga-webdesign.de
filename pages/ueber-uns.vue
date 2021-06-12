@@ -67,7 +67,7 @@
           </div>
           <div class="col-span-7 md:col-span-2 md:col-start-6 row-start-1">
             <div class="w-4/5 md:w-full mx-auto">
-              <img
+              <nuxt-img
                 v-aos
                 class="
                   before-enter
@@ -76,7 +76,8 @@
                   bg-white
                   border-sunshine-500
                 "
-                :src="require(`@/content/media/${page.about.image}?sqlib`)"
+                :src="`media/${page.about.image}`"
+                sizes="lg:800px"
                 alt="Daniel Mössner"
               />
             </div>

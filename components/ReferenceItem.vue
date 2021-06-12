@@ -54,13 +54,11 @@
               style="will-change: transform"
               :style="{ transform: showcaseImageTransform }"
             >
-              <img
-                :src="require(`@/content/media/${portfolioItem.image}?lqip`)"
-                :data-src="
-                  require(`@/content/media/${portfolioItem.image}?resize&size=400`)
-                "
+              <nuxt-img
+                :src="`media/${portfolioItem.image}`"
+                sizes="lg:860px"
                 :alt="portfolioItem.title"
-                class="lazyload block w-full blur-up"
+                class="block w-full"
               />
             </div>
           </div>

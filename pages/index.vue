@@ -268,24 +268,11 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="
-                require('@/assets/logos/thecornerhouse.opt.negate.png?lqip')
-              "
-              :data-src="
-                require('@/assets/logos/thecornerhouse.opt.negate.png')
-              "
+              src="logos/thecornerhouse.opt.negate.png"
               alt="The Corner House Logo"
-              class="
-                w-auto
-                h-full
-                max-h-full
-                delay-100
-                lazyload
-                blur-up
-                before-enter
-              "
+              class="w-auto h-full max-h-full delay-100 before-enter"
             />
           </div>
           <div
@@ -300,20 +287,17 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/francopioli.opt.png?lqip')"
-              :data-src="require('@/assets/logos/francopioli.opt.png')"
+              src="logos/francopioli.opt.png"
               alt="Franco Pioli Logo"
               class="
                 w-full
                 h-auto
                 sm:h-full sm:w-auto
-                xl:w-full xl:h-auto
+                xl:h-auto
                 max-h-full
                 delay-200
-                lazyload
-                blur-up
                 before-enter
               "
             />
@@ -330,20 +314,17 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/susannesoelch.opt.png?lqip')"
-              :data-src="require('@/assets/logos/susannesoelch.opt.png')"
+              src="logos/susannesoelch.opt.png"
               alt="Susanne Sölch Logo"
               class="
                 w-full
                 h-auto
                 sm:h-full sm:w-auto
-                xl:w-full xl:h-auto
+                xl:h-auto
                 max-h-full
                 delay-300
-                lazyload
-                blur-up
                 before-enter
               "
             />
@@ -360,20 +341,11 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/kues.opt.png?lqip')"
-              :data-src="require('@/assets/logos/kues.opt.png')"
+              src="logos/kues.opt.png"
               alt="Küs Logo"
-              class="
-                w-auto
-                h-full
-                max-h-full
-                delay-400
-                lazyload
-                blur-up
-                before-enter
-              "
+              class="w-auto h-full max-h-full delay-400 before-enter"
             />
           </div>
           <div
@@ -388,20 +360,11 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/sn-trockenbau.opt.png?lqip')"
-              :data-src="require('@/assets/logos/sn-trockenbau.opt.png')"
+              src="logos/sn-trockenbau.opt.png"
               alt="SN Trockenbau Logo"
-              class="
-                w-auto
-                h-full
-                max-h-full
-                delay-500
-                lazyload
-                blur-up
-                before-enter
-              "
+              class="w-auto h-full max-h-full delay-500 before-enter"
             />
           </div>
           <div
@@ -416,20 +379,11 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/schaetz.opt.negate.png?lqip')"
-              :data-src="require('@/assets/logos/schaetz.opt.negate.png')"
+              src="logos/schaetz.opt.negate.png"
               alt="Schätz Logo"
-              class="
-                w-auto
-                h-full
-                max-h-full
-                delay-600
-                lazyload
-                blur-up
-                before-enter
-              "
+              class="w-auto h-full max-h-full delay-600 before-enter"
             />
           </div>
           <div
@@ -444,10 +398,9 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/rabe-sport.opt.png?lqip')"
-              :data-src="require('@/assets/logos/rabe-sport.opt.png')"
+              src="logos/rabe-sport.opt.png"
               alt="Rabe Sport Logo"
               class="
                 w-full
@@ -456,8 +409,6 @@
                 xl:w-full xl:h-auto
                 max-h-full
                 delay-700
-                lazyload
-                blur-up
                 before-enter
               "
             />
@@ -474,20 +425,11 @@
               lg:h-32 lg:p-10
             "
           >
-            <img
+            <nuxt-img
               v-aos
-              :src="require('@/assets/logos/qc.opt.png?lqip')"
-              :data-src="require('@/assets/logos/qc.opt.png')"
+              src="logos/qc.opt.png"
               alt="QC Quality Control Logo"
-              class="
-                w-auto
-                h-full
-                max-w-full max-h-full
-                delay-800
-                lazyload
-                blur-up
-                before-enter
-              "
+              class="w-auto h-full max-w-full max-h-full delay-800 before-enter"
               width="200"
             />
           </div>

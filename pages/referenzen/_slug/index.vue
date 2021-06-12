@@ -48,12 +48,10 @@
           <div class="col-span-1 lg:col-span-2">
             <div class="border-4 border-teal-700 shadow-lg rounded-lg">
               <div class="bg-teal-700 rounded overflow-hidden">
-                <img
-                  class="blur-up lazyload w-full"
-                  :src="require(`@/content/media/${item.image}?lqip`)"
-                  :data-src="
-                    require(`@/content/media/${item.image}?resize&size=1000`)
-                  "
+                <nuxt-img
+                  class="w-full"
+                  :src="`media/${item.image}`"
+                  sizes="lg:2000px"
                   :alt="item.title"
                 />
               </div>

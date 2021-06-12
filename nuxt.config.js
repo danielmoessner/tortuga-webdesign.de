@@ -27,28 +27,15 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: "~/plugins/lazysizes.client.js" },
-    { src: "@/directives/animateonscroll.js", mode: "client" },
-  ],
+  plugins: [{ src: "@/directives/animateonscroll.js", mode: "client" }],
   /*
    ** Nuxt.js build-modules
    */
-  buildModules: [
-    "@nuxtjs/gtm",
-    "@aceforth/nuxt-optimized-images",
-    "@nuxtjs/tailwindcss",
-  ],
+  buildModules: ["@nuxtjs/gtm", "@nuxtjs/tailwindcss", "@nuxt/image"],
   /*
    ** Nuxt.js modules
    */
   modules: ["@nuxt/content"],
-  /*
-   ** Nuxt Optimized Images Config
-   */
-  optimizedImages: {
-    optimizeImages: true,
-  },
   /*
    ** Google Tag Manager Config
    */
@@ -60,31 +47,5 @@ export default {
    */
   build: {
     extractCSS: false,
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, { isDev, isClient, loaders: { vue } }) {
-      if (isClient) {
-        vue.transformAssetUrls.img = ["data-src", "src"];
-        vue.transformAssetUrls.source = ["data-srcset", "srcset"];
-      }
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue|ts)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/,
-        });
-      }
-      config.module.rules.unshift({
-        test: /\.(jpe?g|png|webp)$/i,
-        use: {
-          loader: "responsive-loader",
-          options: {
-            adapter: require("responsive-loader/sharp"),
-          },
-        },
-      });
-    },
   },
 };
