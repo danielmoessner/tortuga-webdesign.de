@@ -6,10 +6,10 @@
       class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
       :style="{ width: width + 'px', top: top + 'px' }"
     >
-      <div
+      <img
         class="w-4/5 pt-10 md:pt-0 mx-auto md:w-full"
-        v-html="require(`@/assets/svg/${svgName}.svg?include`)"
-      ></div>
+        :src="require(`@/assets/svg/${svgName}.svg?include`)"
+      />
     </div>
     <div class="container relative z-10">
       <div class="">

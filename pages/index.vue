@@ -5,7 +5,7 @@
       class="bg-teal-800 bg-no-repeat bg-center"
       style="background-size: 1600px auto"
       :style="{
-        'background-image': 'url(\'data:image/svg+xml;utf8,' + bgSvg + '\')',
+        'background-image': `url(${svgUrl})`,
       }"
     >
       <div
@@ -716,6 +716,7 @@ export default {
       return require("@/assets/svg/index.svg?include");
     },
     bgSvg() {
+      console.log(this.svgUrl);
       return this.svgUrl.split("#").join("%23").replace("\n", "");
     },
   },
