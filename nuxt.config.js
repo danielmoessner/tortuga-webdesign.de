@@ -27,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "@/directives/animateonscroll.js", mode: "client" }],
+  plugins: [],
   /*
    ** Nuxt.js build-modules
    */

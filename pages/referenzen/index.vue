@@ -45,18 +45,9 @@
               :key="index"
               class="portfolio--item"
             >
-              <ReferenceItem
-                v-aos
-                class="before-enter"
-                :class="
-                  index % 3 == 0
-                    ? ''
-                    : (index - 1) % 3 == 0
-                    ? 'delay-100'
-                    : 'delay-200'
-                "
-                :portfolio-item="item"
-              />
+              <AnimateOnScroll :delay="index % 3">
+                <ReferenceItem :portfolio-item="item" />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -79,10 +70,12 @@ import NewFooter from "@/components/NewFooter.vue";
 import ReferenceItem from "@/components/ReferenceItem.vue";
 import MetaTags from "@/mixins/MetaTags.js";
 import SvgHeader from "@/components/SvgHeader.vue";
+import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 export default {
   components: {
     SvgHeader,
+    AnimateOnScroll,
     ReferenceItem,
     NewFooter,
     SubNavigation,

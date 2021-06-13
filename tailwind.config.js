@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./components/**/*.vue", "./layouts/**/*.vue", "./pages/**/*.vue"],
-  mode: "jit",
+  // mode: "jit",
   theme: {
     extend: {
       transitionDelay: {

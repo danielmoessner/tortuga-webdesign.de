@@ -26,58 +26,37 @@
               class="py-16 pr-8"
               :class="{ 'md:pl-8': index % 2 === 1 }"
             >
-              <h2
-                v-aos
-                class="
-                  before-enter
-                  font-bold
-                  leading-tight
-                  tracking-tight
-                  text-gray-100 text-4xl
-                  md:text-5xl
-                  mb-1
-                "
-                :class="
-                  index == 0 ? '' : index == 1 ? 'delay-200' : 'delay-400'
-                "
-              >
-                {{ object.title }}
-              </h2>
-              <p
-                v-aos
-                class="
-                  before-enter
-                  text-xl
-                  delay-75
-                  md:text-2xl
-                  text-gray-100
-                  font-light
-                  tracking-wide
-                  mb-10
-                "
-                :class="
-                  index == 0
-                    ? 'delay-50'
-                    : index == 1
-                    ? 'delay-250'
-                    : 'delay-450'
-                "
-              >
-                {{ object.subtitle }}
-              </p>
-              <GrayButton
-                v-aos
-                :text="object.buttonText"
-                :to="object.buttonLink"
-                class="before-enter"
-                :class="
-                  index == 0
-                    ? 'delay-100'
-                    : index == 1
-                    ? 'delay-300'
-                    : 'delay-500'
-                "
-              />
+              <AnimateOnScroll :delay="index">
+                <h2
+                  class="
+                    font-bold
+                    leading-tight
+                    tracking-tight
+                    text-gray-100 text-4xl
+                    md:text-5xl
+                    mb-1
+                  "
+                >
+                  {{ object.title }}
+                </h2>
+              </AnimateOnScroll>
+              <AnimateOnScroll :delay="index + 1">
+                <p
+                  class="
+                    text-xl
+                    md:text-2xl
+                    text-gray-100
+                    font-light
+                    tracking-wide
+                    mb-10
+                  "
+                >
+                  {{ object.subtitle }}
+                </p>
+              </AnimateOnScroll>
+              <AnimateOnScroll :delay="index + 2">
+                <GrayButton :text="object.buttonText" :to="object.buttonLink" />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -97,27 +76,29 @@
               sm:text-4xl sm:leading-10
             "
           >
-            <span v-aos class="before-enter block">{{
-              page.stakes.title
-            }}</span>
-            <span v-aos class="before-enter text-teal-700 delay-150 block">{{
-              page.stakes.subtitle
-            }}</span>
+            <AnimateOnScroll>
+              <span class="block">
+                {{ page.stakes.title }}
+              </span>
+            </AnimateOnScroll>
+            <AnimateOnScroll :delay="1">
+              <span class="text-teal-700 block">
+                {{ page.stakes.subtitle }}
+              </span>
+            </AnimateOnScroll>
           </h2>
           <div class="mt-8 flex lg:flex-shrink-0 xl:mt-0">
             <div class="flex flex-wrap">
-              <GrayButton
-                v-aos
-                class="before-enter mb-2 delay-50"
-                href="#was-bringt-eine-webseite"
-                :text="page.stakes.button"
-              />
-              <TealButton
-                v-aos
-                class="before-enter delay-200"
-                text="Jetzt zusammenarbeiten"
-                to="/kontakt/"
-              />
+              <AnimateOnScroll :delay="1">
+                <GrayButton
+                  class="mb-2 delay-50"
+                  href="#was-bringt-eine-webseite"
+                  :text="page.stakes.button"
+                />
+              </AnimateOnScroll>
+              <AnimateOnScroll :delay="2">
+                <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -130,81 +111,71 @@
     >
       <div class="container">
         <div class="max-w-3xl">
-          <span
-            v-aos
-            class="
-              before-enter
-              block
-              text-gray-200 text-sm
-              md:text-base
-              font-light
-              uppercase
-              tracking-wider
-              leading-tight
-            "
-          >
-            {{ page.value.pretitle }}
-          </span>
-          <h2
-            v-aos
-            class="
-              before-enter
-              delay-100
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              font-bold
-              leading-tight
-              text-gray-200
-              mb-6
-              lg:mb-4
-            "
-          >
-            {{ page.value.title }}
-          </h2>
-          <p
-            v-aos
-            class="
-              before-enter
-              delay-150
-              text-gray-200 text-base
-              md:text-lg
-              max-w-xl
-            "
-          >
-            {{ page.value.subtitle }}
-          </p>
+          <AnimateOnScroll>
+            <span
+              class="
+                block
+                text-gray-200 text-sm
+                md:text-base
+                font-light
+                uppercase
+                tracking-wider
+                leading-tight
+              "
+            >
+              {{ page.value.pretitle }}
+            </span>
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="1">
+            <h2
+              class="
+                text-3xl
+                sm:text-4xl
+                md:text-5xl
+                font-bold
+                leading-tight
+                text-gray-200
+                mb-6
+                lg:mb-4
+              "
+            >
+              {{ page.value.title }}
+            </h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="2">
+            <p class="delay-150 text-gray-200 text-base md:text-lg max-w-xl">
+              {{ page.value.subtitle }}
+            </p>
+          </AnimateOnScroll>
         </div>
         <div class="grid md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-8 mt-24">
-          <div
+          <AnimateOnScroll
             v-for="(proposition, index) in page.value.propositions"
             :key="index"
-            v-aos
-            class="before-enter"
-            :class="
-              index == 0 ? 'delay-350' : index == 1 ? 'delay-500' : 'delay-650'
-            "
+            :delay="index + 1"
           >
-            <div class="flex-col">
-              <h3
-                class="
-                  text-gray-200 text-xl
-                  font-bold
-                  flex
-                  items-end
-                  mb-1
-                  md:mb-6
-                  relative
-                  z-10
-                "
-              >
-                {{ proposition.title }}
-              </h3>
-              <p class="text-base md:text-lg text-gray-200">
-                {{ proposition.text }}
-              </p>
+            <div class="">
+              <div class="flex-col">
+                <h3
+                  class="
+                    text-gray-200 text-xl
+                    font-bold
+                    flex
+                    items-end
+                    mb-1
+                    md:mb-6
+                    relative
+                    z-10
+                  "
+                >
+                  {{ proposition.title }}
+                </h3>
+                <p class="text-base md:text-lg text-gray-200">
+                  {{ proposition.text }}
+                </p>
+              </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
         <div class="grid-cols-3 gap-8 hidden lg:grid">
           <div
@@ -241,212 +212,53 @@
       class="pt-24 pb-32 md:pt-40 md:pb-48 bg-gray-100"
     >
       <div class="container">
-        <h2
-          v-aos
-          class="
-            before-enter
-            text-2xl
-            md:text-4xl
-            tracking-tight
-            font-bold
-            mb-8
-            leading-tight
-          "
-        >
-          {{ page.guide.title }}
-        </h2>
+        <AnimateOnScroll>
+          <h2
+            class="
+              text-2xl
+              md:text-4xl
+              tracking-tight
+              font-bold
+              mb-8
+              leading-tight
+            "
+          >
+            {{ page.guide.title }}
+          </h2>
+        </AnimateOnScroll>
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
-          <div
+          <AnimateOnScroll
+            v-for="(customer, index) in page.guide.customers"
+            :key="customer.name"
+            :delay="index"
             class="
               items-center
               justify-center
               flex
               p-4
-              md:p-8
               h-16
-              md:h-24
+              md:h-24 md:p-8
               lg:h-32 lg:p-10
             "
           >
             <nuxt-img
-              v-aos
-              src="logos/thecornerhouse.opt.negate.png"
-              alt="The Corner House Logo"
-              class="w-auto h-full max-h-full delay-100 before-enter"
+              :src="customer.image"
+              :alt="customer.name"
+              class="max-h-full max-w-full delay-100"
             />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/francopioli.opt.png"
-              alt="Franco Pioli Logo"
-              class="
-                w-full
-                h-auto
-                sm:h-full sm:w-auto
-                xl:h-auto
-                max-h-full
-                delay-200
-                before-enter
-              "
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/susannesoelch.opt.png"
-              alt="Susanne Sölch Logo"
-              class="
-                w-full
-                h-auto
-                sm:h-full sm:w-auto
-                xl:h-auto
-                max-h-full
-                delay-300
-                before-enter
-              "
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/kues.opt.png"
-              alt="Küs Logo"
-              class="w-auto h-full max-h-full delay-400 before-enter"
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/sn-trockenbau.opt.png"
-              alt="SN Trockenbau Logo"
-              class="w-auto h-full max-h-full delay-500 before-enter"
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/schaetz.opt.negate.png"
-              alt="Schätz Logo"
-              class="w-auto h-full max-h-full delay-600 before-enter"
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/rabe-sport.opt.png"
-              alt="Rabe Sport Logo"
-              class="
-                w-full
-                h-auto
-                sm:h-full sm:w-auto
-                xl:w-full xl:h-auto
-                max-h-full
-                delay-700
-                before-enter
-              "
-            />
-          </div>
-          <div
-            class="
-              items-center
-              justify-center
-              flex
-              p-4
-              md:p-8
-              h-16
-              md:h-24
-              lg:h-32 lg:p-10
-            "
-          >
-            <nuxt-img
-              v-aos
-              src="logos/qc.opt.png"
-              alt="QC Quality Control Logo"
-              class="w-auto h-full max-w-full max-h-full delay-800 before-enter"
-              width="200"
-            />
-          </div>
+          </AnimateOnScroll>
         </div>
         <div class="flex flex-wrap">
-          <TealButton
-            v-aos
-            text="Jetzt zusammenarbeiten"
-            to="/kontakt/"
-            class="mb-2 delay-200 before-enter"
-          />
-          <GrayButton
-            v-aos
-            class="before-enter delay-350"
-            :text="page.guide.button"
-            to="/referenzen/"
-          />
+          <AnimateOnScroll :delay="2">
+            <TealButton
+              text="Jetzt zusammenarbeiten"
+              to="/kontakt/"
+              class="mb-2"
+            />
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="3">
+            <GrayButton class="" :text="page.guide.button" to="/referenzen/" />
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
@@ -457,159 +269,165 @@
     >
       <div class="container">
         <div class="max-w-xl">
-          <span
-            v-aos
-            class="
-              before-enter
-              block
-              text-gray-200 text-sm
-              md:text-base
-              font-light
-              uppercase
-              tracking-wider
-              leading-tight
-            "
-          >
-            {{ page.plan.pretitle }}
-          </span>
-          <h2
-            v-aos
-            class="
-              before-enter
-              delay-100
-              text-3xl
-              md:text-4xl
-              lg:text-5xl
-              font-bold
-              leading-tight
-              text-gray-200
-              mb-6
-              lg:mb-4
-            "
-          >
-            {{ page.plan.title }}
-          </h2>
-          <p
-            v-aos
-            class="before-enter delay-250 text-gray-200 text-base md:text-lg"
-          >
-            {{ page.plan.subtitle }}
-          </p>
+          <AnimateOnScroll>
+            <span
+              class="
+                block
+                text-gray-200 text-sm
+                md:text-base
+                font-light
+                uppercase
+                tracking-wider
+                leading-tight
+              "
+            >
+              {{ page.plan.pretitle }}
+            </span>
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="1">
+            <h2
+              class="
+                text-3xl
+                md:text-4xl
+                lg:text-5xl
+                font-bold
+                leading-tight
+                text-gray-200
+                mb-6
+                lg:mb-4
+              "
+            >
+              {{ page.plan.title }}
+            </h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="2">
+            <p class="text-gray-200 text-base md:text-lg">
+              {{ page.plan.subtitle }}
+            </p>
+          </AnimateOnScroll>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
           <div class="">
-            <div v-aos class="before-enter flex">
-              <div
-                class="
-                  font-bold
-                  text-6xl text-sunshine-200
-                  leading-none
-                  mr-6
-                  flex
-                  items-start
-                  relative
-                  flex-col
-                "
-              >
-                1.
-                <div class="tracking-wide text-sm text-sunshine-200">
-                  Schritt
-                </div>
-              </div>
-              <div>
-                <h3
+            <AnimateOnScroll>
+              <div class="flex">
+                <div
                   class="
-                    text-gray-200 text-xl
-                    md:text-2xl
                     font-bold
+                    text-6xl text-sunshine-200
+                    leading-none
+                    mr-6
                     flex
-                    items-end
-                    mb-2
+                    items-start
+                    relative
+                    flex-col
                   "
                 >
-                  {{ page.plan.steps[0].title }}
-                </h3>
-                <p class="text-base md:text-lg text-gray-200">
-                  {{ page.plan.steps[0].text }}
-                </p>
+                  1.
+                  <div class="tracking-wide text-sm text-sunshine-200">
+                    Schritt
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="
+                      text-gray-200 text-xl
+                      md:text-2xl
+                      font-bold
+                      flex
+                      items-end
+                      mb-2
+                    "
+                  >
+                    {{ page.plan.steps[0].title }}
+                  </h3>
+                  <p class="text-base md:text-lg text-gray-200">
+                    {{ page.plan.steps[0].text }}
+                  </p>
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </div>
           <div>
-            <div v-aos class="before-enter flex delay-150">
-              <div
-                class="
-                  font-bold
-                  text-6xl text-sunshine-300
-                  leading-none
-                  mr-6
-                  flex
-                  items-start
-                  relative
-                  flex-col
-                "
-              >
-                2.
-                <div class="tracking-wide text-sm text-sunshine-300">
-                  Schritt
-                </div>
-              </div>
-              <div>
-                <h3
+            <AnimateOnScroll :delay="1">
+              <div class="flex">
+                <div
                   class="
-                    text-gray-200 text-xl
-                    md:text-2xl
                     font-bold
+                    text-6xl text-sunshine-300
+                    leading-none
+                    mr-6
                     flex
-                    items-end
-                    mb-2
+                    items-start
+                    relative
+                    flex-col
                   "
                 >
-                  {{ page.plan.steps[1].title }}
-                </h3>
-                <p class="text-base md:text-lg text-gray-200">
-                  {{ page.plan.steps[1].text }}
-                </p>
+                  2.
+                  <div class="tracking-wide text-sm text-sunshine-300">
+                    Schritt
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="
+                      text-gray-200 text-xl
+                      md:text-2xl
+                      font-bold
+                      flex
+                      items-end
+                      mb-2
+                    "
+                  >
+                    {{ page.plan.steps[1].title }}
+                  </h3>
+                  <p class="text-base md:text-lg text-gray-200">
+                    {{ page.plan.steps[1].text }}
+                  </p>
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </div>
           <div class="">
-            <div v-aos class="before-enter delay-300 flex">
-              <div
-                class="
-                  font-bold
-                  text-6xl text-sunshine-400
-                  leading-none
-                  mr-6
-                  flex
-                  items-start
-                  relative
-                  flex-col
-                "
-              >
-                3.
-                <div class="font-bold text-sm text-sunshine-400 tracking-wide">
-                  Schritt
-                </div>
-              </div>
-              <div>
-                <h3
+            <AnimateOnScroll :delay="2">
+              <div class="flex">
+                <div
                   class="
-                    text-gray-200 text-xl
-                    md:text-2xl
                     font-bold
+                    text-6xl text-sunshine-400
+                    leading-none
+                    mr-6
                     flex
-                    items-end
-                    mb-2
+                    items-start
+                    relative
+                    flex-col
                   "
                 >
-                  {{ page.plan.steps[2].title }}
-                </h3>
-                <p class="text-base md:text-lg text-gray-200">
-                  {{ page.plan.steps[2].text }}
-                </p>
+                  3.
+                  <div
+                    class="font-bold text-sm text-sunshine-400 tracking-wide"
+                  >
+                    Schritt
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="
+                      text-gray-200 text-xl
+                      md:text-2xl
+                      font-bold
+                      flex
+                      items-end
+                      mb-2
+                    "
+                  >
+                    {{ page.plan.steps[2].title }}
+                  </h3>
+                  <p class="text-base md:text-lg text-gray-200">
+                    {{ page.plan.steps[2].text }}
+                  </p>
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </div>
@@ -619,47 +437,47 @@
       <div class="container">
         <div class="flex items-center justify-center flex-col">
           <div class="max-w-2xl text-center flex-col flex items-center">
-            <h2
-              v-aos
-              class="
-                before-enter
-                text-3xl
-                md:text-4xl
-                font-extrabold
-                tracking-tight
-                mb-4
-                leading-tight
-              "
-            >
-              {{ page.leadGeneratorAd.title }}
-            </h2>
-            <p
-              v-aos
-              class="
-                before-enter
-                delay-150
-                text-sm
-                sm:text-base
-                md:text-lg
-                leading-tight
-                max-w-xl
-                mb-12
-              "
-              v-html="page.leadGeneratorAd.htmlText"
-            ></p>
+            <AnimateOnScroll>
+              <h2
+                class="
+                  text-3xl
+                  md:text-4xl
+                  font-extrabold
+                  tracking-tight
+                  mb-4
+                  leading-tight
+                "
+              >
+                {{ page.leadGeneratorAd.title }}
+              </h2>
+            </AnimateOnScroll>
+            <AnimateOnScroll :delay="1">
+              <p
+                class="
+                  text-sm
+                  sm:text-base
+                  md:text-lg
+                  leading-tight
+                  max-w-xl
+                  mb-12
+                "
+                v-html="page.leadGeneratorAd.htmlText"
+              ></p>
+            </AnimateOnScroll>
             <div class="flex flex-wrap justify-center">
-              <TealButton
-                v-aos
-                text="Jetzt zusammenarbeiten"
-                to="/kontakt/"
-                class="mb-2 delay-300 before-enter"
-              />
-              <SunshineButton
-                v-aos
-                class="before-enter delay-100"
-                :text="page.leadGeneratorAd.button"
-                to="/was-macht-eine-gute-webseite-aus/"
-              />
+              <AnimateOnScroll>
+                <TealButton
+                  text="Jetzt zusammenarbeiten"
+                  to="/kontakt/"
+                  class="mb-2 delay-300"
+                />
+              </AnimateOnScroll>
+              <AnimateOnScroll :delay="1">
+                <SunshineButton
+                  :text="page.leadGeneratorAd.button"
+                  to="/was-macht-eine-gute-webseite-aus/"
+                />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -682,9 +500,11 @@ import GrayButton from "@/components/GrayButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
 import MetaTags from "@/mixins/MetaTags.js";
+import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 export default {
   components: {
+    AnimateOnScroll,
     SunshineButton,
     TealButton,
     GrayButton,

@@ -53,7 +53,41 @@
   },
   "guide": {
     "title": "Wir bleiben langfristig an Ihrer Seite, überzeugen Sie sich selbst:",
-    "button": "Zu allen Referenzen"
+    "button": "Zu allen Referenzen",
+    "customers": [
+      {
+        "name": "The Corner House",
+        "image": "/media/thecornerhouse.opt.negate.png"
+      },
+      {
+        "image": "/media/francopioli.opt.png",
+        "name": "Franco Pioli"
+      },
+      {
+        "name": "Clever und entspannt lernen",
+        "image": "/media/susannesoelch.opt.png"
+      },
+      {
+        "name": " KÜS Gutachter - Sefa Sahin",
+        "image": "/media/kues.opt.png"
+      },
+      {
+        "name": "SN Trockenbau",
+        "image": "/media/sn-trockenbau.opt.png"
+      },
+      {
+        "name": "Schätz GmbH",
+        "image": "/media/schaetz.opt.png"
+      },
+      {
+        "image": "/media/rabe-sport.opt.png",
+        "name": "Rabe Sport"
+      },
+      {
+        "image": "/media/qc.opt.png",
+        "name": "QC Quality Control GmbH"
+      }
+    ]
   },
   "description": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
   "header": [

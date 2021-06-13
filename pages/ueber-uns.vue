@@ -14,72 +14,57 @@
       <div class="container">
         <div class="grid grid-cols-7 gap-12">
           <div class="col-span-7 md:col-span-4">
-            <div
-              v-aos
-              class="
-                before-enter
-                uppercase
-                font-light
-                text-sm
-                md:text-base
-                text-white
-                tracking-wider
-                leading-tight
-              "
-            >
-              <span>{{ page.about.pretitle }}</span>
-            </div>
-            <h2
-              v-aos
-              class="
-                before-enter
-                delay-100
-                text-3xl
-                md:text-4xl
-                text-white
-                font-bold
-                tracking-tight
-                leading-tight
-                mb-2
-              "
-            >
-              {{ page.about.title }}
-            </h2>
-            <p
-              v-aos
-              class="
-                before-enter
-                delay-200
-                text-base
-                md:text-lg
-                text-gray-300
-                mb-10
-              "
-            >
-              {{ page.about.subtitle }}
-            </p>
-            <p
-              v-aos
-              class="before-enter delay-300 text-base md:text-lg text-gray-100"
-            >
-              {{ page.about.text }}
-            </p>
+            <AnimateOnScroll>
+              <div
+                class="
+                  uppercase
+                  font-light
+                  text-sm
+                  md:text-base
+                  text-white
+                  tracking-wider
+                  leading-tight
+                "
+              >
+                <span>{{ page.about.pretitle }}</span>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll :delay="1">
+              <h2
+                class="
+                  text-3xl
+                  md:text-4xl
+                  text-white
+                  font-bold
+                  tracking-tight
+                  leading-tight
+                  mb-2
+                "
+              >
+                {{ page.about.title }}
+              </h2>
+            </AnimateOnScroll>
+            <AnimateOnScroll :delay="2">
+              <p class="text-base md:text-lg text-gray-300 mb-10">
+                {{ page.about.subtitle }}
+              </p>
+            </AnimateOnScroll>
+            <AnimateOnScroll :delay="3">
+              <p class="delay-300 text-base md:text-lg text-gray-100">
+                {{ page.about.text }}
+              </p>
+            </AnimateOnScroll>
           </div>
           <div class="col-span-7 md:col-span-2 md:col-start-6 row-start-1">
             <div class="w-4/5 md:w-full mx-auto">
-              <nuxt-img
-                v-aos
-                class="
-                  before-enter
-                  rounded-full
-                  border-4
-                  bg-white
-                  border-sunshine-500
-                "
-                :src="`media/${page.about.image}`"
-                sizes="lg:800px"
-                alt="Daniel Mössner"
-              />
+              <AnimateOnScroll>
+                <nuxt-img
+                  class="rounded-full border-4 bg-white border-sunshine-500"
+                  :src="`media/${page.about.image}`"
+                  sizes="lg:800px"
+                  alt="Daniel Mössner"
+                />
+              </AnimateOnScroll>
             </div>
           </div>
         </div>
@@ -89,27 +74,33 @@
     <section class="pt-20 md:pt-32 pb-20 md:pb-40 bg-gray-100">
       <div class="container">
         <div class="flex flex-col items-center mb-10 md:mb-20">
-          <div v-aos class="before-enter max-w-xl">
-            <h2 class="text-2xl md:text-3xl font-bold text-center">
-              {{ page.faq.title }}
-            </h2>
-          </div>
-          <div v-aos class="before-enter delay-100 max-w-xl">
-            <div class="text-base md:text-lg text-gray-800">
-              {{ page.faq.subtitle }}
+          <AnimateOnScroll>
+            <div class="max-w-xl">
+              <h2 class="text-2xl md:text-3xl font-bold text-center">
+                {{ page.faq.title }}
+              </h2>
             </div>
-          </div>
+          </AnimateOnScroll>
+          <AnimateOnScroll :delay="1">
+            <div class="max-w-xl">
+              <div class="text-base md:text-lg text-gray-800">
+                {{ page.faq.subtitle }}
+              </div>
+            </div>
+          </AnimateOnScroll>
         </div>
         <div class="">
           <div class="">
-            <BaseFaq
+            <AnimateOnScroll
               v-for="(item, index) in page.faq.questions"
               :key="index"
-              v-aos
-              class="before-enter"
-              :question="item.question"
-              :answer="item.answer"
-            />
+            >
+              <BaseFaq
+                class=""
+                :question="item.question"
+                :answer="item.answer"
+              />
+            </AnimateOnScroll>
           </div>
         </div>
       </div>
@@ -131,9 +122,11 @@ import NewFooter from "@/components/NewFooter.vue";
 import BaseFaq from "@/components/BaseFaq.vue";
 import MetaTags from "@/mixins/MetaTags.js";
 import SvgHeader from "@/components/SvgHeader.vue";
+import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 export default {
   components: {
+    AnimateOnScroll,
     SvgHeader,
     BaseFaq,
     NewFooter,
