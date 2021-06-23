@@ -1,0 +1,14 @@
+{
+  "date": "2021-05-26T13:22:57.202Z",
+  "title": "VfR Garching Trainingsdatenbank",
+  "slug": "vfr-garching-trainingsdatenbank",
+  "url": "",
+  "image": "/media/trainingvfr.png",
+  "active": true,
+  "description": "Der beste bekannte Trainingsgenerator steht ab sofort allen Jugendtrainern des VfR Garching zur Verfügung. Sie arbeiten in einem Fußballverrein und das Thema ist auch für Sie interessant? Dann setzen Sie sich mit dem Jugendleiter des VfR Garchings in Verbindung. Mittlerweile sind mehr als 150 Übungen in dem Generator eingepflegt.",
+  "tags": [
+    "Django",
+    "CMS",
+    "Tailwind CSS"
+  ]
+}

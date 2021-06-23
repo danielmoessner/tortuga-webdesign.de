@@ -4,6 +4,9 @@ export default {
   format: "json",
   folder: "content/portfolio",
   create: true,
+  editor: {
+    preview: false,
+  },
   identifier_field: "title",
   slug: "{{fields.slug}}",
   fields: [
@@ -15,7 +18,8 @@ export default {
       label: "Image",
       name: "image",
       widget: "image",
-      hint: "Preferably 1500 pixels wide and jpg format.",
+      hint:
+        "Je größer, desto besser. Das Bild wird von der Webseite automatisch optimiert. JPG und PNG wird bevorzugt.",
     },
     { label: "Active", name: "active", widget: "boolean", required: false },
     {

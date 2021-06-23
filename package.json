@@ -14,6 +14,7 @@
     "update": "npx npm-check-updates -u --timeout 60000 && npm install"
   },
   "dependencies": {
+    "@heroicons/vue": "^1.0.1",
     "@nuxt/content": "^1.14.0",
     "@nuxt/image": "^0.4.14",
     "@nuxtjs/gtm": "^2.4.0",

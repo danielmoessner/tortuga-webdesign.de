@@ -10,18 +10,7 @@
       >
         <nuxt-link :to="detailPage" @click.native="mouseleave">
           <div
-            class="
-              absolute
-              top-0
-              group-hover:opacity-100
-              opacity-0
-              transition
-              ease-in-out
-              duration-150
-              z-20
-              pl-1
-              pt-1
-            "
+            class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-20 pl-1 pt-1"
           >
             <span
               class="bg-gray-800 text-white rounded p-1 text-xs mr-1 mb-1"
@@ -55,7 +44,7 @@
               :style="{ transform: showcaseImageTransform }"
             >
               <nuxt-img
-                :src="`media/${portfolioItem.image}`"
+                :src="portfolioItem.image"
                 sizes="lg:860px"
                 :alt="portfolioItem.title"
                 class="block w-full"

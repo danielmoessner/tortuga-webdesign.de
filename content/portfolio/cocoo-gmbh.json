@@ -1,0 +1,13 @@
+{
+  "date": "2021-06-23T13:33:05.383Z",
+  "title": "CoCOO GmbH",
+  "slug": "cocoo-gmbh",
+  "url": "https://cocoo.de",
+  "image": "/media/cocoo-de.png",
+  "description": "Die CoCOO GmbH unterstützt Sie mit lehrreichen Seminaren und Coachings auf Ihrem Weg zur Digitalisierung. Schauen Sie auf jeden Fall dort vorbei, wenn Sie mehr über agile Methoden erfahren wollen.",
+  "tags": [
+    "Django",
+    "Tailwind CSS",
+    "CMS"
+  ]
+}

@@ -13,23 +13,7 @@
           <button
             type="button"
             aria-label="Menü Button"
-            class="
-              md:hidden
-              inline-flex
-              border border-transparent
-              hover:border-gray-200
-              items-center
-              justify-center
-              p-2
-              rounded-md
-              text-teal-800
-              bg-gray-200
-              hover:text-teal-800
-              focus:outline-none
-              transition
-              duration-150
-              ease-in-out
-            "
+            class="md:hidden inline-flex border border-transparent hover:border-gray-200 items-center justify-center p-2 rounded-md text-teal-800 bg-gray-200 hover:text-teal-800 focus:outline-none transition duration-150 ease-in-out"
             @click="showNav = !showNav"
           >
             <svg
@@ -65,27 +49,7 @@
           </button>
         </div>
         <div
-          class="
-            text-white
-            border border-gray-200 border-t-0
-            md:border-0
-            rounded-t-none
-            w-full
-            md:block md:static
-            absolute
-            transform
-            md:p-0
-            translate-y-full
-            md:transform-none md:bg-transparent md:w-auto md:shadow-none
-            right-0
-            bottom-0
-            bg-sunshine-100
-            z-50
-            px-6
-            py-6
-            rounded-lg
-            shadow-lg
-          "
+          class="text-white border border-gray-200 border-t-0 md:border-0 rounded-t-none w-full md:block md:static absolute transform md:p-0 translate-y-full md:transform-none md:bg-transparent md:w-auto md:shadow-none right-0 bottom-0 bg-sunshine-100 z-50 px-6 py-6 rounded-lg shadow-lg"
           :class="{ hidden: !showNav }"
         >
           <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">

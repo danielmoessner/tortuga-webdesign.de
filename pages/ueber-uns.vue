@@ -16,30 +16,14 @@
           <div class="col-span-7 md:col-span-4">
             <AnimateOnScroll>
               <div
-                class="
-                  uppercase
-                  font-light
-                  text-sm
-                  md:text-base
-                  text-white
-                  tracking-wider
-                  leading-tight
-                "
+                class="uppercase font-light text-sm md:text-base text-white tracking-wider leading-tight"
               >
                 <span>{{ page.about.pretitle }}</span>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <h2
-                class="
-                  text-3xl
-                  md:text-4xl
-                  text-white
-                  font-bold
-                  tracking-tight
-                  leading-tight
-                  mb-2
-                "
+                class="text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight mb-2"
               >
                 {{ page.about.title }}
               </h2>

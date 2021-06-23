@@ -24,14 +24,7 @@
               <a
                 v-if="item.url"
                 target="_blank"
-                class="
-                  underline
-                  transition
-                  ease-in-out
-                  duration-150
-                  text-gray-900
-                  hover:text-gray-700
-                "
+                class="underline transition ease-in-out duration-150 text-gray-900 hover:text-gray-700"
                 :href="item.url"
               >
                 {{ itemUrlClean }}
@@ -50,7 +43,7 @@
               <div class="bg-teal-700 rounded overflow-hidden">
                 <nuxt-img
                   class="w-full"
-                  :src="`media/${item.image}`"
+                  :src="item.image"
                   sizes="lg:2000px"
                   :alt="item.title"
                 />
