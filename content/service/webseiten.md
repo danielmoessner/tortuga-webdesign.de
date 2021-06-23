@@ -65,10 +65,14 @@ Auf der Suche nach einem passenden Handwerker informieren sich viele Kunden zun�
 * SEO Optimierung
 * 100% Zielführung
 
+## Preise
+
+[Klicken Sie hier](/preise/) für unser Leistungsspektrum und unsere Webseitenpreise.
+
 ## NEU: KOSTENLOSE BERATUNG DIREKT BEI IHNEN VOR ORT
 
-Schreiben Sie uns kurz eine Mail und wir setzen uns direkt mit Ihnen in Verbindung:  
+Schreiben Sie uns kurz eine Mail und wir setzen uns direkt mit Ihnen in Verbindung:\
 [kontakt@tortuga-webdesign.de](mailto:kontakt@tortuga-webdesign.de?subject=Webseite)  
 
-oder rufen Sie uns direkt an:  
+oder rufen Sie uns direkt an:\
 Daniel Mössner - [0176 3838 5646](tel:004917638385646)

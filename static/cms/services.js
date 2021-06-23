@@ -1,5 +1,6 @@
 export default {
-  label: "Service",
+  label: "Leistungen",
+  label_singular: "Leistung",
   name: "service",
   folder: "content/service",
   create: true,
