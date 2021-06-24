@@ -7,9 +7,7 @@ import packages from "../cms/packages.js";
 
 export default {
   backend: {
-    name: "github",
-    branch: "master",
-    repo: "danielmoessner/tortuga-webdesign.de",
+    name: "git-gateway",
   },
   local_backend: true,
   media_folder: "/static/media",
