@@ -21,7 +21,7 @@ Oft ist die erste mögliche Lösungen komplizierter als es sein muss. Im Austaus
 
 Mit uns können Sie sich darauf verlassen, dass wir Sie langfristig unterstützen und dafür sorgen, dass Ihr Programm auch in 10 Jahren noch funktioniert. Wir verwenden nur ausgereifte Technologien, sodass es zu keinen Überraschungen kommt. 
 
-Außerdem ist alles programmiertechnisch mögliche, dass Sie sich vorstellen, umsetzbar.
+Zudem setzen uns die eingesetzten Technologien keine Grenzen, wodurch alles möglich ist.
 
 ## KOSTENLOSE BERATUNG DIREKT BEI IHNEN VOR ORT
 
