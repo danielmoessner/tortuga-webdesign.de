@@ -7,7 +7,7 @@ import packages from "../cms/packages.js";
 
 export default {
   backend: {
-    name: "git-gateway",
+    name: "github",
     branch: "master",
     repo: "danielmoessner/tortuga-webdesign.de",
   },
