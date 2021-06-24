@@ -6,7 +6,11 @@ import pages from "../cms/pages/index.js";
 import packages from "../cms/packages.js";
 
 export default {
-  backend: { name: "git-gateway", branch: "master" },
+  backend: {
+    name: "git-gateway",
+    branch: "master",
+    repo: "danielmoessner/tortuga-webdesign.de",
+  },
   local_backend: true,
   media_folder: "/static/media",
   public_folder: "",
