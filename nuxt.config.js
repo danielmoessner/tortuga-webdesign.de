@@ -31,7 +31,7 @@ export default {
   /*
    ** Nuxt.js build-modules
    */
-  buildModules: ["@nuxtjs/gtm", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  buildModules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
   /*
    ** Nuxt.js modules
    */
