@@ -49,4 +49,6 @@ definePageMeta({ layout: "new" });
 const { data: page } = await useAsyncData("thanks", () =>
   queryContent("/page/contact").findOne(),
 );
+
+useMeta(page);
 </script>

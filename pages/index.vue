@@ -337,7 +337,6 @@ import NewFooter from "@/components/NewFooter.vue";
 import GrayButton from "@/components/GrayButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
-// import MetaTags from "@/mixins/MetaTags.js";
 import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 import svgUrl from "@/assets/svg/index.svg";
 
@@ -347,38 +346,14 @@ const { data: page } = await useAsyncData("home", () =>
   queryContent("/page/home").findOne(),
 );
 
-// export default defineNuxtComponent({
-//   components: {
-//     AnimateOnScroll,
-//     SunshineButton,
-//     TealButton,
-//     GrayButton,
-//     NewFooter,
-//   },
-//   mixins: [MetaTags],
-// layout: "new",
-// async asyncData() {
-//   return {
-//     page: await queryContent("/page/home").findOne(),
-//   };
-// },
-// data() {
-//   return {
-// headData: {
-//   script: [
-//     {
-//       src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
-//       async: true,
-//     },
-//   ],
-// },
-//     };
-//   },
-//   computed: {
-//     svgUrl() {
-//       return svg;
-//       // return require("@/assets/svg/index.svg?data");
-//     },
-//   },
-// });
+useMeta(page);
+
+useHead({
+  script: [
+    {
+      src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
+      async: true,
+    },
+  ],
+});
 </script>

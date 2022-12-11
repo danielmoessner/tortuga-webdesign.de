@@ -56,4 +56,6 @@ definePageMeta({ layout: "new" });
 const { data: page } = await useAsyncData("page", () =>
   queryContent("/page/leadgenerator").findOne(),
 );
+
+useMeta(page);
 </script>

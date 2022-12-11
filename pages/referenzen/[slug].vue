@@ -77,7 +77,7 @@ definePageMeta({ layout: "new" });
 const { params, path } = useRoute();
 
 const { data: item } = await useAsyncData(`portfolio-${path}`, () =>
-  queryContent(`/portfolio/${params.slug[0]}`).findOne(),
+  queryContent(`/portfolio/${params.slug}`).findOne(),
 );
 
 if (!item.value?.title) {
@@ -85,6 +85,8 @@ if (!item.value?.title) {
     statusCode: 404,
   });
 }
+
+useMeta(item);
 
 const months = [
   "Jan",

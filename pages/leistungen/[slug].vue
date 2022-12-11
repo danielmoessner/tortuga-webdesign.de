@@ -52,6 +52,8 @@ if (!item.value?.title) {
   });
 }
 
+useMeta(item);
+
 const title = computed(() => {
   return `${item.value?.title} - ${item.value?.subtitle}`;
 });

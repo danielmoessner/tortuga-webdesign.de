@@ -9,5 +9,6 @@
     "Django",
     "Tailwind CSS",
     "CMS"
-  ]
+  ],
+  "active": false
 }

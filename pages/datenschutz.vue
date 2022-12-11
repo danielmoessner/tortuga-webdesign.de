@@ -43,4 +43,6 @@ definePageMeta({ layout: "new" });
 const { data: page } = await useAsyncData("dataProtection", () =>
   queryContent("/page/dataprotection").findOne(),
 );
+
+useMeta(page);
 </script>

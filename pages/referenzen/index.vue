@@ -64,6 +64,8 @@ const { data: page } = await useAsyncData("page", () =>
   queryContent("/page/portfolio").findOne(),
 );
 
+useMeta(page);
+
 const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
   queryContent("portfolio").where({ active: true }).sort({ date: 1 }).find(),
 );

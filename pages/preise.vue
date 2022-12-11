@@ -98,6 +98,8 @@ const { data: page } = await useAsyncData("prices", () =>
   queryContent("/page/prices").findOne(),
 );
 
+useMeta(page);
+
 const { data: packages } = await useAsyncData("packages", () =>
   queryContent("/packages").find(),
 );

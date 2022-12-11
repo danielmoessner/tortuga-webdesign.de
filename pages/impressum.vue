@@ -43,4 +43,6 @@ definePageMeta({ layout: "new" });
 const { data: page } = await useAsyncData("imprint", () =>
   queryContent("/page/imprint").findOne(),
 );
+
+useMeta(page);
 </script>
