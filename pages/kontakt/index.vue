@@ -12,7 +12,7 @@
       <AnimateOnScroll :delay="2">
         <TealButton
           text="Anfrage per Mail stellen"
-          href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
+          to="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
           class="mb-1"
         />
       </AnimateOnScroll>
@@ -43,7 +43,7 @@
               <p class="text-base text-gray-200 md:text-lg">Daniel Mössner</p>
               <a
                 class="text-base text-gray-200 underline transition ease-in-out md:text-lg hover:text-gray-100 active:text-white"
-                href="tel:004917638385646"
+                to="tel:004917638385646"
               >
                 0176 38385646
               </a>

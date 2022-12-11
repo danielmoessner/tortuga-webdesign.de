@@ -1,0 +1,14 @@
+{
+  "date": "2022-07-29T13:17:48.250Z",
+  "title": "Blue Star Marketing",
+  "slug": "blue-star-marketing",
+  "url": "bluestarmarketing.de",
+  "image": "/media/bluestarmarketing.opt.png",
+  "active": true,
+  "description": "kommt demnächst...",
+  "tags": [
+    "NextJS",
+    "CMS",
+    "Mehrsprachig"
+  ]
+}

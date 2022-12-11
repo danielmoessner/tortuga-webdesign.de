@@ -14,8 +14,8 @@ export default {
   local_backend: true,
   display_url: "https://tortuga-webdesign.de",
   site_url: "https://tortuga-webdesign.de",
-  media_folder: "/static/media",
-  public_folder: "",
+  media_folder: "/public/media",
+  public_folder: "/media",
   load_config_file: false,
   collections: [articles, tags, references, packages, services, pages],
 };

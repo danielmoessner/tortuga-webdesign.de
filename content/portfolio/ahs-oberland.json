@@ -1,0 +1,13 @@
+{
+  "date": "2021-11-16T14:22:06.047Z",
+  "title": "AHS Oberland",
+  "slug": "ahs-oberland",
+  "url": "",
+  "image": "/media/ahs-oberland.opt.png",
+  "active": true,
+  "description": "Mittlerweile wurde AHS Oberland erfolgreich aufgekauft und die Webseite ist in der Form nicht mehr live.",
+  "tags": [
+    "NextJS",
+    "CMS"
+  ]
+}

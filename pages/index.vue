@@ -64,7 +64,7 @@
               <AnimateOnScroll :delay="1">
                 <GrayButton
                   class="mb-2 delay-50"
-                  href="#was-bringt-eine-webseite"
+                  to="#was-bringt-eine-webseite"
                   :text="page?.stakes.button"
                 />
               </AnimateOnScroll>

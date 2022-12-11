@@ -18,36 +18,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
 import TriangleSvg from "@/components/TriangleSvg.vue";
-import JustA from "@/components/JustA.vue";
 import JustButton from "@/components/JustButton.vue";
 
-export default {
-  name: "TealButton",
-  components: {
-    JustA,
-    JustButton,
-    TriangleSvg,
+const props = defineProps({
+  to: {
+    type: String,
+    default: "#",
   },
-  props: {
-    to: {
-      type: String,
-      default: "#",
-    },
-    text: {
-      type: String,
-      default: "Click me",
-    },
-    submit: {
-      type: Boolean,
-      default: false,
-    },
+  text: {
+    type: String,
+    default: "Click me",
   },
-  computed: {
-    which() {
-      return this.submit ? "just-button" : "nuxt-link";
-    },
+  submit: {
+    type: Boolean,
+    default: false,
   },
-};
+});
+
+const { submit } = toRefs(props);
+
+const which = computed(() => {
+  return submit.value ? JustButton : resolveComponent("NuxtLink");
+});
 </script>
