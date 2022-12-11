@@ -1,5 +1,5 @@
 <template>
-  <div class="article card is-hoverable border-radius-6 overflow-hidden">
+  <div class="overflow-hidden article card is-hoverable border-radius-6">
     <nuxt-link :to="articleLink" class="article--hover">
       <div class="card-image">
         <figure class="is-5by3 image">
@@ -10,7 +10,7 @@
     <div class="article--bottom card-content">
       <div class="mb-18">
         <nuxt-link :to="articleLink" class="has-text-black-ter">
-          <h2 class="title is-3 mb-10">{{ article.title }}</h2>
+          <h2 class="mb-10 title is-3">{{ article.title }}</h2>
         </nuxt-link>
         <nuxt-link :to="articleLink" class="has-text-black-ter">
           {{ article.description }}
@@ -21,7 +21,7 @@
       </div>
       <div class="media">
         <div class="media-left">
-          <figure class="border-radius-full overflow-hidden is-48x48 image">
+          <figure class="overflow-hidden border-radius-full is-48x48 image">
             <img :src="article.author.image" alt="Author Bild" />
           </figure>
         </div>
@@ -79,7 +79,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .border-radius-6 {
   border-radius: 6px;
 }

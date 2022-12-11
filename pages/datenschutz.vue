@@ -1,31 +1,23 @@
 <template>
   <main class="">
-    <SubNavigation :text="page.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
     <!--  -->
     <SvgHeader
       top="-30"
       width="1000"
       svg-name="rechtliches"
-      :title="page.header.title"
-      :subtitle="page.header.subtitle"
+      :title="page?.header.title"
+      :subtitle="page?.header.subtitle"
     />
     <!---->
     <section class="relative bg-white">
       <div
-        class="
-          px-4
-          py-10
-          max-w-3xl
-          mx-auto
-          sm:px-6 sm:py-12
-          lg:max-w-4xl lg:py-16 lg:px-8
-          xl:max-w-5xl
-        "
+        class="max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
       >
         <article
-          class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
+          class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
         >
-          <nuxt-content :document="page"></nuxt-content>
+          <ContentRenderer v-if="page" :value="page"></ContentRenderer>
         </article>
       </div>
     </section>
@@ -40,26 +32,17 @@
     <!---->
   </main>
 </template>
-<script>
+
+<script setup lang="ts">
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import MetaTags from "@/mixins/MetaTags.js";
 import SvgHeader from "@/components/SvgHeader.vue";
 
-export default {
-  components: {
-    SvgHeader,
-    NewFooter,
-    SubNavigation,
-  },
-  mixins: [MetaTags],
-  layout: "new",
-  async asyncData({ $content }) {
-    const page = await $content("page/dataProtection").fetch();
+definePageMeta({ layout: "new" });
 
-    return {
-      page,
-    };
-  },
-};
+const { data: page } = await useAsyncData("dataProtection", () =>
+  queryContent("/page/dataprotection").findOne(),
+);
+
+useMeta(page);
 </script>

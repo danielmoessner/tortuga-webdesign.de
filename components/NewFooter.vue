@@ -1,18 +1,18 @@
 <template>
   <footer class="pt-20 pb-24 md:py-32" :class="bgColor">
     <div
-      class="container grid grid-cols-2 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5 gap-4"
+      class="container grid grid-cols-2 gap-4 md:grid-cols-3 gap-y-16 md:gap-y-20 lg:gap-y-4 lg:grid-cols-5"
     >
       <div class="col-span-2 md:col-span-3 lg:col-span-2">
-        <LogoSvg class="h-16 md:h-24 mb-10 max-w-full" :invert="invertLogo" />
+        <LogoSvg class="h-16 max-w-full mb-10 md:h-24" :invert="invertLogo" />
         <h2 class="sr-only">Tortuga Webdesign</h2>
-        <div class="text-sm sm:text-base md:text-lg pr-12" :class="textColor">
-          <p>{{ $store.getters.footer.text }}</p>
+        <div class="pr-12 text-sm sm:text-base md:text-lg" :class="textColor">
+          <p>{{ general?.footer.text }}</p>
         </div>
       </div>
       <div class="">
         <div>
-          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
             Navigation
           </h3>
           <ul class="">
@@ -68,11 +68,11 @@
       </div>
       <div class="">
         <div>
-          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
             Kontakt
           </h3>
-          <address class="text-sm md:text-base not-italic" :class="textColor">
-            <span class="text-sm md:text-base font-medium inline-block py-1"
+          <address class="text-sm not-italic md:text-base" :class="textColor">
+            <span class="inline-block py-1 text-sm font-medium md:text-base"
               >Daniel Mössner</span
             >
             <br />
@@ -98,7 +98,7 @@
       </div>
       <div class="col-start-2 md:col-start-auto">
         <div class="text-right">
-          <h3 class="text-lg md:text-xl font-semibold mb-2" :class="textColor">
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
             Rechtliches
           </h3>
           <ul>
@@ -126,37 +126,34 @@
     </div>
   </footer>
 </template>
-<script>
+<script setup lang="ts">
 import LogoSvg from "@/components/LogoSvg.vue";
 import FooterLink from "@/components/FooterLink.vue";
 
-export default {
-  name: "NewFooter",
-  components: {
-    LogoSvg,
-    FooterLink,
+const { data: general } = await useAsyncData("footer", () =>
+  queryContent("/page/general").findOne(),
+);
+
+defineProps({
+  textColor: {
+    type: String,
+    default: "text-gray-800",
   },
-  props: {
-    textColor: {
-      type: String,
-      default: "text-gray-800",
-    },
-    linkColor: {
-      type: String,
-      default: "text-teal-700",
-    },
-    bgColor: {
-      type: String,
-      default: "bg-sunshine-200",
-    },
-    hoverColor: {
-      type: String,
-      default: "text-teal-800",
-    },
-    invertLogo: {
-      type: Boolean,
-      default: false,
-    },
+  linkColor: {
+    type: String,
+    default: "text-teal-700",
   },
-};
+  bgColor: {
+    type: String,
+    default: "bg-sunshine-200",
+  },
+  hoverColor: {
+    type: String,
+    default: "text-teal-800",
+  },
+  invertLogo: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>

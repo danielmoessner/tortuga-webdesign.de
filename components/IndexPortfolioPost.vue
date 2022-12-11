@@ -5,29 +5,12 @@
         <div class="relative h-full">
           <BaseFrame class="h-full min-h-300">
             <div
-              class="
-                group
-                absolute
-                h-full
-                w-full
-                border-radius-3
-                overflow-hidden
-              "
+              class="absolute w-full h-full overflow-hidden  group border-radius-3"
               @mouseover="mouseover"
               @mouseleave="mouseleave"
             >
               <div
-                class="
-                  group-hover:visible
-                  invisible
-                  bg-dark-75
-                  absolute
-                  h-full
-                  w-full
-                  is-hidden-touch is-flex
-                  items-center
-                  justify-center
-                "
+                class="absolute items-center justify-center invisible w-full h-full  group-hover:visible bg-dark-75 is-hidden-touch is-flex"
                 :class="{ 'is-invisible': isScrollable }"
               >
                 <span class="has-text-centered has-text-white is-size-4"
@@ -44,7 +27,7 @@
                 <img
                   :data-src="work.image500"
                   :alt="work.title"
-                  class="is-block w-full lazyload"
+                  class="w-full is-block lazyload"
                 />
               </div>
             </div>
@@ -138,7 +121,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .w-full {
   width: 100%;
 }

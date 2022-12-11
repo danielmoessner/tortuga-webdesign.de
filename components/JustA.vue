@@ -1,5 +1,5 @@
 <template>
-  <a :href="href"><slot></slot></a>
+  <a :to="href"><slot></slot></a>
 </template>
 
 <script>

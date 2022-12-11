@@ -8,13 +8,6 @@
   </div>
 </template>
 
-<script>
-import TheError from "@/components/TheError";
-
-export default {
-  components: {
-    TheError,
-  },
-  layout: "empty",
-};
+<script setup lang="ts">
+import TheError from "@/components/TheError.vue";
 </script>

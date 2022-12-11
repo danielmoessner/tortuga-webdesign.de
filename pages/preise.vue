@@ -1,21 +1,21 @@
 <template>
   <main>
     <!---->
-    <SubNavigation :text="page.navigation.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.navigation.title" class="bg-sunshine-100" />
     <!---->
     <SvgHeader
       top="-165"
       width="900"
       svg-name="ueber-uns"
-      :title="page.header.title"
-      :subtitle="page.header.subtitle"
+      :title="page?.header.title"
+      :subtitle="page?.header.subtitle"
     />
     <!---->
-    <section class="pt-20 pb-40 bg-gray-50 relative">
+    <section class="relative pt-20 pb-40 bg-gray-50">
       <div class="container">
         <div class="sm:flex sm:flex-col sm:align-center">
           <p class="mt-5 text-xl text-gray-700 sm:text-center">
-            {{ page.content.text }}
+            {{ page?.content.text }}
           </p>
         </div>
         <div
@@ -24,10 +24,10 @@
           <div
             v-for="p in packages"
             :key="p.slug"
-            class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 bg-white"
+            class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg shadow-sm"
           >
             <div class="p-6">
-              <h2 class="text-lg leading-6 font-medium text-gray-900">
+              <h2 class="text-lg font-medium leading-6 text-gray-900">
                 {{ p.title }}
               </h2>
               <p class="mt-4 text-sm text-gray-500">
@@ -41,11 +41,11 @@
                 <span class="text-base font-medium text-gray-500">(Netto)</span>
               </p>
             </div>
-            <div class="pt-6 pb-8 px-6">
+            <div class="px-6 pt-6 pb-8">
               <h3
-                class="text-xs font-medium text-gray-900 tracking-wide uppercase"
+                class="text-xs font-medium tracking-wide text-gray-900 uppercase"
               >
-                {{ page.content.features }}
+                {{ page?.content.features }}
               </h3>
               <ul class="mt-6 space-y-4">
                 <li
@@ -55,7 +55,7 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="flex-shrink-0 h-5 w-5 text-green-500"
+                    class="flex-shrink-0 w-5 h-5 text-green-500"
                     aria-hidden="true"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -86,84 +86,21 @@
   </main>
 </template>
 
-<script>
+<script setup lang="ts">
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import MetaTags from "@/mixins/MetaTags.js";
 import SvgHeader from "@/components/SvgHeader.vue";
-import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
+// import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
-export default {
-  components: {
-    AnimateOnScroll,
-    SvgHeader,
-    NewFooter,
-    SubNavigation,
-  },
-  mixins: [MetaTags],
-  layout: "new",
-  async asyncData({ $content }) {
-    const page = await $content("page/prices").fetch();
-    const packages = await $content("packages").fetch();
+definePageMeta({ layout: "new" });
 
-    return {
-      page,
-      packages,
-    };
-  },
-  data() {
-    return {
-      tiers: [
-        {
-          name: "Hobby",
-          href: "#",
-          priceMonthly: 12,
-          description: "All the basics for starting a new business",
-          includedFeatures: [
-            "Potenti felis, in cras at at ligula nunc.",
-            "Orci neque eget pellentesque.",
-          ],
-        },
-        {
-          name: "Freelancer",
-          href: "#",
-          priceMonthly: 24,
-          description: "All the basics for starting a new business",
-          includedFeatures: [
-            "Potenti felis, in cras at at ligula nunc. ",
-            "Orci neque eget pellentesque.",
-            "Donec mauris sit in eu tincidunt etiam.",
-          ],
-        },
-        {
-          name: "Startup",
-          href: "#",
-          priceMonthly: 32,
-          description: "All the basics for starting a new business",
-          includedFeatures: [
-            "Potenti felis, in cras at at ligula nunc. ",
-            "Orci neque eget pellentesque.",
-            "Donec mauris sit in eu tincidunt etiam.",
-            "Faucibus volutpat magna.",
-          ],
-        },
-        {
-          name: "Enterprise",
-          href: "#",
-          priceMonthly: 48,
-          description: "All the basics for starting a new business",
-          includedFeatures: [
-            "Potenti felis, in cras at at ligula nunc. ",
-            "Orci neque eget pellentesque.",
-            "Donec mauris sit in eu tincidunt etiam.",
-            "Faucibus volutpat magna.",
-            "Id sed tellus in varius quisque.",
-            "Risus egestas faucibus.",
-            "Risus cursus ullamcorper.",
-          ],
-        },
-      ],
-    };
-  },
-};
+const { data: page } = await useAsyncData("prices", () =>
+  queryContent("/page/prices").findOne(),
+);
+
+useMeta(page);
+
+const { data: packages } = await useAsyncData("packages", () =>
+  queryContent("/packages").find(),
+);
 </script>

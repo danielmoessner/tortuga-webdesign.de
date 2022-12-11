@@ -1,16 +1,10 @@
 <template>
   <div>
     <NewNavigation />
-    <nuxt />
+    <slot />
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import NewNavigation from "@/components/NewNavigation.vue";
-
-export default {
-  components: {
-    NewNavigation,
-  },
-};
 </script>

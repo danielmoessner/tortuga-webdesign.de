@@ -1,37 +1,26 @@
 <template>
   <section
-    class="pt-32 pb-88 md:pb-96 -mb-56 relative bg-sunshine-200 overflow-hidden"
+    class="relative pt-32 -mb-56 overflow-hidden pb-88 md:pb-96 bg-sunshine-200"
   >
     <div
-      class="absolute min-h-screen z-10 left-1/2 transform -translate-x-1/2"
+      class="absolute z-10 min-h-screen transform -translate-x-1/2 left-1/2"
       :style="{ width: width + 'px', top: top + 'px' }"
     >
-      <img
-        class="w-4/5 pt-10 md:pt-0 mx-auto md:w-full"
-        :src="require(`@/assets/svg/${svgName}.svg?data`)"
-      />
+      <img class="w-4/5 pt-10 mx-auto md:pt-0 md:w-full" :src="svgUrl" />
     </div>
     <div class="container relative z-10">
       <div class="">
-        <div class="flex justify-center items-center flex-col">
+        <div class="flex flex-col items-center justify-center">
           <h1
             v-if="srOnlyTitle"
-            class="sr-only text-5xl md:text-6xl font-extrabold"
+            class="text-5xl font-extrabold sr-only md:text-6xl"
           >
             {{ srOnlyTitle }}
           </h1>
           <AnimateOnScroll>
             <component
               :is="headingElement"
-              class="
-                text-gray-100 text-4xl
-                sm:text-5xl
-                md:text-6xl
-                font-extrabold
-                tracking-tight
-                mb-4
-                leading-none
-              "
+              class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-100 sm:text-5xl md:text-6xl"
             >
               {{ title }}
             </component>
@@ -39,16 +28,7 @@
           <AnimateOnScroll :delay="1">
             <component
               :is="subtitleElement"
-              class="
-                max-w-xl
-                text-center text-xl
-                sm:text-2xl
-                md:text-3xl
-                text-gray-200
-                font-light
-                tracking-wide
-                mb-10
-              "
+              class="max-w-xl mb-10 text-xl font-light tracking-wide text-center text-gray-200 sm:text-2xl md:text-3xl"
             >
               {{ subtitle }}
             </component>
@@ -63,14 +43,7 @@
             </AnimateOnScroll>
             <AnimateOnScroll :delay="3">
               <span
-                class="
-                  block
-                  tracking-wide
-                  text-xs
-                  md:text-sm
-                  font-light
-                  text-white
-                "
+                class="block text-xs font-light tracking-wide text-white md:text-sm"
               >
                 Kostenloses Erstgespräch
               </span>
@@ -82,53 +55,60 @@
   </section>
 </template>
 
-<script>
-import TealButton from "@/components/TealButton.vue";
+<script lang="ts" setup>
 import AnimateOnScroll from "./AnimateOnScroll.vue";
+import TealButton from "@/components/TealButton.vue";
+import rechtlichesSvg from "~/assets/svg/rechtliches.svg";
+import ueberUnsSvg from "~/assets/svg/ueber-uns.svg";
+import hilfestellungSvg from "~/assets/svg/hilfestellung.svg";
+import referenzenSvg from "~/assets/svg/referenzen.svg";
+import kontaktSvg from "~/assets/svg/kontakt.svg";
 
-export default {
-  name: "SvgHeader",
-  components: {
-    TealButton,
-    AnimateOnScroll,
+const props = defineProps({
+  width: {
+    type: String,
+    default: "800",
   },
-  props: {
-    width: {
-      type: String,
-      default: "800",
-    },
-    top: {
-      type: String,
-      default: "0",
-    },
-    svgName: {
-      type: String,
-      default: "hilfestellung",
-    },
-    title: {
-      type: String,
-      default: "Titel",
-    },
-    subtitle: {
-      type: String,
-      default: "Untertitel",
-    },
-    srOnlyTitle: {
-      type: String,
-      default: "",
-    },
-    swapHeadingElement: {
-      type: Boolean,
-      default: false,
-    },
+  top: {
+    type: String,
+    default: "0",
   },
-  computed: {
-    headingElement() {
-      return this.srOnlyTitle ? "div" : this.swapHeadingElement ? "div" : "h1";
-    },
-    subtitleElement() {
-      return this.srOnlyTitle ? "div" : this.swapHeadingElement ? "h1" : "div";
-    },
+  svgName: {
+    type: String,
+    default: "hilfestellung",
   },
-};
+  title: {
+    type: String,
+    default: "Titel",
+  },
+  subtitle: {
+    type: String,
+    default: "Untertitel",
+  },
+  srOnlyTitle: {
+    type: String,
+    default: "",
+  },
+  swapHeadingElement: {
+    type: Boolean,
+    default: false,
+  },
+});
+const { srOnlyTitle, swapHeadingElement, svgName } = toRefs(props);
+
+const svgUrl = computed(() => {
+  if (svgName.value === "ueber-uns") return ueberUnsSvg;
+  if (svgName.value === "rechtliches") return rechtlichesSvg;
+  if (svgName.value === "hilfestellung") return hilfestellungSvg;
+  if (svgName.value === "referenzen") return referenzenSvg;
+  if (svgName.value === "kontakt") return kontaktSvg;
+});
+
+const headingElement = computed(() => {
+  return srOnlyTitle.value ? "div" : swapHeadingElement.value ? "div" : "h1";
+});
+
+const subtitleElement = computed(() => {
+  return srOnlyTitle.value ? "div" : swapHeadingElement.value ? "h1" : "div";
+});
 </script>

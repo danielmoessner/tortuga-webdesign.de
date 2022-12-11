@@ -9,14 +9,11 @@
     </nuxt-link>
   </div>
 </template>
-<script>
-export default {
-  async asyncData({ $content }) {
-    const services = await $content("service").fetch();
 
-    return {
-      services,
-    };
-  },
-};
+<script setup lang="ts">
+definePageMeta({ layout: "new" });
+
+const { data: services } = await useAsyncData("service", () =>
+  queryContent("service").find(),
+);
 </script>

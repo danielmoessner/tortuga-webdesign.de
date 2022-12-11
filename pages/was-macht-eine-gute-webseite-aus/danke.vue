@@ -1,42 +1,34 @@
 <template>
   <main class="">
-    <!-- LinkedIn Tracker -->
-    <img
-      height="1"
-      width="1"
-      style="display: none"
-      alt=""
-      src="https://px.ads.linkedin.com/collect/?pid=2989681&conversionId=3651521&fmt=gif"
-    />
-    <!--  -->
-    <SubNavigation :text="page.thankYou.title" class="bg-sunshine-100" />
-    <!--  -->
+    <!---->
+    <SubNavigation :text="page?.thankYou.title" class="bg-sunshine-100" />
+    <!---->
     <SvgHeader
-      :title="page.thankYou.header.title"
-      :subtitle="page.thankYou.header.subtitle"
+      :title="page?.thankYou.header.title"
+      :subtitle="page?.thankYou.header.subtitle"
       width="800"
       top="-110"
       svg-name="hilfestellung"
     />
     <!---->
-    <section class="pt-24 pb-24 md:pt-32 md:pb-40 relative bg-white">
+    <section class="relative pt-24 pb-24 bg-white md:pt-32 md:pb-40">
       <div class="container">
-        <div class="bg-sunshine-200 border-sunshine-700 rounded-md border-l-4">
+        <div class="border-l-4 rounded-md bg-sunshine-200 border-sunshine-700">
           <div class="p-6">
-            <h2 class="text-2xl font-bold text-sunshine-900 mb-4">
-              {{ page.thankYou.text.title }}
+            <h2 class="mb-4 text-2xl font-bold text-sunshine-900">
+              {{ page?.thankYou.text.title }}
             </h2>
             <p class="mb-1 text-sunshine-900">
-              {{ page.thankYou.text.text }}
+              {{ page?.thankYou.text.text }}
             </p>
             <p class="">
-              <a
+              <nuxt-link
                 class="underline text-sunshine-900 hover:text-sunshine-600"
-                :href="page.thankYou.text.link.to"
+                :to="page?.thankYou.text.link.to"
                 target="_blank"
               >
-                {{ page.thankYou.text.link.text }}
-              </a>
+                {{ page?.thankYou.text.link.text }}
+              </nuxt-link>
             </p>
           </div>
         </div>
@@ -53,40 +45,17 @@
     <!---->
   </main>
 </template>
-<script>
+
+<script setup lang="ts">
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
 
-export default {
-  components: {
-    SvgHeader,
-    NewFooter,
-    SubNavigation,
-  },
-  layout: "new",
-  async asyncData({ $content }) {
-    const page = await $content("page/leadGenerator").fetch();
+definePageMeta({ layout: "new" });
 
-    return {
-      page,
-    };
-  },
-  head() {
-    return {
-      title: this.page.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.page.description,
-        },
-      ],
-    };
-  },
-  mounted() {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "page-view-lead-generator-thank-you" });
-  },
-};
+const { data: page } = await useAsyncData("page", () =>
+  queryContent("/page/leadgenerator").findOne(),
+);
+
+useMeta(page);
 </script>
