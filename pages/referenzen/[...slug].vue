@@ -80,6 +80,12 @@ const { data: item } = await useAsyncData(`portfolio-${path}`, () =>
   queryContent(`/portfolio/${params.slug[0]}`).findOne(),
 );
 
+if (!item.value?.title) {
+  throw createError({
+    statusCode: 404,
+  });
+}
+
 const months = [
   "Jan",
   "Feb",

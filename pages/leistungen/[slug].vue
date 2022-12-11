@@ -38,13 +38,19 @@ import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
 
-definePageMeta({ layout: "new" });
+definePageMeta({ layout: "new", documentDrive: false });
 
 const { params, path } = useRoute();
 
 const { data: item } = await useAsyncData(`service-${path}`, () =>
-  queryContent(`/service/${params.slug[0]}`).findOne(),
+  queryContent(`/service/${params.slug}`).findOne(),
 );
+
+if (!item.value?.title) {
+  throw createError({
+    statusCode: 404,
+  });
+}
 
 const title = computed(() => {
   return `${item.value?.title} - ${item.value?.subtitle}`;
