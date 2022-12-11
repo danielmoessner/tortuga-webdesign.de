@@ -1,18 +1,16 @@
 export default {
   computed: {
     title() {
-      return (
-        this.page.title ||
-        // (this.page.meta ? this.page.meta.title : false) ||
-        this.$store.getters.head.title
-      );
+      return this.page.title;
+      // ||
+      // (this.page.meta ? this.page.meta.title : false) ||
+      // this.$store.getters.head.title
     },
     description() {
-      return (
-        this.page.description ||
-        // (this.page.meta ? this.page.meta.description : false) ||
-        this.$store.getters.head.description
-      );
+      return this.page.description;
+      // ||
+      // (this.page.meta ? this.page.meta.description : false) ||
+      // this.$store.getters.head.description
     },
   },
   data() {

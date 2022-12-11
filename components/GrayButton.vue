@@ -1,55 +1,29 @@
 <template>
-  <div class="flex-inline px-3">
-    <component
-      :is="which"
-      class="
-        custom-button
-        cursor-pointer
-        border-0
-        active:bg-gray-400 active:text-gray-400
-        hover:bg-gray-300 hover:text-gray-300
-        relative
-        bg-gray-200
-        text-gray-200
-        inline-flex
-        transition
-        duration-150
-        ease-in-out
-        focus:outline-none
-      "
+  <div class="px-3 flex-inline">
+    <nuxt-link
+      class="relative inline-flex text-gray-200 transition duration-150 ease-in-out bg-gray-200 border-0 cursor-pointer custom-button active:bg-gray-400 active:text-gray-400 hover:bg-gray-300 hover:text-gray-300 focus:outline-none"
       :to="to"
-      :href="href"
     >
       <div
-        class="
-          px-3
-          py-1
-          md:px-4 md:py-2
-          text-sm text-gray-900
-          md:text-base
-          leading-6
-          font-bold
-        "
+        class="px-3 py-1 text-sm font-bold leading-6 text-gray-900 md:px-4 md:py-2 md:text-base"
       >
         {{ text }}
       </div>
-      <TriangleSvg class="absolute transform right-0 translate-x-1/2" />
+      <TriangleSvg class="absolute right-0 transform translate-x-1/2" />
       <TriangleSvg
-        class="absolute transform left-0 -translate-x-1/2 rotate-180"
+        class="absolute left-0 transform rotate-180 -translate-x-1/2"
       />
-    </component>
+    </nuxt-link>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import TriangleSvg from "@/components/TriangleSvg.vue";
-import JustA from "@/components/JustA.vue";
 
 export default {
   name: "GrayButton",
   components: {
     TriangleSvg,
-    JustA,
   },
   props: {
     to: {
@@ -60,18 +34,9 @@ export default {
       type: String,
       default: "Click me",
     },
-    href: {
-      type: String,
-      default: "",
-    },
     target: {
       type: String,
       default: "_self",
-    },
-  },
-  computed: {
-    which() {
-      return this.href == "" ? "nuxt-link" : "just-a";
     },
   },
 };

@@ -1,42 +1,18 @@
 <template>
-  <div class="flex-inline px-3">
+  <div class="px-3 flex-inline">
     <component
       :is="which"
-      class="
-        custom-button
-        cursor-pointer
-        border-0
-        active:bg-teal-900 active:text-teal-900
-        hover:bg-teal-800 hover:text-teal-800
-        relative
-        bg-teal-700
-        text-teal-700
-        inline-flex
-        transition
-        duration-150
-        ease-in-out
-        focus:outline-none
-      "
+      class="relative inline-flex text-teal-700 transition duration-150 ease-in-out bg-teal-700 border-0 cursor-pointer custom-button active:bg-teal-900 active:text-teal-900 hover:bg-teal-800 hover:text-teal-800 focus:outline-none"
       :to="to"
-      :href="href"
     >
       <div
-        class="
-          px-3
-          md:px-4
-          py-1
-          md:py-2
-          text-white text-sm
-          md:text-base
-          leading-6
-          font-bold
-        "
+        class="px-3 py-1 text-sm font-bold leading-6 text-white md:px-4 md:py-2 md:text-base"
       >
         {{ text }}
       </div>
-      <TriangleSvg class="absolute transform right-0 translate-x-1/2" />
+      <TriangleSvg class="absolute right-0 transform translate-x-1/2" />
       <TriangleSvg
-        class="absolute transform left-0 -translate-x-1/2 rotate-180"
+        class="absolute left-0 transform rotate-180 -translate-x-1/2"
       />
     </component>
   </div>
@@ -63,10 +39,6 @@ export default {
       type: String,
       default: "Click me",
     },
-    href: {
-      type: String,
-      default: "",
-    },
     submit: {
       type: Boolean,
       default: false,
@@ -74,11 +46,7 @@ export default {
   },
   computed: {
     which() {
-      return this.submit
-        ? "just-button"
-        : this.href == ""
-        ? "nuxt-link"
-        : "just-a";
+      return this.submit ? "just-button" : "nuxt-link";
     },
   },
 };

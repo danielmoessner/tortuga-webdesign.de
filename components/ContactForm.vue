@@ -10,17 +10,9 @@
       <input type="hidden" name="form-name" value="contact" />
       <div class="grid grid-cols-5 md:grid-cols-7 md:gap-4 gap-y-1">
         <div
-          class="
-            col-span-5
-            md:col-span-2
-            flex
-            items-start
-            md:justify-end
-            mt-4
-            md:mt-2
-          "
+          class="flex items-start col-span-5 mt-4 md:col-span-2 md:justify-end md:mt-2"
         >
-          <label for="name" class="pl-1 md:pr-0 block text-right"
+          <label for="name" class="block pl-1 text-right md:pr-0"
             >Vor- &amp; Nachname</label
           >
         </div>
@@ -29,30 +21,13 @@
             <div class="relative w-full">
               <input
                 id="name"
-                class="
-                  form-input
-                  placeholder-gray-300
-                  pl-10
-                  w-full
-                  border-opacity-75
-                  focus:shadow-teal
-                "
+                class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
                 type="text"
                 name="name"
                 placeholder="Max Müller"
               />
               <span
-                class="
-                  absolute
-                  flex
-                  h-10
-                  items-center
-                  justify-center
-                  left-0
-                  text-gray-300
-                  top-0
-                  w-10
-                "
+                class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300"
               >
                 <svg
                   aria-hidden="true"
@@ -74,9 +49,9 @@
             </div>
           </div>
         </div>
-        <div class="md:col-span-2 col-span-5">
-          <div class="flex items-start md:justify-end mt-4 md:mt-2">
-            <label class="pl-1 md:pr-0 block text-right" for="mail">
+        <div class="col-span-5 md:col-span-2">
+          <div class="flex items-start mt-4 md:justify-end md:mt-2">
+            <label class="block pl-1 text-right md:pr-0" for="mail">
               Geschäftliche E-Mail
             </label>
           </div>
@@ -86,30 +61,13 @@
             <div class="relative w-full">
               <input
                 id="mail"
-                class="
-                  form-input
-                  placeholder-gray-300
-                  pl-10
-                  w-full
-                  border-opacity-75
-                  focus:shadow-teal
-                "
+                class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
                 type="email"
                 name="email"
                 placeholder="max@mustermann.de"
               />
               <span
-                class="
-                  absolute
-                  flex
-                  h-10
-                  items-center
-                  justify-center
-                  left-0
-                  text-gray-300
-                  top-0
-                  w-10
-                "
+                class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300"
               >
                 <svg
                   aria-hidden="true"
@@ -132,8 +90,8 @@
           </div>
         </div>
         <div class="col-span-5 md:col-span-2">
-          <div class="flex items-start md:justify-end mt-4 md:mt-2">
-            <label class="pl-1 md:pr-0 block text-right" for="website"
+          <div class="flex items-start mt-4 md:justify-end md:mt-2">
+            <label class="block pl-1 text-right md:pr-0" for="website"
               >Webseite (optional)
             </label>
           </div>
@@ -143,30 +101,13 @@
             <div class="relative w-full">
               <input
                 id="website"
-                class="
-                  form-input
-                  placeholder-gray-300
-                  pl-10
-                  w-full
-                  border-opacity-75
-                  focus:shadow-teal
-                "
+                class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
                 type="text"
                 name="website"
                 placeholder="maxmustermann.de"
               />
               <span
-                class="
-                  absolute
-                  flex
-                  h-10
-                  items-center
-                  justify-center
-                  left-0
-                  text-gray-300
-                  top-0
-                  w-10
-                "
+                class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300"
               >
                 <svg
                   aria-hidden="true"
@@ -189,8 +130,8 @@
           </div>
         </div>
         <div class="col-span-5 md:col-span-2">
-          <div class="flex items-start md:justify-end mt-4 md:mt-2">
-            <label class="pl-1 md:pr-0 block text-right" for="message"
+          <div class="flex items-start mt-4 md:justify-end md:mt-2">
+            <label class="block pl-1 text-right md:pr-0" for="message"
               >Weitere Projektdetails (optional)
             </label>
           </div>
@@ -200,13 +141,7 @@
             <textarea
               id="message"
               rows="4"
-              class="
-                form-textarea
-                placeholder-gray-300
-                w-full
-                border-opacity-75
-                focus:shadow-teal
-              "
+              class="w-full placeholder-gray-300 border-opacity-75 form-textarea focus:shadow-teal"
               name="message"
               placeholder="Erzählen Sie uns mehr über Ihr Unternehmen oder Geschäft, Ihre Anforderungen und weitere Spezifika."
             ></textarea>
@@ -214,27 +149,17 @@
         </div>
         <div class="col-span-5 md:col-span-2">
           <div class="flex items-start mt-2 md:justify-end">
-            <label class="pl-1 md:pr-0 block text-right">Datenschutz</label>
+            <label class="block pl-1 text-right md:pr-0">Datenschutz</label>
           </div>
         </div>
         <div class="col-span-5">
           <div class="flex items-center">
             <div class="relative w-full">
-              <div class="flex items-center form-input placeholder-gray-300">
+              <div class="flex items-center placeholder-gray-300 form-input">
                 <input
                   id="dataprotection"
                   type="checkbox"
-                  class="
-                    form-checkbox
-                    text-teal-600
-                    focus:shadow-teal
-                    border-opacity-75
-                    ml-0
-                    mr-3
-                    w-5
-                    h-5
-                    cursor-pointer
-                  "
+                  class="w-5 h-5 ml-0 mr-3 text-teal-600 border-opacity-75 cursor-pointer form-checkbox focus:shadow-teal"
                   name="dataprotection"
                   required
                 />
@@ -252,7 +177,7 @@
           </div>
         </div>
         <div class="col-span-5 md:col-start-3">
-          <div class="flex items-center col-start-3 pt-6 md:pt-3 pb-2">
+          <div class="flex items-center col-start-3 pt-6 pb-2 md:pt-3">
             <slot> </slot>
           </div>
         </div>

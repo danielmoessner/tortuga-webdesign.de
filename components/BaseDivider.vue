@@ -1,7 +1,7 @@
 <template>
   <div class="divider"></div>
 </template>
-<style scoped lang="scss">
+<style scoped lang="css">
 .divider {
   height: 5px;
   width: 100%;

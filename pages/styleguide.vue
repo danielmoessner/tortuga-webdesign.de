@@ -2,35 +2,35 @@
   <main>
     <!---->
     <section class="pt-32 pb-40">
-      <h1 class="text-6xl mb-24">Styleguide</h1>
+      <h1 class="mb-24 text-6xl">Styleguide</h1>
       <!--  -->
       <StyleguideHeading text="Typography" />
       <div class="grid grid-cols-2 gap-8">
         <div class="grid grid-cols-1 gap-8">
           <StyleguideColumn text="Heading 1">
-            <h1 class="text-6xl tracking-tight leading-tight">
+            <h1 class="text-6xl leading-tight tracking-tight">
               Lorem dolor sit amet ti!
             </h1>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 2" class="col-start-1">
-            <h2 class="text-4xl tracking-tight leading-tight">
+            <h2 class="text-4xl leading-tight tracking-tight">
               Lorem dolor sit amet ti!
             </h2>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 3" class="col-start-1">
-            <h3 class="text-3xl tracking-tight leading-tight">
+            <h3 class="text-3xl leading-tight tracking-tight">
               Lorem dolor sit amet ti!
             </h3>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 4" class="col-start-1">
-            <h4 class="text-2xl tracking-tight leading-tight">
+            <h4 class="text-2xl leading-tight tracking-tight">
               Lorem dolor sit amet ti!
             </h4>
           </StyleguideColumn>
         </div>
         <div class="grid grid-cols-1 gap-8">
           <StyleguideColumn text="Paragraph" class="">
-            <p class="text-lg mb-2 text-gray-800">
+            <p class="mb-2 text-lg text-gray-800">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
               quas magni distinctio doloremque laudantium odit ea non nostrum
               eveniet quisquam nobis, inventore repudiandae, nemo vel culpa
@@ -195,71 +195,71 @@
       <!--  -->
       <StyleguideHeading text="Chosen Colors" />
       <div class="grid grid-cols-7">
-        <div class="grid grid-cols-1 gap-4 justify-items-end col-start-2">
-          <div class="h-24 w-24 bg-red-300 p-2 font-bold">
+        <div class="grid grid-cols-1 col-start-2 gap-4 justify-items-end">
+          <div class="w-24 h-24 p-2 font-bold bg-red-300">
             <span class="text-black">Red 300</span>
           </div>
-          <div class="h-24 w-24 bg-red-400 p-2 font-bold">
+          <div class="w-24 h-24 p-2 font-bold bg-red-400">
             <span class="text-black">Red 400</span>
           </div>
           <div class="w-full h-1 bg-gray-100"></div>
-          <div class="h-24 w-24 bg-red-600 p-2 font-bold">
+          <div class="w-24 h-24 p-2 font-bold bg-red-600">
             <span class="text-white">Red 600</span>
           </div>
-          <div class="h-24 w-24 bg-red-700 p-2 font-bold">
+          <div class="w-24 h-24 p-2 font-bold bg-red-700">
             <span class="text-white">Red 700</span>
           </div>
         </div>
         <div class="grid grid-cols-1 gap-4 justify-items-end">
-          <div class="p-2 font-bold h-24 w-24 bg-sunshine-400">
+          <div class="w-24 h-24 p-2 font-bold bg-sunshine-400">
             <span class="text-black">Sunshine 400</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-sunshine-500">
+          <div class="w-24 h-24 p-2 font-bold bg-sunshine-500">
             <span class="text-black">Sunshine 500</span>
           </div>
           <div class="w-full h-1 bg-gray-100"></div>
-          <div class="p-2 font-bold h-24 w-24 bg-sunshine-600">
+          <div class="w-24 h-24 p-2 font-bold bg-sunshine-600">
             <span class="text-white">Sunshine 600</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-sunshine-700">
+          <div class="w-24 h-24 p-2 font-bold bg-sunshine-700">
             <span class="text-white">Sunshine 700</span>
           </div>
         </div>
         <div class="grid grid-cols-1 gap-4 justify-items-center">
-          <div class="flex items-center justify-center relative w-full h-full">
+          <div class="relative flex items-center justify-center w-full h-full">
             <div class="w-full h-1 bg-gray-100"></div>
             <div
-              class="h-full w-1 bg-gray-100 absolute left-0 right-0 mx-auto"
+              class="absolute left-0 right-0 w-1 h-full mx-auto bg-gray-100"
             ></div>
           </div>
         </div>
         <div class="grid grid-cols-1 gap-4 justify-items-start">
-          <div class="p-2 font-bold h-24 w-24 bg-teal-300">
+          <div class="w-24 h-24 p-2 font-bold bg-teal-300">
             <span class="text-black">Teal 300</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-teal-400">
+          <div class="w-24 h-24 p-2 font-bold bg-teal-400">
             <span class="text-black">Teal 400</span>
           </div>
           <div class="w-full h-1 bg-gray-100"></div>
-          <div class="p-2 font-bold h-24 w-24 bg-teal-700">
+          <div class="w-24 h-24 p-2 font-bold bg-teal-700">
             <span class="text-white">Teal 700</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-teal-800">
+          <div class="w-24 h-24 p-2 font-bold bg-teal-800">
             <span class="text-white">Teal 800</span>
           </div>
         </div>
         <div class="grid grid-cols-1 gap-4 justify-items-start">
-          <div class="p-2 font-bold h-24 w-24 bg-blue-300">
+          <div class="w-24 h-24 p-2 font-bold bg-blue-300">
             <span class="text-black">Blue 300</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-blue-400">
+          <div class="w-24 h-24 p-2 font-bold bg-blue-400">
             <span class="text-black">Blue 400</span>
           </div>
           <div class="w-full h-1 bg-gray-100"></div>
-          <div class="p-2 font-bold h-24 w-24 bg-blue-700">
+          <div class="w-24 h-24 p-2 font-bold bg-blue-700">
             <span class="text-white">Blue 700</span>
           </div>
-          <div class="p-2 font-bold h-24 w-24 bg-blue-800">
+          <div class="w-24 h-24 p-2 font-bold bg-blue-800">
             <span class="text-white">Blue 800</span>
           </div>
         </div>
@@ -284,7 +284,7 @@
           <ColorCombination color1="sunshine-500" color2="blue-700" />
           <ColorCombination color1="sunshine-500" color2="blue-800" />
         </div>
-        <div class="col-span-2 flex justify-center items-center">
+        <div class="flex items-center justify-center col-span-2">
           <p class="text-center">
             Warm &amp; Light <br />
             with <br />
@@ -293,7 +293,7 @@
         </div>
       </div>
       <div class="grid grid-cols-6 gap-4">
-        <div class="col-span-2 flex justify-center items-center">
+        <div class="flex items-center justify-center col-span-2">
           <p class="text-center">
             Warm &amp; Dark <br />
             with <br />
@@ -324,7 +324,8 @@
     <!---->
   </main>
 </template>
-<script>
+
+<script setup lang="ts">
 import RedButton from "@/components/RedButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
@@ -334,26 +335,5 @@ import ColorCombination from "@/components/ColorCombination.vue";
 import StyleguideColor from "@/components/StyleguideColor.vue";
 import BlueButton from "@/components/BlueButton.vue";
 
-export default {
-  name: "Styleguide",
-  components: {
-    StyleguideColor,
-    BlueButton,
-    ColorCombination,
-    StyleguideColumn,
-    SunshineButton,
-    StyleguideHeading,
-    RedButton,
-    TealButton,
-  },
-  layout: "new",
-  data() {
-    return {};
-  },
-  head() {
-    return {
-      title: "Styleguide",
-    };
-  },
-};
+definePageMeta({ layout: "new" });
 </script>

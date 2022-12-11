@@ -1,11 +1,6 @@
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-    browser: true,
-  },
-  extends: ["plugin:vue/recommended", "eslint:recommended", "prettier"],
-  plugins: ["vue", "prettier"],
+  extends: ["@nuxtjs/eslint-config-typescript", "prettier"],
+  plugins: ["prettier"],
   rules: {
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
     "vue/no-v-html": 0,
@@ -21,11 +16,5 @@ module.exports = {
         semi: true,
       },
     ],
-  },
-  globals: {
-    $nuxt: true,
-  },
-  parserOptions: {
-    parser: "babel-eslint",
   },
 };

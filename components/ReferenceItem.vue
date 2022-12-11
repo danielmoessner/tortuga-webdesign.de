@@ -1,31 +1,31 @@
 <template>
-  <div class="border-sunshine-400 border-4 rounded-xl shadow-2xl">
-    <div class="bg-sunshine-400 rounded-lg overflow-hidden relative z-10">
+  <div class="border-4 shadow-2xl border-sunshine-400 rounded-xl">
+    <div class="relative z-10 overflow-hidden rounded-lg bg-sunshine-400">
       <div
         ref="showcase"
-        class="relative block overflow-hidden box-content group z-0"
+        class="box-content relative z-0 block overflow-hidden group"
         @mousemove="mousemove"
         @mouseover="mouseover"
         @mouseleave="mouseleave"
       >
         <nuxt-link :to="detailPage" @click.native="mouseleave">
           <div
-            class="absolute top-0 group-hover:opacity-100 opacity-0 transition ease-in-out duration-150 z-20 pl-1 pt-1"
+            class="absolute top-0 z-20 pt-1 pl-1 transition duration-150 ease-in-out opacity-0 group-hover:opacity-100"
           >
             <span
-              class="bg-gray-800 text-white rounded p-1 text-xs mr-1 mb-1"
+              class="p-1 mb-1 mr-1 text-xs text-white bg-gray-800 rounded"
               >{{ portfolioItem.title }}</span
             ><br />
             <div>
               <span
-                class="bg-white text-gray-900 rounded p-1 text-xs mr-1 mb-1"
+                class="p-1 mb-1 mr-1 text-xs text-gray-900 bg-white rounded"
               >
                 {{ month }}
               </span>
               <span
                 v-for="(tag, index) in portfolioItem.tags"
                 :key="index"
-                class="bg-white text-gray-900 rounded p-1 text-xs mr-1 mb-1"
+                class="p-1 mb-1 mr-1 text-xs text-gray-900 bg-white rounded"
               >
                 {{ tag }}
               </span>
@@ -33,17 +33,17 @@
           </div>
           <div
             ref="showcaseHeightSet"
-            class="w-full block"
+            class="block w-full"
             :style="{ 'padding-top': height }"
           ></div>
-          <div class="absolute w-full top-0">
+          <div class="absolute top-0 w-full">
             <div
               ref="showcaseImage"
               class="transform translate-y-0"
               style="will-change: transform"
               :style="{ transform: showcaseImageTransform }"
             >
-              <nuxt-img
+              <img
                 :src="portfolioItem.image"
                 sizes="lg:860px"
                 :alt="portfolioItem.title"
@@ -56,8 +56,9 @@
     </div>
   </div>
 </template>
-<script>
-export default {
+
+<script lang="ts">
+export default defineNuxtComponent({
   components: {},
   props: {
     portfolioItem: {
@@ -100,13 +101,14 @@ export default {
     showcase() {
       return this.$refs.showcase;
     },
-    showcaseImage() {
+    showcaseImage(): HTMLDivElement | unknown {
       return this.$refs.showcaseImage;
     },
-    showcaseHeightSet() {
+    showcaseHeightSet(): HTMLElement | unknown {
       return this.$refs.showcaseHeightSet;
     },
     showcaseImageRoute() {
+      if (!this.showcaseImage || !this.showcaseHeightSet) return 0;
       return Math.min(
         this.showcaseHeightSet.getBoundingClientRect().height -
           this.showcaseImage.getBoundingClientRect().height +
@@ -164,5 +166,5 @@ export default {
       }
     },
   },
-};
+});
 </script>

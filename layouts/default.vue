@@ -1,11 +1,7 @@
 <template>
   <div>
-    <nuxt />
+    <slot />
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-};
-</script>
+<script setup lang="ts"></script>

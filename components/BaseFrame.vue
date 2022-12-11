@@ -23,7 +23,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .border-5 {
   border-width: 5px;
 }
