@@ -1,3 +1,7 @@
+[build]
+  publish = ".output/public"
+  command = "npm run generate"
+
 [[redirects]]
   from = "/portfolio"
   to = "/referenzen/"
