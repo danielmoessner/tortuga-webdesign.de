@@ -1,17 +1,19 @@
 <template>
   <div
-    class="transform transition ease-in-out"
+    class="transition ease-in-out transform"
     :class="[show ? to : from, duration, transitionDelay]"
   >
     <slot />
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { PropType } from "vue";
+
+export default defineNuxtComponent({
   props: {
     delay: {
-      type: Number,
+      type: Number as PropType<0 | 1 | 2 | 3>,
       default: 0,
     },
     duration: {
@@ -29,14 +31,16 @@ export default {
   },
   data() {
     return {
-      observer: null,
+      observer: null as IntersectionObserver | null,
       show: false,
     };
   },
   computed: {
     transitionDelay() {
-      let delay = this.delay * 100;
-      return `delay-${delay}`;
+      if (this.delay === 1) return "delay-[100ms]";
+      if (this.delay === 2) return "delay-[200ms]";
+      if (this.delay === 3) return "delay-[300ms]";
+      return "";
     },
   },
   mounted() {
@@ -55,7 +59,7 @@ export default {
     this.observer.observe(this.$el);
   },
   unmounted() {
-    this.observer.disconnect();
+    this.observer?.disconnect();
   },
-};
+});
 </script>

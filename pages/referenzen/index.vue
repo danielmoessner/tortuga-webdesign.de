@@ -30,7 +30,7 @@
               :key="index"
               class="portfolio--item"
             >
-              <AnimateOnScroll :delay="index % 3">
+              <AnimateOnScroll :delay="(index % 3 as 0 | 1 | 2)">
                 <ReferenceItem :portfolio-item="item" />
               </AnimateOnScroll>
             </div>
