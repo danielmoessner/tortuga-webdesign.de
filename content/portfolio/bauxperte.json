@@ -1,0 +1,13 @@
+{
+  "date": "2022-06-02T14:09:06.711Z",
+  "title": "BauXperte",
+  "slug": "bauxperte",
+  "url": "bauxperte.de",
+  "image": "/media/bauxperte.opt.png",
+  "active": true,
+  "description": "kommt demnächst",
+  "tags": [
+    "NextJS",
+    "CMS"
+  ]
+}
