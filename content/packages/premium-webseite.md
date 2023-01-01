@@ -2,7 +2,7 @@
 title: Premium Webseite
 slug: premium-webseite
 description: Die perfekte Webseite für hohe Ansprüche.
-price: 2000
+price: 3000
 features:
   - text: Rechtlich korrektes Impressum
   - text: Datenschutz DSGVO-konform
