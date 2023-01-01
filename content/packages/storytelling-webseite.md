@@ -3,7 +3,7 @@ title: Storytelling Webseite
 slug: storytelling-webseite
 description: Die perfekte Webseite um komplexe Leistungen einfach und
   verständlich dem Kunden zu vermitteln.
-price: 3500
+price: 5000
 features:
   - text: Rechtlich korrektes Impressum
   - text: Datenschutz DSGVO-konform
