@@ -35,6 +35,7 @@ export default {
             { label: "Subtitle", name: "subtitle", widget: "string" },
           ],
         },
+        {label: 'Button', name: 'button', widget: 'string'}
       ],
     },
     {

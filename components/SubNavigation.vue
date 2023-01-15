@@ -1,20 +1,12 @@
 <template>
-  <nav class="bg-white border-b sticky top-0 z-40">
+  <nav class="sticky top-0 z-40 bg-white border-b">
     <div class="container">
       <div class="flex items-center h-12 md:h-16">
-        <h1
-          class="
-            text-gray-800
-            md:text-black
-            font-medium
-            text-lg
-            md:text-xl
-            leading-tight
-            tracking-tight
-          "
+        <span
+          class="text-lg font-medium leading-tight tracking-tight text-gray-800 md:text-black md:text-xl"
         >
           {{ text }}
-        </h1>
+        </span>
       </div>
     </div>
   </nav>
