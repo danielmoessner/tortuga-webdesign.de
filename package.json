@@ -1,7 +1,7 @@
 {
   "name": "tortuga-webdesign.de",
   "version": "0.0.0",
-  "description": "The tortuga-webdesign.de site.",
+  "description": "The tortuga-webdesign.de website.",
   "author": "Daniel Mössner",
   "private": true,
   "scripts": {
