@@ -1,24 +1,25 @@
 <template>
-  <nav ref="navigation" class="bg-teal-700 z-50 relative">
+  <nav ref="navigation" class="relative z-50 bg-teal-700">
     <div class="container">
       <div
-        class="flex flex-col md:flex-row justify-between items-center relative"
+        class="relative flex flex-col items-center justify-between md:flex-row"
       >
-        <div class="flex justify-between items-center w-full md:w-auto">
+        <div class="flex items-center justify-between w-full md:w-auto">
           <nuxt-link class="" to="/">
             <div class="h-16 p-4 bg-teal-800">
               <LogoSvg :invert="true" />
+              <span class="sr-only">Zur Startseite</span>
             </div>
           </nuxt-link>
           <button
             type="button"
             aria-label="Menü Button"
-            class="md:hidden inline-flex border border-transparent hover:border-gray-200 items-center justify-center p-2 rounded-md text-teal-800 bg-gray-200 hover:text-teal-800 focus:outline-none transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 text-teal-800 transition duration-150 ease-in-out bg-gray-200 border border-transparent rounded-md md:hidden hover:border-gray-200 hover:text-teal-800 focus:outline-none"
             @click="showNav = !showNav"
           >
             <svg
               v-if="!showNav"
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -33,7 +34,7 @@
             </svg>
             <svg
               v-if="showNav"
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -49,10 +50,10 @@
           </button>
         </div>
         <div
-          class="text-white border border-gray-200 border-t-0 md:border-0 rounded-t-none w-full md:block md:static absolute transform md:p-0 translate-y-full md:transform-none md:bg-transparent md:w-auto md:shadow-none right-0 bottom-0 bg-sunshine-100 z-50 px-6 py-6 rounded-lg shadow-lg"
+          class="absolute bottom-0 right-0 z-50 w-full px-6 py-6 text-white transform translate-y-full border border-t-0 border-gray-200 rounded-lg rounded-t-none shadow-lg md:border-0 md:block md:static md:p-0 md:transform-none md:bg-transparent md:w-auto md:shadow-none bg-sunshine-100"
           :class="{ hidden: !showNav }"
         >
-          <div class="flex flex-col md:flex-row space-y-2 md:space-y-0">
+          <div class="flex flex-col space-y-2 md:flex-row md:space-y-0">
             <NavigationLink
               to="/"
               text="Startseite"

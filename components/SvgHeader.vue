@@ -6,7 +6,11 @@
       class="absolute z-10 min-h-screen transform -translate-x-1/2 left-1/2"
       :style="{ width: width + 'px', top: top + 'px' }"
     >
-      <img class="w-4/5 pt-10 mx-auto md:pt-0 md:w-full" :src="svgUrl" />
+      <img
+        class="w-4/5 pt-10 mx-auto md:pt-0 md:w-full"
+        :src="svgUrl"
+        alt="Header Bild"
+      />
     </div>
     <div class="container relative z-10">
       <div class="">

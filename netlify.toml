@@ -41,3 +41,4 @@
 package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "dist"
+package = "netlify-plugin-a11y"
