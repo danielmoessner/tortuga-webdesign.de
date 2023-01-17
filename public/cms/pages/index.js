@@ -32,7 +32,6 @@ export default {
           widget: "object",
           fields: [
             { label: "Title", name: "title", widget: "string" },
-            { label: "Subtitle", name: "subtitle", widget: "string" },
           ],
         },
         {label: 'Button', name: 'button', widget: 'string'}

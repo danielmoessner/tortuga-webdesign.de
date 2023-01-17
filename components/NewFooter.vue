@@ -48,13 +48,14 @@
                 :hover-color="hoverColor"
               />
             </li>
-            <!-- <li class="mb-2">
+            <li class="mb-2">
               <FooterLink
                 text="Artikel"
+                to="/artikel/"
                 :color="linkColor"
-                :hoverColor="hoverColor"
+                :hover-color="hoverColor"
               />
-            </li> -->
+            </li>
             <li class="mb-2">
               <FooterLink
                 text="Kontakt"

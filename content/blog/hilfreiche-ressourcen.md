@@ -1,5 +1,5 @@
 ---
-title: Hiflreiche Ressourcen
+title: Hilfreiche Ressourcen
 slug: hilfreiche-ressourcen
 date: 2020-01-22
 description: Hilfreiche Ressourcen, die wichtig werden bei der Entwicklung einer Webseite.
