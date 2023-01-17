@@ -3,7 +3,7 @@
 */
 
 .container {
-  @apply px-5;
+  @apply relative z-20 px-5;
 }
 
 @screen sm {
@@ -24,5 +24,8 @@
 @screen xl {
   .container {
     @apply px-8;
+  }
+  .container.small {
+    @apply max-w-4xl;
   }
 }

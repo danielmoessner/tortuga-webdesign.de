@@ -1,11 +1,12 @@
 <template>
   <main class="">
     <SubNavigation
+      small
       :text="`${page?.title} - ${article?.title}`"
       class="bg-sunshine-100"
     />
     <section class="lg:bg-gray-100 bg-sunshine-100">
-      <div class="container">
+      <div class="container small">
         <div class="relative min-h-screen pt-12 pb-24 bg-sunshine-100">
           <div class="max-w-3xl mx-auto">
             <nuxt-link to="/artikel" class="text-xs">
@@ -46,7 +47,7 @@
 import SubNavigation from "@/components/SubNavigation.vue";
 import { formatDate } from "@/lib/formatDate";
 
-definePageMeta({ layout: "new" });
+definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
   queryContent("/page/blog").findOne(),

@@ -1,6 +1,6 @@
 <template>
   <nav ref="navigation" class="relative z-50 bg-teal-700">
-    <div class="container">
+    <div class="container" :class="{ small }">
       <div
         class="relative flex flex-col items-center justify-between md:flex-row"
       >
@@ -54,25 +54,21 @@
           :class="{ hidden: !showNav }"
         >
           <div class="flex flex-col space-y-2 md:flex-row md:space-y-0">
-            <NavigationLink
-              to="/"
-              text="Startseite"
-              @click.native="showNav = false"
-            />
+            <NavigationLink to="/" text="Startseite" @click="showNav = false" />
             <NavigationLink
               to="/ueber-uns/"
               text="Über uns"
-              @click.native="showNav = false"
+              @click="showNav = false"
             />
             <NavigationLink
               to="/referenzen/"
               text="Referenzen"
-              @click.native="showNav = false"
+              @click="showNav = false"
             />
             <NavigationLink
               to="/kontakt/"
               text="Kontakt"
-              @click.native="showNav = false"
+              @click="showNav = false"
             />
             <!-- <NavigationLink to="/blog/" text="Blog" /> -->
           </div>
@@ -81,20 +77,12 @@
     </div>
   </nav>
 </template>
-<script>
+
+<script setup lang="ts">
 import LogoSvg from "@/components/LogoSvg.vue";
 import NavigationLink from "@/components/NavigationLink.vue";
 
-export default {
-  name: "NewNavigation",
-  components: {
-    LogoSvg,
-    NavigationLink,
-  },
-  data() {
-    return {
-      showNav: false,
-    };
-  },
-};
+defineProps<{ small?: boolean }>();
+
+const showNav = ref(false);
 </script>

@@ -1,17 +1,15 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation small :text="page?.title" class="bg-sunshine-100" />
     <!---->
     <section class="lg:bg-gray-100 bg-sunshine-100">
-      <div class="container">
-        <div class="min-h-screen pb-24 pt-14 bg-sunshine-100">
+      <div class="container small">
+        <div class="min-h-screen pb-24 bg-sunshine-100 pt-14">
           <div class="max-w-3xl mx-auto">
             <h1 class="text-2xl font-bold text-gray-800">
               {{ page?.header.title }}
             </h1>
-            <div
-              class="mt-8 md:border-l md:border-gray-200 md:pl-6 md:dark:border-zinc-700/40"
-            >
+            <div class="mt-8">
               <div class="flex flex-col space-y-16">
                 <article
                   v-for="article in articles"
@@ -28,7 +26,7 @@
                     />
                   </div>
                   <time
-                    class="relative z-10 items-center order-first hidden mt-1 mb-3 text-sm text-gray-500 md:block dark:text-zinc-500"
+                    class="relative z-10 items-center order-first hidden mt-1 mb-3 text-sm text-gray-500 md:block"
                     :datetime="article.date"
                     >{{ formatDate(article.date) }}</time
                   >
@@ -50,7 +48,7 @@ import { formatDate } from "@/lib/formatDate";
 // import SvgHeader from "@/components/SvgHeader.vue";
 // import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
-definePageMeta({ layout: "new" });
+definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
   queryContent("/page/blog").findOne(),
