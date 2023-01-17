@@ -11,8 +11,8 @@
       <div
         class="divide-y bg-gradient-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800"
       >
-        <h1 class="sr-only">Leistungen</h1>
         <div class="container">
+          <h1 class="sr-only">Leistungen</h1>
           <div class="grid divide-y md:grid-cols-2 md:divide-y-0">
             <div
               v-for="(object, index) in page?.header"
@@ -124,7 +124,7 @@
             </div>
           </AnimateOnScroll>
         </div>
-        <div class="hidden grid-cols-3 gap-8 lg:grid">
+        <!-- <div class="hidden grid-cols-3 gap-8 lg:grid">
           <div
             class="mt-8 text-5xl font-bold leading-none text-teal-800 xl:text-6xl"
           >
@@ -135,7 +135,7 @@
           >
             {{ page?.value.bottomRight }}
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!---->

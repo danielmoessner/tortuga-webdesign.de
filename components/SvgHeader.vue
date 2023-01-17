@@ -62,11 +62,11 @@
 <script lang="ts" setup>
 import AnimateOnScroll from "./AnimateOnScroll.vue";
 import TealButton from "@/components/TealButton.vue";
-import rechtlichesSvg from "~/assets/svg/rechtliches.svg";
-import ueberUnsSvg from "~/assets/svg/ueber-uns.svg";
-import hilfestellungSvg from "~/assets/svg/hilfestellung.svg";
-import referenzenSvg from "~/assets/svg/referenzen.svg";
-import kontaktSvg from "~/assets/svg/kontakt.svg";
+import rechtlichesSvg from "@/assets/svg/rechtliches.svg";
+import ueberUnsSvg from "@/assets/svg/ueber-uns.svg";
+import hilfestellungSvg from "@/assets/svg/hilfestellung.svg";
+import referenzenSvg from "@/assets/svg/referenzen.svg";
+import kontaktSvg from "@/assets/svg/kontakt.svg";
 
 const props = defineProps({
   width: {
