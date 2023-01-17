@@ -15,26 +15,21 @@
             <article class="mt-8">
               <header class="flex flex-col">
                 <h2
-                  class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+                  class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl"
                 >
                   {{ article?.title }}
                 </h2>
                 <time
-                  datetime="2022-09-05"
-                  class="flex items-center order-first text-base text-zinc-400 dark:text-zinc-500"
-                  ><span
-                    class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
-                  ></span
-                  ><span class="ml-3">{{
-                    formatDate(article?.date)
-                  }}</span></time
+                  :datetime="article?.date"
+                  class="flex items-center order-first text-base text-gray-400"
                 >
+                  <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+                  <span class="ml-3">{{ formatDate(article?.date) }}</span>
+                </time>
               </header>
-              <div
-                class="prose prose-a:no-underline prose-a:scroll-mt-64 max-w-none"
-              >
+              <ProseNormal>
                 <ContentDoc :path="`/blog/${params.slug}`" />
-              </div>
+              </ProseNormal>
             </article>
           </div>
         </div>
@@ -44,7 +39,6 @@
 </template>
 
 <script setup lang="ts">
-import SubNavigation from "@/components/SubNavigation.vue";
 import { formatDate } from "@/lib/formatDate";
 
 definePageMeta({ layout: "narrow-layout" });

@@ -15,11 +15,9 @@
       <div
         class="max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
       >
-        <article
-          class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-xl"
-        >
+        <ProseLarge>
           <ContentRenderer v-if="item" :value="item"></ContentRenderer>
-        </article>
+        </ProseLarge>
       </div>
     </section>
     <!---->
