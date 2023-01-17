@@ -11,6 +11,7 @@
       <div
         class="divide-y bg-gradient-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800"
       >
+        <h1 class="sr-only">Leistungen</h1>
         <div class="container">
           <div class="grid divide-y md:grid-cols-2 md:divide-y-0">
             <div
