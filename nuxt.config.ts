@@ -16,14 +16,17 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
+
   /*
    ** Global CSS
    */
   css: ["@/assets/styles/tailwind.css"],
+
   /*
    ** Nuxt.js modules
    */
   modules: ["@nuxt/content"],
+
   /*
    ** Build configuration
    */
@@ -35,4 +38,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: "2024-08-14",
 });

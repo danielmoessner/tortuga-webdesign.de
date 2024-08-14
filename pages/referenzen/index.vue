@@ -51,7 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import { KeysOf } from "nuxt/dist/app/composables/asyncData";
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import ReferenceItem from "@/components/ReferenceItem.vue";
@@ -87,7 +86,7 @@ const portfolioPostsByYear = computed<IPostsByYear>(() => {
   return postsByYear;
 });
 
-const portfolioPostsByYearSortedKeys = computed<KeysOf<IPostsByYear>>(() => {
+const portfolioPostsByYearSortedKeys = computed<string[]>(() => {
   return Object.keys(portfolioPostsByYear.value).sort().reverse();
 });
 </script>

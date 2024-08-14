@@ -68,7 +68,7 @@ Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitg
 
 Tortuga Webdesign
 
-Albert-Schweitzer-Str. 17b
+Trentiner Str. 30
 
 85375 Neufahrn b. Freising
 

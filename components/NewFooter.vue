@@ -92,7 +92,7 @@
             />
             <br />
             <span class="font-medium">Tortuga Webdesign </span><br />
-            Albert-Schweitzer-Str. 17b <br />
+            Trentiner Str. 30 <br />
             85375 Neufahrn b. Freising <br />
           </address>
         </div>

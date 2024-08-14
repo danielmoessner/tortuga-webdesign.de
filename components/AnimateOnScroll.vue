@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="root"
     class="transition ease-in-out transform"
     :class="[show ? to : from, duration, transitionDelay]"
   >
@@ -7,59 +8,51 @@
   </div>
 </template>
 
-<script lang="ts">
-import { PropType } from "vue";
+<script lang="ts" setup>
+const props = withDefaults(
+  defineProps<{
+    delay?: 0 | 1 | 2 | 3;
+    duration?: string;
+    from?: string;
+    to?: string;
+  }>(),
+  {
+    delay: 0,
+    duration: "duration-1000",
+    from: "opacity-0 translate-y-10",
+    to: "opacity-100 translate-y-0",
+    ref,
+  },
+);
 
-export default defineNuxtComponent({
-  props: {
-    delay: {
-      type: Number as PropType<0 | 1 | 2 | 3>,
-      default: 0,
+const observer = ref<IntersectionObserver | null>(null);
+const show = ref(false);
+const root = ref(null);
+
+const transitionDelay = computed(() => {
+  if (props.delay === 1) return "delay-[100ms]";
+  if (props.delay === 2) return "delay-[200ms]";
+  if (props.delay === 3) return "delay-[300ms]";
+  return "";
+});
+
+onMounted(() => {
+  observer.value = new IntersectionObserver(
+    ([entry], obs) => {
+      if (entry.isIntersecting) {
+        obs.disconnect();
+        show.value = true;
+      }
     },
-    duration: {
-      type: String,
-      default: "duration-1000",
+    {
+      threshold: 0.01,
+      rootMargin: "0px 0px -10% 0px",
     },
-    from: {
-      type: String,
-      default: "opacity-0 translate-y-10",
-    },
-    to: {
-      type: String,
-      default: "opacity-100 translate-y-0",
-    },
-  },
-  data() {
-    return {
-      observer: null as IntersectionObserver | null,
-      show: false,
-    };
-  },
-  computed: {
-    transitionDelay() {
-      if (this.delay === 1) return "delay-[100ms]";
-      if (this.delay === 2) return "delay-[200ms]";
-      if (this.delay === 3) return "delay-[300ms]";
-      return "";
-    },
-  },
-  mounted() {
-    this.observer = new IntersectionObserver(
-      ([entry], obs) => {
-        if (entry.isIntersecting) {
-          obs.disconnect();
-          this.show = true;
-        }
-      },
-      {
-        threshold: 0.01,
-        rootMargin: "0px 0px -10% 0px",
-      },
-    );
-    this.observer.observe(this.$el);
-  },
-  unmounted() {
-    this.observer?.disconnect();
-  },
+  );
+  observer.value.observe(root.value);
+});
+
+onUnmounted(() => {
+  observer.value?.disconnect();
 });
 </script>

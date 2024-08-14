@@ -7,7 +7,7 @@ header:
 ## Tortuga Webdesign
 
 Daniel Mössner  
-Albert-Schweitzer-Straße 17b  
+Trentiner Str. 30  
 85375 Neufahrn b. Freising
 
 ### Kontaktdaten
