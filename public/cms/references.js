@@ -42,9 +42,9 @@ export default {
       required: false,
       widget: "relation",
       multiple: true,
-      searchFields: ["title"],
+      search_fields: ["title"],
       collection: "tag",
-      valueField: "title",
+      value_field: "title",
     },
   ],
 };
