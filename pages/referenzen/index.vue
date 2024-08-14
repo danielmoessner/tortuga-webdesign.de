@@ -70,7 +70,7 @@ const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
 );
 
 interface IPostsByYear {
-  [key: number]: any;
+  [key: string]: any;
 }
 
 const portfolioPostsByYear = computed<IPostsByYear>(() => {
@@ -81,6 +81,14 @@ const portfolioPostsByYear = computed<IPostsByYear>(() => {
     year in postsByYear
       ? postsByYear[year].push(item)
       : (postsByYear[year] = [item]);
+  });
+
+  Object.keys(postsByYear).forEach((key) => {
+    postsByYear[key] = postsByYear[key].sort(
+      (a: { date: string }, b: { date: string }) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      },
+    );
   });
 
   return postsByYear;

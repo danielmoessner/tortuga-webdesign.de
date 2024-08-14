@@ -1,0 +1,13 @@
+{
+  "title": "Steve Werner",
+  "slug": "steve-werner",
+  "date": "2024-05-01",
+  "url": "https://steve-werner.com",
+  "image": "/media/steve-werner.png",
+  "active": true,
+  "tags": [
+    "Astro",
+    "Tailwind CSS"
+  ],
+  "description": "Perfekte One Pager Website zur Darstellung der Vision und der wichtigsten Punkte von Steve Werner, der am 26. Mai 24 zur Kreistagswahl antritt."
+}

@@ -13,7 +13,7 @@ export default {
     { label: "Title", name: "title", widget: "string" },
     { label: "Slug", name: "slug", widget: "string" },
     { label: "Url", name: "url", widget: "string", required: false },
-    { label: "Date", name: "date", widget: "date" },
+    { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD" },
     {
       label: "Image",
       name: "image",
