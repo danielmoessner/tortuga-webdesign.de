@@ -1,0 +1,14 @@
+{
+  "title": "Bavaria Yacht Charter - Formular",
+  "slug": "byb-formular",
+  "url": "https://yachtcharter-griechenland.org/angebot.php",
+  "date": "2024-07-29",
+  "image": "/media/byb-formular.png",
+  "active": true,
+  "description": "Programmierung von einem Tool für die dynamische Erstellung von Formularen, die auf den unterschiedlichen Seiten der Bavaria Yacht Charter Gruppe eingebunden werden können und über Eintragungen direkt benachrichtigen.",
+  "tags": [
+    "Django",
+    "Tailwind CSS",
+    "CMS"
+  ]
+}
