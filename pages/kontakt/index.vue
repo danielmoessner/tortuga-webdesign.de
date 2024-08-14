@@ -76,28 +76,6 @@
               </address>
             </div>
           </AnimateOnScroll>
-          <div class="col-start-1">
-            <AnimateOnScroll>
-              <h3
-                class="mt-12 text-2xl font-bold text-gray-100 md:text-3xl md:mt-0"
-              >
-                Maps
-              </h3>
-            </AnimateOnScroll>
-          </div>
-          <AnimateOnScroll class="col-span-2" :delay="1">
-            <div>
-              <div class="p-4 overflow-hidden rounded-lg bg-sunshine-200">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170187.9866221967!2d11.496716990307563!3d48.203008313388644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e6df61b80d737%3A0xb6121f1e0704ba6a!2sTortuga+Webdesign!5e0!3m2!1sde!2sde!4v1551033670191"
-                  frameborder="0"
-                  title="Standort"
-                  style="border: 0; width: 100%; height: 450px"
-                  allowfullscreen="false"
-                />
-              </div>
-            </div>
-          </AnimateOnScroll>
         </div>
       </div>
     </section>
