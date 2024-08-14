@@ -1,6 +1,6 @@
 ---
-title: Webseiten
-slug: webseiten
+title: Webdesign
+slug: webdesign
 subtitle: Klar strukturiert & attraktiv
 srOnlyTitle: Webdesign Agentur München
 metaDescription: Wir liefern die besten Webseiten in und um München.

@@ -1,6 +1,6 @@
 ---
 title: Google Ads
-slug: google-werbung
+slug: google-ads
 subtitle: Ordentlich & zielorientiert
 srOnlyTitle: Webdesign Agentur München
 metaDescription: Ihre Google Ads / Google AdWords Agentur in München Nord für

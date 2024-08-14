@@ -1,0 +1,14 @@
+{
+  "date": "2023-04-26T14:48:51.491Z",
+  "title": "Dr. med. Robert Sentek",
+  "slug": "robert-sentek",
+  "url": "https://www.doktor-sentek.de/",
+  "image": "/media/dr-med-robert-sentek.png",
+  "active": true,
+  "description": "Dr. med. Robert Sentek ist Facharzt für Orthopädie, Unfall- und Handchirurgie. Die Website hilft Besuchern mehr über die unterschiedlichen Krankheitsbilder zu erfahren und Kontakt aufzunehmen.",
+  "tags": [
+    "Gatsby",
+    "CMS",
+    "Tailwind CSS"
+  ]
+}

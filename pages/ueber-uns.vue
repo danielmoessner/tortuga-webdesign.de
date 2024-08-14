@@ -34,7 +34,9 @@
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="3">
-              <p class="text-base text-gray-100 delay-300 md:text-lg">
+              <p
+                class="text-base text-gray-100 whitespace-pre-line delay-300 md:text-lg"
+              >
                 {{ page?.about.text }}
               </p>
             </AnimateOnScroll>

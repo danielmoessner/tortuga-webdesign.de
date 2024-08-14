@@ -92,10 +92,10 @@
   "description": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
   "header": [
     {
-      "title": "Webseiten",
+      "title": "Webdesign",
       "subtitle": "Klar strukturiert & attraktiv",
       "buttonText": "Mehr erfahren",
-      "buttonLink": "/leistungen/webseiten/"
+      "buttonLink": "/leistungen/webdesign/"
     },
     {
       "title": "Programmierung",
@@ -107,7 +107,7 @@
       "title": "Google Ads",
       "subtitle": "Ordentlich & zielorientiert",
       "buttonText": "Mehr erfahren",
-      "buttonLink": "/leistungen/google-werbung/"
+      "buttonLink": "/leistungen/google-ads/"
     }
   ]
 }
