@@ -5,7 +5,7 @@
       class="bg-teal-800 bg-center bg-no-repeat"
       style="background-size: 1600px auto"
       :style="{
-        'background-image': `url(${svgUrl})`,
+        'background-image': 'url(/_nuxt/assets/svg/index.svg)',
       }"
     >
       <div
@@ -339,7 +339,6 @@ import GrayButton from "@/components/GrayButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
 import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
-import svgUrl from "@/assets/svg/index.svg";
 
 definePageMeta({ layout: "new" });
 
@@ -348,13 +347,4 @@ const { data: page } = await useAsyncData("home", () =>
 );
 
 useMeta(page);
-
-// useHead({
-//   script: [
-//     {
-//       src: "https://identity.netlify.com/v1/netlify-identity-widget.js",
-//       async: true,
-//     },
-//   ],
-// });
 </script>
