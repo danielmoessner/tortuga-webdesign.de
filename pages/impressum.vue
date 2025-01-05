@@ -17,7 +17,7 @@
         <article
           class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
         >
-          <ContentRenderer v-if="page" :value="page"></ContentRenderer>
+          <ContentRenderer v-if="page" :value="page" />
         </article>
       </div>
     </section>

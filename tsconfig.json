@@ -1,15 +1,4 @@
 {  
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
-  // "include": [
-  //   // ".nuxt/nuxt.d.ts",
-  //   // "./**/*",
-  //   ".nuxt/imports.d.ts"
-  // ],
-  // "exclude": [
-  //   "dist",
-  //   // ".nuxt",
-  //   ".nuxt/components.d.ts",
-  //   ".output"
-  // ]
 }
