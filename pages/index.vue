@@ -5,7 +5,7 @@
       class="bg-teal-800 bg-center bg-no-repeat"
       style="background-size: 1600px auto"
       :style="{
-        'background-image': 'url(/_nuxt/assets/svg/index.svg)',
+        'background-image': 'url(/svg/index.svg)',
       }"
     >
       <div
@@ -300,7 +300,7 @@
               <p
                 class="max-w-xl mb-12 text-sm leading-tight sm:text-base md:text-lg"
                 v-html="page?.leadGeneratorAd.htmlText"
-              ></p>
+              />
             </AnimateOnScroll>
             <div class="flex flex-wrap justify-center">
               <AnimateOnScroll>
