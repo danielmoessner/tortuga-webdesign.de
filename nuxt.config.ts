@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxt/content"],
+  modules: ["@nuxt/content", "@nuxt/eslint"],
 
   /*
    ** Build configuration
