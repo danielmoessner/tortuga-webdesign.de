@@ -5,10 +5,10 @@
   "author": "Daniel Mössner",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .nuxt && nuxt dev",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "fix": "eslint --fix --ext .vue .; exit 0;",
     "cms": "npx netlify-cms-proxy-server",
     "update": "npx npm-check-updates -u --timeout 60000 && npm install"

@@ -66,7 +66,7 @@ const { data: page } = await useAsyncData("page", () =>
 useMeta(page);
 
 const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
-  queryCollection("referenzen").where("active", "=", true).order('date', 'desc').all(),
+  queryCollection("referenzen").where('active', '=', true).order('date', 'desc').all(),
 );
 
 interface IPostsByYear {
