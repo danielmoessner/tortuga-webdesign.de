@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main v-if="item" class="">
     <SubNavigation :text="item?.title" class="bg-sunshine-100" />
     <SvgHeader
       width="800"
@@ -72,7 +72,7 @@ definePageMeta({ layout: "new" });
 const { params, path } = useRoute();
 
 const { data: item } = await useAsyncData(`portfolio-${path}`, () =>
-  queryCollection("content").path(`/portfolio/${params.slug}`).first(),
+  queryCollection("referenzen").path(`/portfolio/${params.slug}`).first(),
 );
 
 if (!item.value?.title) {

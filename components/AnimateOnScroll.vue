@@ -9,9 +9,11 @@
 </template>
 
 <script lang="ts" setup>
+export type DelayInput = 0 | 1 | 2 | 3;
+
 const props = withDefaults(
   defineProps<{
-    delay?: 0 | 1 | 2 | 3;
+    delay?: DelayInput;
     duration?: string;
     from?: string;
     to?: string;
@@ -27,7 +29,7 @@ const props = withDefaults(
 
 const observer = ref<IntersectionObserver | null>(null);
 const show = ref(false);
-const root = ref(null);
+const root = ref<HTMLElement>();
 
 const transitionDelay = computed(() => {
   if (props.delay === 1) return "delay-[100ms]";

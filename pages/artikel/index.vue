@@ -6,7 +6,7 @@
         <div class="min-h-screen pb-24 bg-sunshine-100 pt-14">
           <div class="max-w-3xl mx-auto">
             <h1 class="text-2xl font-bold text-gray-800">
-              {{ page?.body.header.title }}
+              {{ page?.meta.header.title }}
             </h1>
             <div class="mt-8">
               <div class="flex flex-col space-y-16">
@@ -19,15 +19,15 @@
                     <BlogCard
                       :title="article.title"
                       :description="article.description"
-                      :slug="article.meta.slug"
-                      :date="formatDate(article.meta.date)"
-                      :button="page?.body.button"
+                      :slug="article.slug"
+                      :date="formatDate(article.date)"
+                      :button="page?.meta.button"
                     />
                   </div>
                   <time
                     class="relative z-10 items-center order-first hidden mt-1 mb-3 text-sm text-gray-500 md:block"
-                    :datetime="article.meta.date"
-                    >{{ formatDate(article.meta.date) }}</time
+                    :datetime="article.date"
+                    >{{ formatDate(article.date) }}</time
                   >
                 </article>
               </div>
@@ -47,10 +47,10 @@ import { formatDate } from "@/lib/formatDate";
 definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path("/page/blog").first(),
+  queryCollection("seiten").path("/page/blog").first(),
 );
 const { data: articles } = await useAsyncData("articles", () =>
-  queryCollection("content").where("path", "LIKE", "/blog%").all(),
+  queryCollection("artikel").all(),
 );
 
 useMeta(page);

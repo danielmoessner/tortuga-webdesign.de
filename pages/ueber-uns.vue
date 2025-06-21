@@ -1,12 +1,12 @@
 <template>
   <main>
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.meta.header.title" class="bg-sunshine-100" />
     <SvgHeader
       top="-165"
       width="900"
       svg-name="ueber-uns"
-      :title="page?.body.header.title"
-      :subtitle="page?.body.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
     />
     <section class="relative pt-20 pb-20 bg-teal-800 md:pt-32 md:pb-40">
       <div class="container">
@@ -16,26 +16,26 @@
               <div
                 class="text-sm font-light leading-tight tracking-wider text-white uppercase md:text-base"
               >
-                <span>{{ page?.body.about.pretitle }}</span>
+                <span>{{ page?.meta.about.pretitle }}</span>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <h2
                 class="mb-2 text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl"
               >
-                {{ page?.body.about.title }}
+                {{ page?.meta.about.title }}
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="2">
               <p class="mb-10 text-base text-gray-300 md:text-lg">
-                {{ page?.body.about.subtitle }}
+                {{ page?.meta.about.subtitle }}
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="3">
               <p
                 class="text-base text-gray-100 whitespace-pre-line delay-300 md:text-lg"
               >
-                {{ page?.body.about.text }}
+                {{ page?.meta.about.text }}
               </p>
             </AnimateOnScroll>
           </div>
@@ -44,7 +44,7 @@
               <AnimateOnScroll>
                 <img
                   class="bg-white border-4 rounded-full border-sunshine-500"
-                  :src="`/media/${page?.body.about.image}`"
+                  :src="`/media/${page?.meta.about.image}`"
                   sizes="lg:800px"
                   alt="Daniel Mössner"
                 />
@@ -60,14 +60,14 @@
           <AnimateOnScroll>
             <div class="max-w-xl">
               <h2 class="text-2xl font-bold text-center md:text-3xl">
-                {{ page?.body.faq.title }}
+                {{ page?.meta.faq.title }}
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="1">
             <div class="max-w-xl">
               <div class="text-base text-gray-800 md:text-lg">
-                {{ page?.body.faq.subtitle }}
+                {{ page?.meta.faq.subtitle }}
               </div>
             </div>
           </AnimateOnScroll>
@@ -75,7 +75,7 @@
         <div class="">
           <div class="">
             <AnimateOnScroll
-              v-for="(item, index) in page?.body.faq.questions"
+              v-for="(item, index) in page?.meta.faq.questions"
               :key="index"
             >
               <BaseFaq
@@ -107,7 +107,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("about", () =>
-  queryCollection("content").path("/page/about").first(),
+  queryCollection("seiten").path("/page/about").first(),
 );
 
 useMeta(page);

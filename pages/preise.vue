@@ -1,24 +1,20 @@
 <template>
   <main>
-    <!---->
-    <SubNavigation
-      :text="page?.body.navigation.title"
-      class="bg-sunshine-100"
-    />
-    <!---->
+    <SubNavigation :text="page?.meta.header.title" class="bg-sunshine-100" />
+
     <SvgHeader
       top="-165"
       width="900"
       svg-name="ueber-uns"
-      :title="page?.body.header.title"
-      :subtitle="page?.body.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
     />
-    <!---->
+
     <section class="relative pt-20 pb-40 bg-gray-50">
       <div class="container">
         <div class="sm:flex sm:flex-col sm:align-center">
           <p class="mt-5 text-xl text-gray-700 sm:text-center">
-            {{ page?.body.content.text }}
+            {{ page?.meta.content.text }}
           </p>
         </div>
         <div
@@ -26,19 +22,19 @@
         >
           <div
             v-for="p in packages"
-            :key="p.meta.slug"
+            :key="p.slug as string"
             class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg shadow-sm"
           >
             <div class="p-6">
               <h2 class="text-lg font-medium leading-6 text-gray-900">
-                {{ p.meta.title }}
+                {{ p.title }}
               </h2>
               <p class="mt-4 text-sm text-gray-500">
-                {{ p.meta.description }}
+                {{ p.description }}
               </p>
               <p class="mt-8">
                 <span class="text-4xl font-extrabold text-gray-900">
-                  {{ p.meta.price }},00 €
+                  {{ p.price }},00 €
                 </span>
                 {{ " " }}
                 <span class="text-base font-medium text-gray-500">(Netto)</span>
@@ -48,12 +44,12 @@
               <h3
                 class="text-xs font-medium tracking-wide text-gray-900 uppercase"
               >
-                {{ page?.body.content.features }}
+                {{ page?.meta.content.features }}
               </h3>
               <ul class="mt-6 space-y-4">
                 <li
-                  v-for="feature in p.meta.features"
-                  :key="feature.text"
+                  v-for="feature in p.features"
+                  :key="feature"
                   class="flex space-x-3"
                 >
                   <svg
@@ -69,7 +65,7 @@
                       clip-rule="evenodd"
                     />
                   </svg>
-                  <span class="text-sm text-gray-500">{{ feature.text }}</span>
+                  <span class="text-sm text-gray-500">{{ feature }}</span>
                 </li>
               </ul>
             </div>
@@ -77,7 +73,7 @@
         </div>
       </div>
     </section>
-    <!---->
+
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -85,7 +81,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
   </main>
 </template>
 
@@ -93,17 +88,16 @@
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
-// import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("prices", () =>
-  queryCollection("content").path("/page/prices").first(),
+  queryCollection("seiten").path("/page/prices").first(),
 );
 
 useMeta(page);
 
 const { data: packages } = await useAsyncData("packages", () =>
-  queryCollection("content").where("path", "LIKE", "/packages%").all(),
+  queryCollection("angebote").all(),
 );
 </script>

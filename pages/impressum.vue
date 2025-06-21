@@ -40,7 +40,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("imprint", () =>
-  queryCollection("content").path("/page/imprint").first(),
+  queryCollection("seiten").path("/page/imprint").first(),
 );
 
 useMeta(page);

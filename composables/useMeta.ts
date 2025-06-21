@@ -1,20 +1,14 @@
 import type { Ref } from "vue";
 
 export function useMeta(
-  page: Ref<Record<string, any> | undefined> | undefined,
+  page: Ref<{ title: string; description: string } | undefined | null>,
 ) {
   const title = computed(() => {
-    return (
-      page?.value?.title ||
-      (page?.value?.meta ? page?.value?.meta.title : false)
-    );
+    return page?.value?.title;
   });
 
   const description = computed(() => {
-    return (
-      page?.value?.description ||
-      (page?.value?.meta ? page?.value?.meta.description : false)
-    );
+    return page?.value?.description;
   });
 
   useHead({

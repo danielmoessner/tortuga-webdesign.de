@@ -1,9 +1,9 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.body.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
     <SvgHeader
-      :title="page?.body.header.title"
-      :subtitle="page?.body.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
       width="800"
       top="-110"
       svg-name="hilfestellung"
@@ -17,12 +17,12 @@
               <h2
                 class="mb-3 text-2xl font-bold leading-tight text-gray-100 md:text-3xl"
               >
-                {{ page?.body.stakes.title }}
+                {{ page?.meta.stakes.title }}
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <p class="max-w-lg text-base text-gray-100 md:text-lg">
-                {{ page?.body.stakes.subtitle }}
+                {{ page?.meta.stakes.subtitle }}
               </p>
             </AnimateOnScroll>
           </div>
@@ -30,9 +30,9 @@
 
         <div class="grid gap-8 mb-20 gap-y-16 md:gap-y-8 md:grid-cols-3">
           <AnimateOnScroll
-            v-for="(proposition, index) in page?.body.valuePropositions"
+            v-for="(proposition, index) in page?.meta.valuePropositions"
             :key="index"
-            :delay="index"
+            :delay="index as DelayInput"
           >
             <div>
               <h3 class="mb-2 text-xl font-bold text-gray-100 md:text-2xl">
@@ -48,15 +48,15 @@
           <div>
             <AnimateOnScroll>
               <h2 class="text-3xl font-bold text-gray-100">
-                {{ page?.body.form.title }}
+                {{ page?.meta.form.title }}
               </h2>
             </AnimateOnScroll>
           </div>
           <div class="lg:col-span-2">
             <AnimateOnScroll :delay="1">
               <div class="px-2 py-3 rounded-lg bg-sunshine-200 md:px-8 md:py-5">
-                <LeadGeneratorForm :download="page?.body.form">
-                  <TealButton :submit="true" :text="page?.body.form.button" />
+                <LeadGeneratorForm :download="page?.meta.form">
+                  <TealButton :submit="true" :text="page?.meta.form.button" />
                 </LeadGeneratorForm>
               </div>
             </AnimateOnScroll>
@@ -80,12 +80,14 @@ import NewFooter from "@/components/NewFooter.vue";
 import TealButton from "@/components/TealButton.vue";
 import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
-import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
+import AnimateOnScroll, {
+  type DelayInput,
+} from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path("/page/leadgenerator").first(),
+  queryCollection("seiten").path("/page/leadgenerator").first(),
 );
 
 useMeta(page);

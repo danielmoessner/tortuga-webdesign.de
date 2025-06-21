@@ -1,7 +1,7 @@
 <template>
   <main class="">
     <SubNavigation :text="page?.title" class="bg-sunshine-100" />
-    <!--  -->
+
     <SvgHeader
       top="-30"
       width="1000"
@@ -9,7 +9,7 @@
       :title="page?.meta.header.title"
       :subtitle="page?.meta.header.subtitle"
     />
-    <!---->
+
     <section class="relative bg-white">
       <div
         class="max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
@@ -21,7 +21,7 @@
         </article>
       </div>
     </section>
-    <!---->
+
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -29,7 +29,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
   </main>
 </template>
 
@@ -41,7 +40,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("dataProtection", () =>
-  queryCollection("content").path("/page/dataprotection").first(),
+  queryCollection("seiten").path("/page/dataprotection").first(),
 );
 
 useMeta(page);

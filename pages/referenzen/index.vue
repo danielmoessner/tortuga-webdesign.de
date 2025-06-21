@@ -6,8 +6,8 @@
       width="800"
       top="-120"
       svg-name="referenzen"
-      :title="page?.body.header.title"
-      :subtitle="page?.body.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
     />
 
     <section class="relative pt-20 pb-24 bg-teal-800 md:pt-32 md:pb-40">
@@ -30,7 +30,7 @@
               :key="index"
               class="portfolio--item"
             >
-              <AnimateOnScroll :delay="(index % 3) as 0 | 1 | 2">
+              <AnimateOnScroll :delay="(index % 3) as DelayInput">
                 <ReferenceItem :portfolio-item="item" />
               </AnimateOnScroll>
             </div>
@@ -46,7 +46,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    data: {{ portfolioPosts }}
   </main>
 </template>
 
@@ -55,12 +54,14 @@ import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import ReferenceItem from "@/components/ReferenceItem.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
-import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
+import AnimateOnScroll, {
+  type DelayInput,
+} from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path("/page/portfolio").first(),
+  queryCollection("seiten").path("/page/portfolio").first(),
 );
 
 useMeta(page);
@@ -68,7 +69,7 @@ useMeta(page);
 const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
   queryCollection("referenzen")
     .where("active", "=", true)
-    .order("date", "desc")
+    .order("date", "DESC")
     .all(),
 );
 

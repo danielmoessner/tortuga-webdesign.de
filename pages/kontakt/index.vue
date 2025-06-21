@@ -2,8 +2,8 @@
   <main class="">
     <SubNavigation :text="page?.title" class="bg-sunshine-100" />
     <SvgHeader
-      :title="page?.body.header.title"
-      :subtitle="page?.body.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
       width="800"
       top="-105"
       svg-name="kontakt"
@@ -91,7 +91,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("contact", () =>
-  queryCollection("content").path("/page/contact").first(),
+  queryCollection("seiten").path("/page/contact").first(),
 );
 
 useMeta(page);
