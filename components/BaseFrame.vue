@@ -4,7 +4,7 @@
     :class="{ 'border-5': border, 'border-0': !border }"
   >
     <div class="frame-content">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

@@ -17,7 +17,7 @@
         <article
           class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
         >
-          <ContentRenderer v-if="page" :value="page.body"></ContentRenderer>
+          <ContentRenderer v-if="page" :value="page.body" />
         </article>
       </div>
     </section>
@@ -41,7 +41,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("dataProtection", () =>
-  queryCollection("content").path('/page/dataprotection').first(),
+  queryCollection("content").path("/page/dataprotection").first(),
 );
 
 useMeta(page);

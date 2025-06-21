@@ -54,7 +54,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path('/page/leadgenerator').first(),
+  queryCollection("content").path("/page/leadgenerator").first(),
 );
 
 useMeta(page);

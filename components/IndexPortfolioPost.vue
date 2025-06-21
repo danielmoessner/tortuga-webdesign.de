@@ -5,12 +5,12 @@
         <div class="relative h-full">
           <BaseFrame class="h-full min-h-300">
             <div
-              class="absolute w-full h-full overflow-hidden  group border-radius-3"
+              class="absolute w-full h-full overflow-hidden group border-radius-3"
               @mouseover="mouseover"
               @mouseleave="mouseleave"
             >
               <div
-                class="absolute items-center justify-center invisible w-full h-full  group-hover:visible bg-dark-75 is-hidden-touch is-flex"
+                class="absolute items-center justify-center invisible w-full h-full group-hover:visible bg-dark-75 is-hidden-touch is-flex"
                 :class="{ 'is-invisible': isScrollable }"
               >
                 <span class="has-text-centered has-text-white is-size-4"

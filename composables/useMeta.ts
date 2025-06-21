@@ -1,9 +1,12 @@
-import { type Ref } from "vue";
+import type { Ref } from "vue";
 
-export function useMeta(page: Ref<Record<string, any> | undefined> | undefined) {
+export function useMeta(
+  page: Ref<Record<string, any> | undefined> | undefined,
+) {
   const title = computed(() => {
     return (
-      page?.value?.title || (page?.value?.meta ? page?.value?.meta.title : false)
+      page?.value?.title ||
+      (page?.value?.meta ? page?.value?.meta.title : false)
     );
   });
 

@@ -106,6 +106,7 @@ const svgUrl = computed(() => {
   if (svgName.value === "hilfestellung") return hilfestellungSvg;
   if (svgName.value === "referenzen") return referenzenSvg;
   if (svgName.value === "kontakt") return kontaktSvg;
+  throw new Error("unknown svg name");
 });
 
 const headingElement = computed(() => {

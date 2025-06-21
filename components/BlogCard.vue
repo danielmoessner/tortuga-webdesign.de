@@ -14,7 +14,7 @@
       ><span
         class="absolute inset-y-0 left-0 flex items-center"
         aria-hidden="true"
-        ><span class="h-4 w-0.5 rounded-full bg-gray-200"></span></span
+        ><span class="h-4 w-0.5 rounded-full bg-gray-200" /></span
       >{{ date }}</time
     >
     <p class="relative z-10 mt-2 text-sm text-gray-600">
@@ -39,7 +39,7 @@
           stroke-width="1.5"
           stroke-linecap="round"
           stroke-linejoin="round"
-        ></path>
+        />
       </svg>
     </nuxt-link>
   </div>

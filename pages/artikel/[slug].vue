@@ -23,7 +23,7 @@
                   :datetime="article?.meta.date"
                   class="flex items-center order-first text-base text-gray-400"
                 >
-                  <span class="h-4 w-0.5 rounded-full bg-gray-200"></span>
+                  <span class="h-4 w-0.5 rounded-full bg-gray-200" />
                   <span class="ml-3">{{ formatDate(article?.meta.date) }}</span>
                 </time>
               </header>
@@ -44,13 +44,15 @@ import { formatDate } from "@/lib/formatDate";
 definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path('/page/blog').first(),
+  queryCollection("content").path("/page/blog").first(),
 );
 
 const { params, path } = useRoute();
 
 const { data: article } = await useAsyncData(`article-${path}`, () =>
-  queryCollection("content").where('path', 'LIKE', `/blog/${params.slug}`).first(),
+  queryCollection("content")
+    .where("path", "LIKE", `/blog/${params.slug}`)
+    .first(),
 );
 
 if (!article.value?.title) {

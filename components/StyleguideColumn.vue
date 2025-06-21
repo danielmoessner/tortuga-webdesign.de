@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <slot></slot>
+    <slot />
     <hr class="mb-0 mt-4 bg-gray-200" />
     <small class="uppercase tracking-wider">{{ text }}</small>
   </div>

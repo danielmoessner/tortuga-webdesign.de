@@ -8,6 +8,7 @@ export default withNuxt({
   rules: {
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
     "vue/no-v-html": 0,
+    "vue/html-self-closing": "off",
     "vue/no-static-inline-styles": 0,
     "vue/no-unused-components": "warn",
     "no-console": "off",

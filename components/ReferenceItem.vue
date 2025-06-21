@@ -35,7 +35,7 @@
             ref="showcaseHeightSet"
             class="block w-full"
             :style="{ 'padding-top': height }"
-          ></div>
+          />
           <div class="absolute top-0 w-full">
             <div
               ref="showcaseImage"

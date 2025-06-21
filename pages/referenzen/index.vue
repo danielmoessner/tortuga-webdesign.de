@@ -1,7 +1,7 @@
 <template>
   <main class="">
     <SubNavigation :text="page?.title" class="bg-sunshine-100" />
-    
+
     <SvgHeader
       width="800"
       top="-120"
@@ -9,7 +9,7 @@
       :title="page?.body.header.title"
       :subtitle="page?.body.header.subtitle"
     />
-    
+
     <section class="relative pt-20 pb-24 bg-teal-800 md:pt-32 md:pb-40">
       <div class="container">
         <div
@@ -30,7 +30,7 @@
               :key="index"
               class="portfolio--item"
             >
-              <AnimateOnScroll :delay="(index % 3 as 0 | 1 | 2)">
+              <AnimateOnScroll :delay="(index % 3) as 0 | 1 | 2">
                 <ReferenceItem :portfolio-item="item" />
               </AnimateOnScroll>
             </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </section>
-    
+
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -60,16 +60,20 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path('/page/portfolio').first(),
+  queryCollection("content").path("/page/portfolio").first(),
 );
 
 useMeta(page);
 
 const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
-  queryCollection("referenzen").where('active', '=', true).order('date', 'desc').all(),
+  queryCollection("referenzen")
+    .where("active", "=", true)
+    .order("date", "desc")
+    .all(),
 );
 
 interface IPostsByYear {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -78,9 +82,9 @@ const portfolioPostsByYear = computed<IPostsByYear>(() => {
 
   portfolioPosts.value?.forEach((item) => {
     const year = new Date(item.date).getFullYear();
-    year in postsByYear
-      ? postsByYear[year].push(item)
-      : (postsByYear[year] = [item]);
+
+    if (year in postsByYear) postsByYear[year].push(item);
+    else postsByYear[year] = [item];
   });
 
   Object.keys(postsByYear).forEach((key) => {

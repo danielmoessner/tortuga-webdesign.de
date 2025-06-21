@@ -107,7 +107,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("about", () =>
-  queryCollection("content").path('/page/about').first(),
+  queryCollection("content").path("/page/about").first(),
 );
 
 useMeta(page);

@@ -19,8 +19,8 @@
       <p
         class="mb-8 text-sm text-black md:text-base md:mb-12"
         v-html="description"
-      ></p>
-      <slot></slot>
+      />
+      <slot />
     </div>
   </div>
 </template>

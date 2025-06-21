@@ -16,7 +16,7 @@
         class="max-w-3xl px-4 py-10 mx-auto sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-5xl"
       >
         <ProseLarge>
-          <ContentRenderer v-if="item" :value="item.body"></ContentRenderer>
+          <ContentRenderer v-if="item" :value="item.body" />
         </ProseLarge>
       </div>
     </section>

@@ -1,7 +1,10 @@
 <template>
   <main>
     <!---->
-    <SubNavigation :text="page?.body.navigation.title" class="bg-sunshine-100" />
+    <SubNavigation
+      :text="page?.body.navigation.title"
+      class="bg-sunshine-100"
+    />
     <!---->
     <SvgHeader
       top="-165"
@@ -95,12 +98,12 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("prices", () =>
-  queryCollection("content").path('/page/prices').first(),
+  queryCollection("content").path("/page/prices").first(),
 );
 
 useMeta(page);
 
 const { data: packages } = await useAsyncData("packages", () =>
-  queryCollection("content").where('path', "LIKE", '/packages%').all(),
+  queryCollection("content").where("path", "LIKE", "/packages%").all(),
 );
 </script>

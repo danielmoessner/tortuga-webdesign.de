@@ -1,9 +1,5 @@
 <template>
-  <button type="submit"><slot></slot></button>
+  <button type="submit"><slot /></button>
 </template>
 
-<script>
-export default {
-  name: "Button",
-};
-</script>
+<script></script>

@@ -1,6 +1,5 @@
 <template>
   <main class="overflow-hidden">
-    
     <section
       class="bg-teal-800 bg-center bg-no-repeat"
       style="background-size: 1600px auto"
@@ -42,7 +41,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="pt-20 pb-20 bg-gray-100 md:pt-32 md:pb-32">
       <div class="container">
         <div class="xl:flex xl:items-center xl:justify-between">
@@ -77,7 +76,7 @@
         </div>
       </div>
     </section>
-    
+
     <section
       id="was-bringt-eine-webseite"
       class="pt-32 pb-32 bg-teal-900 md:pt-48 md:pb-56"
@@ -126,7 +125,7 @@
         </div>
       </div>
     </section>
-    
+
     <section
       id="wir-bleiben-langfristig-an-ihrer-seite"
       class="pt-24 pb-32 bg-gray-100 md:pt-40 md:pb-48"
@@ -162,12 +161,16 @@
             />
           </AnimateOnScroll>
           <AnimateOnScroll :delay="3">
-            <GrayButton class="" :text="page?.body.guide.button" to="/referenzen/" />
+            <GrayButton
+              class=""
+              :text="page?.body.guide.button"
+              to="/referenzen/"
+            />
           </AnimateOnScroll>
         </div>
       </div>
     </section>
-    
+
     <section
       id="der-weg-zur-perfekten-webseite"
       class="pt-24 pb-32 bg-teal-900 md:pt-48 md:pb-56"
@@ -272,7 +275,7 @@
         </div>
       </div>
     </section>
-    
+
     <section class="pt-24 pb-32 bg-gray-100 md:pt-40 md:pb-48">
       <div class="container">
         <div class="flex flex-col items-center justify-center">
@@ -309,7 +312,7 @@
         </div>
       </div>
     </section>
-    
+
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -317,7 +320,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    
   </main>
 </template>
 
@@ -331,7 +333,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData(() =>
-  queryCollection("content").path('/page/home').first(),
+  queryCollection("content").path("/page/home").first(),
 );
 
 useMeta(page);

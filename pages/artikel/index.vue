@@ -47,10 +47,10 @@ import { formatDate } from "@/lib/formatDate";
 definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryCollection("content").path('/page/blog').first(),
+  queryCollection("content").path("/page/blog").first(),
 );
 const { data: articles } = await useAsyncData("articles", () =>
-  queryCollection("content").where('path', 'LIKE', '/blog%').all(),
+  queryCollection("content").where("path", "LIKE", "/blog%").all(),
 );
 
 useMeta(page);
