@@ -1,10 +1,9 @@
 <template>
   <main class="">
     <SubNavigation :text="page?.title" class="bg-sunshine-100" />
-    <!---->
     <SvgHeader
-      :title="page?.header.title"
-      :subtitle="page?.header.subtitle"
+      :title="page?.body.header.title"
+      :subtitle="page?.body.header.subtitle"
       width="800"
       top="-105"
       svg-name="kontakt"
@@ -22,7 +21,6 @@
         >
       </AnimateOnScroll>
     </SvgHeader>
-    <!---->
     <section class="relative pt-20 pb-24 bg-teal-700 md:pt-24 md:pb-32">
       <div class="container">
         <div
@@ -79,9 +77,7 @@
         </div>
       </div>
     </section>
-    <!---->
     <NewFooter />
-    <!---->
   </main>
 </template>
 
@@ -95,7 +91,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("contact", () =>
-  queryContent("/page/contact").findOne(),
+  queryCollection("content").path('/page/contact').first(),
 );
 
 useMeta(page);

@@ -6,8 +6,8 @@
       top="-30"
       width="1000"
       svg-name="rechtliches"
-      :title="page?.header.title"
-      :subtitle="page?.header.subtitle"
+      :title="page?.meta.header.title"
+      :subtitle="page?.meta.header.subtitle"
     />
     <!---->
     <section class="relative bg-white">
@@ -17,7 +17,7 @@
         <article
           class="mx-auto prose-sm prose sm:prose lg:prose-lg xl:prose-2xl"
         >
-          <ContentRenderer v-if="page" :value="page"></ContentRenderer>
+          <ContentRenderer v-if="page" :value="page.body"></ContentRenderer>
         </article>
       </div>
     </section>
@@ -41,7 +41,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("dataProtection", () =>
-  queryContent("/page/dataprotection").findOne(),
+  queryCollection("content").path('/page/dataprotection').first(),
 );
 
 useMeta(page);

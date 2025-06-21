@@ -1,15 +1,15 @@
 <template>
   <main class="">
     <SubNavigation :text="page?.title" class="bg-sunshine-100" />
-    <!--  -->
+    
     <SvgHeader
       width="800"
       top="-120"
       svg-name="referenzen"
-      :title="page?.header.title"
-      :subtitle="page?.header.subtitle"
+      :title="page?.body.header.title"
+      :subtitle="page?.body.header.subtitle"
     />
-    <!---->
+    
     <section class="relative pt-20 pb-24 bg-teal-800 md:pt-32 md:pb-40">
       <div class="container">
         <div
@@ -38,7 +38,7 @@
         </div>
       </div>
     </section>
-    <!---->
+    
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -46,7 +46,7 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
+    data: {{ portfolioPosts }}
   </main>
 </template>
 
@@ -60,13 +60,13 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryContent("/page/portfolio").findOne(),
+  queryCollection("content").path('/page/portfolio').first(),
 );
 
 useMeta(page);
 
 const { data: portfolioPosts } = await useAsyncData("portfolio", () =>
-  queryContent("portfolio").where({ active: true }).sort({ date: 1 }).find(),
+  queryCollection("referenzen").where("active", "=", true).order('date', 'desc').all(),
 );
 
 interface IPostsByYear {

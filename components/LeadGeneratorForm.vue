@@ -15,30 +15,13 @@
           <div class="relative">
             <input
               id="firstname"
-              class="
-                form-input
-                placeholder-gray-300
-                pl-10
-                w-full
-                border-opacity-75
-                focus:shadow-teal
-              "
+              class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
               type="text"
               name="firstname"
-              placeholder="Max / Susi"
+              placeholder="Vorname"
             />
             <span
-              class="
-                absolute
-                flex
-                h-10
-                items-center
-                justify-center
-                left-0
-                text-gray-300
-                top-0
-                w-10
-              "
+              class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300 "
             >
               <svg
                 aria-hidden="true"
@@ -64,30 +47,13 @@
           <div class="relative">
             <input
               id="lastname"
-              class="
-                form-input
-                placeholder-gray-300
-                pl-10
-                w-full
-                border-opacity-75
-                focus:shadow-teal
-              "
+              class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
               type="text"
               name="lastname"
-              placeholder="Müller"
+              placeholder="Nachname"
             />
             <span
-              class="
-                absolute
-                flex
-                h-10
-                items-center
-                justify-center
-                left-0
-                text-gray-300
-                top-0
-                w-10
-              "
+              class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300 "
             >
               <svg
                 aria-hidden="true"
@@ -109,34 +75,17 @@
           </div>
         </div>
         <div class="p-3">
-          <label class="mb-1 block" for="mail">E-Mail</label>
+          <label class="block mb-1" for="mail">E-Mail</label>
           <div class="relative">
             <input
               id="mail"
-              class="
-                form-input
-                placeholder-gray-300
-                pl-10
-                w-full
-                border-opacity-75
-                focus:shadow-teal
-              "
+              class="w-full pl-10 placeholder-gray-300 border-opacity-75 form-input focus:shadow-teal"
               type="email"
               name="email"
-              placeholder="mueller@mail.de"
+              placeholder="beispiel@email.de"
             />
             <span
-              class="
-                absolute
-                flex
-                h-10
-                items-center
-                justify-center
-                left-0
-                text-gray-300
-                top-0
-                w-10
-              "
+              class="absolute top-0 left-0 flex items-center justify-center w-10 h-10 text-gray-300 "
             >
               <svg
                 aria-hidden="true"
@@ -157,24 +106,14 @@
             </span>
           </div>
         </div>
-        <div class="p-3 col-start-1">
+        <div class="col-start-1 p-3">
           <label class="block mb-1">Dürfen wir Ihnen E-Mails schicken?</label>
           <div class="relative">
-            <div class="flex items-center form-input placeholder-gray-300">
+            <div class="flex items-center placeholder-gray-300 form-input">
               <input
                 id="dataprotection"
                 type="checkbox"
-                class="
-                  form-checkbox
-                  text-teal-600
-                  focus:shadow-teal
-                  border-opacity-75
-                  ml-0
-                  mr-2
-                  w-5
-                  h-5
-                  cursor-pointer
-                "
+                class="w-5 h-5 ml-0 mr-2 text-teal-600 border-opacity-75 cursor-pointer form-checkbox focus:shadow-teal"
                 name="dataprotection"
                 required
               />
@@ -185,7 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="p-3 mt-5 col-start-1">
+        <div class="col-start-1 p-3 mt-5">
           <div class="">
             <slot></slot>
           </div>

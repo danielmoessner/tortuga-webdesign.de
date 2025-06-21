@@ -1,16 +1,16 @@
-import { Ref } from "vue";
+import { type Ref } from "vue";
 
-export function useMeta(page: Ref<any>) {
+export function useMeta(page: Ref<Record<string, any> | undefined> | undefined) {
   const title = computed(() => {
     return (
-      page.value.title || (page.value.meta ? page.value.meta.title : false)
+      page?.value?.title || (page?.value?.meta ? page?.value?.meta.title : false)
     );
   });
 
   const description = computed(() => {
     return (
-      page.value.description ||
-      (page.value.meta ? page.value.meta.description : false)
+      page?.value?.description ||
+      (page?.value?.meta ? page?.value?.meta.description : false)
     );
   });
 
@@ -18,29 +18,22 @@ export function useMeta(page: Ref<any>) {
     title,
     meta: [
       {
-        hid: "description",
         name: "description",
         content: description.value,
       },
-      // Open Graph
       {
-        hid: "og:title",
         property: "og:title",
         content: title.value,
       },
       {
-        hid: "og:description",
         property: "og:description",
         content: description.value,
       },
-      // Twitter Card
       {
-        hid: "twitter:title",
         name: "twitter:title",
         content: title.value,
       },
       {
-        hid: "twitter:description",
         name: "twitter:description",
         content: description.value,
       },

@@ -1,16 +1,14 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
-    <!--  -->
+    <SubNavigation :text="page?.body.title" class="bg-sunshine-100" />
     <SvgHeader
-      :title="page?.header.title"
-      :subtitle="page?.header.subtitle"
+      :title="page?.body.header.title"
+      :subtitle="page?.body.header.subtitle"
       width="800"
       top="-110"
       svg-name="hilfestellung"
       :swap-heading-element="true"
     />
-    <!---->
     <section class="relative pt-24 pb-24 bg-teal-800 md:pt-32 md:pb-40">
       <div class="container">
         <div class="flex flex-col items-center justify-center mb-24">
@@ -19,12 +17,12 @@
               <h2
                 class="mb-3 text-2xl font-bold leading-tight text-gray-100 md:text-3xl"
               >
-                {{ page?.stakes.title }}
+                {{ page?.body.stakes.title }}
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <p class="max-w-lg text-base text-gray-100 md:text-lg">
-                {{ page?.stakes.subtitle }}
+                {{ page?.body.stakes.subtitle }}
               </p>
             </AnimateOnScroll>
           </div>
@@ -32,7 +30,7 @@
 
         <div class="grid gap-8 mb-20 gap-y-16 md:gap-y-8 md:grid-cols-3">
           <AnimateOnScroll
-            v-for="(proposition, index) in page?.valuePropositions"
+            v-for="(proposition, index) in page?.body.valuePropositions"
             :key="index"
             :delay="index"
           >
@@ -50,15 +48,15 @@
           <div>
             <AnimateOnScroll>
               <h2 class="text-3xl font-bold text-gray-100">
-                {{ page?.form.title }}
+                {{ page?.body.form.title }}
               </h2>
             </AnimateOnScroll>
           </div>
           <div class="lg:col-span-2">
             <AnimateOnScroll :delay="1">
               <div class="px-2 py-3 rounded-lg bg-sunshine-200 md:px-8 md:py-5">
-                <LeadGeneratorForm :download="page?.form">
-                  <TealButton :submit="true" :text="page?.form.button" />
+                <LeadGeneratorForm :download="page?.body.form">
+                  <TealButton :submit="true" :text="page?.body.form.button" />
                 </LeadGeneratorForm>
               </div>
             </AnimateOnScroll>
@@ -66,7 +64,6 @@
         </div>
       </div>
     </section>
-    <!---->
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -74,7 +71,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
   </main>
 </template>
 
@@ -89,7 +85,7 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryContent("/page/leadgenerator").findOne(),
+  queryCollection("content").path('/page/leadgenerator').first(),
 );
 
 useMeta(page);

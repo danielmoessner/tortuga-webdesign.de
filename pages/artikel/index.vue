@@ -1,13 +1,12 @@
 <template>
   <main class="">
     <SubNavigation small :text="page?.title" class="bg-sunshine-100" />
-    <!---->
     <section class="lg:bg-gray-100 bg-sunshine-100">
       <div class="container small">
         <div class="min-h-screen pb-24 bg-sunshine-100 pt-14">
           <div class="max-w-3xl mx-auto">
             <h1 class="text-2xl font-bold text-gray-800">
-              {{ page?.header.title }}
+              {{ page?.body.header.title }}
             </h1>
             <div class="mt-8">
               <div class="flex flex-col space-y-16">
@@ -20,15 +19,15 @@
                     <BlogCard
                       :title="article.title"
                       :description="article.description"
-                      :slug="article.slug"
-                      :date="formatDate(article.date)"
-                      :button="page?.button"
+                      :slug="article.meta.slug"
+                      :date="formatDate(article.meta.date)"
+                      :button="page?.body.button"
                     />
                   </div>
                   <time
                     class="relative z-10 items-center order-first hidden mt-1 mb-3 text-sm text-gray-500 md:block"
-                    :datetime="article.date"
-                    >{{ formatDate(article.date) }}</time
+                    :datetime="article.meta.date"
+                    >{{ formatDate(article.meta.date) }}</time
                   >
                 </article>
               </div>
@@ -44,17 +43,14 @@
 import SubNavigation from "@/components/SubNavigation.vue";
 import BlogCard from "@/components/BlogCard.vue";
 import { formatDate } from "@/lib/formatDate";
-// import TealButton from "@/components/TealButton.vue";
-// import SvgHeader from "@/components/SvgHeader.vue";
-// import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryContent("/page/blog").findOne(),
+  queryCollection("content").path('/page/blog').first(),
 );
 const { data: articles } = await useAsyncData("articles", () =>
-  queryContent("/blog").sort({ date: -1 }).find(),
+  queryCollection("content").where('path', 'LIKE', '/blog%').all(),
 );
 
 useMeta(page);

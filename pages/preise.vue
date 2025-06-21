@@ -1,21 +1,21 @@
 <template>
   <main>
     <!---->
-    <SubNavigation :text="page?.navigation.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.body.navigation.title" class="bg-sunshine-100" />
     <!---->
     <SvgHeader
       top="-165"
       width="900"
       svg-name="ueber-uns"
-      :title="page?.header.title"
-      :subtitle="page?.header.subtitle"
+      :title="page?.body.header.title"
+      :subtitle="page?.body.header.subtitle"
     />
     <!---->
     <section class="relative pt-20 pb-40 bg-gray-50">
       <div class="container">
         <div class="sm:flex sm:flex-col sm:align-center">
           <p class="mt-5 text-xl text-gray-700 sm:text-center">
-            {{ page?.content.text }}
+            {{ page?.body.content.text }}
           </p>
         </div>
         <div
@@ -23,19 +23,19 @@
         >
           <div
             v-for="p in packages"
-            :key="p.slug"
+            :key="p.meta.slug"
             class="bg-white border border-gray-200 divide-y divide-gray-200 rounded-lg shadow-sm"
           >
             <div class="p-6">
               <h2 class="text-lg font-medium leading-6 text-gray-900">
-                {{ p.title }}
+                {{ p.meta.title }}
               </h2>
               <p class="mt-4 text-sm text-gray-500">
-                {{ p.description }}
+                {{ p.meta.description }}
               </p>
               <p class="mt-8">
                 <span class="text-4xl font-extrabold text-gray-900">
-                  {{ p.price }},00 €
+                  {{ p.meta.price }},00 €
                 </span>
                 {{ " " }}
                 <span class="text-base font-medium text-gray-500">(Netto)</span>
@@ -45,11 +45,11 @@
               <h3
                 class="text-xs font-medium tracking-wide text-gray-900 uppercase"
               >
-                {{ page?.content.features }}
+                {{ page?.body.content.features }}
               </h3>
               <ul class="mt-6 space-y-4">
                 <li
-                  v-for="feature in p.features"
+                  v-for="feature in p.meta.features"
                   :key="feature.text"
                   class="flex space-x-3"
                 >
@@ -95,12 +95,12 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("prices", () =>
-  queryContent("/page/prices").findOne(),
+  queryCollection("content").path('/page/prices').first(),
 );
 
 useMeta(page);
 
 const { data: packages } = await useAsyncData("packages", () =>
-  queryContent("/packages").find(),
+  queryCollection("content").where('path', "LIKE", '/packages%').all(),
 );
 </script>

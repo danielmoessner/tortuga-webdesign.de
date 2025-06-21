@@ -1,11 +1,11 @@
 <template>
   <main class="">
     <!---->
-    <SubNavigation :text="page?.thankYou.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page?.body.thankYou.title" class="bg-sunshine-100" />
     <!---->
     <SvgHeader
-      :title="page?.thankYou.header.title"
-      :subtitle="page?.thankYou.header.subtitle"
+      :title="page?.body.thankYou.header.title"
+      :subtitle="page?.body.thankYou.header.subtitle"
       width="800"
       top="-110"
       svg-name="hilfestellung"
@@ -16,18 +16,18 @@
         <div class="border-l-4 rounded-md bg-sunshine-200 border-sunshine-700">
           <div class="p-6">
             <h2 class="mb-4 text-2xl font-bold text-sunshine-900">
-              {{ page?.thankYou.text.title }}
+              {{ page?.body.thankYou.text.title }}
             </h2>
             <p class="mb-1 text-sunshine-900">
-              {{ page?.thankYou.text.text }}
+              {{ page?.body.thankYou.text.text }}
             </p>
             <p class="">
               <nuxt-link
                 class="underline text-sunshine-900 hover:text-sunshine-600"
-                :to="page?.thankYou.text.link.to"
+                :to="page?.body.thankYou.text.link.to"
                 target="_blank"
               >
-                {{ page?.thankYou.text.link.text }}
+                {{ page?.body.thankYou.text.link.text }}
               </nuxt-link>
             </p>
           </div>
@@ -54,7 +54,7 @@ import SvgHeader from "@/components/SvgHeader.vue";
 definePageMeta({ layout: "new" });
 
 const { data: page } = await useAsyncData("page", () =>
-  queryContent("/page/leadgenerator").findOne(),
+  queryCollection("content").path('/page/leadgenerator').first(),
 );
 
 useMeta(page);

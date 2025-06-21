@@ -1,6 +1,6 @@
 <template>
   <main class="overflow-hidden">
-    <!---->
+    
     <section
       class="bg-teal-800 bg-center bg-no-repeat"
       style="background-size: 1600px auto"
@@ -15,7 +15,7 @@
           <h1 class="sr-only">Leistungen</h1>
           <div class="grid divide-y md:grid-cols-2 md:divide-y-0">
             <div
-              v-for="(object, index) in page?.header"
+              v-for="(object, index) in page?.body.header"
               :key="index"
               class="py-16 pr-8"
               :class="{ 'md:pl-8': index % 2 === 1 }"
@@ -42,7 +42,7 @@
         </div>
       </div>
     </section>
-    <!---->
+    
     <section class="pt-20 pb-20 bg-gray-100 md:pt-32 md:pb-32">
       <div class="container">
         <div class="xl:flex xl:items-center xl:justify-between">
@@ -51,12 +51,12 @@
           >
             <AnimateOnScroll>
               <span class="block">
-                {{ page?.stakes.title }}
+                {{ page?.body.stakes.title }}
               </span>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <span class="block text-teal-700">
-                {{ page?.stakes.subtitle }}
+                {{ page?.body.stakes.subtitle }}
               </span>
             </AnimateOnScroll>
           </h2>
@@ -66,7 +66,7 @@
                 <GrayButton
                   class="mb-2 delay-50"
                   to="#was-bringt-eine-webseite"
-                  :text="page?.stakes.button"
+                  :text="page?.body.stakes.button"
                 />
               </AnimateOnScroll>
               <AnimateOnScroll :delay="2">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </section>
-    <!---->
+    
     <section
       id="was-bringt-eine-webseite"
       class="pt-32 pb-32 bg-teal-900 md:pt-48 md:pb-56"
@@ -88,25 +88,25 @@
             <span
               class="block text-sm font-light leading-tight tracking-wider text-gray-200 uppercase md:text-base"
             >
-              {{ page?.value.pretitle }}
+              {{ page?.body.pretitle }}
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="1">
             <h2
               class="mb-6 text-3xl font-bold leading-tight text-gray-200 sm:text-4xl md:text-5xl lg:mb-4"
             >
-              {{ page?.value.title }}
+              {{ page?.body.title }}
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="2">
             <p class="max-w-xl text-base text-gray-200 delay-150 md:text-lg">
-              {{ page?.value.subtitle }}
+              {{ page?.body.subtitle }}
             </p>
           </AnimateOnScroll>
         </div>
         <div class="grid mt-24 md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-8">
           <AnimateOnScroll
-            v-for="(proposition, index) in page?.value.propositions"
+            v-for="(proposition, index) in page?.body.propositions"
             :key="index"
             :delay="index + 1"
           >
@@ -124,21 +124,9 @@
             </div>
           </AnimateOnScroll>
         </div>
-        <!-- <div class="hidden grid-cols-3 gap-8 lg:grid">
-          <div
-            class="mt-8 text-5xl font-bold leading-none text-teal-800 xl:text-6xl"
-          >
-            {{ page?.value.bottomLeft }}
-          </div>
-          <div
-            class="col-span-2 mt-8 text-5xl font-bold leading-none text-teal-800 xl:text-6xl"
-          >
-            {{ page?.value.bottomRight }}
-          </div>
-        </div> -->
       </div>
     </section>
-    <!---->
+    
     <section
       id="wir-bleiben-langfristig-an-ihrer-seite"
       class="pt-24 pb-32 bg-gray-100 md:pt-40 md:pb-48"
@@ -148,12 +136,12 @@
           <h2
             class="mb-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl"
           >
-            {{ page?.guide.title }}
+            {{ page?.body.guide.title }}
           </h2>
         </AnimateOnScroll>
         <div class="grid grid-cols-2 gap-8 mb-16 xl:grid-cols-4">
           <AnimateOnScroll
-            v-for="(customer, index) in page?.guide.customers"
+            v-for="(customer, index) in page?.body.guide.customers"
             :key="customer.name"
             :delay="index"
             class="flex items-center justify-center h-16 p-4 md:h-24 md:p-8 lg:h-32 lg:p-10"
@@ -174,12 +162,12 @@
             />
           </AnimateOnScroll>
           <AnimateOnScroll :delay="3">
-            <GrayButton class="" :text="page?.guide.button" to="/referenzen/" />
+            <GrayButton class="" :text="page?.body.guide.button" to="/referenzen/" />
           </AnimateOnScroll>
         </div>
       </div>
     </section>
-    <!---->
+    
     <section
       id="der-weg-zur-perfekten-webseite"
       class="pt-24 pb-32 bg-teal-900 md:pt-48 md:pb-56"
@@ -190,19 +178,19 @@
             <span
               class="block text-sm font-light leading-tight tracking-wider text-gray-200 uppercase md:text-base"
             >
-              {{ page?.plan.pretitle }}
+              {{ page?.body.plan.pretitle }}
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="1">
             <h2
               class="mb-6 text-3xl font-bold leading-tight text-gray-200 md:text-4xl lg:text-5xl lg:mb-4"
             >
-              {{ page?.plan.title }}
+              {{ page?.body.plan.title }}
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="2">
             <p class="text-base text-gray-200 md:text-lg">
-              {{ page?.plan.subtitle }}
+              {{ page?.body.plan.subtitle }}
             </p>
           </AnimateOnScroll>
         </div>
@@ -222,10 +210,10 @@
                   <h3
                     class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
                   >
-                    {{ page?.plan.steps[0].title }}
+                    {{ page?.body.plan.steps[0].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
-                    {{ page?.plan.steps[0].text }}
+                    {{ page?.body.plan.steps[0].text }}
                   </p>
                 </div>
               </div>
@@ -246,10 +234,10 @@
                   <h3
                     class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
                   >
-                    {{ page?.plan.steps[1].title }}
+                    {{ page?.body.plan.steps[1].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
-                    {{ page?.plan.steps[1].text }}
+                    {{ page?.body.plan.steps[1].text }}
                   </p>
                 </div>
               </div>
@@ -272,10 +260,10 @@
                   <h3
                     class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
                   >
-                    {{ page?.plan.steps[2].title }}
+                    {{ page?.body.plan.steps[2].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
-                    {{ page?.plan.steps[2].text }}
+                    {{ page?.body.plan.steps[2].text }}
                   </p>
                 </div>
               </div>
@@ -284,7 +272,7 @@
         </div>
       </div>
     </section>
-    <!---->
+    
     <section class="pt-24 pb-32 bg-gray-100 md:pt-40 md:pb-48">
       <div class="container">
         <div class="flex flex-col items-center justify-center">
@@ -293,13 +281,13 @@
               <h2
                 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
               >
-                {{ page?.leadGeneratorAd.title }}
+                {{ page?.body.leadGeneratorAd.title }}
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <p
                 class="max-w-xl mb-12 text-sm leading-tight sm:text-base md:text-lg"
-                v-html="page?.leadGeneratorAd.htmlText"
+                v-html="page?.body.leadGeneratorAd.htmlText"
               />
             </AnimateOnScroll>
             <div class="flex flex-wrap justify-center">
@@ -312,7 +300,7 @@
               </AnimateOnScroll>
               <AnimateOnScroll :delay="1">
                 <SunshineButton
-                  :text="page?.leadGeneratorAd.button"
+                  :text="page?.body.leadGeneratorAd.button"
                   to="/was-macht-eine-gute-webseite-aus/"
                 />
               </AnimateOnScroll>
@@ -321,7 +309,7 @@
         </div>
       </div>
     </section>
-    <!---->
+    
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -329,7 +317,7 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
+    
   </main>
 </template>
 
@@ -342,8 +330,8 @@ import AnimateOnScroll from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 
-const { data: page } = await useAsyncData("home", () =>
-  queryContent("/page/home").findOne(),
+const { data: page } = await useAsyncData(() =>
+  queryCollection("content").path('/page/home').first(),
 );
 
 useMeta(page);

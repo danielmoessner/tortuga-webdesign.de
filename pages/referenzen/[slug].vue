@@ -1,31 +1,29 @@
 <template>
   <main class="">
     <SubNavigation :text="item?.title" class="bg-sunshine-100" />
-    <!---->
     <SvgHeader
       width="800"
       top="-120"
       svg-name="referenzen"
       title="Referenz"
       :swap-heading-element="true"
-      :subtitle="item?.title"
+      :subtitle="item?.body.title"
     />
-    <!---->
     <section class="relative pb-20 md:pt-32 md:pb-40 bg-sunshine-100">
       <div class="container">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div class="">
             <StickyInfo
               :dark-tag="itemDate"
-              :tags="item?.tags"
-              :title="item?.title"
+              :tags="item?.body.tags"
+              :title="item?.body.title"
               :description="description"
             >
               <nuxt-link
-                v-if="item?.url"
+                v-if="item?.body.url"
                 target="_blank"
                 class="text-gray-900 underline transition duration-150 ease-in-out hover:text-gray-700"
-                :to="item?.url"
+                :to="item?.body.url"
               >
                 {{ itemUrlClean }}
               </nuxt-link>
@@ -43,9 +41,9 @@
               <div class="overflow-hidden bg-teal-700 rounded">
                 <img
                   class="w-full"
-                  :src="item?.image"
+                  :src="item?.body.image"
                   sizes="lg:2000px"
-                  :alt="item?.title"
+                  :alt="item?.body.title"
                 />
               </div>
             </div>
@@ -53,8 +51,6 @@
         </div>
       </div>
     </section>
-    <!---->
-    <!---->
     <NewFooter
       bg-color="bg-teal-900"
       text-color="text-white"
@@ -62,7 +58,6 @@
       hover-color="text-sunshine-300"
       :invert-logo="true"
     />
-    <!---->
   </main>
 </template>
 <script lang="ts" setup>
@@ -77,7 +72,7 @@ definePageMeta({ layout: "new" });
 const { params, path } = useRoute();
 
 const { data: item } = await useAsyncData(`portfolio-${path}`, () =>
-  queryContent(`/portfolio/${params.slug}`).findOne(),
+  queryCollection("content").path(`/portfolio/${params.slug}`).first(),
 );
 
 if (!item.value?.title) {
@@ -104,16 +99,16 @@ const months = [
 ];
 
 const itemDate = computed(() => {
-  const date = new Date(item.value?.date);
+  const date = new Date(item.value?.body.date);
   return months[date.getMonth()] + " " + date.getFullYear();
 });
 
 const itemUrlClean = computed(() => {
-  const url = item.value?.url;
+  const url = item.value?.body.url;
   return url.replace("https://", "").replace("http://", "");
 });
 
 const description = computed(() => {
-  return item.value?.description.split("\n").join("<br>");
+  return item.value?.body.description.split("\n").join("<br>");
 });
 </script>
