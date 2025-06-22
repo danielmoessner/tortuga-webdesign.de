@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section class="pt-32 pb-40">
+    <section class="px-4 pt-32 pb-40 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <h1 class="mb-24 text-6xl">Styleguide</h1>
       <StyleguideHeading text="Typography" />
       <div class="grid grid-cols-2 gap-8">
@@ -264,6 +264,19 @@
           <ColorCombination color1="sunshine-700" color2="teal-400" />
           <ColorCombination color1="sunshine-700" color2="blue-300" />
           <ColorCombination color1="sunshine-700" color2="blue-300" />
+        </div>
+      </div>
+      <StyleguideHeading text="Logo" />
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <img src="/logos/tortuga.png" alt="Tortuga Webdesign Logo" />
+          <hr class="mt-4 mb-0 bg-gray-200" />
+          <small class="tracking-wider uppercase">PNG</small>
+        </div>
+        <div>
+          <img src="/logos/tortuga.svg" alt="Tortuga Webdesign Logo" />
+          <hr class="mt-4 mb-0 bg-gray-200" />
+          <small class="tracking-wider uppercase">SVG</small>
         </div>
       </div>
     </section>

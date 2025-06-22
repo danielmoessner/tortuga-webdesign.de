@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    class="text-gray-600 md:text-gray-200 md:hover:text-gray-100 text-lg p-2 md:ml-4 transition ease-in-out duration-150 font-medium"
+    class="p-2 text-lg font-medium text-gray-600 transition duration-150 ease-in-out md:text-gray-200 md:hover:text-gray-100 md:ml-4"
     :to="to"
   >
     {{ text }}
@@ -24,6 +24,8 @@ export default {
 </script>
 
 <style scoped>
+@reference "@/assets/styles/tailwind.css";
+
 .nuxt-link-exact-active {
   @apply text-gray-800;
 }

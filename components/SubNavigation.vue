@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 z-40 bg-white border-b">
+  <nav class="sticky top-0 z-40 bg-white border-b border-gray-200">
     <div class="container" :class="{ small }">
       <div class="flex items-center h-12 md:h-16">
         <span

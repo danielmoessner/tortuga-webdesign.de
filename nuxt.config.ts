@@ -1,8 +1,7 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  /*
-   ** Headers of the page
-   */
   app: {
     head: {
       title: "Tortuga Webdesign",
@@ -16,28 +15,10 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
-
-  /*
-   ** Global CSS
-   */
   css: ["@/assets/styles/tailwind.css"],
-
-  /*
-   ** Nuxt.js modules
-   */
   modules: ["@nuxt/content", "@nuxt/eslint"],
-
-  /*
-   ** Build configuration
-   */
-  postcss: {
-    plugins: {
-      "postcss-import": {},
-      "tailwindcss/nesting": {},
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+  vite: {
+    plugins: [tailwindcss()],
   },
-
-  compatibilityDate: "2024-08-14",
+  compatibilityDate: "2024-11-01",
 });

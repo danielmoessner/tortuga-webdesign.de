@@ -7,7 +7,7 @@
         <div class="flex items-center justify-between w-full md:w-auto">
           <nuxt-link class="" to="/">
             <div class="h-16 p-4 bg-teal-800">
-              <LogoSvg :invert="true" />
+              <LogoSvg class="w-full h-full" :invert="true" />
               <span class="sr-only">Zur Startseite</span>
             </div>
           </nuxt-link>
@@ -50,7 +50,7 @@
           </button>
         </div>
         <div
-          class="absolute bottom-0 right-0 z-50 w-full px-6 py-6 text-white transform translate-y-full border border-t-0 border-gray-200 rounded-lg rounded-t-none shadow-lg md:border-0 md:block md:static md:p-0 md:transform-none md:bg-transparent md:w-auto md:shadow-none bg-sunshine-100"
+          class="absolute bottom-0 right-0 z-50 w-full px-6 py-6 text-white transform translate-y-full border border-t-0 border-gray-200 rounded-lg rounded-t-none shadow-lg md:border-0 md:block md:static md:p-0 md:translate-y-0 md:bg-transparent md:w-auto md:shadow-none bg-sunshine-100"
           :class="{ hidden: !showNav }"
         >
           <div class="flex flex-col space-y-2 md:flex-row md:space-y-0">

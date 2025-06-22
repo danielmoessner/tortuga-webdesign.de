@@ -3,7 +3,7 @@
 */
 
 .container {
-  @apply relative z-20 px-5;
+  @apply relative z-20 px-5 mx-auto;
 }
 
 @screen sm {

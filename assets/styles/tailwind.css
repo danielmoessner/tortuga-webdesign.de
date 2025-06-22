@@ -1,9 +1,100 @@
-@import "tailwindcss/base";
+@import "tailwindcss";
 
-@import "tailwindcss/components";
+@theme {
+  /* Transition Delay */
+  --transition-delay-50: 50ms;
+  --transition-delay-75: 75ms;
+  --transition-delay-100: 100ms;
+  --transition-delay-150: 150ms;
+  --transition-delay-200: 200ms;
+  --transition-delay-250: 250ms;
+  --transition-delay-300: 300ms;
+  --transition-delay-350: 350ms;
+  --transition-delay-400: 400ms;
+  --transition-delay-450: 450ms;
+  --transition-delay-500: 500ms;
+  --transition-delay-550: 550ms;
+  --transition-delay-600: 600ms;
+  --transition-delay-650: 650ms;
+  --transition-delay-700: 700ms;
+  --transition-delay-750: 750ms;
+  --transition-delay-800: 800ms;
+  --transition-delay-850: 850ms;
+  --transition-delay-900: 900ms;
+  --transition-delay-950: 950ms;
+  --transition-delay-1000: 1000ms;
 
-@import "tailwindcss/utilities";
+  /* Inset */
+  --inset-1/2: 50%;
+  --inset-1/5: 20%;
+
+  /* Box Shadow */
+  --shadow-teal: 0 0 0 0.2rem rgba(8, 86, 86, 0.43);
+
+  /* Padding */
+  --padding-72: 18rem;
+  --padding-88: 22rem;
+  --padding-96: 24rem;
+  --padding-128: 32rem;
+  --padding-1/5: 20%;
+
+  /* Colors */
+  --color-black: #1d1f20;
+  --color-red-100: #FFFAFA;
+  --color-red-200: #FCD7D8;
+  --color-red-300: #FAB5B6;
+  --color-red-400: #EF7577;
+  --color-red-500: #DD4447;
+  --color-red-600: #C12326;
+  --color-red-700: #9B0F11;
+  --color-red-800: #690506;
+  --color-red-900: #330102;
+  --color-sunshine-100: #FFFDFA;
+  --color-sunshine-200: #FEF2D8;
+  --color-sunshine-300: #FDE6B7;
+  --color-sunshine-400: #F6CC79;
+  --color-sunshine-500: #E0AC45;
+  --color-sunshine-600: #926A1B;
+  --color-sunshine-700: #724F0B;
+  --color-sunshine-800: #684705;
+  --color-sunshine-900: #664502;
+  --color-teal-100: #FAFFFF;
+  --color-teal-200: #D6FBFB;
+  --color-teal-300: #B2F6F6;
+  --color-teal-400: #6DDFDF;
+  --color-teal-500: #38B6B6;
+  --color-teal-600: #188282;
+  --color-teal-700: #085656;
+  --color-teal-800: #033C3C;
+  --color-teal-900: #013333;
+  --color-blue-100: #FAFCFF;
+  --color-blue-200: #D7E4FD;
+  --color-blue-300: #B6CDFB;
+  --color-blue-400: #77A0F3;
+  --color-blue-500: #477CE5;
+  --color-blue-600: #265FD1;
+  --color-blue-700: #1148B4;
+  --color-blue-800: #07348F;
+  --color-blue-900: #022366;
+  --color-gray-100: #eaebeb;
+  --color-gray-200: #d5d7d8;
+  --color-gray-300: #b7bbbd;
+  --color-gray-400: #92979b;
+  --color-gray-500: #72777b;
+  --color-gray-600: #62676a;
+  --color-gray-700: #4e5255;
+  --color-gray-800: #36393a;
+  --color-gray-900: #1d1f20;
+
+  /* Container */
+  --container-padding: 1rem;
+  --container-max-width: 80rem;
+  --container-center: true;
+}
 
 @import "./partials/scrollbar.css";
 @import "./partials/fontawesome.css";
 @import "./partials/container.css";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
