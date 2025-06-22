@@ -57,115 +57,104 @@
   </div>
 </template>
 
-<script lang="ts">
-export default defineNuxtComponent({
-  components: {},
-  props: {
-    portfolioItem: {
-      required: true,
-      type: Object,
-    },
-  },
-  data() {
-    return {
-      months: [
-        "Jan",
-        "Feb",
-        "Mär",
-        "Apr",
-        "Mai",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Okt",
-        "Nov",
-        "Dez",
-      ],
-      mousePositionY: 0.5,
-      showcaseLookedAt: false,
-      showcaseInterval: null as ReturnType<typeof setInterval> | null,
-      showcaseScrollY: 0,
-    };
-  },
-  computed: {
-    height() {
-      return this.portfolioItem.height || "100%";
-    },
-    showcaseImageTransform() {
-      return "translateY(" + this.showcaseScrollY + "px)";
-    },
-    detailPage() {
-      return "/referenzen/" + this.portfolioItem.slug + "/";
-    },
-    showcase(): HTMLElement {
-      return this.$refs.showcase as HTMLElement;
-    },
-    showcaseImage(): HTMLElement {
-      return this.$refs.showcaseImage as HTMLElement;
-    },
-    showcaseHeightSet(): HTMLElement {
-      return this.$refs.showcaseHeightSet as HTMLElement;
-    },
-    showcaseImageRoute() {
-      if (!this.showcaseImage || !this.showcaseHeightSet) return 0;
-      return Math.min(
-        this.showcaseHeightSet.getBoundingClientRect().height -
-          this.showcaseImage.getBoundingClientRect().height +
-          0.3,
-        0,
-      );
-    },
-    month() {
-      const date = new Date(this.portfolioItem.date);
-      return this.months[date.getMonth()] + " " + date.getFullYear();
-    },
-    speed() {
-      if (this.mousePositionY >= 0.45 && this.mousePositionY <= 0.55) {
-        return 0;
-      } else {
-        return -10 * (this.mousePositionY - 0.5);
-      }
-    },
-  },
-  watch: {
-    showcaseLookedAt: function (newValue) {
-      if (newValue === true) {
-        if (this.showcaseInterval === null)
-          this.showcaseInterval = setInterval(this.moveImage, 16);
-      } else {
-        if (this.showcaseInterval !== null)
-          clearInterval(this.showcaseInterval);
-        this.showcaseInterval = null;
-      }
-    },
-  },
-  methods: {
-    updateMousePosition(event: MouseEvent) {
-      const rect = this.showcase.getBoundingClientRect();
-      const y = event.clientY - rect.top;
-      const yProportion = y / rect.height;
-      this.mousePositionY = yProportion;
-    },
-    mousemove(event: MouseEvent) {
-      this.updateMousePosition(event);
-    },
-    mouseover() {
-      this.showcaseLookedAt = true;
-    },
-    mouseleave() {
-      this.showcaseLookedAt = false;
-    },
-    moveImage() {
-      const newPosition = this.showcaseScrollY + this.speed;
-      if (newPosition > 0) {
-        this.showcaseScrollY = 0;
-      } else if (newPosition <= this.showcaseImageRoute) {
-        this.showcaseScrollY = this.showcaseImageRoute;
-      } else {
-        this.showcaseScrollY = newPosition;
-      }
-    },
+<script lang="ts" setup>
+import { ref, computed, watch } from "vue";
+
+const props = defineProps({
+  portfolioItem: {
+    required: true,
+    type: Object,
   },
 });
+
+const showcase = ref<HTMLElement | null>(null);
+const showcaseImage = ref<HTMLElement | null>(null);
+const showcaseHeightSet = ref<HTMLElement | null>(null);
+
+const months = [
+  "Jan",
+  "Feb",
+  "Mär",
+  "Apr",
+  "Mai",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Okt",
+  "Nov",
+  "Dez",
+];
+
+const mousePositionY = ref(0.5);
+const showcaseLookedAt = ref(false);
+const showcaseInterval = ref<ReturnType<typeof setInterval> | null>(null);
+const showcaseScrollY = ref(0);
+
+const height = computed(() => props.portfolioItem.height || "100%");
+const showcaseImageTransform = computed(
+  () => `translateY(${showcaseScrollY.value}px)`,
+);
+const detailPage = computed(() => `/referenzen/${props.portfolioItem.slug}/`);
+const month = computed(() => {
+  const date = new Date(props.portfolioItem.date);
+  return `${months[date.getMonth()]} ${date.getFullYear()}`;
+});
+const speed = computed(() => {
+  if (mousePositionY.value >= 0.45 && mousePositionY.value <= 0.55) {
+    return 0;
+  } else {
+    return -10 * (mousePositionY.value - 0.5);
+  }
+});
+const showcaseImageRoute = computed(() => {
+  if (!showcaseImage.value || !showcaseHeightSet.value) return 0;
+  return Math.min(
+    showcaseHeightSet.value.getBoundingClientRect().height -
+      showcaseImage.value.getBoundingClientRect().height +
+      0.3,
+    0,
+  );
+});
+
+watch(showcaseLookedAt, (newValue) => {
+  if (newValue) {
+    if (showcaseInterval.value === null)
+      showcaseInterval.value = setInterval(moveImage, 16);
+  } else {
+    if (showcaseInterval.value !== null) clearInterval(showcaseInterval.value);
+    showcaseInterval.value = null;
+  }
+});
+
+function updateMousePosition(event: MouseEvent) {
+  if (!showcase.value) return;
+  const rect = showcase.value.getBoundingClientRect();
+  const y = event.clientY - rect.top;
+  const yProportion = y / rect.height;
+  mousePositionY.value = yProportion;
+}
+
+function mousemove(event: MouseEvent) {
+  updateMousePosition(event);
+}
+
+function mouseover() {
+  showcaseLookedAt.value = true;
+}
+
+function mouseleave() {
+  showcaseLookedAt.value = false;
+}
+
+function moveImage() {
+  const newPosition = showcaseScrollY.value + speed.value;
+  if (newPosition > 0) {
+    showcaseScrollY.value = 0;
+  } else if (newPosition <= showcaseImageRoute.value) {
+    showcaseScrollY.value = showcaseImageRoute.value;
+  } else {
+    showcaseScrollY.value = newPosition;
+  }
+}
 </script>
