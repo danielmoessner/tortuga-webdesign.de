@@ -114,9 +114,11 @@ export default {
       this.isMouseOver = false;
     },
     setIsScrollable(xKeyPressed) {
-      xKeyPressed && this.isMouseOver
-        ? (this.isScrollable = true)
-        : (this.isScrollable = false);
+      if (xKeyPressed && this.isMouseOver) {
+        this.isScrollable = true;
+      } else {
+        this.isScrollable = false;
+      }
     },
   },
 };

@@ -51,7 +51,7 @@ onMounted(() => {
       rootMargin: "0px 0px -10% 0px",
     },
   );
-  observer.value.observe(root.value);
+  observer.value.observe(root.value as HTMLElement);
 });
 
 onUnmounted(() => {
