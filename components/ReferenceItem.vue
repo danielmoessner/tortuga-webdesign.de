@@ -84,7 +84,7 @@ export default defineNuxtComponent({
       ],
       mousePositionY: 0.5,
       showcaseLookedAt: false,
-      showcaseInterval: "",
+      showcaseInterval: null as ReturnType<typeof setInterval> | null,
       showcaseScrollY: 0,
     };
   },
@@ -98,14 +98,14 @@ export default defineNuxtComponent({
     detailPage() {
       return "/referenzen/" + this.portfolioItem.slug + "/";
     },
-    showcase() {
-      return this.$refs.showcase;
+    showcase(): HTMLElement {
+      return this.$refs.showcase as HTMLElement;
     },
-    showcaseImage(): HTMLDivElement | unknown {
-      return this.$refs.showcaseImage;
+    showcaseImage(): HTMLElement {
+      return this.$refs.showcaseImage as HTMLElement;
     },
-    showcaseHeightSet(): HTMLElement | unknown {
-      return this.$refs.showcaseHeightSet;
+    showcaseHeightSet(): HTMLElement {
+      return this.$refs.showcaseHeightSet as HTMLElement;
     },
     showcaseImageRoute() {
       if (!this.showcaseImage || !this.showcaseHeightSet) return 0;
@@ -131,22 +131,23 @@ export default defineNuxtComponent({
   watch: {
     showcaseLookedAt: function (newValue) {
       if (newValue === true) {
-        if (this.showcaseInterval === "")
+        if (this.showcaseInterval === null)
           this.showcaseInterval = setInterval(this.moveImage, 16);
       } else {
-        clearInterval(this.showcaseInterval);
-        this.showcaseInterval = "";
+        if (this.showcaseInterval !== null)
+          clearInterval(this.showcaseInterval);
+        this.showcaseInterval = null;
       }
     },
   },
   methods: {
-    updateMousePosition(event) {
+    updateMousePosition(event: MouseEvent) {
       const rect = this.showcase.getBoundingClientRect();
       const y = event.clientY - rect.top;
       const yProportion = y / rect.height;
       this.mousePositionY = yProportion;
     },
-    mousemove(event) {
+    mousemove(event: MouseEvent) {
       this.updateMousePosition(event);
     },
     mouseover() {

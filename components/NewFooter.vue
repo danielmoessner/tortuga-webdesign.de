@@ -7,7 +7,7 @@
         <LogoSvg class="h-16 max-w-full mb-10 md:h-24" :invert="invertLogo" />
         <h2 class="sr-only">Footer</h2>
         <div class="pr-12 text-sm sm:text-base md:text-lg" :class="textColor">
-          <p>{{ general?.footer.text }}</p>
+          <p>{{ general?.meta.footer.text }}</p>
         </div>
       </div>
       <div class="">
@@ -132,7 +132,7 @@ import LogoSvg from "@/components/LogoSvg.vue";
 import FooterLink from "@/components/FooterLink.vue";
 
 const { data: general } = await useAsyncData("footer", () =>
-  queryContent("/page/general").findOne(),
+  queryCollection("seiten").path("/pages/general").first(),
 );
 
 defineProps({

@@ -7,7 +7,7 @@
       svg-name="referenzen"
       title="Referenz"
       :swap-heading-element="true"
-      :subtitle="item?.body.title"
+      :subtitle="item?.title"
     />
     <section class="relative pb-20 md:pt-32 md:pb-40 bg-sunshine-100">
       <div class="container">
@@ -15,15 +15,15 @@
           <div class="">
             <StickyInfo
               :dark-tag="itemDate"
-              :tags="item?.body.tags"
-              :title="item?.body.title"
+              :tags="item?.tags"
+              :title="item?.title"
               :description="description"
             >
               <nuxt-link
-                v-if="item?.body.url"
+                v-if="item?.url"
                 target="_blank"
                 class="text-gray-900 underline transition duration-150 ease-in-out hover:text-gray-700"
-                :to="item?.body.url"
+                :to="item?.url"
               >
                 {{ itemUrlClean }}
               </nuxt-link>
@@ -41,9 +41,9 @@
               <div class="overflow-hidden bg-teal-700 rounded">
                 <img
                   class="w-full"
-                  :src="item?.body.image"
+                  :src="item?.image"
                   sizes="lg:2000px"
-                  :alt="item?.body.title"
+                  :alt="item?.title"
                 />
               </div>
             </div>
@@ -99,16 +99,16 @@ const months = [
 ];
 
 const itemDate = computed(() => {
-  const date = new Date(item.value?.body.date);
+  const date = new Date(item.value?.date as string);
   return months[date.getMonth()] + " " + date.getFullYear();
 });
 
 const itemUrlClean = computed(() => {
-  const url = item.value?.body.url;
-  return url.replace("https://", "").replace("http://", "");
+  const url = item.value?.url;
+  return url?.replace("https://", "").replace("http://", "");
 });
 
 const description = computed(() => {
-  return item.value?.body.description.split("\n").join("<br>");
+  return item.value?.description.split("\n").join("<br>") || "";
 });
 </script>

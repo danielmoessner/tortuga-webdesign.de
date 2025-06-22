@@ -10,6 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "fix": "eslint --fix --ext .vue .; exit 0;",
+    "check": "vue-tsc --noEmit",
     "cms": "npx netlify-cms-proxy-server",
     "update": "npx npm-check-updates -u --timeout 60000 && npm install"
   },
