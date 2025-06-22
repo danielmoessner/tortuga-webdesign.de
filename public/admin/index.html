@@ -5,25 +5,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CMS</title>
-  <script type="module">
-    window.CMS_MANUAL_INIT = true;
-    const { CMS, initCMS: init } = window;
-    import config from './config.js';
-    init({ config: config })
-  </script>
-  <style>
-    /* this hides the error message */
-    #nc-root>div:nth-child(1) {
-      display: none;
-    }
-  </style>
-  <!-- Include the script that enables Netlify Identity on this page. -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.3.2/dist/decap-cms.js"></script>
+  <script type="module">window.CMS_MANUAL_INIT = true;</script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.4/dist/decap-cms.js"></script>
+  <script type="module">
+    const { CMS, initCMS: init } = window;
+    import config from './config.js';
+    init({ config: config })
+  </script>
 </body>
 
 </html>

@@ -87,29 +87,29 @@
             <span
               class="block text-sm font-light leading-tight tracking-wider text-gray-200 uppercase md:text-base"
             >
-              {{ page?.meta.pretitle }}
+              {{ page?.meta.value.pretitle }}
             </span>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="1">
             <h2
               class="mb-6 text-3xl font-bold leading-tight text-gray-200 sm:text-4xl md:text-5xl lg:mb-4"
             >
-              {{ page?.meta.title }}
+              {{ page?.meta.value.title }}
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll :delay="2">
             <p class="max-w-xl text-base text-gray-200 delay-150 md:text-lg">
-              {{ page?.meta.subtitle }}
+              {{ page?.meta.value.subtitle }}
             </p>
           </AnimateOnScroll>
         </div>
         <div class="grid mt-24 md:grid-cols-3 gap-y-12 md:gap-y-16 gap-x-8">
           <AnimateOnScroll
-            v-for="(proposition, index) in page?.meta.propositions"
+            v-for="(proposition, index) in page?.meta.value.propositions"
             :key="index"
             :delay="(index + 1) as DelayInput"
           >
-            <div class="">
+            <div>
               <div class="flex-col">
                 <h3
                   class="relative z-10 flex items-end mb-1 text-xl font-bold text-gray-200 md:mb-6"

@@ -70,7 +70,6 @@
               text="Kontakt"
               @click="showNav = false"
             />
-            <!-- <NavigationLink to="/blog/" text="Blog" /> -->
           </div>
         </div>
       </div>

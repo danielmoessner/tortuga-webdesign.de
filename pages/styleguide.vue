@@ -1,9 +1,7 @@
 <template>
   <main>
-    <!---->
     <section class="pt-32 pb-40">
       <h1 class="mb-24 text-6xl">Styleguide</h1>
-      <!--  -->
       <StyleguideHeading text="Typography" />
       <div class="grid grid-cols-2 gap-8">
         <div class="grid grid-cols-1 gap-8">
@@ -59,7 +57,6 @@
           </StyleguideColumn>
         </div>
       </div>
-      <!--  -->
       <StyleguideHeading text="Buttons" />
       <div class="grid grid-cols-4 gap-8">
         <StyleguideColumn text="Red">
@@ -75,7 +72,6 @@
           <BlueButton />
         </StyleguideColumn>
       </div>
-      <!--  -->
       <StyleguideHeading text="Color Palette" />
       <div class="grid grid-cols-5">
         <StyleguideColumn text="Warm" class="col-span-2">
@@ -144,7 +140,6 @@
           </StyleguideColumn>
         </StyleguideColumn>
       </div>
-      <!--  -->
       <StyleguideHeading text="Chosen Colors" />
       <div class="grid grid-cols-7">
         <div class="grid grid-cols-1 col-start-2 gap-4 justify-items-end">
@@ -272,8 +267,6 @@
         </div>
       </div>
     </section>
-
-    <!---->
   </main>
 </template>
 
