@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "slug": "tonart-singhammer",
+  "date": "2021-11-30",
+  "url": "https://www.tonart-singhammer.de/",
+  "title": "Tonart Singhammer",
+  "tags": [
+    "Gatsby",
+    "Tailwind CSS",
+    "CMS"
+  ],
+  "image": "/media/tonart-singhammer.png",
+  "description": "Brunhilde Singhammer gestaltet Tongefäße und bietet immer wieder unterschiedlichste Veranstaltungen an."
+}
