@@ -44,23 +44,18 @@
             </div>
           </AnimateOnScroll>
         </div>
-        <div class="grid gap-4 lg:grid-cols-3 md:gap-8">
-          <div>
-            <AnimateOnScroll>
-              <h2 class="text-3xl font-bold text-gray-100">
-                {{ page?.meta.form.title }}
-              </h2>
-            </AnimateOnScroll>
-          </div>
-          <div class="lg:col-span-2">
-            <AnimateOnScroll :delay="1">
-              <div class="px-2 py-3 rounded-lg bg-sunshine-200 md:px-8 md:py-5">
-                <LeadGeneratorForm :download="page?.meta.form">
-                  <TealButton :submit="true" :text="page?.meta.form.button" />
-                </LeadGeneratorForm>
-              </div>
-            </AnimateOnScroll>
-          </div>
+        <div class="flex justify-center">
+          <AnimateOnScroll>
+            <h2 class="text-3xl font-bold text-gray-100 text-center">
+              {{ page?.meta.form.title }}
+            </h2>
+            <div class="mt-5 text-center">
+              <SunshineButton
+                text="Zum PDF"
+                href="/hilfestellungen/was-macht-eine-gute-webseite-aus.pdf"
+              />
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
@@ -77,8 +72,6 @@
 <script lang="ts" setup>
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
-import TealButton from "@/components/TealButton.vue";
-import LeadGeneratorForm from "@/components/LeadGeneratorForm.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
 import AnimateOnScroll, {
   type DelayInput,
