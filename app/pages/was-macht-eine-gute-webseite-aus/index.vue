@@ -52,7 +52,8 @@
             <div class="mt-5 text-center">
               <SunshineButton
                 text="Zum PDF"
-                href="/hilfestellungen/was-macht-eine-gute-webseite-aus.pdf"
+                to="https://tortuga-webdesign.de/hilfestellungen/was-macht-eine-gute-webseite-aus.pdf"
+                target="_blank"
               />
             </div>
           </AnimateOnScroll>

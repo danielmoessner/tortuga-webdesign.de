@@ -8,7 +8,7 @@
       }"
     >
       <div
-        class="divide-y bg-gradient-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800"
+        class="divide-y bg-linear-to-tr from-teal-800 md:from-transparent md:to-transparent md:via-transparent to-sunshine-400 via-teal-800"
       >
         <div class="container">
           <h1 class="sr-only">Leistungen</h1>
