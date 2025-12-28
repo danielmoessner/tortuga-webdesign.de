@@ -27,11 +27,6 @@ export default {
 @reference "@/assets/styles/tailwind.css";
 
 .nuxt-link-exact-active {
-  @apply text-gray-800;
-}
-@screen md {
-  .nuxt-link-exact-active {
-    @apply text-white;
-  }
+  @apply text-gray-800 md:text-white;
 }
 </style>

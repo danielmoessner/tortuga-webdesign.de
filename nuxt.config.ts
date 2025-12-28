@@ -20,5 +20,4 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  compatibilityDate: "2024-11-01",
 });
