@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import SubNavigation from "@/components/SubNavigation.vue";
 import BlogCard from "@/components/BlogCard.vue";
-import { formatDate } from "@/lib/formatDate";
+import { formatDate } from "~/app/lib/formatDate";
 
 definePageMeta({ layout: "narrow-layout" });
 

@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { formatDate } from "@/lib/formatDate";
+import { formatDate } from "~/app/lib/formatDate";
 
 definePageMeta({ layout: "narrow-layout" });
 
