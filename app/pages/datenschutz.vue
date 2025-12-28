@@ -39,7 +39,9 @@ import SvgHeader from "@/components/SvgHeader.vue";
 
 definePageMeta({ layout: "new" });
 
-
+const { data: page } = await useAsyncData("dataProtection", () =>
+  queryCollection("seiten").path("/page/dataprotection").first(),
+);
 
 useMeta(page);
 </script>
