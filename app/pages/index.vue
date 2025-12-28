@@ -304,7 +304,7 @@
               <AnimateOnScroll :delay="1">
                 <SunshineButton
                   :text="page?.meta.leadGeneratorAd.button"
-                  to="/was-macht-eine-gute-webseite-aus/"
+                  to="/was-macht-eine-gute-webseite-aus"
                 />
               </AnimateOnScroll>
             </div>
