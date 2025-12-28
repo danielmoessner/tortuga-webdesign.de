@@ -60,7 +60,7 @@ import AnimateOnScroll, {
 
 definePageMeta({ layout: "new" });
 
-const { data: page } = await useAsyncData("page", () =>
+const { data: page } = await useAsyncData("referenzen", () =>
   queryCollection("seiten").path("/page/portfolio").first(),
 );
 

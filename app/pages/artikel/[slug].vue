@@ -43,7 +43,7 @@ import { formatDate } from "@/lib/formatDate";
 
 definePageMeta({ layout: "narrow-layout" });
 
-const { data: page } = await useAsyncData("page", () =>
+const { data: page } = await useAsyncData("artikel", () =>
   queryCollection("seiten").path("/page/blog").first(),
 );
 

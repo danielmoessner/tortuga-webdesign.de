@@ -86,7 +86,7 @@ import AnimateOnScroll, {
 
 definePageMeta({ layout: "new" });
 
-const { data: page } = await useAsyncData("page", () =>
+const { data: page } = await useAsyncData("leadgenerator", () =>
   queryCollection("seiten").path("/page/leadgenerator").first(),
 );
 
