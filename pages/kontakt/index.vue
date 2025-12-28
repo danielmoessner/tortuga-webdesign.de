@@ -69,8 +69,9 @@
               </h3>
               <address class="text-base not-italic text-gray-200 md:text-lg">
                 <span class="font-medium">Tortuga Webdesign</span> <br />
-                Trentiner Str. 30 <br />
-                85375 Neufahrn b. Freising
+                Daniel Mössner <br />
+                Waldweg 17 <br />
+                85386 Eching
               </address>
             </div>
           </AnimateOnScroll>

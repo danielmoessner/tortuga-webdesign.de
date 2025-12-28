@@ -92,8 +92,8 @@
             />
             <br />
             <span class="font-medium">Tortuga Webdesign </span><br />
-            Trentiner Str. 30 <br />
-            85375 Neufahrn b. Freising <br />
+            Waldweg 17 <br />
+            85386 Eching <br />
           </address>
         </div>
       </div>

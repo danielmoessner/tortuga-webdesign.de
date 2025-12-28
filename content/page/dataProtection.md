@@ -68,9 +68,11 @@ Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitg
 
 Tortuga Webdesign
 
-Trentiner Str. 30
+Daniel Mössner
 
-85375 Neufahrn b. Freising
+Waldweg 17
+
+85386 Eching
 
 Deutschland
 
