@@ -32,8 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import { formatDate } from "@/lib/formatDate";
-
 definePageMeta({ layout: "narrow-layout" });
 
 const { data: page } = await useAsyncData("artikel", () =>
