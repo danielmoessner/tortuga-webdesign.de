@@ -44,11 +44,5 @@ const { data: article } = await useAsyncData(`article-${path}`, () =>
   queryCollection("artikel").path(`/blog/${params.slug}`).first(),
 );
 
-if (!article.value?.title) {
-  throw createError({
-    statusCode: 404,
-  });
-}
-
 useMeta(page);
 </script>
