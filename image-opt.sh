@@ -1,0 +1,1 @@
+magick public/media/microphone.jpg -resize 600x -strip -interlace Plane -quality 85 public/media/microphone.600.opt.jpg

@@ -9,17 +9,18 @@ slug: drei-stufen-prozess
 description: Der Artikel erklärt unseren 3 Stufen Meileinstein Prozess zur
   Erstellung einer professionellen und individuellen Webseite.
 ---
+
 Der Artikel erklärt den Prozess der Erstellung einer professionellen und auf Sie angepassten Webseite. Wir hoffen Ihnen dadurch ein klares Bild über den Ablauf zu verschaffen.
 
 ## Meilensteine
 
-Der Prozess teilt sich auf in insgesamt 3 Meilensteine. Jeder Meilenstein enthält klare Ziele und strukturierte Prozesse. Nach dem erfolgreichen Abschluss aller Punkte ist die Webseite online und für jeden aufrufbar. 
+Der Prozess teilt sich auf in insgesamt 3 Meilensteine. Jeder Meilenstein enthält klare Ziele und strukturierte Prozesse. Nach dem erfolgreichen Abschluss aller Punkte ist die Webseite online und für jeden aufrufbar.
 
 Die verschiedenen Meilensteine sind:
 
-* Strategie Meilenstein
-* Design Meilenstein
-* Entwicklungs-Meilenstein
+- Strategie
+- Entwicklung
+- Veröffentlichung
 
 Im folgenden erklären wir die Ziele und Prozesse der einzelnen Abschnitte.
 
@@ -27,11 +28,12 @@ Im folgenden erklären wir die Ziele und Prozesse der einzelnen Abschnitte.
 
 ![Strategie](/media/strategie.600.opt.jpg)
 
-Hier geht es um den Nutzen, den die Webseite zu erfüllen hat.
+Das Ziel, die Struktur und das Design der Website werden festgelegt.
 
 ### Ziele
 
 Nach diesem Meilenstein ist klar welches Ziel die Webseite hat. Außerdem kennen wir die Branche und wissen welche Inhalte auf der Seite erscheinen, die uns helfen das Ziel zu erreichen. Wir wissen auch in welche visuelle Richtung wir gehen.
+Außerdem wissen wir aus wie vielen Seiten die Webseite besteht und welche Inhalte wo platziert sind. Auf der Design-Seite ist bekannt welche Farben & Schriftarten benutzt werden.
 
 ### Prozess
 
@@ -49,25 +51,11 @@ Welche Visuelle Richtung macht für die Seite Sinn?
 
 Was sind Referenzen von Seiten die gut aussehen oder in die falsche Richtung gehen?
 
-## Design Meilenstein
-
-![Design](/media/design.600.opt.jpg)
-
-In diesem Meilenstein legen wir die Struktur und das Design fest.
-
-### Ziele
-
-Am Ende dieses Meilensteins wissen wir aus wie vielen Seiten Ihre Webseite besteht und welche Inhalte wo platziert sind. Zudem sind die Haupttexte bereits bekannt und in finaler Form. Außderdem legen wir fest welche Farben & Schriftarten benutzt werden und wie die Buttons oder einzelnen Elemente ausschauen.
-
-### Prozess
-
-Wir erstellen auf die Strategiephase angepasste Wireframes und mit diesen nähern wir uns dem finalen Design. Sobald wir alle Seiten fertig haben, schicken wir Ihnen den Entwurf. Änderungswünsche nehmen wir mit auf und sobald Sie mit dem Design 100 % zufrieden sind, gehen wir zum nächsten Meilenstein über.
-
 ## Entwicklungs-Meilenstein
 
 ![Entwicklung](/media/code.600.opt.jpg)
 
-Wir entwickeln aus dem Design brauchbaren Code.
+Die Website entsteht Schritt für Schritt.
 
 ### Ziele
 
@@ -75,4 +63,18 @@ Am Ende von diesem Meilenstein haben wir eine Internetseite, die wir sofort ver�
 
 ### Prozess
 
-Wir formen die Webseite passend zum Design. Die SEO Einstellungen optimieren wir auf Google. Am Ende schicken wir Ihnen die Seite, sodass Sie alles überprüfen und noch einmal testen können. Wir wollen, dass Sie eine Webseite bekommen mit der Sie zu 100% zufrieden sind.
+Hier wird Schritt für Schritt vorgegangen, das heißt zuerst wird die Startseite entwickelt und Feedback eingeholt. Danach werden die Unterseiten entwickelt und wieder Feedback eingeholt. Der Prozess ist dabei iterativ und während die eine Seite auf Feedback wartet wird die nächste Seite entwickelt.
+
+## Veröffentlichungs-Meilenstein
+
+![Veröffentlichung](/media/microphone.600.opt.jpg)
+
+Die Website wird online gestellt und ist für jeden erreichbar.
+
+### Ziele
+
+Am Ende von diesem Meilenstein ist die Webseite online und für jeden erreichbar. Alle technischen und rechtlichen Anforderungen sind erfüllt.
+
+### Prozess
+
+Die Website wird auf der Hauptdomain veröffentlicht. Danach werden nochmal alle technischen Anforderungen überprüft. Über die kommenden Wochen wird geschaut, dass die Website auf Google gut gefunden wird und für die Besucher alles reibungslos funktioniert.
