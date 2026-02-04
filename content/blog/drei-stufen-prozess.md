@@ -10,71 +10,65 @@ description: Der Artikel erklärt unseren 3 Stufen Meileinstein Prozess zur
   Erstellung einer professionellen und individuellen Webseite.
 ---
 
-Der Artikel erklärt den Prozess der Erstellung einer professionellen und auf Sie angepassten Webseite. Wir hoffen Ihnen dadurch ein klares Bild über den Ablauf zu verschaffen.
+# Erstellung einer professionellen und benutzerfreundlichen Webseite
 
-## Meilensteine
+Dieser Artikel beschreibt den strukturierten Prozess zur Erstellung einer Webseite, die speziell auf die Bedürfnisse und Erwartungen der Besucher abgestimmt ist. Durch die Aufteilung in drei klare Meilensteine wird der gesamte Weg von der Idee bis zur fertigen, öffentlich zugänglichen Seite übersichtlich und effizient gestaltet. Jeder Meilenstein umfasst definierte Ziele und schrittweise Prozesse, die sicherstellen, dass das Projekt zielgerichtet vorangeht. Dieser Ansatz minimiert Risiken, nutzt Ressourcen optimal und gewährleistet eine hohe Qualität. Am Ende aller Meilensteine steht eine vollständig funktionsfähige Webseite, die online ist und von jedermann aufgerufen werden kann.
 
-Der Prozess teilt sich auf in insgesamt 3 Meilensteine. Jeder Meilenstein enthält klare Ziele und strukturierte Prozesse. Nach dem erfolgreichen Abschluss aller Punkte ist die Webseite online und für jeden aufrufbar.
+## Überblick über die Meilensteine
 
-Die verschiedenen Meilensteine sind:
+Die Meilensteine bieten eine logische Abfolge, die den Prozess in überschaubare Etappen unterteilt. Sie ermöglichen es, Fortschritte zu messen und Anpassungen vorzunehmen, falls nötig. Die drei Hauptmeilensteine lauten:
 
-- Strategie
-- Entwicklung
-- Veröffentlichung
+- **Strategie**: Hier wird der Grundstein gelegt, indem Ziele, Struktur und Design definiert werden.
+- **Entwicklung**: In dieser Phase entsteht die Webseite schrittweise und wird iterativ verbessert.
+- **Veröffentlichung**: Abschließend wird die Seite live geschaltet und auf Funktionalität überprüft.
 
-Im folgenden erklären wir die Ziele und Prozesse der einzelnen Abschnitte.
+Im Folgenden werden die Ziele und Prozesse jedes Meilensteins detailliert erläutert.
 
-## Strategie Meilenstein
+## Meilenstein: Strategie
 
 ![Strategie](/media/strategie.600.opt.jpg)
 
-Das Ziel, die Struktur und das Design der Website werden festgelegt.
+In diesem ersten Meilenstein wird die Grundlage für die gesamte Webseite festgelegt. Das umfasst die Definition der Ziele, der Struktur und des Designs. Dieser Schritt ist entscheidend, da er sicherstellt, dass die Webseite nicht nur ästhetisch ansprechend ist, sondern auch strategisch auf die Zielgruppe ausgerichtet. Ohne eine solide Strategie besteht das Risiko, dass die Seite später nicht die gewünschten Ergebnisse erzielt, wie z. B. mehr Besucher oder höhere Konversionen.
 
 ### Ziele
 
-Nach diesem Meilenstein ist klar welches Ziel die Webseite hat. Außerdem kennen wir die Branche und wissen welche Inhalte auf der Seite erscheinen, die uns helfen das Ziel zu erreichen. Wir wissen auch in welche visuelle Richtung wir gehen.
-Außerdem wissen wir aus wie vielen Seiten die Webseite besteht und welche Inhalte wo platziert sind. Auf der Design-Seite ist bekannt welche Farben & Schriftarten benutzt werden.
+Nach Abschluss dieses Meilensteins ist klar, welches übergeordnete Ziel die Webseite verfolgt. Die Branche wird analysiert, die relevanten Inhalte, die zum Erreichen dieses Ziels beitragen, werden identifiziert, und eine visuelle Richtung wird festgelegt. Zusätzlich wird festgelegt, aus wie vielen Seiten die Webseite besteht, wo welche Inhalte platziert werden und welche Design-Elemente wie Farben und Schriftarten verwendet werden. Diese Klarheit vermeidet spätere Änderungen und beschleunigt den Entwicklungsprozess.
 
 ### Prozess
 
-Der Prozess gliedert sich auf in die Beantwortung folgender Fragen:
+Der Prozess basiert auf der systematischen Beantwortung zentraler Fragen, die eine fundierte Planung ermöglichen. Diese Fragen werden in Workshops oder Meetings diskutiert, um alle Beteiligten einzubeziehen:
 
-Was ist das Ziel der Webseite? Mögliche Ziele sind zum Beispiel: Lead Generierung, Verkauf, Personalgewinnung, Verbesserte Conversion Rate, Mehr Aufmerksamkeit, Höhere Kundenzufriedenheit, Weniger Zeit für bestimmte Aufgaben verbringen, Veröffentlichung von Inhalten vereinfachen, Bessere IT-Infrastruktur
+- Was ist das Ziel der Webseite? Mögliche Ziele könnten sein: Generierung von Leads (z. B. Anfragen potenzieller Kunden), direkter Verkauf von Produkten, Gewinnung neuer Mitarbeiter, Steigerung der Conversion Rate (z. B. von Besuchern zu Käufern), Erhöhung der Aufmerksamkeit für die Marke, Verbesserung der Kundenzufriedenheit durch bessere Informationen, Reduzierung von Zeitaufwand für Routineaufgaben (z. B. durch Automatisierung), Vereinfachung der Inhaltsveröffentlichung oder Aufbau einer robusten IT-Infrastruktur. Das Ziel ist messbar, um später den Erfolg zu evaluieren.
+- In welcher Branche positioniert sich die Webseite und wer sind mögliche Konkurrenten? Hier wird der Markt analysiert, um Stärken und Schwächen der Konkurrenz zu identifizieren und sich abzuheben.
+- Welche Inhalte sollen auf der Webseite erscheinen? Beispiele für Inhalte sind: Produkte und Dienstleistungen, Unternehmensinformationen (z. B. Team, offene Stellen, Vision), Kontaktmöglichkeiten, Erklärungen zu Arbeitsweisen ("Was machen wir?" oder "Wie machen wir es?"), Vorteile für Kunden, Ressourcen wie Whitepapers oder Downloads, Updates (News, Blog, Pressemitteilungen), Kundenreferenzen, Newsletter-Anmeldung, Links zu Social-Media-Profilen, Fallstudien oder auf spezifische Kundensegmente zugeschnittene Seiten. Die Inhalte sind auf die Zielgruppe abgestimmt, um Relevanz zu gewährleisten.
+- Ob und wie werden die Inhalte später gepflegt? Dies umfasst Überlegungen zu einem Content-Management-System (CMS) oder regelmäßigen Updates, um die Seite aktuell zu halten.
+- Welche visuelle Richtung passt zur Webseite? Basierend auf der Markenidentität werden Stile gewählt, die Vertrauen und Professionalität vermitteln.
+- Was sind Referenzseiten? Beispiele für gut gestaltete Seiten (als Inspiration) oder solche, die in die falsche Richtung gehen (um Fehler zu vermeiden), werden gesammelt.
 
-In welcher Branche platziert sich die Webseite und was sind mögliche Konkurrenten?
-
-Welche Inhalte sollen auf die Webseite? Mögliche Inhalte sind zum Beispiel: Produkte und Leistungen, Unternehmen (Team, Jobs, Vision), Kontakt, Was machen wir? / Wie machen wir was?, Benefits, Ressourcen (White Papers, Downloads), Updates (News, Blog, Public Relations), Kunden / Referenzen, Newsletter Anmeldung, Social Media Profile, Fallstudien, Auf Kundensegmente angepasste Seiten
-
-Ob und wie werden am Ende die Inhalte gepfelgt?
-
-Welche Visuelle Richtung macht für die Seite Sinn?
-
-Was sind Referenzen von Seiten die gut aussehen oder in die falsche Richtung gehen?
-
-## Entwicklungs-Meilenstein
+## Meilenstein: Entwicklung
 
 ![Entwicklung](/media/code.600.opt.jpg)
 
-Die Website entsteht Schritt für Schritt.
+In diesem Meilenstein wird die Webseite schrittweise umgesetzt. Der Fokus liegt auf der technischen Realisierung, basierend auf den Entscheidungen aus der Strategiephase. Dieser iterative Ansatz ermöglicht frühe Feedback-Schleifen, was die Qualität steigert und teure Nachbesserungen vermeidet.
 
 ### Ziele
 
-Am Ende von diesem Meilenstein haben wir eine Internetseite, die wir sofort veröffentlichen können. Die Seite funktioniert auf allen gängigen Browsern und passt sich an alle unterschiedlichen Bildschirmgrößen an.
+Am Ende dieses Meilensteins existiert eine vollständig funktionsfähige Webseite, die sofort veröffentlicht werden könnte. Sie ist kompatibel mit allen gängigen Browsern (z. B. Chrome, Firefox, Safari) und responsiv, d. h. sie passt sich automatisch an verschiedene Bildschirmgrößen an – von Smartphones über Tablets bis zu Desktops. Dies gewährleistet eine optimale Nutzererfahrung unabhängig vom Gerät.
 
 ### Prozess
 
-Hier wird Schritt für Schritt vorgegangen, das heißt zuerst wird die Startseite entwickelt und Feedback eingeholt. Danach werden die Unterseiten entwickelt und wieder Feedback eingeholt. Der Prozess ist dabei iterativ und während die eine Seite auf Feedback wartet wird die nächste Seite entwickelt.
+Der Entwicklungsprozess ist iterativ und schrittweise aufgebaut, um Flexibilität zu bieten. Zuerst wird die Startseite erstellt und Feedback von Stakeholdern eingeholt, um Anpassungen vorzunehmen. Anschließend folgen die Unterseiten in ähnlicher Weise. Während auf Feedback für eine Seite gewartet wird, kann parallel an der nächsten gearbeitet werden. Dieser Ansatz fördert kontinuierliche Verbesserungen und stellt sicher, dass die Webseite den Anforderungen entspricht. Technische Aspekte wie Ladezeiten, Sicherheit und Barrierefreiheit werden von Anfang an berücksichtigt.
 
-## Veröffentlichungs-Meilenstein
+## Meilenstein: Veröffentlichung
 
 ![Veröffentlichung](/media/microphone.600.opt.jpg)
 
-Die Website wird online gestellt und ist für jeden erreichbar.
+Im abschließenden Meilenstein wird die Webseite live geschaltet. Dieser Schritt markiert den Übergang von der Entwicklung zur realen Nutzung und beinhaltet finale Überprüfungen, um eine reibungslose Funktionalität zu gewährleisten.
 
 ### Ziele
 
-Am Ende von diesem Meilenstein ist die Webseite online und für jeden erreichbar. Alle technischen und rechtlichen Anforderungen sind erfüllt.
+Nach diesem Meilenstein ist die Webseite online und für alle Nutzer weltweit erreichbar. Alle technischen Anforderungen (z. B. Geschwindigkeit, Sicherheit) sowie rechtliche Vorgaben (z. B. Datenschutz nach DSGVO, Impressum) sind erfüllt. Dies schafft eine solide Basis für langfristigen Erfolg.
 
 ### Prozess
 
-Die Website wird auf der Hauptdomain veröffentlicht. Danach werden nochmal alle technischen Anforderungen überprüft. Über die kommenden Wochen wird geschaut, dass die Website auf Google gut gefunden wird und für die Besucher alles reibungslos funktioniert.
+Zunächst wird die Webseite auf der Hauptdomain (z. B. www.beispiel.de) hochgeladen und aktiviert. Danach erfolgt eine umfassende Überprüfung aller technischen Aspekte, wie Links und Formulare. In den folgenden Wochen wird die Sichtbarkeit in Suchmaschinen wie Google (durch SEO-Maßnahmen) und die Nutzererfahrung überwacht. Falls Probleme auftauchen, werden diese schnell behoben. Dieser Nachsorgeprozess optimiert die Webseite kontinuierlich und berücksichtigt Feedback der Besucher.
