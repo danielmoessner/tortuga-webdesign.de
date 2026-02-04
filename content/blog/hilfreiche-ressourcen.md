@@ -26,10 +26,10 @@ Dabei muss man beachten dass Fotos vom dem/der Fotografen/Fotgrafin und selber f
 Im Einzelfall muss man jeweils abwägen was am meisten Sinn macht.
 
 Plattform für frei verfügbare Fotos:
-[Unsplash](https://unsplash.com/).
+<a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
 Plattform für käufliche Fotos:
-[Adobe Stock](https://stock.adobe.com/).
+<a href="https://stock.adobe.com/" target="_blank" rel="noopener noreferrer">Adobe Stock</a>.
 
 ### Schriftarten
 
@@ -43,10 +43,10 @@ Dabei gilt das selbe Prinzip wie bei den Fotos. Frei verfügbare sieht man teilw
 Hier muss wie bei den Bildern im Einzelfall entschieden werden was am meisten Sinn macht. Mit in die Entscheidung fließt dabei auch ein welchen Stil die Schriftart haben soll und welcher Unterschied zwischen Überschriften und normalem Text vorliegt.
 
 Plattform für frei verfügbare Schriftarten:
-[Google Fonts](https://fonts.google.com/).
+<a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>.
 
 Plattform für käufliche Schriftarten:
-[YouWorkForThem](https://www.youworkforthem.com/).
+<a href="https://www.youworkforthem.com/" target="_blank" rel="noopener noreferrer">YouWorkForThem</a>.
 
 ### Icons
 
@@ -54,33 +54,39 @@ Bei Icons empfehlen wir im Gegensatz zu Schriftarten und Bildern keine Einzigart
 
 Webseiten für hochwertige Icons:
 
-- [FontAwesome](https://fontawesome.com/)
-- [The Noun Project](https://thenounproject.com/)
-- [Heroicons](https://heroicons.com/)
+<ul>
+  <li><a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a></li>
+  <li><a href="https://thenounproject.com/" target="_blank" rel="noopener noreferrer">The Noun Project</a></li>
+  <li><a href="https://heroicons.com/" target="_blank" rel="noopener noreferrer">Heroicons</a></li>
+</ul>
 
 ### Illustrationen
 
 Illustrationen geben Webseiten einen professionellen und hochwertigen Touch. Hier gilt das selbe Prinzip zu Schriftarten und Bildern. Besonders interessant wird es mit individuell erstellten und animierten Illustrationen.
 
-Frei verfügbare Illustrationen: [Undraw](https://undraw.co/illustrations).
+Frei verfügbare Illustrationen: <a href="https://undraw.co/illustrations" target="_blank" rel="noopener noreferrer">Undraw</a>.
 
 ### Farben
 
 Farben sind schwieriger als es auf den ersten Blick erscheint. Teilweise gibt es bereits eine Corprate Identity und die Webseite passt sich mit ihren Farben daran an. Für die Entdeckung von neuen Farben und Kombinationen eignen sich folgende Tools:
 
-- [Adobe Color](https://color.adobe.com/de/create/color-wheel/)
-- [Color Hex](https://www.color-hex.com/)
-- [HSL Slider](https://www.w3schools.com/colors/colors_hsl.asp)
+<ul>
+  <li><a href="https://color.adobe.com/de/create/color-wheel/" target="_blank" rel="noopener noreferrer">Adobe Color</a></li>
+  <li><a href="https://www.color-hex.com/" target="_blank" rel="noopener noreferrer">Color Hex</a></li>
+  <li><a href="https://www.w3schools.com/colors/colors_hsl.asp" target="_blank" rel="noopener noreferrer">HSL Slider</a></li>
+</ul>
 
 ### Datenschutz
 
 Datenchutz kann ein heikles Thema sein aber ist bei den meisten Webseiten nicht kompliziert. Sobald es über Google Analytics und Newsletter hinausgeht muss individuell geschaut werden. Für alle anderen Seiten gibt es Datenschutzgeneratoren die einem angepassten Datenschutz liefern. Dabei wählt man aus welche Dienste die eigene Webseite benutzt und daraus wird der richtige Datenschutz generiert.
 
 Datenschutzgenerator der Wilde Beuger Solmecke Rechtsanwälte:
-[Zum Generator](https://www.wbs-law.de/it-und-internet-recht/datenschutzrecht/datenschutzerklaerung/datenschutzgenerator/)
+<a href="https://www.wbs-law.de/it-und-internet-recht/datenschutzrecht/datenschutzerklaerung/datenschutzgenerator/" target="_blank" rel="noopener noreferrer">Zum Generator</a>
 
 ### Technisches
 
 #### Django
 
-- [Classy Class-Based Views](https://ccbv.co.uk/)
+<ul>
+  <li><a href="https://ccbv.co.uk/" target="_blank" rel="noopener noreferrer">Classy Class-Based Views</a></li>
+</ul>
