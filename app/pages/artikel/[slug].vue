@@ -19,13 +19,6 @@
                 >
                   {{ article?.title }}
                 </h2>
-                <time
-                  :datetime="article?.date"
-                  class="flex items-center order-first text-base text-gray-400"
-                >
-                  <span class="h-4 w-0.5 rounded-full bg-gray-200" />
-                  <span class="ml-3">{{ formatDate(article?.date) }}</span>
-                </time>
               </header>
               <ProseNormal>
                 <ContentRenderer v-if="article" :value="article.body" />

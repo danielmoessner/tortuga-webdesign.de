@@ -24,11 +24,6 @@
                       :button="page?.meta.button"
                     />
                   </div>
-                  <time
-                    class="relative z-10 items-center order-first hidden mt-1 mb-3 text-sm text-gray-500 md:block"
-                    :datetime="article.date"
-                    >{{ formatDate(article.date) }}</time
-                  >
                 </article>
               </div>
             </div>
