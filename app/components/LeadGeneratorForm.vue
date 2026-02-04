@@ -6,7 +6,7 @@
       name="lead"
       data-netlify="true"
       method="post"
-      action="/was-macht-eine-gute-webseite-aus/danke"
+      action="/was-macht-eine-gute-website-aus/danke"
     >
       <input type="hidden" name="form-name" value="lead" />
       <div class="grid gap-y-1 md:gap-y-0 gap-x-2 md:grid-cols-2">

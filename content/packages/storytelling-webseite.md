@@ -1,7 +1,7 @@
 ---
-title: Storytelling Webseite
-slug: storytelling-webseite
-description: Die perfekte Webseite um komplexe Leistungen einfach und
+title: Storytelling Website
+slug: storytelling-website
+description: Die perfekte Website um komplexe Leistungen einfach und
   verständlich dem Kunden zu vermitteln.
 price: 8000
 features:

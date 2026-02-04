@@ -13,13 +13,6 @@
               &#x2190; Zurück zu allen Artikeln
             </nuxt-link>
             <article class="mt-8">
-              <header class="flex flex-col">
-                <h2
-                  class="mt-6 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl"
-                >
-                  {{ article?.title }}
-                </h2>
-              </header>
               <ProseNormal>
                 <ContentRenderer v-if="article" :value="article.body" />
               </ProseNormal>

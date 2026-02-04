@@ -92,7 +92,7 @@
         <div class="col-span-5 md:col-span-2">
           <div class="flex items-start mt-4 md:justify-end md:mt-2">
             <label class="block pl-1 text-right md:pr-0" for="website"
-              >Webseite (optional)
+              >Website (optional)
             </label>
           </div>
         </div>

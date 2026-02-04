@@ -1,11 +1,11 @@
 {
   "plan": {
-    "title": "Der Weg zur perfekten Webseite",
+    "title": "Der Weg zur perfekten Website",
     "subtitle": "Wir wollen, dass Sie am Ende zu 100 % zufrieden sind.",
     "steps": [
       {
         "title": "Strategie",
-        "text": "Im ersten Schritt finden wir heraus welches Ziel Sie mir Ihrer Webseite erreichen wollen und wie genau wir dort hinkommen."
+        "text": "Im ersten Schritt finden wir heraus welches Ziel Sie mir Ihrer Website erreichen wollen und wie genau wir dort hinkommen."
       },
       {
         "title": "Entwicklung",
@@ -21,8 +21,8 @@
   },
   "value": {
     "pretitle": "Unser Komplettpaket liefert Ihnen",
-    "title": "Besseres Geschäft durch begeisterte Webseitenbesucher",
-    "subtitle": "Ihre Kunden sollen auf Ihrer Webseite eine positive Erfahrung erleben genauso, wie wenn Sie einen Laden haben.",
+    "title": "Besseres Geschäft durch begeisterte Websitenbesucher",
+    "subtitle": "Ihre Kunden sollen auf Ihrer Website eine positive Erfahrung erleben genauso, wie wenn Sie einen Laden haben.",
     "propositions": [
       {
         "title": "Professioneller Internetauftritt",
@@ -40,16 +40,16 @@
     "bottomLeft": "Ausführung",
     "bottomRight": "Langfristiges Ergebnis"
   },
-  "title": "Werden Sie modern & geliebt von Ihren Webseiten-besuchern",
+  "title": "Werden Sie modern & geliebt von Ihren Websiten-besuchern",
   "stakes": {
     "title": "Sie benötigen eine professionelle Onlinepräsenz?",
     "subtitle": "Wir liefern das Komplettpaket.",
-    "button": "Was bringt eine Webseite?"
+    "button": "Was bringt eine Website?"
   },
   "leadGeneratorAd": {
-    "title": "Was macht eine gute Webseite aus?",
+    "title": "Was macht eine gute Website aus?",
     "button": "Jetzt PDF herunterladen",
-    "htmlText": "Welche <b>5 Punkte</b> sind ausschlaggebend für eine\n              <b>gute Webseite</b>? Wie wird <b>Ihre Webseite</b> zum\n              <b>Erfolg</b>? Erfahren Sie die <b>Antworten</b> in dem von uns\n              für Sie erstellten <b>PDF</b>."
+    "htmlText": "Welche <b>5 Punkte</b> sind ausschlaggebend für eine\n              <b>gute Website</b>? Wie wird <b>Ihre Website</b> zum\n              <b>Erfolg</b>? Erfahren Sie die <b>Antworten</b> in dem von uns\n              für Sie erstellten <b>PDF</b>."
   },
   "guide": {
     "title": "Wir bleiben langfristig an Ihrer Seite, überzeugen Sie sich selbst:",
@@ -89,7 +89,7 @@
       }
     ]
   },
-  "description": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
+  "description": "Viele Personen oder Unternehmen werden online nachteilig repräsentiert. Wir von Tortuga Webdesign liefern klar strukturierte & attraktive Websiten, sodass Sie online modern dargestellt und von Websitenbesuchern geliebt werden.",
   "header": [
     {
       "title": "Webdesign",

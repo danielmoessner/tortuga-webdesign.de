@@ -5,13 +5,13 @@
     "subtitle": "Wer gehört zu Tortuga Webdesign?"
   },
   "intro": {
-    "title": "Wir liefern klar strukturierte & attraktive Webseiten, sodass Sie online modern dargestellt und von Webseitenbesuchern geliebt werden.",
+    "title": "Wir liefern klar strukturierte & attraktive Websiten, sodass Sie online modern dargestellt und von Websitenbesuchern geliebt werden.",
     "subtitle": ""
   },
   "about": {
     "pretitle": "Über uns",
     "title": "Wir bleiben langfristig an Ihrer Seite",
-    "text": "Bereits seit 2017 erstellen wir von Tortuga Webdesign alle Arten von Webseiten, egal ob für Selbstständige, Kleinunternehmer oder mittelständische Unternehmen mit Online-Shop.\n\nUnser Anspruch sind zufriedene Kunden, die während des gesamten Prozesses zuverlässig und professionell von uns betreut werden. Die Wünsche und Vorstellungen unserer Kunden sind unsere Motivation, unser Bestes zu geben und Sie glücklich zu machen.",
+    "text": "Bereits seit 2017 erstellen wir von Tortuga Webdesign alle Arten von Websiten, egal ob für Selbstständige, Kleinunternehmer oder mittelständische Unternehmen mit Online-Shop.\n\nUnser Anspruch sind zufriedene Kunden, die während des gesamten Prozesses zuverlässig und professionell von uns betreut werden. Die Wünsche und Vorstellungen unserer Kunden sind unsere Motivation, unser Bestes zu geben und Sie glücklich zu machen.",
     "subtitle": "Daniel Mössner",
     "image": "daniel-moessner.500.opt.png"
   },
@@ -24,10 +24,10 @@
         "answer": "Das ist davon abhängig ob die Seite dynamisch (Backend, Datenbank, Login zum Texte ändern) oder statisch ist. Statische Seiten können ohne weitere Kosten gehostet werden. Bei dynamischen Seiten bewegen sich die Preise zwischen 5€ und 15€ pro Monat."
       },
       {
-        "question": "Wann ist meine Webseite fertig?",
-        "answer": "Wir planen für jede Phase (Strategie, Design, Entwicklung) 1-2 Wochen ein. Damit ist Ihre Webseite nach 3-6 Wochen online. Das Vorhandensein von Texten die Zeit verkürzen."
+        "question": "Wann ist meine Website fertig?",
+        "answer": "Wir planen für jede Phase (Strategie, Design, Entwicklung) 1-2 Wochen ein. Damit ist Ihre Website nach 3-6 Wochen online. Das Vorhandensein von Texten die Zeit verkürzen."
       }
     ]
   },
-  "description": "Tortuga Webdesign liefert klare und attraktive Webseiten, sodass Selbständige und kleine Unternehmen online modern aussehen & von Webseitenbesuchern geliebt werden."
+  "description": "Tortuga Webdesign liefert klare und attraktive Websiten, sodass Selbständige und kleine Unternehmen online modern aussehen & von Websitenbesuchern geliebt werden."
 }

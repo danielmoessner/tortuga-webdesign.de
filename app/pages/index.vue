@@ -64,7 +64,7 @@
               <AnimateOnScroll :delay="1">
                 <GrayButton
                   class="mb-2 delay-50"
-                  to="#was-bringt-eine-webseite"
+                  to="#was-bringt-eine-website"
                   :text="page?.meta.stakes.button"
                 />
               </AnimateOnScroll>
@@ -78,7 +78,7 @@
     </section>
 
     <section
-      id="was-bringt-eine-webseite"
+      id="was-bringt-eine-website"
       class="pt-32 pb-32 bg-teal-900 md:pt-48 md:pb-56"
     >
       <div class="container">
@@ -172,7 +172,7 @@
     </section>
 
     <section
-      id="der-weg-zur-perfekten-webseite"
+      id="der-weg-zur-perfekten-website"
       class="pt-24 pb-32 bg-teal-900 md:pt-48 md:pb-56"
     >
       <div class="container">
@@ -304,7 +304,7 @@
               <AnimateOnScroll :delay="1">
                 <SunshineButton
                   :text="page?.meta.leadGeneratorAd.button"
-                  to="/was-macht-eine-gute-webseite-aus"
+                  to="/was-macht-eine-gute-website-aus"
                 />
               </AnimateOnScroll>
             </div>

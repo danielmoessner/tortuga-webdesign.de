@@ -1,7 +1,7 @@
 ---
-title: Premium Webseite
-slug: premium-webseite
-description: Die perfekte Webseite für hohe Ansprüche.
+title: Premium Website
+slug: premium-website
+description: Die perfekte Website für hohe Ansprüche.
 price: 5000
 features:
   - Rechtlich korrektes Impressum

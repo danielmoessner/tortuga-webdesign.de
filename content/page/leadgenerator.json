@@ -1,12 +1,12 @@
 {
-  "title": "Was macht eine gute Webseite aus?",
+  "title": "Was macht eine gute Website aus?",
   "header": {
     "title": "Hilfestellung",
-    "subtitle": "Was macht eine gute Webseite aus?"
+    "subtitle": "Was macht eine gute Website aus?"
   },
   "stakes": {
-    "title": "Erfahren Sie wie eine Webseite begeistert",
-    "subtitle": "Was ist dem Besucher wichtig? Was können Sie bei Ihrer Seite verbessern? Worauf achten wir bei dem Design von Webseiten?"
+    "title": "Erfahren Sie wie eine Website begeistert",
+    "subtitle": "Was ist dem Besucher wichtig? Was können Sie bei Ihrer Seite verbessern? Worauf achten wir bei dem Design von Websiten?"
   },
   "valuePropositions": [
     {
@@ -16,7 +16,7 @@
         "margin": 0
       },
       "title": "Worauf achten wir?",
-      "text": "In der Hilfestellung haben wir genau beschrieben worauf wir bei unseren Webseiten achten und worauf Sie achten sollten, wenn Sie sich Referenzen von Webseiten anschauen."
+      "text": "In der Hilfestellung haben wir genau beschrieben worauf wir bei unseren Websiten achten und worauf Sie achten sollten, wenn Sie sich Referenzen von Websiten anschauen."
     },
     {
       "icon": {
@@ -25,7 +25,7 @@
         "margin": 0
       },
       "title": "Was wollen Ihre Besucher?",
-      "text": "Überlegen Sie sich welche Ziele Ihre Webseitenbesucher auf Ihrer Seite haben und erfahren Sie wie Sie es schaffen Ihre Besucher zu begeistern."
+      "text": "Überlegen Sie sich welche Ziele Ihre Websitenbesucher auf Ihrer Seite haben und erfahren Sie wie Sie es schaffen Ihre Besucher zu begeistern."
     },
     {
       "icon": {
@@ -34,7 +34,7 @@
         "margin": 0
       },
       "title": "Wie erreichen Sie Ihre Ziele?",
-      "text": "Werden Sie sich darüber im Klaren welchen Zweck Ihre Webseite zu erfüllen hat und wie die Webseite strukturiert sein muss um dieses Ziel zu erreichen."
+      "text": "Werden Sie sich darüber im Klaren welchen Zweck Ihre Website zu erfüllen hat und wie die Website strukturiert sein muss um dieses Ziel zu erreichen."
     }
   ],
   "download": {
@@ -48,14 +48,14 @@
       "title": "Viel Erfolg mit unserer Hilfestellung!",
       "message": "Bereit unsere Hiflestellung anzusehen? Klicken Sie einfach auf den Link. Keine Sorge, falls Sie gerade keine Zeit haben zum durchlesen, es ist bereits alles unterwegs zu Ihrem Postfach."
     },
-    "link": "/hilfestellungen/Was-macht-eine-gute-Webseite-aus.pdf"
+    "link": "/hilfestellungen/Was-macht-eine-gute-Website-aus.pdf"
   },
   "thankYou": {
     "text": {
       "title": "Viel Erfolg mit unserer Hilfestellung!",
       "text": "Bereit unsere Hiflestellung anzusehen? Klicken Sie einfach auf den Link. Keine Sorge, falls Sie gerade keine Zeit haben zum durchlesen, es ist bereits alles unterwegs zu Ihrem Postfach.",
       "link": {
-        "to": "/hilfestellungen/was-macht-eine-gute-webseite-aus.pdf",
+        "to": "/hilfestellungen/was-macht-eine-gute-website-aus.pdf",
         "text": "Jetzt herunterladen"
       }
     },
@@ -63,7 +63,7 @@
       "subtitle": "Vielen Dank für Ihr Interesse!",
       "title": "Hilfestellung"
     },
-    "title": "Was macht eine gute Webseite aus? - Vielen Dank für Ihr Interesse",
+    "title": "Was macht eine gute Website aus? - Vielen Dank für Ihr Interesse",
     "description": ""
   },
   "form": {

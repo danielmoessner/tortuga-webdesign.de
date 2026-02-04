@@ -1,6 +1,6 @@
 ---
-title: One Pager Webseite
-slug: one-pager-webseite
+title: One Pager Website
+slug: one-pager-website
 description: Die perfekte Visitenkarte fürs Web.
 price: 3000
 features:
