@@ -2,14 +2,14 @@
 title: Premium Webseite
 slug: premium-webseite
 description: Die perfekte Webseite für hohe Ansprüche.
-price: 3000
+price: 5000
 features:
-  - text: Rechtlich korrektes Impressum
-  - text: Datenschutz DSGVO-konform
-  - text: Mobil-optimiert
-  - text: Für Suchmaschinen optimiert
-  - text: Bis zu 10 Seiten
-  - text: Alle Inhalte sind veränderbar
-  - text: Einfaches & verständliches CMS System
-  - text: Klarer & strukturierter Aufbau
+  - Rechtlich korrektes Impressum
+  - Datenschutz DSGVO-konform
+  - Mobil-optimiert
+  - Für Suchmaschinen optimiert
+  - Bis zu 10 Seiten
+  - Alle Inhalte sind veränderbar
+  - Einfaches & verständliches CMS System
+  - Klarer & strukturierter Aufbau
 ---

@@ -2,12 +2,12 @@
 title: One Pager Webseite
 slug: one-pager-webseite
 description: Die perfekte Visitenkarte fürs Web.
-price: 2000
+price: 3000
 features:
-  - text: Rechtlich korrektes Impressum
-  - text: Datenschutz DSGVO-konform
-  - text: Mobil-optimiert
-  - text: Für Suchmaschinen optimiert
-  - text: 1 Seite
-  - text: Alle Inhalte sind veränderbar
+  - Rechtlich korrektes Impressum
+  - Datenschutz DSGVO-konform
+  - Mobil-optimiert
+  - Für Suchmaschinen optimiert
+  - 1 Seite
+  - Alle Inhalte sind veränderbar
 ---
