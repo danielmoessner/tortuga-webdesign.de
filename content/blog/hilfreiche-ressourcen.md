@@ -8,6 +8,7 @@ author:
   image: /img/daniel-moessner.120.opt.png
 image: /img/ressource-cover.1200.opt.jpg
 ---
+
 ## Woher kommen Fotos Schriftarten Datenschutz und mehr?
 
 Dieser Artikel fasst zusammen welche Dienste einem zu Hilfe eilen sobald Bilder Schriftarten Datenschutz oder ähnliches benötigt werden.
@@ -16,9 +17,9 @@ Dieser Artikel fasst zusammen welche Dienste einem zu Hilfe eilen sobald Bilder 
 
 Für qualitativ hochwertige Fotos gibt es verschieden Quellen:
 
-* Fotograf & selber fotografiert
-* Käuflich auf verschiedensten Plattformen
-* Gratis verfügbar mit entsprechender Lizenz
+- Fotograf & selber fotografiert
+- Käuflich auf verschiedensten Plattformen
+- Gratis verfügbar mit entsprechender Lizenz
 
 Dabei muss man beachten dass Fotos vom dem/der Fotografen/Fotgrafin und selber fotografiert einzigartig sind. Bei frei verfügbaren Fotos ist die Einzigartigkeit entsprechend geringer wodurch die Gefahr besteht sie auf einer anderen Webseite wieder zu sehen. Gekaufte Bilder bewegen sich in der Mitte.
 
@@ -34,10 +35,10 @@ Plattform für käufliche Fotos:
 
 Für Schriftarten gibt es zwei Quellen:
 
-* Käufliche
-* Frei verfügbare
+- Käufliche
+- Frei verfügbare
 
-Dabei gilt das selbe Prinzip wie bei den Fotos. Frei verfügbare sieht man teilweise immer wieder auf verschiedensten Seiten. Käufliche sind durch Zufall nicht zwei mal zu finden. 
+Dabei gilt das selbe Prinzip wie bei den Fotos. Frei verfügbare sieht man teilweise immer wieder auf verschiedensten Seiten. Käufliche sind durch Zufall nicht zwei mal zu finden.
 
 Hier muss wie bei den Bildern im Einzelfall entschieden werden was am meisten Sinn macht. Mit in die Entscheidung fließt dabei auch ein welchen Stil die Schriftart haben soll und welcher Unterschied zwischen Überschriften und normalem Text vorliegt.
 
@@ -53,9 +54,9 @@ Bei Icons empfehlen wir im Gegensatz zu Schriftarten und Bildern keine Einzigart
 
 Webseiten für hochwertige Icons:
 
-* [FontAwesome](https://fontawesome.com/)
-* [The Noun Project](https://thenounproject.com/)
-* [Heroicons](https://heroicons.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [The Noun Project](https://thenounproject.com/)
+- [Heroicons](https://heroicons.com/)
 
 ### Illustrationen
 
@@ -67,9 +68,9 @@ Frei verfügbare Illustrationen: [Undraw](https://undraw.co/illustrations).
 
 Farben sind schwieriger als es auf den ersten Blick erscheint. Teilweise gibt es bereits eine Corprate Identity und die Webseite passt sich mit ihren Farben daran an. Für die Entdeckung von neuen Farben und Kombinationen eignen sich folgende Tools:
 
-* [Adobe Color](https://color.adobe.com/de/create/color-wheel/)
-* [Color Hex](https://www.color-hex.com/)
-* [HSL Slider](https://www.w3schools.com/colors/colors_hsl.asp)
+- [Adobe Color](https://color.adobe.com/de/create/color-wheel/)
+- [Color Hex](https://www.color-hex.com/)
+- [HSL Slider](https://www.w3schools.com/colors/colors_hsl.asp)
 
 ### Datenschutz
 
@@ -77,3 +78,9 @@ Datenchutz kann ein heikles Thema sein aber ist bei den meisten Webseiten nicht 
 
 Datenschutzgenerator der Wilde Beuger Solmecke Rechtsanwälte:
 [Zum Generator](https://www.wbs-law.de/it-und-internet-recht/datenschutzrecht/datenschutzerklaerung/datenschutzgenerator/)
+
+### Technisches
+
+#### Django
+
+- [Classy Class-Based Views](https://ccbv.co.uk/)
