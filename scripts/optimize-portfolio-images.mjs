@@ -6,7 +6,7 @@ const PROJECT_ROOT = process.cwd();
 const PORTFOLIO_DIR = path.join(PROJECT_ROOT, "content", "portfolio");
 const PUBLIC_DIR = path.join(PROJECT_ROOT, "public");
 
-const TARGET_WIDTH = 840;
+const TARGET_WIDTH = 420;
 const WEBP_QUALITY = 80;
 const JPEG_QUALITY = 82;
 

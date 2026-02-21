@@ -117,7 +117,7 @@ const optimizedImageWebp = computed(() => {
   if (dot === -1) return null;
   const baseName = fileName.slice(0, dot);
 
-  return `/media/opt/${baseName}.840.opt.webp`;
+  return `/media/opt/${baseName}.420.opt.webp`;
 });
 
 const optimizedImageFallback = computed(() => {
