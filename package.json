@@ -15,17 +15,17 @@
     "update": "npx npm-check-updates -u --timeout 60000 && npm install"
   },
   "dependencies": {
-    "@nuxt/content": "==3.10.*",
+    "@nuxt/content": "==3.11.*",
     "@nuxt/eslint": "==1.*",
     "@tailwindcss/forms": "==0.5.*",
     "@tailwindcss/typography": "==0.5.*",
-    "@tailwindcss/vite": "==4.1.*",
+    "@tailwindcss/vite": "==4.2.*",
     "better-sqlite3": "==12.*",
     "eslint": "==9.39.*",
     "eslint-config-prettier": "==10.1.*",
     "eslint-plugin-prettier": "==5.5.*",
-    "nuxt": "==4.2.*",
-    "prettier": "==3.7.*",
+    "nuxt": "==4.3.*",
+    "prettier": "==3.8.*",
     "typescript": "==5.*",
     "vue-tsc": "==3.*"
   }
