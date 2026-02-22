@@ -95,35 +95,7 @@ const showcaseImageTransform = computed(
   () => `translateY(${showcaseScrollY.value}px)`,
 );
 const detailPage = computed(() => `/referenzen/${props.portfolioItem.slug}/`);
-const optimizedImageWebp = computed(() => {
-  const url = props.portfolioItem.image as string | undefined;
-  if (!url || typeof url !== "string") return null;
-  if (!url.startsWith("/media/")) return null;
 
-  const fileNameStart = url.lastIndexOf("/") + 1;
-  const fileName = url.slice(fileNameStart);
-  const dot = fileName.lastIndexOf(".");
-  if (dot === -1) return null;
-  const baseName = fileName.slice(0, dot);
-
-  return `/media/opt/${baseName}.420.opt.webp`;
-});
-
-const optimizedImageFallback = computed(() => {
-  const url = props.portfolioItem.image as string | undefined;
-  if (!url || typeof url !== "string") return null;
-  if (!url.startsWith("/media/")) return null;
-
-  const fileNameStart = url.lastIndexOf("/") + 1;
-  const fileName = url.slice(fileNameStart);
-  const dot = fileName.lastIndexOf(".");
-  if (dot === -1) return null;
-  const baseName = fileName.slice(0, dot);
-  const ext = fileName.slice(dot).toLowerCase();
-  if (!ext || ![".jpg", ".jpeg", ".png"].includes(ext)) return null;
-
-  return `/media/opt/${baseName}.860.opt${ext}`;
-});
 const month = computed(() => {
   const date = new Date(props.portfolioItem.date);
   return `${months[date.getMonth()]} ${date.getFullYear()}`;
