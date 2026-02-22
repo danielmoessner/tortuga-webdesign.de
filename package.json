@@ -7,7 +7,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "node scripts/optimize-portfolio-images.mjs && nuxt generate",
+    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "fix": "eslint --fix --ext .vue .; exit 0;",
     "check": "vue-tsc --noEmit",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxt/content": "==3.11.*",
     "@nuxt/eslint": "==1.*",
+    "@nuxt/image": "==2.*",
     "@tailwindcss/forms": "==0.5.*",
     "@tailwindcss/typography": "==0.5.*",
     "@tailwindcss/vite": "==4.2.*",
@@ -26,7 +27,6 @@
     "eslint-plugin-prettier": "==5.5.*",
     "nuxt": "==4.3.*",
     "prettier": "==3.8.*",
-    "sharp": "^0.34.5",
     "typescript": "==5.*",
     "vue-tsc": "==3.*"
   }

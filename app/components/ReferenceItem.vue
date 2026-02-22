@@ -43,22 +43,11 @@
               style="will-change: transform"
               :style="{ transform: showcaseImageTransform }"
             >
-              <picture>
-                <source
-                  v-if="optimizedImageWebp"
-                  :srcset="optimizedImageWebp"
-                  type="image/webp"
-                />
-                <source
-                  v-if="optimizedImageFallback"
-                  :srcset="optimizedImageFallback"
-                />
-                <img
-                  :src="portfolioItem.image"
-                  :alt="portfolioItem.title"
-                  class="block w-full"
-                />
-              </picture>
+              <nuxt-picture
+                :src="portfolioItem.image"
+                :alt="portfolioItem.title"
+                width="420"
+              />
             </div>
           </div>
         </nuxt-link>
