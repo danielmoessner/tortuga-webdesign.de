@@ -1,13 +1,13 @@
 <template>
   <main v-if="item" class="">
-    <SubNavigation :text="item?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="item.title" class="bg-sunshine-100" />
     <SvgHeader
       width="800"
       top="-120"
       svg-name="referenzen"
       title="Referenz"
       :swap-heading-element="true"
-      :subtitle="item?.title"
+      :subtitle="item.title"
     />
     <section class="relative pb-20 md:pt-32 md:pb-40 bg-sunshine-100">
       <div class="container">
@@ -15,15 +15,15 @@
           <div class="">
             <StickyInfo
               :dark-tag="itemDate"
-              :tags="item?.tags"
-              :title="item?.title"
+              :tags="item.tags"
+              :title="item.title"
               :description="description"
             >
               <nuxt-link
-                v-if="item?.url"
+                v-if="item.url"
                 target="_blank"
                 class="text-gray-900 underline transition duration-150 ease-in-out hover:text-gray-700"
-                :to="item?.url"
+                :to="item.url"
               >
                 {{ itemUrlClean }}
               </nuxt-link>
@@ -41,9 +41,9 @@
               <div class="overflow-hidden bg-teal-700 rounded">
                 <img
                   class="w-full"
-                  :src="item?.image"
+                  :src="item.image"
                   sizes="lg:2000px"
-                  :alt="item?.title"
+                  :alt="item.title"
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ const { data: item } = await useAsyncData(`portfolio-${path}`, () =>
   queryCollection("referenzen").path(`/portfolio/${params.slug}`).first(),
 );
 
-if (!item.value?.title) {
+if (!item || !item.value || !item.value.title) {
   throw createError({
     statusCode: 404,
   });

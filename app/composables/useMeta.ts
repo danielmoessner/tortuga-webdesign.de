@@ -4,11 +4,11 @@ export function useMeta(
   page: Ref<{ title: string; description: string } | undefined | null>,
 ) {
   const title = computed(() => {
-    return page?.value?.title;
+    return page.value?.title || "";
   });
 
   const description = computed(() => {
-    return page?.value?.description;
+    return page.value?.description || "";
   });
 
   useHead({

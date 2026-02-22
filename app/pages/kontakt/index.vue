@@ -1,9 +1,9 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
     <SvgHeader
-      :title="page?.meta.header.title"
-      :subtitle="page?.meta.header.subtitle"
+      :title="page.meta.header.title"
+      :subtitle="page.meta.header.subtitle"
       width="800"
       top="-105"
       svg-name="kontakt"

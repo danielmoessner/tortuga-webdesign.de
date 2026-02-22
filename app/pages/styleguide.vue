@@ -66,7 +66,7 @@
           <TealButton />
         </StyleguideColumn>
         <StyleguideColumn text="Sunshine">
-          <SunshineButton />
+          <SunshineButton text="Click Me" to="#" />
         </StyleguideColumn>
         <StyleguideColumn text="Blue">
           <BlueButton />

@@ -185,12 +185,7 @@
     </form>
   </div>
 </template>
-<script>
-export default {
-  name: "ContactForm",
-  components: {},
-};
-</script>
+<script setup lang="ts"></script>
 <style scoped>
 .mt-08 {
   margin-top: 0.8rem;

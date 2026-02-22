@@ -1,12 +1,12 @@
 <template>
   <main class="">
-    <SubNavigation small :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation small :text="page.title" class="bg-sunshine-100" />
     <section class="lg:bg-gray-100 bg-sunshine-100">
       <div class="container small">
         <div class="min-h-screen pb-24 bg-sunshine-100 pt-14">
           <div class="max-w-3xl mx-auto">
             <h1 class="text-2xl font-bold text-gray-800">
-              {{ page?.meta.header.title }}
+              {{ page.meta.header.title }}
             </h1>
             <div class="mt-8">
               <div class="flex flex-col space-y-16">
@@ -21,7 +21,7 @@
                       :description="article.description"
                       :slug="article.slug"
                       :date="formatDate(article.date)"
-                      :button="page?.meta.button"
+                      :button="page.meta.button"
                     />
                   </div>
                 </article>

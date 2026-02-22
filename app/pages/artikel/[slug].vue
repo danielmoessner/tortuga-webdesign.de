@@ -2,7 +2,7 @@
   <main class="">
     <SubNavigation
       small
-      :text="`${page?.title} - ${article?.title}`"
+      :text="`${page.title} - ${article?.title}`"
       class="bg-sunshine-100"
     />
     <section class="lg:bg-gray-100 bg-sunshine-100">

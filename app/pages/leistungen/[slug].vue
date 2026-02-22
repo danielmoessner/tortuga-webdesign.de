@@ -41,7 +41,7 @@ const { data: item } = await useAsyncData(`service-${path}`, () =>
   queryCollection("leistungen").path(`/service/${params.slug}`).first(),
 );
 
-if (!item.value?.title) {
+if (!item || !item.value || !item.value.title) {
   throw createError({
     statusCode: 404,
   });

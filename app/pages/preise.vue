@@ -1,20 +1,20 @@
 <template>
   <main>
-    <SubNavigation :text="page?.meta.header.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page.meta.header.title" class="bg-sunshine-100" />
 
     <SvgHeader
       top="-165"
       width="900"
       svg-name="ueber-uns"
-      :title="page?.meta.header.title"
-      :subtitle="page?.meta.header.subtitle"
+      :title="page.meta.header.title"
+      :subtitle="page.meta.header.subtitle"
     />
 
     <section class="relative pt-20 pb-40 bg-gray-50">
       <div class="container">
         <div class="sm:flex sm:flex-col sm:align-center">
           <p class="mt-5 text-xl text-gray-700 sm:text-center">
-            {{ page?.meta.content.text }}
+            {{ page.meta.content.text }}
           </p>
         </div>
         <div
@@ -44,7 +44,7 @@
               <h3
                 class="text-xs font-medium tracking-wide text-gray-900 uppercase"
               >
-                {{ page?.meta.content.features }}
+                {{ page.meta.content.features }}
               </h3>
               <ul class="mt-6 space-y-4">
                 <li
@@ -54,7 +54,7 @@
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="flex-shrink-0 w-5 h-5 text-green-500"
+                    class="shrink-0 w-5 h-5 text-green-500"
                     aria-hidden="true"
                     viewBox="0 0 20 20"
                     fill="currentColor"

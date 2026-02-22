@@ -1,9 +1,9 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
     <SvgHeader
-      :title="page?.meta.header.title"
-      :subtitle="page?.meta.header.subtitle"
+      :title="page.meta.header.title"
+      :subtitle="page.meta.header.subtitle"
       width="800"
       top="-110"
       svg-name="hilfestellung"
@@ -17,12 +17,12 @@
               <h2
                 class="mb-3 text-2xl font-bold leading-tight text-gray-100 md:text-3xl"
               >
-                {{ page?.meta.stakes.title }}
+                {{ page.meta.stakes.title }}
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="1">
               <p class="max-w-lg text-base text-gray-100 md:text-lg">
-                {{ page?.meta.stakes.subtitle }}
+                {{ page.meta.stakes.subtitle }}
               </p>
             </AnimateOnScroll>
           </div>
@@ -30,7 +30,7 @@
 
         <div class="grid gap-8 mb-20 gap-y-16 md:gap-y-8 md:grid-cols-3">
           <AnimateOnScroll
-            v-for="(proposition, index) in page?.meta.valuePropositions"
+            v-for="(proposition, index) in page.meta.valuePropositions"
             :key="index"
             :delay="index as DelayInput"
           >
@@ -47,7 +47,7 @@
         <div class="flex justify-center">
           <AnimateOnScroll>
             <h2 class="text-3xl font-bold text-gray-100 text-center">
-              {{ page?.meta.form.title }}
+              {{ page.meta.form.title }}
             </h2>
             <div class="mt-5 text-center">
               <SunshineButton

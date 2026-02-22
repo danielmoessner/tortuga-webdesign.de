@@ -1,13 +1,13 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
 
     <SvgHeader
       width="800"
       top="-120"
       svg-name="referenzen"
-      :title="page?.meta.header.title"
-      :subtitle="page?.meta.header.subtitle"
+      :title="page.meta.header.title"
+      :subtitle="page.meta.header.subtitle"
     />
 
     <section class="relative pt-20 pb-24 bg-teal-800 md:pt-32 md:pb-40">

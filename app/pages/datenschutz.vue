@@ -1,13 +1,13 @@
 <template>
   <main class="">
-    <SubNavigation :text="page?.title" class="bg-sunshine-100" />
+    <SubNavigation :text="page.title" class="bg-sunshine-100" />
 
     <SvgHeader
       top="-30"
       width="1000"
       svg-name="rechtliches"
-      :title="page?.meta.header.title"
-      :subtitle="page?.meta.header.subtitle"
+      :title="page.meta.header.title"
+      :subtitle="page.meta.header.subtitle"
     />
 
     <section class="relative bg-white">

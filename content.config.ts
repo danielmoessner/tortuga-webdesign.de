@@ -19,9 +19,13 @@ export default defineContentConfig({
     seiten: defineCollection({
       type: "page",
       source: "page/*.(md|json)",
-      schema: z.object({
-        meta: z.record(z.string(), z.any()),
-      }),
+      schema: z.union([
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+        z.record(z.string(), z.string()),
+      ]),
     }),
     artikel: defineCollection({
       type: "page",
