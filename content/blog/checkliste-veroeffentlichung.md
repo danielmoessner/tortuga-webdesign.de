@@ -20,3 +20,4 @@ description: Die Checkliste die nach Abschluss eines Webprojekts abgearbeitet we
 - Test-Website ist nicht mehr öffentlich zugänglich
 - Google Lighthouse Scores sind im grünen Bereich
 - Bilder sind optimiert und haben passende Formate
+- Google Search Console indexiert mehrere Seiten
