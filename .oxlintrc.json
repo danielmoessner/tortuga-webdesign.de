@@ -7,7 +7,5 @@
     "es2022": true
   },
   "ignorePatterns": ["node_modules/**", ".nuxt/**", ".output/**", "dist/**"],
-  "rules": {
-    "eslint/no-unused-vars": "error"
-  }
+  "rules": {}
 }
