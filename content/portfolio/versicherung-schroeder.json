@@ -1,0 +1,14 @@
+{
+  "title": "Versicherung Schröder",
+  "slug": "versicherung-schroeder",
+  "url": "https://versicherung-schroeder.de/de/",
+  "date": "2026-04-03",
+  "image": "/media/versicherung-schroeder.png",
+  "active": true,
+  "tags": [
+    "Astro",
+    "Tailwind CSS",
+    "Mehrsprachig"
+  ],
+  "description": "Versicherung Schröder - Die Experten für Versicherungen und Finanzen. Und die neue Website passt jetzt perfekt zur Corporate Identity."
+}
