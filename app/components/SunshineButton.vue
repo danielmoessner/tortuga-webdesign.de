@@ -5,15 +5,11 @@
       :to="to"
       :target="target"
     >
-      <div
-        class="px-3 md:px-4 py-1 md:py-2 text-gray-800 text-sm md:text-base leading-6 font-bold"
-      >
+      <div class="px-3 md:px-4 py-1 md:py-2 text-gray-800 text-sm md:text-base leading-6 font-bold">
         {{ text }}
       </div>
       <TriangleSvg class="absolute transform right-0 translate-x-1/2" />
-      <TriangleSvg
-        class="absolute transform left-0 -translate-x-1/2 rotate-180"
-      />
+      <TriangleSvg class="absolute transform left-0 -translate-x-1/2 rotate-180" />
     </NuxtLink>
   </div>
 </template>

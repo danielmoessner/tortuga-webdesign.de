@@ -12,17 +12,10 @@
       </div>
       <div class="">
         <div>
-          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
-            Navigation
-          </h3>
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">Navigation</h3>
           <ul class="">
             <li class="mb-2">
-              <FooterLink
-                text="Startseite"
-                to="/"
-                :color="linkColor"
-                :hover-color="hoverColor"
-              />
+              <FooterLink text="Startseite" to="/" :color="linkColor" :hover-color="hoverColor" />
             </li>
             <li class="mb-2">
               <FooterLink
@@ -69,13 +62,9 @@
       </div>
       <div class="">
         <div>
-          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
-            Kontakt
-          </h3>
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">Kontakt</h3>
           <address class="text-sm not-italic md:text-base" :class="textColor">
-            <span class="inline-block py-1 text-sm font-medium md:text-base"
-              >Daniel Mössner</span
-            >
+            <span class="inline-block py-1 text-sm font-medium md:text-base">Daniel Mössner</span>
             <br />
             <FooterLink
               class=""
@@ -99,9 +88,7 @@
       </div>
       <div class="col-start-2 md:col-start-auto">
         <div class="text-right">
-          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">
-            Rechtliches
-          </h3>
+          <h3 class="mb-2 text-lg font-semibold md:text-xl" :class="textColor">Rechtliches</h3>
           <ul>
             <li class="mb-2">
               <FooterLink

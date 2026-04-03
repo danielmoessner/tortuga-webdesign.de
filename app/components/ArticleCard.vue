@@ -15,9 +15,7 @@
         <nuxt-link :to="articleLink" class="has-text-black-ter">
           {{ article.description }}
         </nuxt-link>
-        <span v-for="(tag, index) in article.tags" :key="index"
-          >#{{ tag }}</span
-        >
+        <span v-for="(tag, index) in article.tags" :key="index">#{{ tag }}</span>
       </div>
       <div class="media">
         <div class="media-left">
@@ -27,9 +25,7 @@
         </div>
         <div class="media-content">
           <p class="title is-5">{{ article.author.name }}</p>
-          <time class="subtitle is-6 is-block" :datetime="article.date">{{
-            articleDate
-          }}</time>
+          <time class="subtitle is-6 is-block" :datetime="article.date">{{ articleDate }}</time>
         </div>
       </div>
     </div>
@@ -46,20 +42,7 @@ export default {
   },
   data() {
     return {
-      months: [
-        "Jan",
-        "Feb",
-        "Mär",
-        "Apr",
-        "Mai",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Okt",
-        "Nov",
-        "Dez",
-      ],
+      months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
     };
   },
   computed: {
@@ -68,13 +51,7 @@ export default {
     },
     articleDate() {
       const date = new Date(this.article.date);
-      return (
-        date.getDate() +
-        ". " +
-        this.months[date.getMonth()] +
-        " " +
-        date.getFullYear()
-      );
+      return date.getDate() + ". " + this.months[date.getMonth()] + " " + date.getFullYear();
     },
   },
 };

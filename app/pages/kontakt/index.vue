@@ -23,21 +23,15 @@
     </SvgHeader>
     <section class="relative pt-20 pb-24 bg-teal-700 md:pt-24 md:pb-32">
       <div class="container">
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-y-16 md:gap-x-8"
-        >
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-y-16 md:gap-x-8">
           <div class="col-span-2 md:col-span-1">
             <AnimateOnScroll :delay="1">
-              <h2 class="text-2xl font-bold text-gray-100 md:text-3xl">
-                Kontaktdaten
-              </h2>
+              <h2 class="text-2xl font-bold text-gray-100 md:text-3xl">Kontaktdaten</h2>
             </AnimateOnScroll>
           </div>
           <AnimateOnScroll :delay="1">
             <div>
-              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">
-                Telefon
-              </h3>
+              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">Telefon</h3>
               <p class="text-base text-gray-200 md:text-lg">Daniel Mössner</p>
               <a
                 class="text-base text-gray-200 underline transition ease-in-out md:text-lg hover:text-gray-100 active:text-white"
@@ -49,9 +43,7 @@
           </AnimateOnScroll>
           <AnimateOnScroll :delay="2">
             <div>
-              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">
-                E-Mail
-              </h3>
+              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">E-Mail</h3>
               <a
                 class="text-base text-gray-200 underline transition duration-150 ease-in-out md:text-lg hover:text-gray-100 active:text-white"
                 href="mailto:kontakt@tortuga-webdesign.de?subject=Anfrage"
@@ -59,14 +51,9 @@
               </a>
             </div>
           </AnimateOnScroll>
-          <AnimateOnScroll
-            class="col-span-2 md:col-start-2 md:col-span-2"
-            :delay="3"
-          >
+          <AnimateOnScroll class="col-span-2 md:col-start-2 md:col-span-2" :delay="3">
             <div>
-              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">
-                Adresse
-              </h3>
+              <h3 class="mb-1 text-lg font-bold text-gray-100 md:text-xl">Adresse</h3>
               <address class="text-base not-italic text-gray-200 md:text-lg">
                 <span class="font-medium">Tortuga Webdesign</span> <br />
                 Daniel Mössner <br />

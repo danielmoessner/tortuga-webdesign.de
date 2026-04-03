@@ -6,11 +6,7 @@
   "date": "2018-05-31T22:00:00.000Z",
   "url": "",
   "title": "Schätz Maschinenverleih",
-  "tags": [
-    "Bootstrap 4",
-    "Django",
-    "CMS"
-  ],
+  "tags": ["Bootstrap 4", "Django", "CMS"],
   "image": "/media/1500x.maschinenverleih-schaetz.de.jpg",
   "description": "Einer der größten Maschinenverleiher in München. Hier ist nicht nur auf der Website die passende Maschine schnell gefunden, sondern auch im Laden. Update 2025: Das Geschäft wurde Anfang des Jahres eingestellt."
 }

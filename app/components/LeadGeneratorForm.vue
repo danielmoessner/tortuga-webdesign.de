@@ -118,8 +118,7 @@
                 required
               />
               <label class="block leading-tight" for="dataprotection">
-                Ja, ich würde gerne Marketing E-Mails von Tortuga Webdesign
-                erhalten.
+                Ja, ich würde gerne Marketing E-Mails von Tortuga Webdesign erhalten.
               </label>
             </div>
           </div>

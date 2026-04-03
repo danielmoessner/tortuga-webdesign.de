@@ -1,8 +1,6 @@
 import type { Ref } from "vue";
 
-export function useMeta(
-  page: Ref<{ title: string; description: string } | undefined | null>,
-) {
+export function useMeta(page: Ref<{ title: string; description: string } | undefined | null>) {
   const title = computed(() => {
     return page.value?.title || "";
   });

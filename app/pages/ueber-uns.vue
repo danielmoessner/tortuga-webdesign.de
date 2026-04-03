@@ -32,9 +32,7 @@
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll :delay="3">
-              <p
-                class="text-base text-gray-100 whitespace-pre-line delay-300 md:text-lg"
-              >
+              <p class="text-base text-gray-100 whitespace-pre-line delay-300 md:text-lg">
                 {{ page.meta.about.text }}
               </p>
             </AnimateOnScroll>
@@ -74,15 +72,8 @@
         </div>
         <div class="">
           <div class="">
-            <AnimateOnScroll
-              v-for="(item, index) in page.meta.faq.questions"
-              :key="index"
-            >
-              <BaseFaq
-                class=""
-                :question="item.question"
-                :answer="item.answer"
-              />
+            <AnimateOnScroll v-for="(item, index) in page.meta.faq.questions" :key="index">
+              <BaseFaq class="" :question="item.question" :answer="item.answer" />
             </AnimateOnScroll>
           </div>
         </div>
@@ -109,6 +100,9 @@ definePageMeta({ layout: "new" });
 const { data: page } = await useAsyncData("about", () =>
   queryCollection("seiten").path("/page/about").first(),
 );
+
+const y = 1 / 0;
+const x = ref();
 
 useMeta(page);
 </script>

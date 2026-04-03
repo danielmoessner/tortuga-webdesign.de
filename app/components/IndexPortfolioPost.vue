@@ -24,11 +24,7 @@
                   'overflow-y-scroll': isScrollable,
                 }"
               >
-                <img
-                  :data-src="work.image500"
-                  :alt="work.title"
-                  class="w-full is-block lazyload"
-                />
+                <img :data-src="work.image500" :alt="work.title" class="w-full is-block lazyload" />
               </div>
             </div>
           </BaseFrame>
@@ -36,11 +32,7 @@
       </div>
       <div class="column is-4" :class="offsetText">
         <div class="index-portfolio-post-text">
-          <div
-            data-aos="fade-up"
-            :data-aos-delay="aosDelay"
-            data-aos-duration="600"
-          >
+          <div data-aos="fade-up" :data-aos-delay="aosDelay" data-aos-duration="600">
             <h3 class="title is-4">{{ work.title }}</h3>
             <p class="mb-18">
               {{ work.description }}

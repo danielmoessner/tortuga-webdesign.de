@@ -5,9 +5,6 @@
   "url": "https://ramjoie-montageservice.de",
   "active": true,
   "description": "Eine einfache Website die darauf aufmerksam macht, dass Handwerker gesucht werden für den seit 1999 bestehenden Ramjoie Montageservice.",
-  "tags": [
-    "WordPress",
-    "CMS"
-  ],
+  "tags": ["WordPress", "CMS"],
   "image": "/media/ramjoie-montageservice.png"
 }

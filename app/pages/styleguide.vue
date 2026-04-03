@@ -6,53 +6,41 @@
       <div class="grid grid-cols-2 gap-8">
         <div class="grid grid-cols-1 gap-8">
           <StyleguideColumn text="Heading 1">
-            <h1 class="text-6xl leading-tight tracking-tight">
-              Lorem dolor sit amet ti!
-            </h1>
+            <h1 class="text-6xl leading-tight tracking-tight">Lorem dolor sit amet ti!</h1>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 2" class="col-start-1">
-            <h2 class="text-4xl leading-tight tracking-tight">
-              Lorem dolor sit amet ti!
-            </h2>
+            <h2 class="text-4xl leading-tight tracking-tight">Lorem dolor sit amet ti!</h2>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 3" class="col-start-1">
-            <h3 class="text-3xl leading-tight tracking-tight">
-              Lorem dolor sit amet ti!
-            </h3>
+            <h3 class="text-3xl leading-tight tracking-tight">Lorem dolor sit amet ti!</h3>
           </StyleguideColumn>
           <StyleguideColumn text="Heading 4" class="col-start-1">
-            <h4 class="text-2xl leading-tight tracking-tight">
-              Lorem dolor sit amet ti!
-            </h4>
+            <h4 class="text-2xl leading-tight tracking-tight">Lorem dolor sit amet ti!</h4>
           </StyleguideColumn>
         </div>
         <div class="grid grid-cols-1 gap-8">
           <StyleguideColumn text="Paragraph" class="">
             <p class="mb-2 text-lg text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-              quas magni distinctio doloremque laudantium odit ea non nostrum
-              eveniet quisquam nobis, inventore repudiandae, nemo vel culpa
-              animi porro eaque! Nisi?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quas magni
+              distinctio doloremque laudantium odit ea non nostrum eveniet quisquam nobis, inventore
+              repudiandae, nemo vel culpa animi porro eaque! Nisi?
             </p>
             <p class="text-lg text-gray-800">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum
-              nobis facere incidunt aliquam nihil facilis voluptatum. Distinctio
-              officiis provident sint vitae recusandae harum, eos consequatur?
-              Quasi maiores maxime eius ea.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nobis facere incidunt
+              aliquam nihil facilis voluptatum. Distinctio officiis provident sint vitae recusandae
+              harum, eos consequatur? Quasi maiores maxime eius ea.
             </p>
           </StyleguideColumn>
           <StyleguideColumn text="Paragraph Small">
             <p class="mb-2 text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-              provident aperiam iure totam distinctio dolorum, repudiandae quod
-              molestiae hic esse qui alias. Aliquid dicta itaque, earum placeat
-              vel iure doloremque.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, provident aperiam iure
+              totam distinctio dolorum, repudiandae quod molestiae hic esse qui alias. Aliquid dicta
+              itaque, earum placeat vel iure doloremque.
             </p>
             <p class="text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
-              reiciendis unde molestiae itaque voluptatem, nostrum quo nam!
-              Maiores consequuntur tempora, quis accusamus officia, et, eveniet
-              iure sit dolor aliquid vero?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla reiciendis unde
+              molestiae itaque voluptatem, nostrum quo nam! Maiores consequuntur tempora, quis
+              accusamus officia, et, eveniet iure sit dolor aliquid vero?
             </p>
           </StyleguideColumn>
         </div>
@@ -175,9 +163,7 @@
         <div class="grid grid-cols-1 gap-4 justify-items-center">
           <div class="relative flex items-center justify-center w-full h-full">
             <div class="w-full h-1 bg-gray-100" />
-            <div
-              class="absolute left-0 right-0 w-1 h-full mx-auto bg-gray-100"
-            />
+            <div class="absolute left-0 right-0 w-1 h-full mx-auto bg-gray-100" />
           </div>
         </div>
         <div class="grid grid-cols-1 gap-4 justify-items-start">

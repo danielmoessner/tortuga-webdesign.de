@@ -4,11 +4,7 @@
   "url": "https://lodge2713.com",
   "date": "2025-12-31",
   "image": "/media/lodge2713.png",
-  "tags": [
-    "Astro",
-    "Tailwind CSS",
-    "Mehrsprachig"
-  ],
+  "tags": ["Astro", "Tailwind CSS", "Mehrsprachig"],
   "description": "Luxus, Ruhe & Natur - vereint in der Lodge 2713. Entdecke dein privates Refugium in Berchtesgaden. Und die Website erlaubt direkte Buchung, sowie mehrere Sprachen für internationales Publikum.",
   "active": true
 }

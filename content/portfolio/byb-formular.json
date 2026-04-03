@@ -6,9 +6,5 @@
   "image": "/media/byb-formular.png",
   "active": true,
   "description": "Programmierung von einem Tool für die dynamische Erstellung von Formularen, die auf den unterschiedlichen Seiten der Bavaria Yacht Charter Gruppe eingebunden werden können und über Eintragungen direkt benachrichtigen.",
-  "tags": [
-    "Django",
-    "Tailwind CSS",
-    "CMS"
-  ]
+  "tags": ["Django", "Tailwind CSS", "CMS"]
 }

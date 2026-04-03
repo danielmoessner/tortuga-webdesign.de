@@ -44,9 +44,7 @@ definePageMeta({ layout: "narrow-layout" });
 const { data: page } = await useAsyncData("blog", () =>
   queryCollection("seiten").path("/page/blog").first(),
 );
-const { data: articles } = await useAsyncData("articles", () =>
-  queryCollection("artikel").all(),
-);
+const { data: articles } = await useAsyncData("articles", () => queryCollection("artikel").all());
 
 useMeta(page);
 </script>

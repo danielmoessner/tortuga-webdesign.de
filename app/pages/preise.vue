@@ -33,25 +33,17 @@
                 {{ p.description }}
               </p>
               <p class="mt-8">
-                <span class="text-4xl font-extrabold text-gray-900">
-                  {{ p.price }},00 €
-                </span>
+                <span class="text-4xl font-extrabold text-gray-900"> {{ p.price }},00 € </span>
                 {{ " " }}
                 <span class="text-base font-medium text-gray-500">(Netto)</span>
               </p>
             </div>
             <div class="px-6 pt-6 pb-8">
-              <h3
-                class="text-xs font-medium tracking-wide text-gray-900 uppercase"
-              >
+              <h3 class="text-xs font-medium tracking-wide text-gray-900 uppercase">
                 {{ page.meta.content.features }}
               </h3>
               <ul class="mt-6 space-y-4">
-                <li
-                  v-for="feature in p.features"
-                  :key="feature"
-                  class="flex space-x-3"
-                >
+                <li v-for="feature in p.features" :key="feature" class="flex space-x-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="shrink-0 w-5 h-5 text-green-500"
@@ -97,7 +89,5 @@ const { data: page } = await useAsyncData("prices", () =>
 
 useMeta(page);
 
-const { data: packages } = await useAsyncData("packages", () =>
-  queryCollection("angebote").all(),
-);
+const { data: packages } = await useAsyncData("packages", () => queryCollection("angebote").all());
 </script>

@@ -11,15 +11,10 @@
           :text="tag"
         />
       </div>
-      <h2
-        class="mb-6 text-2xl font-bold leading-tight tracking-tight text-black md:text-3xl"
-      >
+      <h2 class="mb-6 text-2xl font-bold leading-tight tracking-tight text-black md:text-3xl">
         {{ title }}
       </h2>
-      <p
-        class="mb-8 text-sm text-black md:text-base md:mb-12"
-        v-html="description"
-      />
+      <p class="mb-8 text-sm text-black md:text-base md:mb-12" v-html="description" />
       <slot />
     </div>
   </div>

@@ -3,11 +3,7 @@
   "title": "Katharina Greuner",
   "slug": "katharina-greuner",
   "url": "https://katharina-greuner.de",
-  "tags": [
-    "NextJS",
-    "Tailwind CSS",
-    "CMS"
-  ],
+  "tags": ["NextJS", "Tailwind CSS", "CMS"],
   "description": "Katharina Greuner ist als Heilerin tätig und mit dieser Website ist Sie in der Lage selbständig Ihre Dienstleistungen anzupassen, Blog Artikel zu verfassen und Seminar-Termine einzustellen.",
   "image": "/media/katharina-greuner.png",
   "active": true

@@ -27,9 +27,7 @@
                 </h2>
               </AnimateOnScroll>
               <AnimateOnScroll :delay="(index + 1) as DelayInput">
-                <p
-                  class="mb-10 text-xl font-light tracking-wide text-gray-100 md:text-2xl"
-                >
+                <p class="mb-10 text-xl font-light tracking-wide text-gray-100 md:text-2xl">
                   {{ object.subtitle }}
                 </p>
               </AnimateOnScroll>
@@ -77,10 +75,7 @@
       </div>
     </section>
 
-    <section
-      id="was-bringt-eine-website"
-      class="pt-32 pb-32 bg-teal-900 md:pt-48 md:pb-56"
-    >
+    <section id="was-bringt-eine-website" class="pt-32 pb-32 bg-teal-900 md:pt-48 md:pb-56">
       <div class="container">
         <div class="max-w-3xl">
           <AnimateOnScroll>
@@ -132,9 +127,7 @@
     >
       <div class="container">
         <AnimateOnScroll>
-          <h2
-            class="mb-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl"
-          >
+          <h2 class="mb-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl">
             {{ page.meta.guide.title }}
           </h2>
         </AnimateOnScroll>
@@ -154,27 +147,16 @@
         </div>
         <div class="flex flex-wrap">
           <AnimateOnScroll :delay="2">
-            <TealButton
-              text="Jetzt zusammenarbeiten"
-              to="/kontakt/"
-              class="mb-2"
-            />
+            <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" class="mb-2" />
           </AnimateOnScroll>
           <AnimateOnScroll :delay="3">
-            <GrayButton
-              class=""
-              :text="page.meta.guide.button"
-              to="/referenzen/"
-            />
+            <GrayButton class="" :text="page.meta.guide.button" to="/referenzen/" />
           </AnimateOnScroll>
         </div>
       </div>
     </section>
 
-    <section
-      id="der-weg-zur-perfekten-website"
-      class="pt-24 pb-32 bg-teal-900 md:pt-48 md:pb-56"
-    >
+    <section id="der-weg-zur-perfekten-website" class="pt-24 pb-32 bg-teal-900 md:pt-48 md:pb-56">
       <div class="container">
         <div class="max-w-xl">
           <AnimateOnScroll>
@@ -205,14 +187,10 @@
                   class="relative flex flex-col items-start mr-6 text-6xl font-bold leading-none text-sunshine-200"
                 >
                   1.
-                  <div class="text-sm tracking-wide text-sunshine-200">
-                    Schritt
-                  </div>
+                  <div class="text-sm tracking-wide text-sunshine-200">Schritt</div>
                 </div>
                 <div>
-                  <h3
-                    class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
-                  >
+                  <h3 class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl">
                     {{ page.meta.plan.steps[0].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
@@ -229,14 +207,10 @@
                   class="relative flex flex-col items-start mr-6 text-6xl font-bold leading-none text-sunshine-300"
                 >
                   2.
-                  <div class="text-sm tracking-wide text-sunshine-300">
-                    Schritt
-                  </div>
+                  <div class="text-sm tracking-wide text-sunshine-300">Schritt</div>
                 </div>
                 <div>
-                  <h3
-                    class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
-                  >
+                  <h3 class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl">
                     {{ page.meta.plan.steps[1].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
@@ -253,16 +227,10 @@
                   class="relative flex flex-col items-start mr-6 text-6xl font-bold leading-none text-sunshine-400"
                 >
                   3.
-                  <div
-                    class="text-sm font-bold tracking-wide text-sunshine-400"
-                  >
-                    Schritt
-                  </div>
+                  <div class="text-sm font-bold tracking-wide text-sunshine-400">Schritt</div>
                 </div>
                 <div>
-                  <h3
-                    class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl"
-                  >
+                  <h3 class="flex items-end mb-2 text-xl font-bold text-gray-200 md:text-2xl">
                     {{ page.meta.plan.steps[2].title }}
                   </h3>
                   <p class="text-base text-gray-200 md:text-lg">
@@ -281,9 +249,7 @@
         <div class="flex flex-col items-center justify-center">
           <div class="flex flex-col items-center max-w-2xl text-center">
             <AnimateOnScroll>
-              <h2
-                class="mb-4 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl"
-              >
+              <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
                 {{ page.meta.leadGeneratorAd.title }}
               </h2>
             </AnimateOnScroll>
@@ -295,11 +261,7 @@
             </AnimateOnScroll>
             <div class="flex flex-wrap justify-center">
               <AnimateOnScroll>
-                <TealButton
-                  text="Jetzt zusammenarbeiten"
-                  to="/kontakt/"
-                  class="mb-2 delay-300"
-                />
+                <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" class="mb-2 delay-300" />
               </AnimateOnScroll>
               <AnimateOnScroll :delay="1">
                 <SunshineButton
@@ -328,9 +290,7 @@ import NewFooter from "@/components/NewFooter.vue";
 import GrayButton from "@/components/GrayButton.vue";
 import TealButton from "@/components/TealButton.vue";
 import SunshineButton from "@/components/SunshineButton.vue";
-import AnimateOnScroll, {
-  type DelayInput,
-} from "@/components/AnimateOnScroll.vue";
+import AnimateOnScroll, { type DelayInput } from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 

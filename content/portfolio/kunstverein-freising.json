@@ -5,8 +5,6 @@
   "date": "2025-04-16",
   "image": "/media/kunstverein-freising.de.png",
   "active": true,
-  "tags": [
-    "WordPress"
-  ],
+  "tags": ["WordPress"],
   "description": "Der Kunstverein Freising begeistert mit einem vielfältigen Programm und spannenden Veranstaltungen, die auf der neuen, benutzerfreundlichen Website übersichtlich und leicht zugänglich präsentiert werden."
 }

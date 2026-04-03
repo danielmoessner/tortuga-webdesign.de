@@ -18,8 +18,7 @@ export default {
       label: "Image",
       name: "image",
       widget: "image",
-      hint:
-        "Je größer, desto besser. Das Bild wird von der Webseite automatisch optimiert. JPG und PNG wird bevorzugt.",
+      hint: "Je größer, desto besser. Das Bild wird von der Webseite automatisch optimiert. JPG und PNG wird bevorzugt.",
     },
     { label: "Active", name: "active", widget: "boolean", required: false },
     {

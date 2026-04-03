@@ -1,21 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CMS</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-
-<body>
-  <script type="module">window.CMS_MANUAL_INIT = true;</script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.4/dist/decap-cms.js"></script>
-  <script type="module">
-    const { CMS, initCMS: init } = window;
-    import config from './config.js';
-    init({ config: config })
-  </script>
-</body>
-
+  <body>
+    <script type="module">
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.4/dist/decap-cms.js"
+    ></script>
+    <script type="module">
+      const { CMS, initCMS: init } = window;
+      import config from "./config.js";
+      init({ config: config });
+    </script>
+  </body>
 </html>

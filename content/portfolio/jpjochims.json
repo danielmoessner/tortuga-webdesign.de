@@ -4,10 +4,7 @@
   "url": "https://jpjochims.de",
   "image": "/media/jpjochims.png",
   "active": true,
-  "tags": [
-    "Tailwind CSS",
-    "Astro"
-  ],
+  "tags": ["Tailwind CSS", "Astro"],
   "description": "Mit dem neuen One Pager ist das landtechnisches Lohnunternehmen und Straßen- sowie Tiefbaudienstleister in der Lage einen guten Überblick über alle Leistungen zu liefern und bei neuen Bewerbern einen guten Eindruck zu hinterlassen.",
   "date": "2023-12-02"
 }

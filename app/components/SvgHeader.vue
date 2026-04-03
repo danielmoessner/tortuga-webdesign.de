@@ -1,24 +1,15 @@
 <template>
-  <section
-    class="relative pt-32 -mb-56 overflow-hidden pb-88 md:pb-96 bg-sunshine-200"
-  >
+  <section class="relative pt-32 -mb-56 overflow-hidden pb-88 md:pb-96 bg-sunshine-200">
     <div
       class="absolute z-10 min-h-screen transform -translate-x-1/2 left-1/2"
       :style="{ width: width + 'px', top: top + 'px' }"
     >
-      <img
-        class="w-4/5 pt-10 mx-auto md:pt-0 md:w-full"
-        :src="svgUrl"
-        alt="Header Bild"
-      />
+      <img class="w-4/5 pt-10 mx-auto md:pt-0 md:w-full" :src="svgUrl" alt="Header Bild" />
     </div>
     <div class="container relative z-10">
       <div class="">
         <div class="flex flex-col items-center justify-center">
-          <h1
-            v-if="srOnlyTitle"
-            class="text-5xl font-extrabold sr-only md:text-6xl"
-          >
+          <h1 v-if="srOnlyTitle" class="text-5xl font-extrabold sr-only md:text-6xl">
             {{ srOnlyTitle }}
           </h1>
           <AnimateOnScroll>
@@ -39,16 +30,10 @@
           </AnimateOnScroll>
           <slot>
             <AnimateOnScroll :delay="2">
-              <TealButton
-                text="Jetzt zusammenarbeiten"
-                to="/kontakt/"
-                class="mb-1"
-              />
+              <TealButton text="Jetzt zusammenarbeiten" to="/kontakt/" class="mb-1" />
             </AnimateOnScroll>
             <AnimateOnScroll :delay="3">
-              <span
-                class="block text-xs font-light tracking-wide text-white md:text-sm"
-              >
+              <span class="block text-xs font-light tracking-wide text-white md:text-sm">
                 Kostenloses Erstgespräch
               </span>
             </AnimateOnScroll>

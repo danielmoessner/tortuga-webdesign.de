@@ -15,13 +15,14 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
 */
 
 @font-face {
-	font-family: 'VisbyCF-DemiBold';
-	src: url('visby-cf-demi-bold.eot');
-	src: url('visby-cf-demi-bold.eot?#iefix') format('embedded-opentype'),
-             url('visby-cf-demi-bold.woff2') format('woff2'),
-	     url('visby-cf-demi-bold.woff') format('woff'),
-	     url('visby-cf-demi-bold.ttf') format('truetype'),
-	     url('visby-cf-demi-bold.svg#youworkforthem') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "VisbyCF-DemiBold";
+  src: url("visby-cf-demi-bold.eot");
+  src:
+    url("visby-cf-demi-bold.eot?#iefix") format("embedded-opentype"),
+    url("visby-cf-demi-bold.woff2") format("woff2"),
+    url("visby-cf-demi-bold.woff") format("woff"),
+    url("visby-cf-demi-bold.ttf") format("truetype"),
+    url("visby-cf-demi-bold.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

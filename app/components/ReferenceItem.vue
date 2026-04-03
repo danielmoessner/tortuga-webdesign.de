@@ -12,14 +12,12 @@
           <div
             class="absolute top-0 z-20 pt-1 pl-1 transition duration-150 ease-in-out opacity-0 group-hover:opacity-100"
           >
-            <span
-              class="p-1 mb-1 mr-1 text-xs text-white bg-gray-800 rounded"
-              >{{ portfolioItem.title }}</span
+            <span class="p-1 mb-1 mr-1 text-xs text-white bg-gray-800 rounded">{{
+              portfolioItem.title
+            }}</span
             ><br />
             <div>
-              <span
-                class="p-1 mb-1 mr-1 text-xs text-gray-900 bg-white rounded"
-              >
+              <span class="p-1 mb-1 mr-1 text-xs text-gray-900 bg-white rounded">
                 {{ month }}
               </span>
               <span
@@ -31,11 +29,7 @@
               </span>
             </div>
           </div>
-          <div
-            ref="showcaseHeightSet"
-            class="block w-full"
-            :style="{ 'padding-top': height }"
-          />
+          <div ref="showcaseHeightSet" class="block w-full" :style="{ 'padding-top': height }" />
           <div class="absolute top-0 w-full">
             <div
               ref="showcaseImage"
@@ -43,11 +37,7 @@
               style="will-change: transform"
               :style="{ transform: showcaseImageTransform }"
             >
-              <nuxt-picture
-                :src="portfolioItem.image"
-                :alt="portfolioItem.title"
-                width="420"
-              />
+              <nuxt-picture :src="portfolioItem.image" :alt="portfolioItem.title" width="420" />
             </div>
           </div>
         </nuxt-link>
@@ -70,20 +60,7 @@ const showcase = ref<HTMLElement | null>(null);
 const showcaseImage = ref<HTMLElement | null>(null);
 const showcaseHeightSet = ref<HTMLElement | null>(null);
 
-const months = [
-  "Jan",
-  "Feb",
-  "Mär",
-  "Apr",
-  "Mai",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Okt",
-  "Nov",
-  "Dez",
-];
+const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
 
 const mousePositionY = ref(0.5);
 const showcaseLookedAt = ref(false);
@@ -91,9 +68,7 @@ const showcaseInterval = ref<ReturnType<typeof setInterval> | null>(null);
 const showcaseScrollY = ref(0);
 
 const height = computed(() => props.portfolioItem.height || "100%");
-const showcaseImageTransform = computed(
-  () => `translateY(${showcaseScrollY.value}px)`,
-);
+const showcaseImageTransform = computed(() => `translateY(${showcaseScrollY.value}px)`);
 const detailPage = computed(() => `/referenzen/${props.portfolioItem.slug}/`);
 
 const month = computed(() => {
@@ -119,8 +94,7 @@ const showcaseImageRoute = computed(() => {
 
 watch(showcaseLookedAt, (newValue) => {
   if (newValue) {
-    if (showcaseInterval.value === null)
-      showcaseInterval.value = setInterval(moveImage, 16);
+    if (showcaseInterval.value === null) showcaseInterval.value = setInterval(moveImage, 16);
   } else {
     if (showcaseInterval.value !== null) clearInterval(showcaseInterval.value);
     showcaseInterval.value = null;

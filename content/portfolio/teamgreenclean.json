@@ -6,8 +6,5 @@
   "image": "/media/teamgreenclean.png",
   "active": true,
   "description": "Team Green Clean mit Martyna Ostropolska ist der vertrauenswürdiger Partner für hochwertigen Reinigungsservice in Dithmarschen, Nordfriesland und Umgebung.",
-  "tags": [
-    "Astro",
-    "Tailwind CSS"
-  ]
+  "tags": ["Astro", "Tailwind CSS"]
 }

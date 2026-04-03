@@ -6,9 +6,5 @@
   "image": "/media/dr-med-robert-sentek.png",
   "active": true,
   "description": "Dr. med. Robert Sentek ist Facharzt für Orthopädie, Unfall- und Handchirurgie. Die Website hilft Besuchern mehr über die unterschiedlichen Krankheitsbilder zu erfahren und Kontakt aufzunehmen.",
-  "tags": [
-    "Gatsby",
-    "CMS",
-    "Tailwind CSS"
-  ]
+  "tags": ["Gatsby", "CMS", "Tailwind CSS"]
 }

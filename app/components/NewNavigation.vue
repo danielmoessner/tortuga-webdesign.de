@@ -1,9 +1,7 @@
 <template>
   <nav ref="navigation" class="relative z-50 bg-teal-700">
     <div class="container" :class="{ small }">
-      <div
-        class="relative flex flex-col items-center justify-between md:flex-row"
-      >
+      <div class="relative flex flex-col items-center justify-between md:flex-row">
         <div class="flex items-center justify-between w-full md:w-auto">
           <nuxt-link class="" to="/">
             <div class="h-16 p-4 bg-teal-800">
@@ -55,21 +53,9 @@
         >
           <div class="flex flex-col space-y-2 md:flex-row md:space-y-0">
             <NavigationLink to="/" text="Startseite" @click="showNav = false" />
-            <NavigationLink
-              to="/ueber-uns/"
-              text="Über uns"
-              @click="showNav = false"
-            />
-            <NavigationLink
-              to="/referenzen/"
-              text="Referenzen"
-              @click="showNav = false"
-            />
-            <NavigationLink
-              to="/kontakt/"
-              text="Kontakt"
-              @click="showNav = false"
-            />
+            <NavigationLink to="/ueber-uns/" text="Über uns" @click="showNav = false" />
+            <NavigationLink to="/referenzen/" text="Referenzen" @click="showNav = false" />
+            <NavigationLink to="/kontakt/" text="Kontakt" @click="showNav = false" />
           </div>
         </div>
       </div>

@@ -8,9 +8,7 @@
         {{ text }}
       </div>
       <TriangleSvg class="absolute transform right-0 translate-x-1/2" />
-      <TriangleSvg
-        class="absolute transform left-0 -translate-x-1/2 rotate-180"
-      />
+      <TriangleSvg class="absolute transform left-0 -translate-x-1/2 rotate-180" />
     </nuxt-link>
   </div>
 </template>

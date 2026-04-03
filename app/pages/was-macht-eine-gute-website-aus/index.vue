@@ -14,9 +14,7 @@
         <div class="flex flex-col items-center justify-center mb-24">
           <div class="flex flex-col items-center max-w-2xl text-center">
             <AnimateOnScroll>
-              <h2
-                class="mb-3 text-2xl font-bold leading-tight text-gray-100 md:text-3xl"
-              >
+              <h2 class="mb-3 text-2xl font-bold leading-tight text-gray-100 md:text-3xl">
                 {{ page.meta.stakes.title }}
               </h2>
             </AnimateOnScroll>
@@ -74,9 +72,7 @@
 import SubNavigation from "@/components/SubNavigation.vue";
 import NewFooter from "@/components/NewFooter.vue";
 import SvgHeader from "@/components/SvgHeader.vue";
-import AnimateOnScroll, {
-  type DelayInput,
-} from "@/components/AnimateOnScroll.vue";
+import AnimateOnScroll, { type DelayInput } from "@/components/AnimateOnScroll.vue";
 
 definePageMeta({ layout: "new" });
 

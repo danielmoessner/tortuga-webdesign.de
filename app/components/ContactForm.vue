@@ -9,12 +9,8 @@
     >
       <input type="hidden" name="form-name" value="contact" />
       <div class="grid grid-cols-5 md:grid-cols-7 md:gap-4 gap-y-1">
-        <div
-          class="flex items-start col-span-5 mt-4 md:col-span-2 md:justify-end md:mt-2"
-        >
-          <label for="name" class="block pl-1 text-right md:pr-0"
-            >Vor- &amp; Nachname</label
-          >
+        <div class="flex items-start col-span-5 mt-4 md:col-span-2 md:justify-end md:mt-2">
+          <label for="name" class="block pl-1 text-right md:pr-0">Vor- &amp; Nachname</label>
         </div>
         <div class="col-span-5">
           <div class="flex items-center w-full">
@@ -51,9 +47,7 @@
         </div>
         <div class="col-span-5 md:col-span-2">
           <div class="flex items-start mt-4 md:justify-end md:mt-2">
-            <label class="block pl-1 text-right md:pr-0" for="mail">
-              Geschäftliche E-Mail
-            </label>
+            <label class="block pl-1 text-right md:pr-0" for="mail"> Geschäftliche E-Mail </label>
           </div>
         </div>
         <div class="col-span-5">
@@ -91,9 +85,7 @@
         </div>
         <div class="col-span-5 md:col-span-2">
           <div class="flex items-start mt-4 md:justify-end md:mt-2">
-            <label class="block pl-1 text-right md:pr-0" for="website"
-              >Website (optional)
-            </label>
+            <label class="block pl-1 text-right md:pr-0" for="website">Website (optional) </label>
           </div>
         </div>
         <div class="col-span-5">
@@ -165,12 +157,9 @@
                 />
                 <label class="leading-tight" for="dataprotection">
                   Ich habe die
-                  <a class="underline" href="/datenschutz"
-                    >Informationen zur Datenverarbeitung</a
-                  >
-                  zur Kenntnis genommen. Meine angegebenen Daten werden zum
-                  Zweck der Bearbeitung meiner Anfrage von Tortuga Webdesign
-                  gespeichert.
+                  <a class="underline" href="/datenschutz">Informationen zur Datenverarbeitung</a>
+                  zur Kenntnis genommen. Meine angegebenen Daten werden zum Zweck der Bearbeitung
+                  meiner Anfrage von Tortuga Webdesign gespeichert.
                 </label>
               </div>
             </div>

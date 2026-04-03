@@ -5,10 +5,6 @@
   "url": "https://cocoo.de",
   "image": "/media/cocoo-de.png",
   "description": "Die CoCOO GmbH unterstützt Sie mit lehrreichen Seminaren und Coachings auf Ihrem Weg zur Digitalisierung. Schauen Sie auf jeden Fall dort vorbei, wenn Sie mehr über agile Methoden erfahren wollen.",
-  "tags": [
-    "Django",
-    "Tailwind CSS",
-    "CMS"
-  ],
+  "tags": ["Django", "Tailwind CSS", "CMS"],
   "active": true
 }

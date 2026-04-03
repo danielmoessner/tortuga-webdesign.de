@@ -28,23 +28,14 @@
                 {{ itemUrlClean }}
               </nuxt-link>
               <div class="flex flex-wrap mt-12 md:mt-20">
-                <GrayButton
-                  text="Zurück zu allen Referenzen"
-                  to="/referenzen/"
-                  class="mb-2"
-                />
+                <GrayButton text="Zurück zu allen Referenzen" to="/referenzen/" class="mb-2" />
               </div>
             </StickyInfo>
           </div>
           <div class="col-span-1 lg:col-span-2">
             <div class="border-4 border-teal-700 rounded-lg shadow-lg">
               <div class="overflow-hidden bg-teal-700 rounded">
-                <img
-                  class="w-full"
-                  :src="item.image"
-                  sizes="lg:2000px"
-                  :alt="item.title"
-                />
+                <img class="w-full" :src="item.image" sizes="lg:2000px" :alt="item.title" />
               </div>
             </div>
           </div>
@@ -83,20 +74,7 @@ if (!item || !item.value || !item.value.title) {
 
 useMeta(item);
 
-const months = [
-  "Jan",
-  "Feb",
-  "Mär",
-  "Apr",
-  "Mai",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Okt",
-  "Nov",
-  "Dez",
-];
+const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"];
 
 const itemDate = computed(() => {
   const date = new Date(item.value?.date as string);

@@ -1,9 +1,5 @@
 <template>
-  <svg
-    class="fill-current w-auto"
-    viewBox="0 0 55.657 86.536"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg class="fill-current w-auto" viewBox="0 0 55.657 86.536" xmlns="http://www.w3.org/2000/svg">
     <g transform="translate(-42.246 -79.141)">
       <g shape-rendering="auto">
         <path d="m52.245 89.141 17.829 66.539 17.829-66.539z" />

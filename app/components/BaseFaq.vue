@@ -1,21 +1,12 @@
 <template>
-  <div
-    class="mb-6 overflow-hidden rounded-lg bg-white shadow-md relative"
-    @click="clicked"
-  >
-    <div
-      ref="question"
-      class="cursor-pointer flex justify-between shadow relative rounded-lg"
-    >
+  <div class="mb-6 overflow-hidden rounded-lg bg-white shadow-md relative" @click="clicked">
+    <div ref="question" class="cursor-pointer flex justify-between shadow relative rounded-lg">
       <div
         class="font-bold text-base md:text-lg text-gray-800 flex items-center flex-grow px-3 md:px-4 py-2 md:py-3 pl-4 md:pl-5 leading-tight"
       >
         {{ question }}
       </div>
-      <div
-        class="flex items-center justify-center px-3 py-3"
-        :style="iconStyle"
-      >
+      <div class="flex items-center justify-center px-3 py-3" :style="iconStyle">
         <span class="icon text-teal-700">
           <svg
             aria-hidden="true"
@@ -69,9 +60,7 @@ export default {
   },
   computed: {
     answerHeight() {
-      return this.isOpen && this.$refs.answer
-        ? this.$refs.answer.scrollHeight + "px"
-        : 0;
+      return this.isOpen && this.$refs.answer ? this.$refs.answer.scrollHeight + "px" : 0;
     },
     iconStyle() {
       return this.isOpen ? { transform: "scaleY(-1)" } : {};

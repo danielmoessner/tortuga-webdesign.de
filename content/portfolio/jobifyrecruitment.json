@@ -3,11 +3,7 @@
   "title": "Jobify Recruitment",
   "slug": "jobifyrecruitment",
   "url": "",
-  "tags": [
-    "Django",
-    "CMS",
-    "Mehrsprachig"
-  ],
+  "tags": ["Django", "CMS", "Mehrsprachig"],
   "description": "Jobify Recruitment findet die richtigen Bewerber für Hotel- und Gastronomie-Betriebe. Auf der zweisprachigen Website können sich Kandidaten auflisten lassen, um von Arbeitgebern gefunden zu werden.",
   "image": "/media/jobifyrecruitment.opt.png",
   "active": true

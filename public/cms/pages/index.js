@@ -30,11 +30,9 @@ export default {
           label: "Header",
           name: "header",
           widget: "object",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-          ],
+          fields: [{ label: "Title", name: "title", widget: "string" }],
         },
-        {label: 'Button', name: 'button', widget: 'string'}
+        { label: "Button", name: "button", widget: "string" },
       ],
     },
     {

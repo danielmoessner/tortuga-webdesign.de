@@ -1,38 +1,38 @@
 [build]
-  publish = "dist"
-  command = "npm run generate"
+publish = "dist"
+command = "npm run generate"
 
 [[redirects]]
-  from = "/portfolio"
-  to = "/referenzen/"
-  status = 301
+from = "/portfolio"
+to = "/referenzen/"
+status = 301
 
 [[redirects]]
-  from = "/google-ads"
-  to = "/leistungen/google-werbung/"
-  status = 301
+from = "/google-ads"
+to = "/leistungen/google-werbung/"
+status = 301
 
 [[redirects]]
-  from = "/leistungen/google-ads"
-  to = "/leistungen/google-werbung/"
-  status = 301
+from = "/leistungen/google-ads"
+to = "/leistungen/google-werbung/"
+status = 301
 
 [[redirects]]
-  from = "/cms-systeme"
-  to = "/leistungen/cms-systeme/"
-  status = 301
+from = "/cms-systeme"
+to = "/leistungen/cms-systeme/"
+status = 301
 
 [[redirects]]
-  from = "/leistungen"
-  to = "/"
-  status = 301
+from = "/leistungen"
+to = "/"
+status = 301
 
 [[redirects]]
-  from = "/*"
-  to = "/404"
-  status = 404
+from = "/*"
+to = "/404"
+status = 404
 
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-  [plugins.inputs]
-  buildDir = ".output/public"
+[plugins.inputs]
+buildDir = ".output/public"
