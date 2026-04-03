@@ -22,7 +22,7 @@
               :key="index"
               class="portfolio--item"
             >
-              <AnimateOnScroll :delay="(index % 3) as DelayInput">
+              <AnimateOnScroll :delay="(index as number % 3) as DelayInput">
                 <ReferenceItem :portfolio-item="item" />
               </AnimateOnScroll>
             </div>

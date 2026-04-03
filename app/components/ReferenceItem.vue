@@ -37,7 +37,19 @@
               style="will-change: transform"
               :style="{ transform: showcaseImageTransform }"
             >
-              <nuxt-picture :src="portfolioItem.image" :alt="portfolioItem.title" width="420" />
+              <nuxt-picture
+                :src="portfolioItem.image"
+                :alt="portfolioItem.title"
+                width="420"
+                sizes="(min-width: 1024px) 33vw, 50vw"
+                format="avif,webp"
+                :preload="false"
+                :img-attrs="{
+                  loading: 'lazy',
+                  decoding: 'async',
+                  fetchpriority: 'low',
+                }"
+              />
             </div>
           </div>
         </nuxt-link>
